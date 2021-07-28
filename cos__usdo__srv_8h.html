@@ -26,7 +26,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CANopen FD Slave Stack
    </div>
-   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.08</div>
+   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.10</div>
   </td>
  </tr>
  </tbody>
@@ -65,7 +65,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_29f239331dc16a526dbfcb33f76a2f2c.html">source</a></li><li class="navelem"><a class="el" href="dir_d3012b80eda00fc63564e3363f5e4112.html">stack-cos</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -103,96 +103,12 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6827f704c4b3b1b60d1b7e09c162b819"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__usdo__srv_8h.html#a6827f704c4b3b1b60d1b7e09c162b819">CosUsdoCopyMessageToValue</a> (void *pvdValueV, uint8_t ubDataTypeV)</td></tr>
-<tr class="separator:a6827f704c4b3b1b60d1b7e09c162b819"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0190d78f9285264683a29cdfacd2b0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__usdo__srv_8h.html#ab0190d78f9285264683a29cdfacd2b0b">CosUsdoCopyValueToMessage</a> (void *pvdValueV, uint8_t ubDataTypeV)</td></tr>
-<tr class="separator:ab0190d78f9285264683a29cdfacd2b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace08d7fb87f98d93eac2d75d47a1bf54"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__usdo__srv_8h.html#ace08d7fb87f98d93eac2d75d47a1bf54">CosUsdoInit</a> (uint8_t ubNodeIdV)</td></tr>
 <tr class="separator:ace08d7fb87f98d93eac2d75d47a1bf54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0769a81678fd32a2d159936cd82a372d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__usdo__srv_8h.html#a0769a81678fd32a2d159936cd82a372d">CosUsdoSendAbort</a> (uint8_t ubAbortCodeV)</td></tr>
 <tr class="separator:a0769a81678fd32a2d159936cd82a372d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a6827f704c4b3b1b60d1b7e09c162b819"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6827f704c4b3b1b60d1b7e09c162b819">&#9670;&nbsp;</a></span>CosUsdoCopyMessageToValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CosUsdoCopyMessageToValue </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pvdValueV</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ubDataTypeV</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Copy data field from USDO message into value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pvdValueV</td><td>- Pointer to value </td></tr>
-    <tr><td class="paramname">ubDataTypeV</td><td>- Defines the value data type</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>This function copies the USDO data field into the location defined by <em>pvdValueV</em>. Depending on the data type the byte order is assigned according to CiA 1301. </p>
-<p>For convenience, this function is called by <a class="el" href="cos__sdo_8h.html#af328aa154a9ab2476b6becfc5251e468" title="Copy data field from SDO message into value.">CosSdoCopyMessageToValue()</a>. Hence access to objects inside the protocol stack are always handled by <a class="el" href="cos__sdo_8h.html#af328aa154a9ab2476b6becfc5251e468" title="Copy data field from SDO message into value.">CosSdoCopyMessageToValue()</a>, even if the device is operated in CANopen FD mode.</p>
-<dl class="section warning"><dt>Warning</dt><dd>This function is used internally by the CANopen FD protocol stack and should not be called by the user. </dd></dl>
-
-</div>
-</div>
-<a id="ab0190d78f9285264683a29cdfacd2b0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0190d78f9285264683a29cdfacd2b0b">&#9670;&nbsp;</a></span>CosUsdoCopyValueToMessage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CosUsdoCopyValueToMessage </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pvdValueV</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ubDataTypeV</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Copy value into USDO message. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pvdValueV</td><td>- Pointer to value </td></tr>
-    <tr><td class="paramname">ubDataTypeV</td><td>- Defines the data type</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>This function copies the given value into the data field of a USDO message. Depending on the data type the byte order is assigned according to CiA 1301.</p>
-<p>For convenience, this function is called by <a class="el" href="cos__sdo_8h.html#a9f92f9fcc359c26c64e32c5a726ff29d" title="Copy value into SDO message.">CosSdoCopyValueToMessage()</a>. Hence access to objects inside the protocol stack are always handled by <a class="el" href="cos__sdo_8h.html#a9f92f9fcc359c26c64e32c5a726ff29d" title="Copy value into SDO message.">CosSdoCopyValueToMessage()</a>, even if the device is operated in CANopen FD mode.</p>
-<dl class="section warning"><dt>Warning</dt><dd>This function is used internally by the CANopen FD protocol stack and should not be called by the user. </dd></dl>
-
-</div>
-</div>
 <a id="ace08d7fb87f98d93eac2d75d47a1bf54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace08d7fb87f98d93eac2d75d47a1bf54">&#9670;&nbsp;</a></span>CosUsdoInit()</h2>
 
@@ -243,7 +159,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>This function is sends a USDO abort message. The abort code is taken from the enumeration UsdoAbort_e. </p>
+<p>This function is sends a USDO abort message. The abort code is taken from the enumeration #UsdoAbort_e. </p>
 
 </div>
 </div>

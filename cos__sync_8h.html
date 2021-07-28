@@ -26,7 +26,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CANopen FD Slave Stack
    </div>
-   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.08</div>
+   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.10</div>
   </td>
  </tr>
  </tbody>
@@ -65,7 +65,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_29f239331dc16a526dbfcb33f76a2f2c.html">source</a></li><li class="navelem"><a class="el" href="dir_d3012b80eda00fc63564e3363f5e4112.html">stack-cos</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The Synchronisation Object is broadcasted periodically by the SYNC producer. This SYNC provides the basic network clock. The time period between the SYNCs is specified by the standard parameter communication cycle period (Object 1006h: Communication Cycle Period), which may be written by a configuration tool to the application devices during the boot-up process. There can be a time jitter in transmission by the SYNC producer corresponding approximately to the latency due to some other message being transmitted just before the SYNC. In order to guarantee timely access to the CAN bus the SYNC is given a very high priority identifier (1005h). Devices which operate synchronously may use the SYNC object to synchronise their own timing with that of the Synchronisation Object producer. The details of this synchronisation are device dependent.</p>
+<div class="textblock"><p>The Synchronisation Object is broadcasted periodically by the SYNC producer. This SYNC provides the basic network clock. The time period between the SYNCs is specified by the standard parameter communication cycle period (Object 1006<sub>h</sub>: Communication Cycle Period), which may be written by a configuration tool to the application devices during the boot-up process. There can be a time jitter in transmission by the SYNC producer corresponding approximately to the latency due to some other message being transmitted just before the SYNC. In order to guarantee timely access to the CAN bus the SYNC is given a very high priority identifier (Object 1005<sub>h</sub>). Devices which operate synchronously may use the SYNC object to synchronise their own timing with that of the Synchronisation Object producer. The details of this synchronisation are device dependent.</p>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for cos_sync.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -102,135 +102,12 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:acec28d348b62c342c3e93a3f964215c5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__sync_8h.html#acec28d348b62c342c3e93a3f964215c5">CosSync_Idx1005</a> (uint8_t ubSubIndexV, uint8_t ubReqCodeV)</td></tr>
-<tr class="separator:acec28d348b62c342c3e93a3f964215c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2152e94c0e055c188865d17042ee21aa"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__sync_8h.html#a2152e94c0e055c188865d17042ee21aa">CosSync_Idx1006</a> (uint8_t ubSubIndexV, uint8_t ubReqCodeV)</td></tr>
-<tr class="separator:a2152e94c0e055c188865d17042ee21aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac996933a321363d445c1e8f1d07f42a0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__sync_8h.html#ac996933a321363d445c1e8f1d07f42a0">CosSync_Idx1019</a> (uint8_t ubSubIndexV, uint8_t ubReqCodeV)</td></tr>
-<tr class="separator:ac996933a321363d445c1e8f1d07f42a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b8d496bc3ce2b64c4ba8fecb5816eb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__sync_8h.html#a8b8d496bc3ce2b64c4ba8fecb5816eb4">CosSyncEventRcvPdo</a> (void)</td></tr>
 <tr class="separator:a8b8d496bc3ce2b64c4ba8fecb5816eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ca89aa788ad64b498d041601f8625e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__sync_8h.html#a4ca89aa788ad64b498d041601f8625e7">CosSyncMessageHandler</a> (void)</td></tr>
-<tr class="separator:a4ca89aa788ad64b498d041601f8625e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b72a5cb600034f10566f6127882ce7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__sync_8h.html#a4b72a5cb600034f10566f6127882ce7b">CosSyncSetProducer</a> (uint16_t uwTimeV)</td></tr>
+<tr class="separator:a4b72a5cb600034f10566f6127882ce7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="acec28d348b62c342c3e93a3f964215c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acec28d348b62c342c3e93a3f964215c5">&#9670;&nbsp;</a></span>CosSync_Idx1005()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t CosSync_Idx1005 </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ubSubIndexV</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ubReqCodeV</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Index 1005 - COB-ID SYNC Object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ubSubIndexV</td><td>sub-index </td></tr>
-    <tr><td class="paramname">ubReqCodeV</td><td>read / write access </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>SDO response code</dd></dl>
-<p>Index 1005h defines the COB-ID of the Synchronisation Object (SYNC). The index is only available when the symbol <a class="el" href="cos__conf_8h.html#ab23b6849ccf9d5b653269cdb838315a2" title="Implementation of index 1005h.">COS_DICT_OBJ_1005</a> is set. This function is called by the CANopen slave framework on reception on a SDO message (callback). The function returns a SDO response code defined by the <a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98f" title="Return code for SDO callbacks.">CosSdo_e</a> enumeration. </p>
-
-</div>
-</div>
-<a id="a2152e94c0e055c188865d17042ee21aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2152e94c0e055c188865d17042ee21aa">&#9670;&nbsp;</a></span>CosSync_Idx1006()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t CosSync_Idx1006 </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ubSubIndexV</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ubReqCodeV</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Index 1006 - Communication cycle period. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ubSubIndexV</td><td>sub-index </td></tr>
-    <tr><td class="paramname">ubReqCodeV</td><td>read / write access </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>SDO response code</dd></dl>
-<p>Index 1005h defines the COB-ID of the Synchronisation Object (SYNC). The index is only available when the symbol <a class="el" href="cos__conf_8h.html#a6be12b92b3b41df804b5efb08b85a01f" title="Implementation of index 1006h.">COS_DICT_OBJ_1006</a> is set. This function is called by the CANopen slave framework on reception on a SDO message (callback). The function returns a SDO response code defined by the <a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98f" title="Return code for SDO callbacks.">CosSdo_e</a> enumeration. </p>
-
-</div>
-</div>
-<a id="ac996933a321363d445c1e8f1d07f42a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac996933a321363d445c1e8f1d07f42a0">&#9670;&nbsp;</a></span>CosSync_Idx1019()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t CosSync_Idx1019 </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ubSubIndexV</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ubReqCodeV</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Index 1019 - SYNC counter. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ubSubIndexV</td><td>sub-index </td></tr>
-    <tr><td class="paramname">ubReqCodeV</td><td>read / write access </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>SDO response code</dd></dl>
-<p>Index 1019h defines the SYNC counter of the Synchronisation Object (SYNC). The index is only available when the symbol <a class="el" href="cos__conf_8h.html#a88ecba0db08f132e08bb312051506610" title="Implementation of index 1019h.">COS_DICT_OBJ_1019</a> is set. This function is called by the CANopen slave framework on reception on a SDO message (callback). The function returns a SDO response code defined by the <a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98f" title="Return code for SDO callbacks.">CosSdo_e</a> enumeration. </p>
-
-</div>
-</div>
 <a id="a8b8d496bc3ce2b64c4ba8fecb5816eb4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b8d496bc3ce2b64c4ba8fecb5816eb4">&#9670;&nbsp;</a></span>CosSyncEventRcvPdo()</h2>
 
@@ -247,30 +124,35 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Handle Rx-PDOs on SYNC reception. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000021">Todo:</a></b></dt><dd>Add Rx-PDO handling on SYNC reception</dd></dl>
+<p>Handle RPDOs on SYNC reception. </p>
 <p>This function is called upon reception of a SYNC message when the device is operational and the device has Receive PDOs. Please note that Receive PDOs do not have a SYNC counter feature, they are updated on every reception of the SYNC message. </p>
 
 </div>
 </div>
-<a id="a4ca89aa788ad64b498d041601f8625e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ca89aa788ad64b498d041601f8625e7">&#9670;&nbsp;</a></span>CosSyncMessageHandler()</h2>
+<a id="a4b72a5cb600034f10566f6127882ce7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b72a5cb600034f10566f6127882ce7b">&#9670;&nbsp;</a></span>CosSyncSetProducer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CosSyncMessageHandler </td>
+          <td class="memname">void CosSyncSetProducer </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>uwTimeV</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>React on SYNC messages. </p>
-<p>This function is called by main message handler function CosMgrMessageHandler(). It calls the services that require a SYNC message (PDO). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">uwTimeV</td><td>SYNC producer time in milli-seconds</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function allows to enable or disable a SYNC producer by the application. Using a value &gt; 0 for <em>uwTimeV</em> enables the SYNC producer, a value of 0 switches the service to SYNC consumer. The value for <em>uwTimeV</em> is given in multiples of 1 milli-second. </p>
+<p>The function has impact on the values of objects 1005<sub>h</sub> and 1006<sub>h</sub> and will modify the current setting. </p>
+<p>Please refer to the description of <a class="el" href="cos__mgr_8h.html#af0ae04ac22a54d53dc6c29f64086e24c">CosMgrOnStart()</a> for a code example. </p>
 
 </div>
 </div>

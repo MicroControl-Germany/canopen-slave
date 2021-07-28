@@ -26,7 +26,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CANopen FD Slave Stack
    </div>
-   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.08</div>
+   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.10</div>
   </td>
  </tr>
  </tbody>
@@ -65,7 +65,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_29f239331dc16a526dbfcb33f76a2f2c.html">source</a></li><li class="navelem"><a class="el" href="dir_d3012b80eda00fc63564e3363f5e4112.html">stack-cos</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -77,13 +77,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This module holds all functions for the initialisation and control of the CANopen slave. Some functions of this module need to be adopted to the target platform: </p><ul>
+<div class="textblock"><p>This module holds all functions for the initialisation and control of the CANopen slave. Some functions of this module need to be adopted to the target application: </p><ul>
 <li><a class="el" href="cos__mgr_8h.html#ad0a1d3a875c7db08553fbf5952aa31f9" title="Get module bit-rate.">CosMgrGetBitrate()</a> </li>
-<li><a class="el" href="cos__mgr_8h.html#a26773e7845db7a7a2b352fcb52a058c4" title="Get node address.">CosMgrGetNodeId()</a> </li>
-<li><a class="el" href="cos__mgr_8h.html#a7dbbb77838bbc73832205615b89df7e8" title="Get Serial Number of module.">CosMgrGetSerialNumber()</a> </li>
-<li><a class="el" href="cos__mgr_8h.html#ac890e7904bc138656f7ca0de661036e7" title="Handle Bus-Off condition.">CosMgrOnBusOff()</a></li>
+<li><a class="el" href="cos__mgr_8h.html#a26773e7845db7a7a2b352fcb52a058c4">CosMgrGetNodeId()</a> </li>
+<li><a class="el" href="cos__mgr_8h.html#a79647921b24fe5a996e4b2b147492fb1">CosMgrGetProductCode()</a> </li>
+<li><a class="el" href="cos__mgr_8h.html#a7dbbb77838bbc73832205615b89df7e8">CosMgrGetSerialNumber()</a> </li>
+<li><a class="el" href="cos__mgr_8h.html#a658ad26f2a00ecab90b425916e3de216">CosMgrOnBootUp()</a> </li>
+<li><a class="el" href="cos__mgr_8h.html#ac890e7904bc138656f7ca0de661036e7" title="Handle Bus-Off condition.">CosMgrOnBusOff()</a> </li>
+<li><a class="el" href="cos__mgr_8h.html#af0ae04ac22a54d53dc6c29f64086e24c">CosMgrOnStart()</a></li>
 </ul>
-<p>These functions are located in the cos_user.c file. </p>
+<p>These functions are located in the cos_user.c file. Please refer to <a class="el" href="page_8ex_start.html">Initialisation Process</a> for details about the <a class="el" href="cos__mgr_8h.html#a1ac846f2ac39ff649997614d26192a40" title="Initialise the CANopen Slave.">CosMgrInit()</a> function and also check the <a class="el" href="page_8ex_main.html">Complete Startup Process</a> for reference. </p>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for cos_mgr.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -130,6 +133,10 @@ Functions</h2></td></tr>
 <tr class="separator:a7dbbb77838bbc73832205615b89df7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ac846f2ac39ff649997614d26192a40"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__mgr_8h.html#a1ac846f2ac39ff649997614d26192a40">CosMgrInit</a> (uint8_t ubCanIfV, uint16_t uwConfigV)</td></tr>
 <tr class="separator:a1ac846f2ac39ff649997614d26192a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a658ad26f2a00ecab90b425916e3de216"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__mgr_8h.html#a658ad26f2a00ecab90b425916e3de216">CosMgrOnBootUp</a> (void)</td></tr>
+<tr class="separator:a658ad26f2a00ecab90b425916e3de216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0ae04ac22a54d53dc6c29f64086e24c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__mgr_8h.html#af0ae04ac22a54d53dc6c29f64086e24c">CosMgrOnStart</a> (uint8_t ubCallerResultT)</td></tr>
+<tr class="separator:af0ae04ac22a54d53dc6c29f64086e24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb67ceab70605f6fbc0027ce31ab96cc"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__mgr_8h.html#adb67ceab70605f6fbc0027ce31ab96cc">CosMgrProcess</a> (void)</td></tr>
 <tr class="separator:adb67ceab70605f6fbc0027ce31ab96cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82f94eb674ea4c0c47bc62130759f9f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__mgr_8h.html#a82f94eb674ea4c0c47bc62130759f9f1">CosMgrProfileUpdate</a> (uint16_t uwIndexV, uint8_t ubSubIndexV)</td></tr>
@@ -181,7 +188,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Use the CANopen slave protocol stack as NMT master and LSS master. This option is only possible in conjunction with the mini-master package. It is advised to use the CANopen master protocol stack in order to achieve full support of all CANopen master features. </p>
+<p>Use the CANopen FD Slave protocol stack as NMT master and LSS master. This option is only possible in conjunction with the mini-master add-on. It is advised to use the <a href="https://microcontrol-germany.github.io/canopen-master/">CANopen FD Master</a> protocol stack in order to achieve full support of all CANopen master features. </p>
 
 </div>
 </div>
@@ -219,7 +226,7 @@ Functions</h2></td></tr>
 
 <p>Get module bit-rate. </p>
 <dl class="section return"><dt>Returns</dt><dd>Constant value for bit-rate </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>This function has to be adopted to the hardware (cos_user.c)</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>This function has to be adopted to the application (cos_user.c)</dd></dl>
 <p>This routine checks for the bit-rate. The code of this routine has to be adopted to the specific target. The function returns a constant for the bit-rate that is specified in the <a class="el" href="canpie_8h.html" title="CANpie constants, structures and enumerations">canpie.h</a> file. </p>
 
 </div>
@@ -239,10 +246,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Get node address. </p>
 <dl class="section return"><dt>Returns</dt><dd>node-ID </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>This function has to be adopted to the hardware (cos_user.c)</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>This function has to be adopted to the application (cos_user.c)</dd></dl>
 <p>This routine checks for the node-ID. The code of this routine has to be adopted to the specific target. The function returns a value in the range from 1 to 127. </p>
 
 </div>
@@ -262,11 +267,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Get Product Code of module. </p>
 <dl class="section return"><dt>Returns</dt><dd>Product Code </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>This function has to be adopted to the hardware (cos_user.c)</dd></dl>
-<p>This routine returns the Product Code of the module. The Product Number is used within in Identity Object (Index 1018hex). </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>This function has to be adopted to the application (cos_user.c)</dd></dl>
+<p>This routine returns the Product Code of the module. The Product Number is used within in Identity Object (index 1018:02h). </p>
 
 </div>
 </div>
@@ -285,11 +288,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Get Serial Number of module. </p>
 <dl class="section return"><dt>Returns</dt><dd>Serial Number </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>This function has to be adopted to the hardware (cos_user.c)</dd></dl>
-<p>This routine returns the Serial Number of the module, which must be a unique value for a product family. The Serial Number is used within in Identity Object (Index 1018hex). </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>This function has to be adopted to the application (cos_user.c)</dd></dl>
+<p>This routine returns the Serial Number of the module, which must be a unique value for a product family. The Serial Number is used within the Identity Object (index 1018:04h). </p>
 
 </div>
 </div>
@@ -337,6 +338,112 @@ Functions</h2></td></tr>
 <li><a class="el" href="cos__mgr_8h.html#a45d1fde92317582fc1bdc1e1b463661e">COS_CONF_FD</a> for CANopen FD </li>
 </ul>
 
+</div>
+</div>
+<a id="a658ad26f2a00ecab90b425916e3de216"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a658ad26f2a00ecab90b425916e3de216">&#9670;&nbsp;</a></span>CosMgrOnBootUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CosMgrOnBootUp </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This event is called after successful transmission of the Boot-up message. </p>
+
+</div>
+</div>
+<a id="af0ae04ac22a54d53dc6c29f64086e24c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ae04ac22a54d53dc6c29f64086e24c">&#9670;&nbsp;</a></span>CosMgrOnStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CosMgrOnStart </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>ubCallerResultT</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ubCallerResultT</td><td>Result of CANopen service initialisation</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This event is called during the initialisation of CANopen services (refer to <a class="el" href="cos__mgr_8h.html#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a>). The parameter <em>ubCallerResultT</em> holds the state of the initialisation process. Possible values are defined by the <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296" title="Error Codes of protocol stack.">CosErr_e</a> enumeration. On successful initialisation the value for <em>ubCallerResultT</em> is <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a>. </p>
+<p>The following example shows how to change default settings for the hearbeat and the SYNC producer, as well as regsitration of EMCY codes. </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="cos__mgr_8h.html#af0ae04ac22a54d53dc6c29f64086e24c">CosMgrOnStart</a>(uint8_t ubCallerResultT)</div>
+<div class="line">{</div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// Device Profile : CiA 401</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   <a class="code" href="cos301_8h.html#a010d268152927b1763215036d1087b49">Cos301_SetDeviceType</a>(1, 0x000F0191);</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// Register possible EMCY codes</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   <a class="code" href="cos__emcy_8h.html#a19c22f7c543fddfc9a77b56c9ff9d640">CosEmcyErrorRegister</a>(<a class="code" href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a7622b63ce54ee203524add8d495b15fd">eEMCY_301_MAINS_VOLTAGE</a>,         EMCY_ERR_VOLT_INP_LOW, <a class="code" href="canopen_8h.html#aad9a4c2f6c14753f8e43e418abf37fefab90c165d16b0d6c7c9fb00a14c7ec634">eCoErrReg_VOLTAGE</a>,     0);</div>
+<div class="line">   <a class="code" href="cos__emcy_8h.html#a19c22f7c543fddfc9a77b56c9ff9d640">CosEmcyErrorRegister</a>(<a class="code" href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a544fa6d63b99916012769364ad2590e0">eEMCY_301_DEVICE_TEMPERATURE</a>,    EMCY_ERR_TEMP_DEVICE,  <a class="code" href="canopen_8h.html#aad9a4c2f6c14753f8e43e418abf37fefad4dc8e5d3b1c6cc32f33a9a475e5cfc9">eCoErrReg_TEMPERATURE</a>, 0);</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// Check status of initialisation</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   <span class="keywordflow">switch</span> (ubCallerResultT)</div>
+<div class="line">   {</div>
+<div class="line">      <span class="keywordflow">case</span> <a class="code" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a>:</div>
+<div class="line">         <span class="comment">// no error</span></div>
+<div class="line">         <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">case</span> <a class="code" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296ae64d07e98b7586ecc5580db221650165">eCOS_ERR_CAN_INIT</a>:</div>
+<div class="line">         <span class="comment">// failed to initialise CAN interface</span></div>
+<div class="line">         <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">case</span> <a class="code" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a5eee242344c0fba63c3219c22b0d7348">eCOS_ERR_VALUE_NODE_ID</a>:</div>
+<div class="line">         <span class="comment">// node-ID not valid</span></div>
+<div class="line">         <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">case</span> <a class="code" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a29c9946c3d66178de67350502b5af232">eCOS_ERR_PARM_LOAD</a>:</div>
+<div class="line">         <span class="comment">// could not load parameters from NVM</span></div>
+<div class="line">         <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">default</span>:</div>
+<div class="line">         <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// Set SYNC producer to 2 sec</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   <a class="code" href="cos__sync_8h.html#a4b72a5cb600034f10566f6127882ce7b">CosSyncSetProducer</a>(2000);</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// Set heartbeat producer to 1 sec</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   <a class="code" href="cos__nmt_8h.html#aae2129c83d630ffce47988418d389139">CosNmtSetHeartbeatProd</a>(1000);</div>
+<div class="line">}</div>
+<div class="ttc" id="acanopen_8h_html_aad9a4c2f6c14753f8e43e418abf37fefab90c165d16b0d6c7c9fb00a14c7ec634"><div class="ttname"><a href="canopen_8h.html#aad9a4c2f6c14753f8e43e418abf37fefab90c165d16b0d6c7c9fb00a14c7ec634">eCoErrReg_VOLTAGE</a></div><div class="ttdeci">@ eCoErrReg_VOLTAGE</div><div class="ttdef"><b>Definition:</b> canopen.h:706</div></div>
+<div class="ttc" id="acanopen_8h_html_aad9a4c2f6c14753f8e43e418abf37fefad4dc8e5d3b1c6cc32f33a9a475e5cfc9"><div class="ttname"><a href="canopen_8h.html#aad9a4c2f6c14753f8e43e418abf37fefad4dc8e5d3b1c6cc32f33a9a475e5cfc9">eCoErrReg_TEMPERATURE</a></div><div class="ttdeci">@ eCoErrReg_TEMPERATURE</div><div class="ttdef"><b>Definition:</b> canopen.h:709</div></div>
+<div class="ttc" id="acos301_8h_html_a010d268152927b1763215036d1087b49"><div class="ttname"><a href="cos301_8h.html#a010d268152927b1763215036d1087b49">Cos301_SetDeviceType</a></div><div class="ttdeci">void Cos301_SetDeviceType(uint8_t ubLogicalDeviceV, uint32_t ulDeviceTypeV)</div></div>
+<div class="ttc" id="acos__defs_8h_html_ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9"><div class="ttname"><a href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a></div><div class="ttdeci">@ eCOS_ERR_NONE</div><div class="ttdef"><b>Definition:</b> cos_defs.h:498</div></div>
+<div class="ttc" id="acos__defs_8h_html_ad559c6541faef4f8afa177362deed296a29c9946c3d66178de67350502b5af232"><div class="ttname"><a href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a29c9946c3d66178de67350502b5af232">eCOS_ERR_PARM_LOAD</a></div><div class="ttdeci">@ eCOS_ERR_PARM_LOAD</div><div class="ttdef"><b>Definition:</b> cos_defs.h:531</div></div>
+<div class="ttc" id="acos__defs_8h_html_ad559c6541faef4f8afa177362deed296a5eee242344c0fba63c3219c22b0d7348"><div class="ttname"><a href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a5eee242344c0fba63c3219c22b0d7348">eCOS_ERR_VALUE_NODE_ID</a></div><div class="ttdeci">@ eCOS_ERR_VALUE_NODE_ID</div><div class="ttdef"><b>Definition:</b> cos_defs.h:513</div></div>
+<div class="ttc" id="acos__defs_8h_html_ad559c6541faef4f8afa177362deed296ae64d07e98b7586ecc5580db221650165"><div class="ttname"><a href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296ae64d07e98b7586ecc5580db221650165">eCOS_ERR_CAN_INIT</a></div><div class="ttdeci">@ eCOS_ERR_CAN_INIT</div><div class="ttdef"><b>Definition:</b> cos_defs.h:501</div></div>
+<div class="ttc" id="acos__emcy_8h_html_a19c22f7c543fddfc9a77b56c9ff9d640"><div class="ttname"><a href="cos__emcy_8h.html#a19c22f7c543fddfc9a77b56c9ff9d640">CosEmcyErrorRegister</a></div><div class="ttdeci">Status_tv CosEmcyErrorRegister(uint8_t ubEmcyIdxV, uint16_t uwErrCodeV, uint8_t ubErrRegisterV, uint8_t ubErrCompareV)</div></div>
+<div class="ttc" id="acos__emcy_8h_html_a2064e8da648758eba453650d5f776366a544fa6d63b99916012769364ad2590e0"><div class="ttname"><a href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a544fa6d63b99916012769364ad2590e0">eEMCY_301_DEVICE_TEMPERATURE</a></div><div class="ttdeci">@ eEMCY_301_DEVICE_TEMPERATURE</div><div class="ttdef"><b>Definition:</b> cos_emcy.h:345</div></div>
+<div class="ttc" id="acos__emcy_8h_html_a2064e8da648758eba453650d5f776366a7622b63ce54ee203524add8d495b15fd"><div class="ttname"><a href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a7622b63ce54ee203524add8d495b15fd">eEMCY_301_MAINS_VOLTAGE</a></div><div class="ttdeci">@ eEMCY_301_MAINS_VOLTAGE</div><div class="ttdef"><b>Definition:</b> cos_emcy.h:342</div></div>
+<div class="ttc" id="acos__mgr_8h_html_af0ae04ac22a54d53dc6c29f64086e24c"><div class="ttname"><a href="cos__mgr_8h.html#af0ae04ac22a54d53dc6c29f64086e24c">CosMgrOnStart</a></div><div class="ttdeci">void CosMgrOnStart(uint8_t ubCallerResultT)</div></div>
+<div class="ttc" id="acos__nmt_8h_html_aae2129c83d630ffce47988418d389139"><div class="ttname"><a href="cos__nmt_8h.html#aae2129c83d630ffce47988418d389139">CosNmtSetHeartbeatProd</a></div><div class="ttdeci">void CosNmtSetHeartbeatProd(uint16_t uwTimeV)</div><div class="ttdoc">Setup time for heartbeat producer.</div></div>
+<div class="ttc" id="acos__sync_8h_html_a4b72a5cb600034f10566f6127882ce7b"><div class="ttname"><a href="cos__sync_8h.html#a4b72a5cb600034f10566f6127882ce7b">CosSyncSetProducer</a></div><div class="ttdeci">void CosSyncSetProducer(uint16_t uwTimeV)</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="adb67ceab70605f6fbc0027ce31ab96cc"></a>
@@ -464,9 +571,10 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Error Code</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Error Code </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="cos__mgr_8h.html#a658ad26f2a00ecab90b425916e3de216">CosMgrOnBootUp()</a>, <a class="el" href="cos__mgr_8h.html#af0ae04ac22a54d53dc6c29f64086e24c">CosMgrOnStart()</a></dd></dl>
 <p>This routine starts the CANopen protocol stack on the given node-ID and bit rate. The initialisation routines from other CANopen services are called and the Boot-up message is sent. The function returns <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a> on success. </p>
-<p>In case the device shall be started in classical CANopen mode the parameter <code>slBitrateDatSelV</code> is set to <a class="el" href="canpie_8h.html#a1701ab116f6fb6d511dfc34e5115de2baad510570f0bc89dc1101adbce0434771">eCP_BITRATE_NONE</a>. </p>
+<p>In case the device shall be started in classical CANopen mode the parameter <code>slBitrateDatSelV</code> must be set to <a class="el" href="canpie_8h.html#a1701ab116f6fb6d511dfc34e5115de2baad510570f0bc89dc1101adbce0434771">eCP_BITRATE_NONE</a>. </p>
 <dl class="section attention"><dt>Attention</dt><dd>The number and position of parameters has been changed with major version 6 (CANopen FD) of the protocol stack. </dd></dl>
 
 </div>

@@ -26,7 +26,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CANopen FD Slave Stack
    </div>
-   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.08</div>
+   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.10</div>
   </td>
  </tr>
  </tbody>
@@ -65,7 +65,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_29f239331dc16a526dbfcb33f76a2f2c.html">source</a></li><li class="navelem"><a class="el" href="dir_d3012b80eda00fc63564e3363f5e4112.html">stack-cos</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -104,7 +104,7 @@ $(function() {
 Macros</h2></td></tr>
 <tr class="memitem:afd8f10aabb16f1271bdfd4ccf2bc188e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__defs_8h.html#afd8f10aabb16f1271bdfd4ccf2bc188e">COS_VERSION_MAJOR</a>&#160;&#160;&#160;6</td></tr>
 <tr class="separator:afd8f10aabb16f1271bdfd4ccf2bc188e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e8beac173d30e112e31818081782f71"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__defs_8h.html#a7e8beac173d30e112e31818081782f71">COS_VERSION_MINOR</a>&#160;&#160;&#160;9</td></tr>
+<tr class="memitem:a7e8beac173d30e112e31818081782f71"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__defs_8h.html#a7e8beac173d30e112e31818081782f71">COS_VERSION_MINOR</a>&#160;&#160;&#160;10</td></tr>
 <tr class="separator:a7e8beac173d30e112e31818081782f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -227,7 +227,7 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296ae64d07e98b7586ecc5580db221650165">eCOS_ERR_CAN_INIT</a> = 0x01
 , <br />
-&#160;&#160;<b>eCOS_ERR_CAN_FAIL</b> = 0x02
+&#160;&#160;<a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296ae78e828c2842e307cc5da42ff70a5719">eCOS_ERR_CAN_FAIL</a> = 0x02
 , <br />
 &#160;&#160;<a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296ad09fe4ef4e8530bc7bab3a6cc4de34a7">eCOS_ERR_NODE_INIT</a> = 0x10
 , <br />
@@ -237,9 +237,9 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296add94e347bf4d1bc9bfa0a1f1549ae1ee">eCOS_ERR_VALUE_BITRATE</a> = 0x31
 , <br />
-&#160;&#160;<b>eCOS_ERR_VALUE_INDEX</b> = 0x32
+&#160;&#160;<a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a6f37eb7290eb3340d06579ce7be35a0e">eCOS_ERR_VALUE_INDEX</a> = 0x32
 , <br />
-&#160;&#160;<b>eCOS_ERR_VALUE_SUB_INDEX</b> = 0x33
+&#160;&#160;<a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296abb62b6aa06d9e029de198a8f8ee212ff">eCOS_ERR_VALUE_SUB_INDEX</a> = 0x33
 , <br />
 &#160;&#160;<a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a4614d9073acef947eff0405a6a597fd5">eCOS_ERR_VALUE_IDENTIFIER</a> = 0x34
 , <br />
@@ -248,6 +248,10 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a29c9946c3d66178de67350502b5af232">eCOS_ERR_PARM_LOAD</a> = 0x40
 , <br />
 &#160;&#160;<a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a983714064daaa89316e403112aba2494">eCOS_ERR_PARM_SAVE</a> = 0x41
+, <br />
+&#160;&#160;<a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a66b6860d8ebf1fad9294cf31fce40dd0">eCOS_ERR_LSS_VALUE</a> = 0x50
+, <br />
+&#160;&#160;<a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296ac2c30d7d6d705515936651cebe48376e">eCOS_ERR_SERVICE_NOT_AVAILABLE</a> = 0x58
 <br />
  }</td></tr>
 <tr class="separator:ad559c6541faef4f8afa177362deed296"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -275,7 +279,7 @@ Enumerations</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define COS_VERSION_MINOR&#160;&#160;&#160;9</td>
+          <td class="memname">#define COS_VERSION_MINOR&#160;&#160;&#160;10</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -394,25 +398,50 @@ Enumerations</h2></td></tr>
 <p>Error Codes of protocol stack. </p>
 <p>All error codes of the CANopen slave protocol stack have the prefix 'eCOS_ERR_'. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9"></a>eCOS_ERR_NONE&#160;</td><td class="fielddoc"><p>No error </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9"></a>eCOS_ERR_NONE&#160;</td><td class="fielddoc"><p>No error <br  />
+ </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296ae64d07e98b7586ecc5580db221650165"></a>eCOS_ERR_CAN_INIT&#160;</td><td class="fielddoc"><p>CAN interface not initialised </p>
+<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296ae64d07e98b7586ecc5580db221650165"></a>eCOS_ERR_CAN_INIT&#160;</td><td class="fielddoc"><p>CAN interface not initialised <br  />
+ </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296ad09fe4ef4e8530bc7bab3a6cc4de34a7"></a>eCOS_ERR_NODE_INIT&#160;</td><td class="fielddoc"><p>Node is not initialised </p>
+<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296ae78e828c2842e307cc5da42ff70a5719"></a>eCOS_ERR_CAN_FAIL&#160;</td><td class="fielddoc"><p>Access to CAN interface failed <br  />
+ </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a13c467a79f8e320ce0e361dfe8fe3225"></a>eCOS_ERR_NODE_RESET&#160;</td><td class="fielddoc"><p>Reset request for Node </p>
+<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296ad09fe4ef4e8530bc7bab3a6cc4de34a7"></a>eCOS_ERR_NODE_INIT&#160;</td><td class="fielddoc"><p>Node is not initialised <br  />
+ </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a5eee242344c0fba63c3219c22b0d7348"></a>eCOS_ERR_VALUE_NODE_ID&#160;</td><td class="fielddoc"><p>Node ID (device address) is out of range </p>
+<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a13c467a79f8e320ce0e361dfe8fe3225"></a>eCOS_ERR_NODE_RESET&#160;</td><td class="fielddoc"><p>Reset request for Node <br  />
+ </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296add94e347bf4d1bc9bfa0a1f1549ae1ee"></a>eCOS_ERR_VALUE_BITRATE&#160;</td><td class="fielddoc"><p>Bit-rate is out of range </p>
+<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a5eee242344c0fba63c3219c22b0d7348"></a>eCOS_ERR_VALUE_NODE_ID&#160;</td><td class="fielddoc"><p>Node ID (device address) is out of range <br  />
+ </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a4614d9073acef947eff0405a6a597fd5"></a>eCOS_ERR_VALUE_IDENTIFIER&#160;</td><td class="fielddoc"><p>Identifier is out of range </p>
+<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296add94e347bf4d1bc9bfa0a1f1549ae1ee"></a>eCOS_ERR_VALUE_BITRATE&#160;</td><td class="fielddoc"><p>Bit-rate is out of range <br  />
+ </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a731f40e919c53bfc4b73202fdeb453cf"></a>eCOS_ERR_VALUE_PARAMETER&#160;</td><td class="fielddoc"><p>General parameter out of range </p>
+<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a6f37eb7290eb3340d06579ce7be35a0e"></a>eCOS_ERR_VALUE_INDEX&#160;</td><td class="fielddoc"><p>Index not valid / out of range <br  />
+ </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a29c9946c3d66178de67350502b5af232"></a>eCOS_ERR_PARM_LOAD&#160;</td><td class="fielddoc"><p>Failure of parameter load operation </p>
+<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296abb62b6aa06d9e029de198a8f8ee212ff"></a>eCOS_ERR_VALUE_SUB_INDEX&#160;</td><td class="fielddoc"><p>Sub-index not valid / out of range <br  />
+ </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a983714064daaa89316e403112aba2494"></a>eCOS_ERR_PARM_SAVE&#160;</td><td class="fielddoc"><p>Failure of parameter save operation </p>
+<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a4614d9073acef947eff0405a6a597fd5"></a>eCOS_ERR_VALUE_IDENTIFIER&#160;</td><td class="fielddoc"><p>Identifier is out of range <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a731f40e919c53bfc4b73202fdeb453cf"></a>eCOS_ERR_VALUE_PARAMETER&#160;</td><td class="fielddoc"><p>General parameter out of range <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a29c9946c3d66178de67350502b5af232"></a>eCOS_ERR_PARM_LOAD&#160;</td><td class="fielddoc"><p>Failure of parameter load operation <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a983714064daaa89316e403112aba2494"></a>eCOS_ERR_PARM_SAVE&#160;</td><td class="fielddoc"><p>Failure of parameter save operation <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296a66b6860d8ebf1fad9294cf31fce40dd0"></a>eCOS_ERR_LSS_VALUE&#160;</td><td class="fielddoc"><p>Value for LSS parameter out of range <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad559c6541faef4f8afa177362deed296ac2c30d7d6d705515936651cebe48376e"></a>eCOS_ERR_SERVICE_NOT_AVAILABLE&#160;</td><td class="fielddoc"><p>Service (e.g. SDO client) not available <br  />
+ </p>
 </td></tr>
 </table>
 

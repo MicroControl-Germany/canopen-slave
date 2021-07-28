@@ -26,7 +26,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CANopen FD Slave Stack
    </div>
-   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.08</div>
+   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.10</div>
   </td>
  </tr>
  </tbody>
@@ -65,7 +65,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_842623b0797e30bbec2a659c2a75b61b.html">canpie-fd</a></li><li class="navelem"><a class="el" href="dir_a7cb9f522a2c07272d68f1ff43337815.html">source</a></li><li class="navelem"><a class="el" href="dir_ad62b1d103d76ab191cc1fe9b7ada2e2.html">canpie-fd</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_5621f0c32b973146c7a32c8fe78d1bfb.html">canpie-fd</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -107,7 +107,7 @@ $(function() {
 <div class="ttc" id="acanpie_8h_html_a364ad643291389f2be3c52e7e0d5f0bfa6339424fe05aa422027f98daa81a5cce"><div class="ttname"><a href="canpie_8h.html#a364ad643291389f2be3c52e7e0d5f0bfa6339424fe05aa422027f98daa81a5cce">eCP_CHANNEL_1</a></div><div class="ttdeci">@ eCP_CHANNEL_1</div><div class="ttdef"><b>Definition:</b> canpie.h:731</div></div>
 <div class="ttc" id="acp__nrl_8h_html_a02a523bc50412f2ef4ebc611616f4659"><div class="ttname"><a href="cp__nrl_8h.html#a02a523bc50412f2ef4ebc611616f4659">CpNrlSetDeviationLimit</a></div><div class="ttdeci">CpStatus_tv CpNrlSetDeviationLimit(uint8_t ubNrlChannelV, uint8_t ubLimitV)</div></div>
 <div class="ttc" id="acp__nrl_8h_html_a59c545c6e9e1dc2685499a2531b50a82"><div class="ttname"><a href="cp__nrl_8h.html#a59c545c6e9e1dc2685499a2531b50a82">CpNrlRegisterDriver</a></div><div class="ttdeci">CpStatus_tv CpNrlRegisterDriver(uint8_t ubNrlChannelV, uint8_t ubPhyIfDclV, uint8_t ubPhyIfRclV, CpNrlDriver_ts *ptsNrlDriverV)</div></div>
-<div class="ttc" id="acp__nrl_8h_html_a830b4579a2f4b62d330cbd4f52c33a35a9368b03de4bd898f1fe7ae6e2be72f5f"><div class="ttname"><a href="cp__nrl_8h.html#a830b4579a2f4b62d330cbd4f52c33a35a9368b03de4bd898f1fe7ae6e2be72f5f">eCP_NRL_CHANNEL_1</a></div><div class="ttdeci">@ eCP_NRL_CHANNEL_1</div><div class="ttdef"><b>Definition:</b> cp_nrl.h:357</div></div>
+<div class="ttc" id="acp__nrl_8h_html_a830b4579a2f4b62d330cbd4f52c33a35a9368b03de4bd898f1fe7ae6e2be72f5f"><div class="ttname"><a href="cp__nrl_8h.html#a830b4579a2f4b62d330cbd4f52c33a35a9368b03de4bd898f1fe7ae6e2be72f5f">eCP_NRL_CHANNEL_1</a></div><div class="ttdeci">@ eCP_NRL_CHANNEL_1</div><div class="ttdef"><b>Definition:</b> cp_nrl.h:387</div></div>
 <div class="ttc" id="acp__nrl_8h_html_a9b4690af061458069678beaa2f48c56b"><div class="ttname"><a href="cp__nrl_8h.html#a9b4690af061458069678beaa2f48c56b">CpNrlSetTimeout</a></div><div class="ttdeci">CpStatus_tv CpNrlSetTimeout(uint8_t ubNrlChannelV, uint32_t ulMicroSecondsV)</div></div>
 <div class="ttc" id="acp__nrl_8h_html_ab01b5771c67411c54cc2ea1e56cec3ab"><div class="ttname"><a href="cp__nrl_8h.html#ab01b5771c67411c54cc2ea1e56cec3ab">CpNrlRegisterHandler</a></div><div class="ttdeci">CpStatus_tv CpNrlRegisterHandler(uint8_t ubNrlChannelV, CpNrlStateHandler_Fn pfnStateHandlerV)</div></div>
 </div><!-- fragment --><p>The <a class="el" href="group__CP__NRL.html">NRL configuration options</a> allow to change options during compilation of the NRL. </p>
@@ -117,7 +117,15 @@ $(function() {
 <img src="nrl_interface_to_canpie.png" alt=""/>
 <div class="caption">
 Interface to CANpie FD driver</div></div>
- </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<h2>Using the NRL in non-redundant mode</h2>
+<p>The NRL can be started in non-redundant mode, i.e. only one CAN interface is used for communication. This mode allows the application to disable the functionality of the NRL during run-time. In non-redundant mode the NRL is a transparent layer between the CANpie FD driver and the application. The non-redundant mode is started by passing a value of <a class="el" href="canpie_8h.html#a364ad643291389f2be3c52e7e0d5f0bfa944a3fb5a143c7997c9e03990b645ae4">eCP_CHANNEL_NONE</a> for the physical interface of Redundant CAN Line upon registration.</p>
+<div class="fragment"><div class="line"><span class="comment">//----------------------------------------------------------------------------------------------</span></div>
+<div class="line"><span class="comment">// Register driver on logical NRL channel 1, but in non-redundant mode</span></div>
+<div class="line"><span class="comment">// CAN interface 1 is used for application</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><a class="code" href="cp__nrl_8h.html#a59c545c6e9e1dc2685499a2531b50a82">CpNrlRegisterDriver</a>(<a class="code" href="cp__nrl_8h.html#a830b4579a2f4b62d330cbd4f52c33a35a9368b03de4bd898f1fe7ae6e2be72f5f">eCP_NRL_CHANNEL_1</a>, <a class="code" href="canpie_8h.html#a364ad643291389f2be3c52e7e0d5f0bfa6339424fe05aa422027f98daa81a5cce">eCP_CHANNEL_1</a>, <a class="code" href="canpie_8h.html#a364ad643291389f2be3c52e7e0d5f0bfa944a3fb5a143c7997c9e03990b645ae4">eCP_CHANNEL_NONE</a>, &amp;tsNrlDriverS);</div>
+<div class="ttc" id="acanpie_8h_html_a364ad643291389f2be3c52e7e0d5f0bfa944a3fb5a143c7997c9e03990b645ae4"><div class="ttname"><a href="canpie_8h.html#a364ad643291389f2be3c52e7e0d5f0bfa944a3fb5a143c7997c9e03990b645ae4">eCP_CHANNEL_NONE</a></div><div class="ttdeci">@ eCP_CHANNEL_NONE</div><div class="ttdef"><b>Definition:</b> canpie.h:728</div></div>
+</div><!-- fragment --> </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for cp_nrl.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -153,6 +161,8 @@ Macros</h2></td></tr>
 <tr class="separator:gaa7a2410ad6d0bf9c6f58c301d570ff8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac2ecb8e582b9e96e2be8a2cafd9816b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CP__NRL.html#gac2ecb8e582b9e96e2be8a2cafd9816b1">CP_NRL_SUPPORT</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:gac2ecb8e582b9e96e2be8a2cafd9816b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab8e1a2e3adb52fb71643448b1fb09234"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CP__NRL.html#gab8e1a2e3adb52fb71643448b1fb09234">CP_NRL_FAULT_SIMULATION</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:gab8e1a2e3adb52fb71643448b1fb09234"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -172,6 +182,17 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a830b4579a2f4b62d330cbd4f52c33a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc67cbc0c50f09e1e67f0e12fcc3f86"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cp__nrl_8h.html#a2dc67cbc0c50f09e1e67f0e12fcc3f86">CpNrlFault_e</a> { <br />
+&#160;&#160;<a class="el" href="cp__nrl_8h.html#a2dc67cbc0c50f09e1e67f0e12fcc3f86aa0d4f522dd35ae90309c35486d61c323">eCP_NRL_FAULT_NONE</a> = 0
+, <br />
+&#160;&#160;<a class="el" href="cp__nrl_8h.html#a2dc67cbc0c50f09e1e67f0e12fcc3f86a0e7485480b796d30ee6406ef0a7a0daf">eCP_NRL_FAULT_DISCONNECT_DCL</a>
+, <br />
+&#160;&#160;<a class="el" href="cp__nrl_8h.html#a2dc67cbc0c50f09e1e67f0e12fcc3f86a68af66ef40f36a67c11c5ce3f58fd49f">eCP_NRL_FAULT_DISCONNECT_RCL</a>
+, <br />
+&#160;&#160;<a class="el" href="cp__nrl_8h.html#a2dc67cbc0c50f09e1e67f0e12fcc3f86a7e3631e16961c05ae3efdbf7444cb140">eCP_NRL_FAULT_DISCONNECT_ALL</a>
+<br />
+ }</td></tr>
+<tr class="separator:a2dc67cbc0c50f09e1e67f0e12fcc3f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09ebe8a89c7c03913c3611be54111c85"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cp__nrl_8h.html#a09ebe8a89c7c03913c3611be54111c85">CpNrlLine_e</a> { <br />
 &#160;&#160;<a class="el" href="cp__nrl_8h.html#a09ebe8a89c7c03913c3611be54111c85af81f8ea2b60055c9e4bac754ebdb4e00">eCP_NRL_LINE_DCL</a> = 0
 , <br />
@@ -189,20 +210,22 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="cp__nrl_8h.html#ac16da4c8006138ef221b02625235a569a37a1e0f8694e58d6555afe65fab6998d">eCP_NRL_STATE_PASSIVE</a> = 2
 , <br />
 &#160;&#160;<a class="el" href="cp__nrl_8h.html#ac16da4c8006138ef221b02625235a569aac3bf004c00fa0ca36f288121eea2885">eCP_NRL_STATE_DISCONNECTED</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="cp__nrl_8h.html#ac16da4c8006138ef221b02625235a569afb90ab3a5d01eb971b61e402a84e4408">eCP_NRL_STATE_NON_REDUNDANT</a> = 4
 <br />
  }</td></tr>
 <tr class="separator:ac16da4c8006138ef221b02625235a569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa2134aa38553a82ff5775698ffc9b5e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cp__nrl_8h.html#aa2134aa38553a82ff5775698ffc9b5e2">CpNrlMboxCounterEvent</a> (uint8_t ubPhyIfV, uint8_t ubBufferIdxV)</td></tr>
-<tr class="separator:aa2134aa38553a82ff5775698ffc9b5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50736eac15c4ebc5ad0883468a21fe9d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cp__nrl_8h.html#a50736eac15c4ebc5ad0883468a21fe9d">CpNrlMboxFlush</a> (uint8_t ubActiveLineV)</td></tr>
-<tr class="separator:a50736eac15c4ebc5ad0883468a21fe9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f99c072bcb81865e455f50aa0dc69a8"><td class="memItemLeft" align="right" valign="top">bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cp__nrl_8h.html#a4f99c072bcb81865e455f50aa0dc69a8">CpNrlMboxCounterEvent</a> (uint8_t ubPhyIfV, uint8_t ubBufferIdxV)</td></tr>
+<tr class="separator:a4f99c072bcb81865e455f50aa0dc69a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8360e96ccf96c80329e4f5a8662908a7"><td class="memItemLeft" align="right" valign="top">bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cp__nrl_8h.html#a8360e96ccf96c80329e4f5a8662908a7">CpNrlMboxFlush</a> (CpPort_ts *ptsPortV)</td></tr>
+<tr class="separator:a8360e96ccf96c80329e4f5a8662908a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5728c19a16324c71364bc220959c2dfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cp__nrl_8h.html#a5728c19a16324c71364bc220959c2dfe">CpNrlMboxTickEvent</a> (void)</td></tr>
 <tr class="separator:a5728c19a16324c71364bc220959c2dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a321f0bb55135f72485b11f01e72bc652"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cp__nrl_8h.html#a321f0bb55135f72485b11f01e72bc652">CpNrlMboxTickLoad</a> (uint8_t ubPhyIfV, uint8_t ubBufferIdxV)</td></tr>
-<tr class="separator:a321f0bb55135f72485b11f01e72bc652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38a38670c19d093e22e1650a41d5fad3"><td class="memItemLeft" align="right" valign="top">bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cp__nrl_8h.html#a38a38670c19d093e22e1650a41d5fad3">CpNrlMboxTickLoad</a> (uint8_t ubPhyIfV, uint8_t ubBufferIdxV)</td></tr>
+<tr class="separator:a38a38670c19d093e22e1650a41d5fad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a22f3a147407cd9885e8d43961f7fe2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCpNrlCoreData__s.html">CpNrlCoreData_ts</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cp__nrl_8h.html#a8a22f3a147407cd9885e8d43961f7fe2">CpNrlCoreData</a> (uint8_t ubPhyIfV)</td></tr>
 <tr class="separator:a8a22f3a147407cd9885e8d43961f7fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59c545c6e9e1dc2685499a2531b50a82"><td class="memItemLeft" align="right" valign="top">CpStatus_tv&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cp__nrl_8h.html#a59c545c6e9e1dc2685499a2531b50a82">CpNrlRegisterDriver</a> (uint8_t ubNrlChannelV, uint8_t ubPhyIfDclV, uint8_t ubPhyIfRclV, <a class="el" href="structCpNrlDriver__s.html">CpNrlDriver_ts</a> *ptsNrlDriverV)</td></tr>
@@ -280,6 +303,38 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a2dc67cbc0c50f09e1e67f0e12fcc3f86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dc67cbc0c50f09e1e67f0e12fcc3f86">&#9670;&nbsp;</a></span>CpNrlFault_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="cp__nrl_8h.html#a2dc67cbc0c50f09e1e67f0e12fcc3f86">CpNrlFault_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>NRL fault simulation definitions. </p>
+<p>The values of the enumeration CpNrlFault_e are used to simulate fault conditions using the function CpNrlFaultSimulation(). </p>
+<p>The NRL fault simulation is only available if the symbol <a class="el" href="group__CP__NRL.html#gab8e1a2e3adb52fb71643448b1fb09234">CP_NRL_FAULT_SIMULATION</a> is set to 1. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2dc67cbc0c50f09e1e67f0e12fcc3f86aa0d4f522dd35ae90309c35486d61c323"></a>eCP_NRL_FAULT_NONE&#160;</td><td class="fielddoc"><p>No fault <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2dc67cbc0c50f09e1e67f0e12fcc3f86a0e7485480b796d30ee6406ef0a7a0daf"></a>eCP_NRL_FAULT_DISCONNECT_DCL&#160;</td><td class="fielddoc"><p>Fault on DCL <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2dc67cbc0c50f09e1e67f0e12fcc3f86a68af66ef40f36a67c11c5ce3f58fd49f"></a>eCP_NRL_FAULT_DISCONNECT_RCL&#160;</td><td class="fielddoc"><p>Fault on RCL <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2dc67cbc0c50f09e1e67f0e12fcc3f86a7e3631e16961c05ae3efdbf7444cb140"></a>eCP_NRL_FAULT_DISCONNECT_ALL&#160;</td><td class="fielddoc"><p>Fault on both lines <br  />
+ </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a09ebe8a89c7c03913c3611be54111c85"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a09ebe8a89c7c03913c3611be54111c85">&#9670;&nbsp;</a></span>CpNrlLine_e</h2>
 
@@ -332,6 +387,9 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="ac16da4c8006138ef221b02625235a569aac3bf004c00fa0ca36f288121eea2885"></a>eCP_NRL_STATE_DISCONNECTED&#160;</td><td class="fielddoc"><p>NRL is is disconnected from CAN <br  />
  </p>
 </td></tr>
+<tr><td class="fieldname"><a id="ac16da4c8006138ef221b02625235a569afb90ab3a5d01eb971b61e402a84e4408"></a>eCP_NRL_STATE_NON_REDUNDANT&#160;</td><td class="fielddoc"><p>NRL is used in non-redundant mode <br  />
+ </p>
+</td></tr>
 </table>
 
 </div>
@@ -364,14 +422,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa2134aa38553a82ff5775698ffc9b5e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2134aa38553a82ff5775698ffc9b5e2">&#9670;&nbsp;</a></span>CpNrlMboxCounterEvent()</h2>
+<a id="a4f99c072bcb81865e455f50aa0dc69a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f99c072bcb81865e455f50aa0dc69a8">&#9670;&nbsp;</a></span>CpNrlMboxCounterEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool CpNrlMboxCounterEvent </td>
+          <td class="memname">bool_t CpNrlMboxCounterEvent </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>ubPhyIfV</em>, </td>
@@ -402,29 +460,29 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a50736eac15c4ebc5ad0883468a21fe9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50736eac15c4ebc5ad0883468a21fe9d">&#9670;&nbsp;</a></span>CpNrlMboxFlush()</h2>
+<a id="a8360e96ccf96c80329e4f5a8662908a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8360e96ccf96c80329e4f5a8662908a7">&#9670;&nbsp;</a></span>CpNrlMboxFlush()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool CpNrlMboxFlush </td>
+          <td class="memname">bool_t CpNrlMboxFlush </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ubActiveLineV</em></td><td>)</td>
+          <td class="paramtype">CpPort_ts *&#160;</td>
+          <td class="paramname"><em>ptsPortV</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ubActiveLineV</td><td>Active CAN line</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptsPortV</td><td>Pointer to CAN port structure</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if mailboxes are flushed</dd></dl>
-<p>The function flushes the receive mailboxes of the Active CAN Line (ACL) after a Fault Detection event occurred. The value for the parameter <em>ubActiveLineV</em> is either <a class="el" href="cp__nrl_8h.html#a09ebe8a89c7c03913c3611be54111c85af81f8ea2b60055c9e4bac754ebdb4e00">eCP_NRL_LINE_DCL</a> or <a class="el" href="cp__nrl_8h.html#a09ebe8a89c7c03913c3611be54111c85a35ce431a562a06f7a9d7b22f8b107e77">eCP_NRL_LINE_RCL</a>. </p>
+<p>The function flushes the receive mailboxes of the Active CAN Line (ACL) after a Fault Detection event occurred. The value for the parameter <em>ptsPortV</em> defines which CAN port has to be flushed. </p>
 <p>The function is implemented inside the CANpie FD driver and <b>shall not be used</b> by the Higher Layer Protocol. </p>
 
 </div>
@@ -449,14 +507,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a321f0bb55135f72485b11f01e72bc652"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a321f0bb55135f72485b11f01e72bc652">&#9670;&nbsp;</a></span>CpNrlMboxTickLoad()</h2>
+<a id="a38a38670c19d093e22e1650a41d5fad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38a38670c19d093e22e1650a41d5fad3">&#9670;&nbsp;</a></span>CpNrlMboxTickLoad()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool CpNrlMboxTickLoad </td>
+          <td class="memname">bool_t CpNrlMboxTickLoad </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>ubPhyIfV</em>, </td>

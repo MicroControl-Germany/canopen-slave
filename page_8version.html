@@ -26,7 +26,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CANopen FD Slave Stack
    </div>
-   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.08</div>
+   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.10</div>
   </td>
  </tr>
  </tbody>
@@ -69,11 +69,22 @@ $(function() {
 <div class="title">Version History current major release </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>Version 6.08 - 2021.02</h2>
+<div class="textblock"><h2>Version 6.10 - 2021.07</h2>
 <ul>
-<li>New function <a class="el" href="cos__mgr_8h.html#a79647921b24fe5a996e4b2b147492fb1" title="Get Product Code of module.">CosMgrGetProductCode()</a></li>
+<li>Fix issue for SDO block transfer</li>
+<li>Fix issue of SYNC cycle time</li>
+<li>Fix issue with NVM enumeration</li>
+<li>New function <a class="el" href="cos__mgr_8h.html#a658ad26f2a00ecab90b425916e3de216">CosMgrOnBootUp()</a></li>
+<li>New function <a class="el" href="cos__mgr_8h.html#af0ae04ac22a54d53dc6c29f64086e24c">CosMgrOnStart()</a></li>
+<li>New function <a class="el" href="cos__sdo_8h.html#a7721c3e6256b2bd919505d80a21c2849" title="Handler for SDO block download.">CosSdoBlkFinal()</a></li>
+<li>Add SDO block download support for SDO client (add-on mini-master)</li>
+<li>Add example for STM32L476G-EVAL board</li>
+</ul>
+<h2>Version 6.08 - 2021.02</h2>
+<ul>
+<li>New function <a class="el" href="cos__mgr_8h.html#a79647921b24fe5a996e4b2b147492fb1">CosMgrGetProductCode()</a></li>
 <li>Improve static code checking</li>
-<li>New symbol ID_MASK_IS_DISABLED</li>
+<li>New symbol <a class="el" href="group__ID__MASK.html#ga18782a001c3a981ec464e54336eccbe9">ID_MASK_IS_DISABLED</a></li>
 <li>Support for Network Redundancy Layer</li>
 <li>Improve NVM tests (PDO storage, CiA 401 storage)</li>
 <li>Test individual bits in error register (1001h)</li>
@@ -103,7 +114,7 @@ $(function() {
 <li>Add new symbols for CANopen FD support (<a class="el" href="cos__conf_8h.html#a5bada5152a1f84187551842b69e40c7b" title="Support CANopen FD.">COS_FD_SUPPORT</a>, <a class="el" href="cos__conf_8h.html#a6a14a97b8116fe97210bc5c3d8aaf7d3" title="Number of logical device profiles.">COS_LOGICAL_PROFILE</a> and <a class="el" href="cos__conf_8h.html#ad49b73a99e3572046d63e367b4162d7c" title="Number of parallel USDO requests.">COS_USDO_NUMBER</a>)</li>
 <li>Update parameter for function <a class="el" href="cos__mgr_8h.html#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a></li>
 <li>Introduce function for object 1000h (Cos301_Idx1000)</li>
-<li>Add <a class="el" href="cos__usdo__srv_8h.html#a6827f704c4b3b1b60d1b7e09c162b819" title="Copy data field from USDO message into value.">CosUsdoCopyMessageToValue()</a> and <a class="el" href="cos__usdo__srv_8h.html#ab0190d78f9285264683a29cdfacd2b0b" title="Copy value into USDO message.">CosUsdoCopyValueToMessage()</a></li>
+<li>Add CosUsdoCopyMessageToValue() and CosUsdoCopyValueToMessage()</li>
 <li>Initialisation of SDO or USDO service depends on configuration</li>
 </ul>
 <h2>History of older major releases</h2>

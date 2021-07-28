@@ -26,7 +26,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CANopen FD Slave Stack
    </div>
-   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.08</div>
+   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.10</div>
   </td>
  </tr>
  </tbody>
@@ -65,7 +65,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_29f239331dc16a526dbfcb33f76a2f2c.html">source</a></li><li class="navelem"><a class="el" href="dir_d3012b80eda00fc63564e3363f5e4112.html">stack-cos</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -103,6 +103,8 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a7721c3e6256b2bd919505d80a21c2849"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__sdo_8h.html#a7721c3e6256b2bd919505d80a21c2849">CosSdoBlkFinal</a> (uint16_t uwIndexV, uint8_t ubSubIndexV)</td></tr>
+<tr class="separator:a7721c3e6256b2bd919505d80a21c2849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50611dff589c7f45be050e3917f3fb06"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__sdo_8h.html#a50611dff589c7f45be050e3917f3fb06">CosSdoBlkUpObjectSize</a> (uint16_t uwIndexV, uint8_t ubSubIndexV)</td></tr>
 <tr class="separator:a50611dff589c7f45be050e3917f3fb06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af328aa154a9ab2476b6becfc5251e468"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__sdo_8h.html#af328aa154a9ab2476b6becfc5251e468">CosSdoCopyMessageToValue</a> (void *pValueV, uint8_t ubDataTypeV)</td></tr>
@@ -119,6 +121,45 @@ Functions</h2></td></tr>
 <tr class="separator:ab3951c1a176e96180ef612d8baec2852"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a7721c3e6256b2bd919505d80a21c2849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7721c3e6256b2bd919505d80a21c2849">&#9670;&nbsp;</a></span>CosSdoBlkFinal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t CosSdoBlkFinal </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>uwIndexV</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>ubSubIndexV</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handler for SDO block download. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">uwIndexV</td><td>Index of object </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ubSubIndexV</td><td>Sub-index of object</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return code for SDO callbacks</dd></dl>
+<p>This function is called by the stack when all data during a SDO block transfer has been written to the device. The application can now check for valid data before a final SDO response is sent. The function is located in cos_user.c. If no data is checked by the application the function shall return eCosSdo_WRITE_OK. </p>
+
+</div>
+</div>
 <a id="a50611dff589c7f45be050e3917f3fb06"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50611dff589c7f45be050e3917f3fb06">&#9670;&nbsp;</a></span>CosSdoBlkUpObjectSize()</h2>
 

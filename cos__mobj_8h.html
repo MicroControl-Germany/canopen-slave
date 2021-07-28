@@ -26,7 +26,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CANopen FD Slave Stack
    </div>
-   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.08</div>
+   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.10</div>
   </td>
  </tr>
  </tbody>
@@ -65,7 +65,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_29f239331dc16a526dbfcb33f76a2f2c.html">source</a></li><li class="navelem"><a class="el" href="dir_077f56d98ab0f751ba8de674eafb538c.html">application</a></li><li class="navelem"><a class="el" href="dir_575e0081d453a362d12b275e6785c91f.html">template-cos</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_059b8d327d09617c411023af730a36c0.html">application</a></li><li class="navelem"><a class="el" href="dir_f11c742974e1d48748f43d8e1a986849.html">template-cos</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -99,7 +99,9 @@ $(function() {
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">2007<sub>h</sub>   </td><td class="markdownTableBodyLeft">Access to character string   </td><td class="markdownTableBodyLeft"><a class="el" href="cos__mobj_8h.html#a30a6e6c8265f10f82827c358673a7b73" title="Index 2007h - Example function 4.">CosMob_Idx2007</a>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">2008<sub>h</sub>   </td><td class="markdownTableBodyLeft">Access to character string   </td><td class="markdownTableBodyLeft">szCosMob_Str2008G[]   </td></tr>
+<td class="markdownTableBodyLeft">2008<sub>h</sub>   </td><td class="markdownTableBodyLeft">Access to character string   </td><td class="markdownTableBodyLeft">szCosMob_Str2008G[]    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">2009<sub>h</sub>   </td><td class="markdownTableBodyLeft">Write-only object, uint32_t value   </td><td class="markdownTableBodyLeft">ulCosMob_Var2009G   </td></tr>
 </table>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for cos_mobj.h:</div>
@@ -155,6 +157,8 @@ Variables</h2></td></tr>
 <tr class="separator:abb931a064585122677f5d15775e4f05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cf930b3e7afabc12b547e4a656e2b8e"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__mobj_8h.html#a0cf930b3e7afabc12b547e4a656e2b8e">szCosMob_Str2008G</a> []</td></tr>
 <tr class="separator:a0cf930b3e7afabc12b547e4a656e2b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bb865fea1f29e2daabe0ecd15753cfe"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__mobj_8h.html#a8bb865fea1f29e2daabe0ecd15753cfe">ulCosMob_Var2009G</a></td></tr>
+<tr class="separator:a8bb865fea1f29e2daabe0ecd15753cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a7e4c50481142d624f2053953fe968e31"></a>
@@ -285,7 +289,7 @@ Variables</h2></td></tr>
 <div class="line">   <a class="code" href="cos__sdo_8h.html#a9f92f9fcc359c26c64e32c5a726ff29d">CosSdoCopyValueToMessage</a>(  (<span class="keywordtype">void</span> *) &amp;uwMyValueG, <a class="code" href="canopen_8h.html#af122a9d57498817ddfb93b1c3716b1c6a3cb0d0950c66dc347ec3fd706781459c">CoDT_UNSIGNED16</a>);</div>
 <div class="line">   <a class="code" href="cos__sdo_8h.html#a9b862e78dfd33f5bf0f6ac9b7e52fca4">CosSdoResponse</a>(<a class="code" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98faa606cdc965b54f45e0df3501aaece55f">eCosSdo_READ2_OK</a>);</div>
 <div class="line">}</div>
-<div class="ttc" id="acanopen_8h_html_af122a9d57498817ddfb93b1c3716b1c6a3cb0d0950c66dc347ec3fd706781459c"><div class="ttname"><a href="canopen_8h.html#af122a9d57498817ddfb93b1c3716b1c6a3cb0d0950c66dc347ec3fd706781459c">CoDT_UNSIGNED16</a></div><div class="ttdeci">@ CoDT_UNSIGNED16</div><div class="ttdef"><b>Definition:</b> canopen.h:551</div></div>
+<div class="ttc" id="acanopen_8h_html_af122a9d57498817ddfb93b1c3716b1c6a3cb0d0950c66dc347ec3fd706781459c"><div class="ttname"><a href="canopen_8h.html#af122a9d57498817ddfb93b1c3716b1c6a3cb0d0950c66dc347ec3fd706781459c">CoDT_UNSIGNED16</a></div><div class="ttdeci">@ CoDT_UNSIGNED16</div><div class="ttdef"><b>Definition:</b> canopen.h:555</div></div>
 <div class="ttc" id="acos__defs_8h_html_a5f2ea5d4c0d5cff718531f6f83b0f98faa606cdc965b54f45e0df3501aaece55f"><div class="ttname"><a href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98faa606cdc965b54f45e0df3501aaece55f">eCosSdo_READ2_OK</a></div><div class="ttdeci">@ eCosSdo_READ2_OK</div><div class="ttdef"><b>Definition:</b> cos_defs.h:292</div></div>
 <div class="ttc" id="acos__sdo_8h_html_a9b862e78dfd33f5bf0f6ac9b7e52fca4"><div class="ttname"><a href="cos__sdo_8h.html#a9b862e78dfd33f5bf0f6ac9b7e52fca4">CosSdoResponse</a></div><div class="ttdeci">void CosSdoResponse(uint8_t ubResponseV)</div><div class="ttdoc">Evaluate SDO messages.</div></div>
 <div class="ttc" id="acos__sdo_8h_html_a9f92f9fcc359c26c64e32c5a726ff29d"><div class="ttname"><a href="cos__sdo_8h.html#a9f92f9fcc359c26c64e32c5a726ff29d">CosSdoCopyValueToMessage</a></div><div class="ttdeci">void CosSdoCopyValueToMessage(void *pValueV, uint8_t ubDataTypeV)</div><div class="ttdoc">Copy value into SDO message.</div></div>
@@ -525,6 +529,29 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Global variable for data direct access via SDO (read/write) and PDO (read only). </p>
+
+</div>
+</div>
+<a id="a8bb865fea1f29e2daabe0ecd15753cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bb865fea1f29e2daabe0ecd15753cfe">&#9670;&nbsp;</a></span>ulCosMob_Var2009G</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ulCosMob_Var2009G</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Global variable for write-only via SDO </p>
 
 </div>
 </div>

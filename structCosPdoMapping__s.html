@@ -26,7 +26,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CANopen FD Slave Stack
    </div>
-   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.08</div>
+   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.10</div>
   </td>
  </tr>
  </tbody>
@@ -72,14 +72,12 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The structure <em><a class="el" href="structCosPdoMapping__s.html" title="PDO mapping parameter (dynamic mapping)">CosPdoMapping_s</a></em> describes the mappable object of a device with <b>dynamic PDO mapping</b>. Dynamic PDO mapping is selected by setting the symbol <a class="el" href="cos__conf_8h.html#a7373184e34672bcbfbb62749349e0be2" title="Implementation of PDO mapping.">COS_PDO_MAPPING</a> to a value </p><blockquote class="doxtable">
-<p>0. </p>
-</blockquote>
+<div class="textblock"><p>The structure <em><a class="el" href="structCosPdoMapping__s.html" title="PDO mapping parameter (dynamic mapping)">CosPdoMapping_s</a></em> describes the mappable objects of a device with <b>dynamic PDO mapping</b>. Dynamic PDO mapping is selected by setting the symbol <a class="el" href="cos__conf_8h.html#a7373184e34672bcbfbb62749349e0be2" title="Implementation of PDO mapping.">COS_PDO_MAPPING</a> to a value greater than 0. </p>
 <p>The element <em><a class="el" href="structCosPdoMapping__s.html#a90e47007333e2242486982ec099d689a">ulMapEntry</a></em> describes a mapping entry (see CiA 301). The void pointer <em><a class="el" href="structCosPdoMapping__s.html#a14fa7c1c2e066e94b1ecc482ae2188fd">pvdData</a></em> links the mapping entry to application data. The function pointer <em><a class="el" href="structCosPdoMapping__s.html#ac79d7a1bb8a81987fc412641ba4264f1">pfnHandler</a></em> links to a handler that is called after reception of a RPDO or before transmission of a TPDO. </p>
 <p>If dynamic PDO mapping is used, the possible mapping entries of the application are defined in several *.inc files. The file cos_user_rpdo.inc contains a list with valid mapping entries for <br  />
- Receive-PDOs and the cos_user_tpdo.inc a list with mapping entries for the Transmit-PDOs. In addition to the mapping values, callback handlers can be added as an option. For a Receive-PDO the handler is called <b>after</b> reception, for a Transmit-PDO the handler is called <b>before</b> transmision</p>
-<dl class="section attention"><dt>Attention</dt><dd>At reception of a PDO the data will be distribute to all mapped values defined by <a class="el" href="structCosPdoMapping__s.html#a14fa7c1c2e066e94b1ecc482ae2188fd">pvdData</a> <b>before</b> the corresponding handler (<a class="el" href="structCosPdoMapping__s.html#ac79d7a1bb8a81987fc412641ba4264f1">pfnHandler</a>) is called. At sent of a PDO the data will be collect from all mapped values defined by <a class="el" href="structCosPdoMapping__s.html#a14fa7c1c2e066e94b1ecc482ae2188fd">pvdData</a> <b>after</b> the corresponding handler (<a class="el" href="structCosPdoMapping__s.html#ac79d7a1bb8a81987fc412641ba4264f1">pfnHandler</a>) has been called.</dd></dl>
-<p>For example, the available mapping entries for receive PDO that are defined in cos_user_rpdo.inc are: </p><div class="fragment"><div class="line">{</div>
+ RPDOs and the cos_user_tpdo.inc a list with mapping entries for the TrPDOs. In addition to the mapping entries, callback handlers can be added as an option. For a RPDO the handler is called <b>after</b> reception, for a Transmit-PDO the handler is called <b>before</b> transmission. </p>
+<p>On reception of a PDO data will be distributed to all mapped values defined by <a class="el" href="structCosPdoMapping__s.html#a14fa7c1c2e066e94b1ecc482ae2188fd">pvdData</a> <b>before</b> the corresponding handler (<a class="el" href="structCosPdoMapping__s.html#ac79d7a1bb8a81987fc412641ba4264f1">pfnHandler</a>) is called. On transmission of a PDO the data will be collected from all mapped values defined by <a class="el" href="structCosPdoMapping__s.html#a14fa7c1c2e066e94b1ecc482ae2188fd">pvdData</a> <b>after</b> the corresponding handler (<a class="el" href="structCosPdoMapping__s.html#ac79d7a1bb8a81987fc412641ba4264f1">pfnHandler</a>) has been called.</p>
+<p>As an example, the available mapping entries for a RPDO defined in cos_user_rpdo.inc are: </p><div class="fragment"><div class="line">{</div>
 <div class="line">   <span class="comment">// mapping entry Index 2002h Sub-Idex 00h and 8 bit long</span></div>
 <div class="line">   .ulMapEntry  = 0x20020008,</div>
 <div class="line">   <span class="comment">// pointer to the corresponding variable</span></div>
@@ -94,13 +92,13 @@ $(function() {
 <div class="line">   <span class="comment">// pointer to the corresponding variable</span></div>
 <div class="line">   .pvdData     = &amp;<a class="code" href="cos__mobj_8h.html#afc9ff561f14e685635607415d305eabb">uwCosMob_Var2003G</a>,</div>
 <div class="line">   <span class="comment">// no handler should be triggered after value reception and modification</span></div>
-<div class="line">   .pfnHandler  = 0</div>
+<div class="line">   .pfnHandler  = 0L</div>
 <div class="line">},</div>
 <div class="ttc" id="acos__mobj_8h_html_a1f9843d97fa0519e3d84885551da73bc"><div class="ttname"><a href="cos__mobj_8h.html#a1f9843d97fa0519e3d84885551da73bc">ubCosMob_Var2002G</a></div><div class="ttdeci">uint8_t ubCosMob_Var2002G</div></div>
 <div class="ttc" id="acos__mobj_8h_html_a7a2854fa48737fd20963404f6fcec0dc"><div class="ttname"><a href="cos__mobj_8h.html#a7a2854fa48737fd20963404f6fcec0dc">CosMob_PdoRcvHandler</a></div><div class="ttdeci">void CosMob_PdoRcvHandler(uint32_t ulMapEntryV)</div><div class="ttdoc">Demo implementation of callback handler for a mapping entry.</div></div>
 <div class="ttc" id="acos__mobj_8h_html_afc9ff561f14e685635607415d305eabb"><div class="ttname"><a href="cos__mobj_8h.html#afc9ff561f14e685635607415d305eabb">uwCosMob_Var2003G</a></div><div class="ttdeci">uint16_t uwCosMob_Var2003G</div></div>
-</div><!-- fragment --><p> Starting from this list you can use the function <a class="el" href="cos__pdo_8h.html#a4b72f4c9d77e77fa19038e2f8cd87e1a" title="Add new or modify previous mapping entry of a RPDO.">CosPdoRcvMapAdd()</a> to map the entries to the corresponding position in the PDO. When this PDO is received, the variables <a class="el" href="cos__mobj_8h.html#a1f9843d97fa0519e3d84885551da73bc">ubCosMob_Var2002G</a> and/or <a class="el" href="cos__mobj_8h.html#afc9ff561f14e685635607415d305eabb">uwCosMob_Var2003G</a> are set automatically and the handler <a class="el" href="cos__mobj_8h.html#a7a2854fa48737fd20963404f6fcec0dc" title="Demo implementation of callback handler for a mapping entry.">CosMob_PdoRcvHandler()</a> is called.</p>
-<p>The cos_user_tpdo.inc contains following available transmit PDO mapping entries: </p><div class="fragment"><div class="line">{</div>
+</div><!-- fragment --><p> Starting from this list you can use the function <a class="el" href="cos__pdo_8h.html#a4b72f4c9d77e77fa19038e2f8cd87e1a">CosPdoRcvMapAdd()</a> to map the entries to the desired position inside the PDO. Upon PDO reception, the variables <a class="el" href="cos__mobj_8h.html#a1f9843d97fa0519e3d84885551da73bc">ubCosMob_Var2002G</a> and/or <a class="el" href="cos__mobj_8h.html#afc9ff561f14e685635607415d305eabb">uwCosMob_Var2003G</a> are updated and the handler <a class="el" href="cos__mobj_8h.html#a7a2854fa48737fd20963404f6fcec0dc" title="Demo implementation of callback handler for a mapping entry.">CosMob_PdoRcvHandler()</a> is called.</p>
+<p>The file cos_user_tpdo.inc contains an example for TPDO mapping entries: </p><div class="fragment"><div class="line">{</div>
 <div class="line">   <span class="comment">// mapping entry Index 2002h Sub-Idex 00h and 8 bit long</span></div>
 <div class="line">   .ulMapEntry  = 0x20040020,</div>
 <div class="line">   <span class="comment">// pointer to the corresponding variable</span></div>
@@ -121,8 +119,7 @@ $(function() {
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="acos__mobj_8h_html_a26a4c765402ab04e03bc3c9fa589cd1c"><div class="ttname"><a href="cos__mobj_8h.html#a26a4c765402ab04e03bc3c9fa589cd1c">CosMob_PdoTrmHandler</a></div><div class="ttdeci">void CosMob_PdoTrmHandler(uint32_t ulMapEntryV)</div><div class="ttdoc">Demo implementation of callback handler for a mapping entry.</div></div>
 <div class="ttc" id="acos__mobj_8h_html_abb931a064585122677f5d15775e4f05b"><div class="ttname"><a href="cos__mobj_8h.html#abb931a064585122677f5d15775e4f05b">ulCosMob_Var2004G</a></div><div class="ttdeci">uint32_t ulCosMob_Var2004G</div></div>
-</div><!-- fragment --><p> Starting from this list you can use the function <a class="el" href="cos__pdo_8h.html#a9f891237793411810a849527effb0c46" title="Add new or modify previous mapping entry of a TPDO.">CosPdoTrmMapAdd()</a> to map the entries to the corresponding position in the PDO. When sending this PDO, <a class="el" href="cos__mobj_8h.html#a26a4c765402ab04e03bc3c9fa589cd1c" title="Demo implementation of callback handler for a mapping entry.">CosMob_PdoTrmHandler()</a> will be called and than the content of the variable <a class="el" href="cos__mobj_8h.html#abb931a064585122677f5d15775e4f05b">ulCosMob_Var2004G</a> will be copied automatically into the send PDO.</p>
-<dl class="section warning"><dt>Warning</dt><dd>This struct is only used if <a class="el" href="cos__conf_8h.html#a7373184e34672bcbfbb62749349e0be2" title="Implementation of PDO mapping.">COS_PDO_MAPPING</a> &gt; 0 </dd></dl>
+</div><!-- fragment --><p> Starting from this list you can use the function <a class="el" href="cos__pdo_8h.html#a9f891237793411810a849527effb0c46">CosPdoTrmMapAdd()</a> to map the entries to the desired position in the PDO. Upon transmission, the function <a class="el" href="cos__mobj_8h.html#a26a4c765402ab04e03bc3c9fa589cd1c" title="Demo implementation of callback handler for a mapping entry.">CosMob_PdoTrmHandler()</a> will be called and the content of the variables <a class="el" href="cos__mobj_8h.html#abb931a064585122677f5d15775e4f05b">ulCosMob_Var2004G</a> and/or uqCosMob_Var2005G will be copied into the PDO payload. </p>
 </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for CosPdoMapping_s:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -191,7 +188,7 @@ Data Fields</h2></td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Index   </td><td class="markdownTableBodyLeft">Sub-Index   </td><td class="markdownTableBodyLeft">Length   </td></tr>
 </table>
-<p>The functions #CosPdoGeMapIndex(), #CosPdoGeMapSubIndex() and #CosPdoGeMapLength() can be used to access the individual values. </p>
+<p>The functions <a class="el" href="cos__pdo_8h.html#ae9f1de77a37b7439075bbea9307d6a19">CosPdoGetMapIndex()</a>, <a class="el" href="cos__pdo_8h.html#a2da3ef5a045537caf1661ff30981e3e4">CosPdoGetMapSubIndex()</a> and <a class="el" href="cos__pdo_8h.html#a0ec8c24d5f1ecf5cf3084ed29914eba6">CosPdoGetMapLength()</a> can be used to access the individual values. </p>
 
 </div>
 </div>

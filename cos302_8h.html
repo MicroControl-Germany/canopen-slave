@@ -26,7 +26,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CANopen FD Slave Stack
    </div>
-   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.08</div>
+   <div id="projectbrief">Making your systems precise, reliable and high-quality - Version 6.10</div>
   </td>
  </tr>
  </tbody>
@@ -65,13 +65,12 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_29f239331dc16a526dbfcb33f76a2f2c.html">source</a></li><li class="navelem"><a class="el" href="dir_d3012b80eda00fc63564e3363f5e4112.html">stack-cos</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">cos302.h File Reference</div>  </div>
 </div><!--header-->
@@ -131,15 +130,6 @@ Macros</h2></td></tr>
 <tr class="separator:a1bde70a6f6f6900a3e206ff0f73e607c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2ba212651434627e1515f1d65c2f461"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos302_8h.html#aa2ba212651434627e1515f1d65c2f461">COS_DS302_NV_UNSIGNED32</a>&#160;&#160;&#160;8</td></tr>
 <tr class="separator:aa2ba212651434627e1515f1d65c2f461"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a63776859b146e6c4e9a0175d45f3614a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos302_8h.html#a63776859b146e6c4e9a0175d45f3614a">Cos302_ParmLoad</a> (void)</td></tr>
-<tr class="separator:a63776859b146e6c4e9a0175d45f3614a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc28321bc7ca9e5fcc9ba44e63700429"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos302_8h.html#abc28321bc7ca9e5fcc9ba44e63700429">Cos302_ParmSave</a> (void)</td></tr>
-<tr class="separator:abc28321bc7ca9e5fcc9ba44e63700429"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65119869bba474bdaa16d6676f41fa63"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos302_8h.html#a65119869bba474bdaa16d6676f41fa63">Cos302_NetworkVariable</a> (uint8_t ubSubIndexV, uint8_t ubReqCodeV)</td></tr>
-<tr class="separator:a65119869bba474bdaa16d6676f41fa63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a1bde70a6f6f6900a3e206ff0f73e607c"></a>
@@ -184,87 +174,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Number of supported UNSIGNED8 network variables. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a65119869bba474bdaa16d6676f41fa63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65119869bba474bdaa16d6676f41fa63">&#9670;&nbsp;</a></span>Cos302_NetworkVariable()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t Cos302_NetworkVariable </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ubSubIndexV</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ubReqCodeV</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read / Write network variables via SDO access. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ubSubIndexV</td><td>- sub-index </td></tr>
-    <tr><td class="paramname">ubReqCodeV</td><td>- read / write access </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>SDO response code (enumeration <a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98f" title="Return code for SDO callbacks.">CosSdo_e</a>) </dd></dl>
-
-</div>
-</div>
-<a id="a63776859b146e6c4e9a0175d45f3614a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63776859b146e6c4e9a0175d45f3614a">&#9670;&nbsp;</a></span>Cos302_ParmLoad()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t Cos302_ParmLoad </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Load Parameter. </p>
-<dl class="section return"><dt>Returns</dt><dd>Status code from <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296" title="Error Codes of protocol stack.">CosErr_e</a> enumeration </dd></dl>
-
-</div>
-</div>
-<a id="abc28321bc7ca9e5fcc9ba44e63700429"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc28321bc7ca9e5fcc9ba44e63700429">&#9670;&nbsp;</a></span>Cos302_ParmSave()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t Cos302_ParmSave </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Store Parameter. </p>
-<dl class="section return"><dt>Returns</dt><dd>Status code from <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296" title="Error Codes of protocol stack.">CosErr_e</a> enumeration </dd></dl>
 
 </div>
 </div>
