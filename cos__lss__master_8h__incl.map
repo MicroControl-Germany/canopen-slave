@@ -1,8 +1,0 @@
-<map id="cos_lss_master.h" name="cos_lss_master.h">
-<area shape="rect" id="node1" title="CANopen Mini&#45;Master &#45; Layer Setting Services." alt="" coords="139,5,264,32"/>
-<area shape="rect" id="node2" href="$canopen_8h.html" title="General CANopen definitions." alt="" coords="159,80,243,107"/>
-<area shape="rect" id="node3" href="$mc__compiler_8h.html" title="Definition of compiler independent data types." alt="" coords="147,155,256,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,229,139,256"/>
-<area shape="rect" id="node5" title=" " alt="" coords="163,229,239,256"/>
-<area shape="rect" id="node6" title=" " alt="" coords="263,229,329,256"/>
-</map>
