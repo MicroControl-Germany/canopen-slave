@@ -42,7 +42,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectbrief">CANopen (FD) Slave Documentation</div>
-   <div id="projectnumber">Version 6.14.00</div>
+   <div id="projectnumber">Version 6.14.02</div>
   </td>
  </tr>
  </tbody>
@@ -285,6 +285,18 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3a8d547f644938cb65c0f6adcbbbe6fded">eLSS_CMD_MODE_SEL_RESPONSE</a> = 68
 , <br />
+&#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3aa4ab80a5efab1fb73152a18b8b637eb3">eLSS_CMD_IDENT_RMT_SLAVE_VENDOR_ID</a> = 70
+, <br />
+&#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3a9379ec740414d9ce963f688ac89b5c95">eLSS_CMD_IDENT_RMT_SLAVE_PRODUCT_CODE</a> = 71
+, <br />
+&#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3a158500cdcf2cf77f582f4427084c27e0">eLSS_CMD_IDENT_RMT_SLAVE_REVISION_LOW</a> = 72
+, <br />
+&#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3a99e66335b09196ba7e765b031921d685">eLSS_CMD_IDENT_RMT_SLAVE_REVISION_HIGH</a> = 73
+, <br />
+&#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3a2cf43fd146e2cf9ca6335544770182ae">eLSS_CMD_IDENT_RMT_SLAVE_SERIAL_LOW</a> = 74
+, <br />
+&#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3a04f7acbbc06b4483a25547b0ce51d0c8">eLSS_CMD_IDENT_RMT_SLAVE_SERIAL_HIGH</a> = 75
+, <br />
 &#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3a45434316cd8567f724808ad0949d4219">eLSS_CMD_IDENT_SLAVE_NCFG_REQ</a> = 76
 , <br />
 &#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3a2e5098ebcd9367a319e2ca73c995b0d5">eLSS_CMD_IDENT_SLAVE_RESP</a> = 79
@@ -293,15 +305,15 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3a2c8f4f5e3043fc439d81b32b0e7f5e21">eLSS_CMD_FASTSCAN</a> = 81
 , <br />
-&#160;&#160;<b>eLSS_CMD_INQUIRE_VENDOR_ID</b> = 90
+&#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3aa0d4d710874e3b23ddc2299e2682b5a6">eLSS_CMD_INQUIRE_VENDOR_ID</a> = 90
 , <br />
-&#160;&#160;<b>eLSS_CMD_INQUIRE_PRODUCT_CODE</b> = 91
+&#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3ae80051b92199d9a1342c02948a9c5cc8">eLSS_CMD_INQUIRE_PRODUCT_CODE</a> = 91
 , <br />
-&#160;&#160;<b>eLSS_CMD_INQUIRE_REVISION_NUM</b> = 92
+&#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3a95a435cbba1cd5e633c27f58d4fb7531">eLSS_CMD_INQUIRE_REVISION_NUM</a> = 92
 , <br />
-&#160;&#160;<b>eLSS_CMD_INQUIRE_SERIAL_NUM</b> = 93
+&#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3af4ee7870c02a00b35f0b2b17a5801d85">eLSS_CMD_INQUIRE_SERIAL_NUM</a> = 93
 , <br />
-&#160;&#160;<b>eLSS_CMD_INQUIRE_NODE_ID</b> = 94
+&#160;&#160;<a class="el" href="canopen_8h.html#aab9a1d6a321f8478e5f4c1c410f85ad3a770cdf8e3e13d6ff12d95504dd503e88">eLSS_CMD_INQUIRE_NODE_ID</a> = 94
 , <br />
 &#160;&#160;<b>eLSS_CMD_UNKNOWN</b> = 99
 <br />
@@ -497,6 +509,24 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="aab9a1d6a321f8478e5f4c1c410f85ad3a8d547f644938cb65c0f6adcbbbe6fded" name="aab9a1d6a321f8478e5f4c1c410f85ad3a8d547f644938cb65c0f6adcbbbe6fded"></a>eLSS_CMD_MODE_SEL_RESPONSE&#160;</td><td class="fielddoc"><p>Switch mode selective - LSS slave response (44h - 68dec) <br  />
  </p>
 </td></tr>
+<tr><td class="fieldname"><a id="aab9a1d6a321f8478e5f4c1c410f85ad3aa4ab80a5efab1fb73152a18b8b637eb3" name="aab9a1d6a321f8478e5f4c1c410f85ad3aa4ab80a5efab1fb73152a18b8b637eb3"></a>eLSS_CMD_IDENT_RMT_SLAVE_VENDOR_ID&#160;</td><td class="fielddoc"><p>Identify remote slave, vendor-id command (46h - 70dec) <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aab9a1d6a321f8478e5f4c1c410f85ad3a9379ec740414d9ce963f688ac89b5c95" name="aab9a1d6a321f8478e5f4c1c410f85ad3a9379ec740414d9ce963f688ac89b5c95"></a>eLSS_CMD_IDENT_RMT_SLAVE_PRODUCT_CODE&#160;</td><td class="fielddoc"><p>Identify remote slave, product-code command (47h - 71dec) <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aab9a1d6a321f8478e5f4c1c410f85ad3a158500cdcf2cf77f582f4427084c27e0" name="aab9a1d6a321f8478e5f4c1c410f85ad3a158500cdcf2cf77f582f4427084c27e0"></a>eLSS_CMD_IDENT_RMT_SLAVE_REVISION_LOW&#160;</td><td class="fielddoc"><p>Identify remote slave, revision-number low command (48h - 72dec) <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aab9a1d6a321f8478e5f4c1c410f85ad3a99e66335b09196ba7e765b031921d685" name="aab9a1d6a321f8478e5f4c1c410f85ad3a99e66335b09196ba7e765b031921d685"></a>eLSS_CMD_IDENT_RMT_SLAVE_REVISION_HIGH&#160;</td><td class="fielddoc"><p>Identify remote slave, revision-number high command (49h - 73dec) <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aab9a1d6a321f8478e5f4c1c410f85ad3a2cf43fd146e2cf9ca6335544770182ae" name="aab9a1d6a321f8478e5f4c1c410f85ad3a2cf43fd146e2cf9ca6335544770182ae"></a>eLSS_CMD_IDENT_RMT_SLAVE_SERIAL_LOW&#160;</td><td class="fielddoc"><p>Identify remote slave, serial-number low command (4Ah - 74dec) <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aab9a1d6a321f8478e5f4c1c410f85ad3a04f7acbbc06b4483a25547b0ce51d0c8" name="aab9a1d6a321f8478e5f4c1c410f85ad3a04f7acbbc06b4483a25547b0ce51d0c8"></a>eLSS_CMD_IDENT_RMT_SLAVE_SERIAL_HIGH&#160;</td><td class="fielddoc"><p>Identify remote slave, serial-number high command (4Bh - 75dec) <br  />
+ </p>
+</td></tr>
 <tr><td class="fieldname"><a id="aab9a1d6a321f8478e5f4c1c410f85ad3a45434316cd8567f724808ad0949d4219" name="aab9a1d6a321f8478e5f4c1c410f85ad3a45434316cd8567f724808ad0949d4219"></a>eLSS_CMD_IDENT_SLAVE_NCFG_REQ&#160;</td><td class="fielddoc"><p>Identify non-configured slave request (4Ch - 76dec) <br  />
  </p>
 </td></tr>
@@ -507,6 +537,21 @@ Enumerations</h2></td></tr>
  </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aab9a1d6a321f8478e5f4c1c410f85ad3a2c8f4f5e3043fc439d81b32b0e7f5e21" name="aab9a1d6a321f8478e5f4c1c410f85ad3a2c8f4f5e3043fc439d81b32b0e7f5e21"></a>eLSS_CMD_FASTSCAN&#160;</td><td class="fielddoc"><p>Fastscan command (51h - 81dec) <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aab9a1d6a321f8478e5f4c1c410f85ad3aa0d4d710874e3b23ddc2299e2682b5a6" name="aab9a1d6a321f8478e5f4c1c410f85ad3aa0d4d710874e3b23ddc2299e2682b5a6"></a>eLSS_CMD_INQUIRE_VENDOR_ID&#160;</td><td class="fielddoc"><p>Inquire identity, vendor ID command (5Ah - 90dec) <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aab9a1d6a321f8478e5f4c1c410f85ad3ae80051b92199d9a1342c02948a9c5cc8" name="aab9a1d6a321f8478e5f4c1c410f85ad3ae80051b92199d9a1342c02948a9c5cc8"></a>eLSS_CMD_INQUIRE_PRODUCT_CODE&#160;</td><td class="fielddoc"><p>Inquire identity, product code command (5Bh - 91dec) <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aab9a1d6a321f8478e5f4c1c410f85ad3a95a435cbba1cd5e633c27f58d4fb7531" name="aab9a1d6a321f8478e5f4c1c410f85ad3a95a435cbba1cd5e633c27f58d4fb7531"></a>eLSS_CMD_INQUIRE_REVISION_NUM&#160;</td><td class="fielddoc"><p>Inquire identity, revision number command (5Ch - 92dec) <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aab9a1d6a321f8478e5f4c1c410f85ad3af4ee7870c02a00b35f0b2b17a5801d85" name="aab9a1d6a321f8478e5f4c1c410f85ad3af4ee7870c02a00b35f0b2b17a5801d85"></a>eLSS_CMD_INQUIRE_SERIAL_NUM&#160;</td><td class="fielddoc"><p>Inquire identity, serial number command (5Dh - 93dec) <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aab9a1d6a321f8478e5f4c1c410f85ad3a770cdf8e3e13d6ff12d95504dd503e88" name="aab9a1d6a321f8478e5f4c1c410f85ad3a770cdf8e3e13d6ff12d95504dd503e88"></a>eLSS_CMD_INQUIRE_NODE_ID&#160;</td><td class="fielddoc"><p>Inquire identity, node ID command (5Eh - 94dec) <br  />
  </p>
 </td></tr>
 </table>
@@ -619,7 +664,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a class="el" href="canopen_8h.html">canopen.h</a></li>
-    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Tue Jul 25 2023 </li>
+    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Tue Aug 1 2023 </li>
   </ul>
 </div>
 </body>
