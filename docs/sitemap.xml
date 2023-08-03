@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_references.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_api_overview.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_examples.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_getting_started.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_api_templates.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_api_canpie.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_api_hal.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_api_stack.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_add_on_overview.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_example_start.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_example_pdo_com.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_example_pdo_map.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_ex_board_STM32G474E_EVAL.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_ex_board_STM32L476G_EVAL.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__conf_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__demo__app_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_example_main.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__mobj_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_example_user.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/canpie_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cp__core_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cp__fifo_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cp__msg_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/mc__cpu_8h.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/mc__nvm_8h.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/mc__tmr_8h.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/mc__wdt_8h.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/mc__compiler_8h.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__sdo_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__usdo__srv_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__pdo_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__nmt_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__emcy_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__sync_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__time_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__lss_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/canopen_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__defs_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__dict_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__led_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__mgr_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_add_on_cia_401.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_add_on_cia_406.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_add_on_safety.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structCosPdoCom__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structCosPdoMapping__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/group__CP__CONF.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/dir_059b8d327d09617c411023af730a36c0.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/dir_f11c742974e1d48748f43d8e1a986849.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos301_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__nvm_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos302_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos401di_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos401do_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__safety_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structCosPdoMap__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structCosTimeOfDay__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structCpTime__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structCpCanMsg__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structCpHdi__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structCpStatistic__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structCpState__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/group__CP__VERSION.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/group__CP__MASK.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/group__CP__MSG__CTRL.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/dir_5621f0c32b973146c7a32c8fe78d1bfb.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structCpFifo__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/deprecated.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/dir_e31421c8d11a714f997d94dfd878485b.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structMcTmrFunc__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structMcTmrSoft__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/unionFloat__u.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/dir_6887179d8fe86910a5bf36fb6ffab179.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/todo.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/dir_ab9ddd2c2615ef270f1f12625803a92d.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/group__NODE__STATE.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/group__EMCY__CODES.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/group__ID__MASK.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/group__SDO__ERR.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structCosDicEntry__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/group__COS__DS401__VERSION.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos_ds401_changelog.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos401ai_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos401ao_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/group__COS__DS406__VERSION.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos406_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/group__COS__SAFETY__VERSION.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__nvm__user_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/dir_1556766a54ca70d6e09250deb222f627.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/dir_17fbd31ce5a75d8e8747c6b55e4accf6.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cp__nrl_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/mc__fifo_8h.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos303_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/cos__nrl_8h.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/group__DS406.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/dir_3957ab0e6272c2a5d079dd0fa0986319.html</loc>
+  <lastmod>2023-08-01T14:36:48+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/group__CP__NRL.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structCpNrlDriver__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structCpNrlState__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structCpNrlCoreData__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/group__CP__NRL__VERSION.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://microcontrol-germany.github.io/canopen-slave/structMcFifoCtrl__s.html</loc>
+  <lastmod>2023-08-01T14:36:49+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+
+
+</urlset>
