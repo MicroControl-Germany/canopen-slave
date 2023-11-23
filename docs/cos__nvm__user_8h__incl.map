@@ -1,9 +1,15 @@
 <map id="cos_nvm_user.h" name="cos_nvm_user.h">
-<area shape="rect" id="node1" title="CANopen Slave Stack &#45; Non&#45;volatile memory locations." alt="" coords="86,5,203,31"/>
-<area shape="rect" id="node2" href="$cos__conf_8h.html" title="CANopen Slave Stack &#45; General configuration ." alt="" coords="47,79,133,104"/>
-<area shape="rect" id="node3" href="$mc__nvm_8h.html" title="MCL &#45; access to non&#45;volatile memory ." alt="" coords="158,79,241,104"/>
-<area shape="rect" id="node4" href="$mc__compiler_8h.html" title="Definition of compiler independent data types ." alt="" coords="146,152,253,177"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,225,137,251"/>
-<area shape="rect" id="node6" title=" " alt="" coords="162,225,237,251"/>
-<area shape="rect" id="node7" title=" " alt="" coords="261,225,327,251"/>
+<area shape="rect" id="Node000001" title="CANopen Slave Stack &#45; Non&#45;volatile memory locations." alt="" coords="85,5,201,31"/>
+<area shape="rect" id="Node000002" href="$cos__conf_8h.html" title="CANopen Slave Stack &#45; General configuration ." alt="" coords="47,79,132,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,33,110,68,106,65,132,30"/>
+<area shape="rect" id="Node000003" href="$mc__nvm_8h.html" title="MCL &#45; access to non&#45;volatile memory ." alt="" coords="157,79,239,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,30,181,65,177,68,150,33"/>
+<area shape="rect" id="Node000004" href="$mc__compiler_8h.html" title="Definition of compiler independent data types ." alt="" coords="145,153,250,178"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="200,105,200,137,195,137,195,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,226,137,252"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="177,181,107,221,104,216,175,177"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="161,226,235,252"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="200,179,200,211,195,211,195,179"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="259,226,323,252"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="215,177,265,215,262,219,212,181"/>
 </map>

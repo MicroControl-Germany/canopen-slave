@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['mimxrt1170_5fevk_20board_0',['MIMXRT1170_EVK board',['../cos_ex_board_MIMXRT1170_EVK.html',1,'']]]
+  ['deprecated_20list_0',['Deprecated List',['../deprecated.html',1,'']]],
+  ['device_20profile_20cia_20401_1',['CANopen Device Profile CiA 401',['../cos_add_on_cia_401.html',1,'']]],
+  ['device_20profile_20cia_20406_2',['CANopen Device Profile CiA 406',['../cos_add_on_cia_406.html',1,'']]],
+  ['dk_20board_3',['STM32H735G-DK board',['../cos_ex_board_STM32H735G_DK.html',1,'']]]
 ];

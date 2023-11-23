@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['identifier_20mask_20values_0',['Identifier mask values',['../group__ID__MASK.html',1,'']]]
+  ['emcy_20error_20codes_0',['EMCY error codes',['../group__EMCY__CODES.html',1,'']]],
+  ['error_20codes_1',['error codes',['../group__EMCY__CODES.html',1,'EMCY error codes'],['../group__SDO__ERR.html',1,'SDO error codes']]]
 ];

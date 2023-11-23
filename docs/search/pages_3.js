@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getting_20started_0',['Getting started',['../cos_getting_started.html',1,'']]]
+  ['5_20releases_0',['Version History for major 5 releases',['../cos_version_5.html',1,'']]]
 ];
