@@ -42,7 +42,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectbrief">CANopen Slave Documentation</div>
-   <div id="projectnumber">Version 6.14.04</div>
+   <div id="projectnumber">Version 6.16.02</div>
   </td>
  </tr>
  </tbody>
@@ -139,8 +139,6 @@ Macros</h2></td></tr>
 <tr class="separator:a5d57ee3da661221bd2af7e7ad922c708"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ffb38f9e72a77c72e3ae6737e9fc75c" id="r_a5ffb38f9e72a77c72e3ae6737e9fc75c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__conf_8h.html#a5ffb38f9e72a77c72e3ae6737e9fc75c">COS_DS404_AI_SCALING</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a5ffb38f9e72a77c72e3ae6737e9fc75c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefc95bf3ad5c1c0d6fb3a2c021acb109" id="r_aefc95bf3ad5c1c0d6fb3a2c021acb109"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__conf_8h.html#aefc95bf3ad5c1c0d6fb3a2c021acb109">COS_DS404_AL</a>&#160;&#160;&#160;0</td></tr>
-<tr class="separator:aefc95bf3ad5c1c0d6fb3a2c021acb109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe1f40e383386af69025a8d1bb4afa07" id="r_abe1f40e383386af69025a8d1bb4afa07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__conf_8h.html#abe1f40e383386af69025a8d1bb4afa07">COS_DS404_AO</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:abe1f40e383386af69025a8d1bb4afa07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae90b40621f2b1e0c30749fe57ee9306f" id="r_ae90b40621f2b1e0c30749fe57ee9306f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__conf_8h.html#ae90b40621f2b1e0c30749fe57ee9306f">COS_DS404_DT_INT16</a>&#160;&#160;&#160;1</td></tr>
@@ -225,6 +223,8 @@ Macros</h2></td></tr>
 <tr class="separator:a930650e4a908e09392b8f49438096e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae7f25c5cc464b73ceb2e885bab956a5" id="r_aae7f25c5cc464b73ceb2e885bab956a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__conf_8h.html#aae7f25c5cc464b73ceb2e885bab956a5">COS_PDO_TRM_ID_CONST</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:aae7f25c5cc464b73ceb2e885bab956a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d45da5426bd9f9f55b5ac766260714" id="r_a53d45da5426bd9f9f55b5ac766260714"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__conf_8h.html#a53d45da5426bd9f9f55b5ac766260714">COS_PDO_INHIBIT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a53d45da5426bd9f9f55b5ac766260714"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3bf5b72e9f6b2a2f937d92293c8f61a" id="r_ae3bf5b72e9f6b2a2f937d92293c8f61a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__conf_8h.html#ae3bf5b72e9f6b2a2f937d92293c8f61a">COS_PDO_SYNC_START</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:ae3bf5b72e9f6b2a2f937d92293c8f61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7373184e34672bcbfbb62749349e0be2" id="r_a7373184e34672bcbfbb62749349e0be2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos__conf_8h.html#a7373184e34672bcbfbb62749349e0be2">COS_PDO_MAPPING</a>&#160;&#160;&#160;8</td></tr>
@@ -713,12 +713,12 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Support CiA 401, analogue inputs. </p>
-<p>This symbol defines if objects for analogue inputs from the device profile for I/O modules (CiA 401) are included in the dictionary. </p>
+<p>Support CiA 401, analog inputs. </p>
+<p>This symbol defines if objects for analog inputs from the device profile for I/O modules (CiA 401) are included in the dictionary. </p>
 <p>The add-on <b>CANopen Device Profile CiA 401</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen (FD) Slave Add-on modules</a>).</p>
 <ul>
-<li>0 : do not support CiA 401, analogue inputs </li>
-<li>N : support CiA 401, N is number of analogue input blocks </li>
+<li>0 : do not support CiA 401, analog inputs </li>
+<li>N : support CiA 401, N is number of analog input blocks </li>
 </ul>
 
 </div>
@@ -735,12 +735,12 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Support CiA 401, analogue outputs. </p>
-<p>This symbol defines if objects for analogue outputs from the device profile for I/O modules (CiA 401) are included in the dictionary. </p>
+<p>Support CiA 401, analog outputs. </p>
+<p>This symbol defines if objects for analog outputs from the device profile for I/O modules (CiA 401) are included in the dictionary. </p>
 <p>The add-on <b>CANopen Device Profile CiA 401</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen (FD) Slave Add-on modules</a>).</p>
 <ul>
-<li>0 : do not support CiA 401, analogue outputs </li>
-<li>N : support CiA 401, N is number of analogue outputs </li>
+<li>0 : do not support CiA 401, analog outputs </li>
+<li>N : support CiA 401, N is number of analog outputs </li>
 </ul>
 
 </div>
@@ -823,12 +823,12 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Support CiA 404, analogue inputs. </p>
-<p>This symbol defines if objects for analogue inputs from the device profile for Sensors and Closed-loop Control (CiA 404) are included in the dictionary. </p>
+<p>Support CiA 404, analog inputs. </p>
+<p>This symbol defines if objects for analog inputs from the device profile for Sensors and Closed-loop Control (CiA 404) are included in the dictionary. </p>
 <p>The add-on <b>CANopen Device Profile CiA 404</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen (FD) Slave Add-on modules</a>).</p>
 <ul>
-<li>0 : do not support CiA 404, analogue inputs </li>
-<li>N : support CiA 404, N is number of analogue inputs </li>
+<li>0 : do not support CiA 404, analog inputs </li>
+<li>N : support CiA 404, N is number of analog inputs </li>
 </ul>
 
 </div>
@@ -845,13 +845,12 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Support filter within CiA 404, analogue inputs. </p>
-<p>This symbol defines if objects for filtering analogue inputs from the device profile for Sensors and Closed-loop Control (CiA 404) are included in the dictionary.</p>
-<p>The objects affected are: 61A0h and 61A1h </p>
+<p>Support filter within CiA 404, analog inputs. </p>
+<p>This symbol defines if objects (index 61A0<sub>h</sub> and 61A1<sub>h</sub>) for filtering analog inputs from the device profile for sensors and closed-loop control (CiA 404) are included in the dictionary. </p>
 <p>The add-on <b>CANopen Device Profile CiA 404</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen (FD) Slave Add-on modules</a>).</p>
 <ul>
-<li>0 : do not support CiA 404, analogue input filters </li>
-<li>1 : support CiA 404, analogue input filters </li>
+<li>0 : do not support CiA 404, analog input filters </li>
+<li>1 : support CiA 404, analog input filters </li>
 </ul>
 
 </div>
@@ -868,34 +867,12 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Support filter within CiA 404, analogue inputs. </p>
-<p>This symbol defines if objects for filtering analogue inputs from the device profile for Sensors and Closed-loop Control (CiA 404) are included in the dictionary.</p>
-<p>The objects affected are: 6126h and 6127h</p>
-<ul>
-<li>0 : do not support CiA 404, analogue input filters </li>
-<li>1 : support CiA 404, analogue input filters </li>
-</ul>
-
-</div>
-</div>
-<a id="aefc95bf3ad5c1c0d6fb3a2c021acb109" name="aefc95bf3ad5c1c0d6fb3a2c021acb109"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefc95bf3ad5c1c0d6fb3a2c021acb109">&#9670;&#160;</a></span>COS_DS404_AL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define COS_DS404_AL&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Support CiA 404, alarm block. </p>
-<p>This symbol defines if objects for alarms from the device profile for Sensors and Closed-loop Control (CiA 404) are included in the dictionary. </p>
+<p>Support filter within CiA 404, analog inputs. </p>
+<p>This symbol defines if objects (index 6126<sub>h</sub> and 6127<sub>h</sub>) for scaling of analog inputs from the device profile for sensors and closed-loop control (CiA 404) are included in the dictionary. </p>
 <p>The add-on <b>CANopen Device Profile CiA 404</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen (FD) Slave Add-on modules</a>).</p>
 <ul>
-<li>0 : do not support CiA 404, alarms </li>
-<li>1 : support CiA 404, alarms </li>
+<li>0 : do not support CiA 404, analog input filters </li>
+<li>1 : support CiA 404, analog input filters </li>
 </ul>
 
 </div>
@@ -912,12 +889,12 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Support CiA 404, analogue outputs. </p>
-<p>This symbol defines if objects for analogue outputs from the device profile for Sensors and Closed-loop Control (CiA 404) are included in the dictionary. </p>
+<p>Support CiA 404, analog outputs. </p>
+<p>This symbol defines if objects for analog outputs from the device profile for sensors and closed-loop control (CiA 404) are included in the dictionary. </p>
 <p>The add-on <b>CANopen Device Profile CiA 404</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen (FD) Slave Add-on modules</a>).</p>
 <ul>
-<li>0 : do not support CiA 404, analogue outputs </li>
-<li>N : support CiA 404, analogue outputs </li>
+<li>0 : do not support CiA 404, analog outputs </li>
+<li>N : support CiA 404, analog outputs </li>
 </ul>
 
 </div>
@@ -935,11 +912,11 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>CiA 404 data type. </p>
-<p>This symbol defines if the data type FLOAT is supported for the device profile for Sensors and Closed-loop Control (CiA 404). </p>
+<p>This symbol defines if the data type <code>float</code> is supported for the device profile for sensors and closed-loop Control (CiA 404). </p>
 <p>The add-on <b>CANopen Device Profile CiA 404</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen (FD) Slave Add-on modules</a>).</p>
 <ul>
 <li>0 : not supported </li>
-<li>1 : support data type FLOAT </li>
+<li>1 : support data type <code>float</code> </li>
 </ul>
 
 </div>
@@ -957,11 +934,11 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>CiA 404 data type. </p>
-<p>This symbol defines if the data type INT16 is supported for the device profile for Sensors and Closed-loop Control (CiA 404). </p>
+<p>This symbol defines if the data type <code>int16_t</code> is supported for the device profile for sensors and closed-loop Control (CiA 404). </p>
 <p>The add-on <b>CANopen Device Profile CiA 404</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen (FD) Slave Add-on modules</a>).</p>
 <ul>
 <li>0 : not supported </li>
-<li>1 : support data type Integer16 </li>
+<li>1 : support data type <code>int16_t</code> </li>
 </ul>
 
 </div>
@@ -979,11 +956,11 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>CiA 404 data type. </p>
-<p>This symbol defines if the data type INT32 is supported for the device profile for Sensors and Closed-loop Control (CiA 404). </p>
+<p>This symbol defines if the data type <code>int32_t</code> is supported for the device profile for sensors and closed-loop control (CiA 404). </p>
 <p>The add-on <b>CANopen Device Profile CiA 404</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen (FD) Slave Add-on modules</a>).</p>
 <ul>
 <li>0 : not supported </li>
-<li>1 : support data type Integer32 </li>
+<li>1 : support data type <code>int32_t</code> </li>
 </ul>
 
 </div>
@@ -1089,12 +1066,12 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Support CiA 437, analogue input module. </p>
-<p>This symbol defines if the virtual device <em>analogue input module</em> is included in the dictionary. </p>
+<p>Support CiA 437, analog input module. </p>
+<p>This symbol defines if the virtual device <em>analog input module</em> is included in the dictionary. </p>
 <p>The add-on <b>CANopen Application Profile CiA 437</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen (FD) Slave Add-on modules</a>).</p>
 <ul>
-<li>0 : do not support virtual device analogue input module </li>
-<li>N : support virtual device analogue input module, N is the number of analogue inputs </li>
+<li>0 : do not support virtual device analog input module </li>
+<li>N : support virtual device analog input module, N is the number of analog inputs </li>
 </ul>
 
 </div>
@@ -1111,12 +1088,12 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Support CiA 437, analogue output module. </p>
-<p>This symbol defines if the virtual device <em>analogue output module</em> is included in the dictionary. </p>
+<p>Support CiA 437, analog output module. </p>
+<p>This symbol defines if the virtual device <em>analog output module</em> is included in the dictionary. </p>
 <p>The add-on <b>CANopen Application Profile CiA 437</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen (FD) Slave Add-on modules</a>).</p>
 <ul>
-<li>0 : do not support virtual device analogue output module </li>
-<li>N : support virtual device analogue output module, N is the number of analogue outputs </li>
+<li>0 : do not support virtual device analog output module </li>
+<li>N : support virtual device analog output module, N is the number of analog outputs </li>
 </ul>
 
 </div>
@@ -1182,7 +1159,7 @@ Macros</h2></td></tr>
 <p>The add-on <b>CANopen Application Profile CiA 437</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen (FD) Slave Add-on modules</a>).</p>
 <ul>
 <li>0 : do not support virtual device temperature sensor </li>
-<li>N : support virtual device temperature sensor, N is the number of analogue inputs </li>
+<li>N : support virtual device temperature sensor, N is the number of analog inputs </li>
 </ul>
 
 </div>
@@ -1334,6 +1311,23 @@ Macros</h2></td></tr>
 <li>0 : do not support NRL </li>
 <li>1 : support NRL </li>
 </ul>
+
+</div>
+</div>
+<a id="a53d45da5426bd9f9f55b5ac766260714" name="a53d45da5426bd9f9f55b5ac766260714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d45da5426bd9f9f55b5ac766260714">&#9670;&#160;</a></span>COS_PDO_INHIBIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COS_PDO_INHIBIT&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Support Inhibit time for transmit PDOs. </p>
+<p>This symbol defines if an inhibit time is supported for transmit PDOs. </p>
 
 </div>
 </div>
@@ -1591,7 +1585,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_059b8d327d09617c411023af730a36c0.html">application</a></li><li class="navelem"><a class="el" href="dir_f11c742974e1d48748f43d8e1a986849.html">template-cos</a></li><li class="navelem"><a class="el" href="cos__conf_8h.html">cos_conf.h</a></li>
-    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Thu Nov 23 2023 </li>
+    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Mon Dec 4 2023 </li>
   </ul>
 </div>
 </body>

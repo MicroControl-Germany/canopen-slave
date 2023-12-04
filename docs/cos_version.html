@@ -42,7 +42,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectbrief">CANopen Slave Documentation</div>
-   <div id="projectnumber">Version 6.14.04</div>
+   <div id="projectnumber">Version 6.16.02</div>
   </td>
  </tr>
  </tbody>
@@ -108,7 +108,20 @@ $(document).ready(function(){initNavTree('cos_version.html',''); initResizable()
   <div class="headertitle"><div class="title">Version History</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>Version 6.14 - 2023.06</h1>
+<div class="textblock"><h1>Version 6.16 - 2023.11</h1>
+<ul>
+<li>Add header file <a class="el" href="cos303_8h.html">cos303.h</a> for definition of physical units</li>
+<li>Add toolchain support for GCC 13.2.1</li>
+<li>Fix parameter name for <a class="el" href="cos__mgr_8h.html#a66f8a2f399c9e83cc14e622ddaf4c4a7">CosMgrOnStart()</a></li>
+<li>Improve error checking for LSS store configuration</li>
+<li>Update directory structure for CMake configuration files</li>
+<li>Update documentation for EMCY handling</li>
+<li>Update add-on for CiA 404 profile</li>
+<li>Update NVM organization for 401 and 404</li>
+<li>Remove deprecated variable <code>ulIdx1000_DeviceTypeC</code></li>
+<li>NRL is now treated as an add-on module</li>
+</ul>
+<h1>Version 6.14 - 2023.06</h1>
 <ul>
 <li>Define replacement for <a class="el" href="cp__msg_8h.html#ae075a11693734eede1805b44bdce8302" title="Convert DLC to payload size.">CpMsgDlcToSize()</a> when FD is not supported</li>
 <li>Fix transmission of multiple EMCYs denoting a communication error</li>
@@ -182,7 +195,7 @@ $(document).ready(function(){initNavTree('cos_version.html',''); initResizable()
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Thu Nov 23 2023 </li>
+    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Mon Dec 4 2023 </li>
   </ul>
 </div>
 </body>

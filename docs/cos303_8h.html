@@ -42,7 +42,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectbrief">CANopen Slave Documentation</div>
-   <div id="projectnumber">Version 6.14.04</div>
+   <div id="projectnumber">Version 6.16.02</div>
   </td>
  </tr>
  </tbody>
@@ -106,12 +106,13 @@ $(document).ready(function(){initNavTree('cos303_8h.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">cos303.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file holds defines of CiA 303 recommendation. </p>
+<div class="textblock"><p>This file holds definitions for the CiA 303 specification. </p>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for cos303.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -149,12 +150,123 @@ $(document).ready(function(){initNavTree('cos303_8h.html',''); initResizable(); 
 </map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a7c9b57a4b2536b451854c604189b8c0d" id="r_a7c9b57a4b2536b451854c604189b8c0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos303_8h.html#a7c9b57a4b2536b451854c604189b8c0d">COS303_PHYSICAL_UNIT</a>(SiPrefix,  SiNumerator,  SiDenominator,  Profile)</td></tr>
+<tr class="separator:a7c9b57a4b2536b451854c604189b8c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:adc36a74d28405b1de88459340ef08778" id="r_adc36a74d28405b1de88459340ef08778"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos303_8h.html#adc36a74d28405b1de88459340ef08778">Cos303_SI_Prefix_e</a> </td></tr>
+<tr class="separator:adc36a74d28405b1de88459340ef08778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4874d0d0fbf5374e0d945e5c21a57cd8" id="r_a4874d0d0fbf5374e0d945e5c21a57cd8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8">Cos303_SI_Unit_e</a> </td></tr>
 <tr class="separator:a4874d0d0fbf5374e0d945e5c21a57cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a7c9b57a4b2536b451854c604189b8c0d" name="a7c9b57a4b2536b451854c604189b8c0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c9b57a4b2536b451854c604189b8c0d">&#9670;&#160;</a></span>COS303_PHYSICAL_UNIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COS303_PHYSICAL_UNIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">SiPrefix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">SiNumerator, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">SiDenominator, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Profile&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                    ((uint32_t)( \</div>
+<div class="line">                                    (((uint32_t)SiPrefix &lt;&lt; 24) &amp; 0xFF000000)     |       \</div>
+<div class="line">                                    (((uint32_t)SiNumerator &lt;&lt; 16) &amp; 0x00FF0000)  |       \</div>
+<div class="line">                                    (((uint32_t)SiDenominator &lt;&lt; 8) &amp; 0x0000FF00) |       \</div>
+<div class="line">                                    (((uint32_t)Profile) &amp; 0x000000FF)                    \</div>
+<div class="line">                                                                            ))</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">SiPrefix</td><td>value defined by <a class="el" href="cos303_8h.html#adc36a74d28405b1de88459340ef08778">Cos303_SI_Prefix_e</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">SiNumerator</td><td>value defined by <a class="el" href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8">Cos303_SI_Unit_e</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">SiDenominator</td><td>value defined by <a class="el" href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8">Cos303_SI_Unit_e</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Profile</td><td>reserved, always 0</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The notation indexes represent hexadecimal code values for the ISO 80000 series’ physical units and prefixes in CiA documents, especially in device, interface and application profiles. The value structure of a configuration parameter, which determines the physical unit, should contain a notation index for SI prefix and notation indexes for SI unit as SI unit numerator and denominator. </p>
+<h2>Examples</h2>
+<div class="fragment"><div class="line">uiint32_t   ulDegreeCelsiusT = <a class="code hl_define" href="cos303_8h.html#a7c9b57a4b2536b451854c604189b8c0d">COS303_PHYSICAL_UNIT</a>(<a class="code hl_enumvalue" href="cos303_8h.html#adc36a74d28405b1de88459340ef08778a1b4b760e027f59188b85d243a716f33d">eCOS303_SI_PREFIX_NONE</a>, </div>
+<div class="line">                                                    <a class="code hl_enumvalue" href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8a512ed9028d7f7412ae380d4de537f7ee">eCOS303_SI_UNIT_DEGREE_CELSIUS</a>,</div>
+<div class="line">                                                    <a class="code hl_enumvalue" href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8a01ccfcd99cde26be4159f2f4c51859e7">eCOS303_SI_UNIT_NONE</a>,</div>
+<div class="line">                                                    0);</div>
+<div class="line"> </div>
+<div class="line">uiint32_t   ulMilliVoltT     = <a class="code hl_define" href="cos303_8h.html#a7c9b57a4b2536b451854c604189b8c0d">COS303_PHYSICAL_UNIT</a>(<a class="code hl_enumvalue" href="cos303_8h.html#adc36a74d28405b1de88459340ef08778afe573d1c61734ad6af6e18b37461fff2">eCOS303_SI_PREFIX_MILLI</a>, </div>
+<div class="line">                                                    <a class="code hl_enumvalue" href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8ac6a73651e37d8c3ea0ba64d3c3a98709">eCOS303_SI_UNIT_VOLT</a>,</div>
+<div class="line">                                                    <a class="code hl_enumvalue" href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8a01ccfcd99cde26be4159f2f4c51859e7">eCOS303_SI_UNIT_NONE</a>,</div>
+<div class="line">                                                    0);</div>
+<div class="ttc" id="acos303_8h_html_a4874d0d0fbf5374e0d945e5c21a57cd8a01ccfcd99cde26be4159f2f4c51859e7"><div class="ttname"><a href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8a01ccfcd99cde26be4159f2f4c51859e7">eCOS303_SI_UNIT_NONE</a></div><div class="ttdeci">@ eCOS303_SI_UNIT_NONE</div><div class="ttdoc">dimensionless</div><div class="ttdef"><b>Definition</b> cos303.h:65</div></div>
+<div class="ttc" id="acos303_8h_html_a4874d0d0fbf5374e0d945e5c21a57cd8a512ed9028d7f7412ae380d4de537f7ee"><div class="ttname"><a href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8a512ed9028d7f7412ae380d4de537f7ee">eCOS303_SI_UNIT_DEGREE_CELSIUS</a></div><div class="ttdeci">@ eCOS303_SI_UNIT_DEGREE_CELSIUS</div><div class="ttdoc">degree celsius [°C]</div><div class="ttdef"><b>Definition</b> cos303.h:90</div></div>
+<div class="ttc" id="acos303_8h_html_a4874d0d0fbf5374e0d945e5c21a57cd8ac6a73651e37d8c3ea0ba64d3c3a98709"><div class="ttname"><a href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8ac6a73651e37d8c3ea0ba64d3c3a98709">eCOS303_SI_UNIT_VOLT</a></div><div class="ttdeci">@ eCOS303_SI_UNIT_VOLT</div><div class="ttdoc">volt [V]</div><div class="ttdef"><b>Definition</b> cos303.h:83</div></div>
+<div class="ttc" id="acos303_8h_html_a7c9b57a4b2536b451854c604189b8c0d"><div class="ttname"><a href="cos303_8h.html#a7c9b57a4b2536b451854c604189b8c0d">COS303_PHYSICAL_UNIT</a></div><div class="ttdeci">#define COS303_PHYSICAL_UNIT(SiPrefix, SiNumerator, SiDenominator, Profile)</div><div class="ttdef"><b>Definition</b> cos303.h:152</div></div>
+<div class="ttc" id="acos303_8h_html_adc36a74d28405b1de88459340ef08778a1b4b760e027f59188b85d243a716f33d"><div class="ttname"><a href="cos303_8h.html#adc36a74d28405b1de88459340ef08778a1b4b760e027f59188b85d243a716f33d">eCOS303_SI_PREFIX_NONE</a></div><div class="ttdeci">@ eCOS303_SI_PREFIX_NONE</div><div class="ttdoc">no prefix, 100</div><div class="ttdef"><b>Definition</b> cos303.h:53</div></div>
+<div class="ttc" id="acos303_8h_html_adc36a74d28405b1de88459340ef08778afe573d1c61734ad6af6e18b37461fff2"><div class="ttname"><a href="cos303_8h.html#adc36a74d28405b1de88459340ef08778afe573d1c61734ad6af6e18b37461fff2">eCOS303_SI_PREFIX_MILLI</a></div><div class="ttdeci">@ eCOS303_SI_PREFIX_MILLI</div><div class="ttdoc">milli, 10-3 [m]</div><div class="ttdef"><b>Definition</b> cos303.h:54</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="adc36a74d28405b1de88459340ef08778" name="adc36a74d28405b1de88459340ef08778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc36a74d28405b1de88459340ef08778">&#9670;&#160;</a></span>Cos303_SI_Prefix_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="cos303_8h.html#adc36a74d28405b1de88459340ef08778">Cos303_SI_Prefix_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Representation of SI prefixes </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adc36a74d28405b1de88459340ef08778a6d43fb951981cf72921dca9dc9bfcd2f" name="adc36a74d28405b1de88459340ef08778a6d43fb951981cf72921dca9dc9bfcd2f"></a>eCOS303_SI_PREFIX_GIGA&#160;</td><td class="fielddoc"><p>giga, 10<sup>9</sup>, [G] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adc36a74d28405b1de88459340ef08778a3721e2d12e4ae9f0bfe8f7f9f9cfd9fd" name="adc36a74d28405b1de88459340ef08778a3721e2d12e4ae9f0bfe8f7f9f9cfd9fd"></a>eCOS303_SI_PREFIX_MEGA&#160;</td><td class="fielddoc"><p>mega, 10<sup>6</sup>, [M] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adc36a74d28405b1de88459340ef08778a5d1062a6f0c8fc90160b587574258ec1" name="adc36a74d28405b1de88459340ef08778a5d1062a6f0c8fc90160b587574258ec1"></a>eCOS303_SI_PREFIX_KILO&#160;</td><td class="fielddoc"><p>kilo, 10<sup>3</sup>, [k] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adc36a74d28405b1de88459340ef08778a1b4b760e027f59188b85d243a716f33d" name="adc36a74d28405b1de88459340ef08778a1b4b760e027f59188b85d243a716f33d"></a>eCOS303_SI_PREFIX_NONE&#160;</td><td class="fielddoc"><p>no prefix, 10<sup>0</sup> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adc36a74d28405b1de88459340ef08778afe573d1c61734ad6af6e18b37461fff2" name="adc36a74d28405b1de88459340ef08778afe573d1c61734ad6af6e18b37461fff2"></a>eCOS303_SI_PREFIX_MILLI&#160;</td><td class="fielddoc"><p>milli, 10<sup>-3</sup> [m] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adc36a74d28405b1de88459340ef08778a13f1306640935aa7c9401ff4fe4554bf" name="adc36a74d28405b1de88459340ef08778a13f1306640935aa7c9401ff4fe4554bf"></a>eCOS303_SI_PREFIX_MICRO&#160;</td><td class="fielddoc"><p>micro, 10<sup>-6</sup> [&micro;] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adc36a74d28405b1de88459340ef08778a8ae9419fca02fa5ed6c2c09ad4b4c82d" name="adc36a74d28405b1de88459340ef08778a8ae9419fca02fa5ed6c2c09ad4b4c82d"></a>eCOS303_SI_PREFIX_NANA&#160;</td><td class="fielddoc"><p>nano, 10<sup>-9</sup> [n] </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a4874d0d0fbf5374e0d945e5c21a57cd8" name="a4874d0d0fbf5374e0d945e5c21a57cd8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4874d0d0fbf5374e0d945e5c21a57cd8">&#9670;&#160;</a></span>Cos303_SI_Unit_e</h2>
 
@@ -168,11 +280,73 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 <p>Representation of SI units </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8ac7af96c6d4ae6f5cbbc5a1ec752083e6" name="a4874d0d0fbf5374e0d945e5c21a57cd8ac7af96c6d4ae6f5cbbc5a1ec752083e6"></a>eCOS303_SI_UNIT_NEWTON&#160;</td><td class="fielddoc"><p>eCOS303_SI_UNIT_NEWTON [N] </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a01ccfcd99cde26be4159f2f4c51859e7" name="a4874d0d0fbf5374e0d945e5c21a57cd8a01ccfcd99cde26be4159f2f4c51859e7"></a>eCOS303_SI_UNIT_NONE&#160;</td><td class="fielddoc"><p>dimensionless </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a3266d18a72bfdeb6f528bb18a462b94e" name="a4874d0d0fbf5374e0d945e5c21a57cd8a3266d18a72bfdeb6f528bb18a462b94e"></a>eCOS303_SI_UNIT_GRAM&#160;</td><td class="fielddoc"><p>eCOS303_SI_UNIT_GRAM [g] </p>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8ae12f57bba554e5f40d0833e4ff998151" name="a4874d0d0fbf5374e0d945e5c21a57cd8ae12f57bba554e5f40d0833e4ff998151"></a>eCOS303_SI_UNIT_METRE&#160;</td><td class="fielddoc"><p>meter [m] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a1144848e85f16f9f43f663cb008b9d23" name="a4874d0d0fbf5374e0d945e5c21a57cd8a1144848e85f16f9f43f663cb008b9d23"></a>eCOS303_SI_UNIT_TONNE&#160;</td><td class="fielddoc"><p>eCOS303_SI_UNIT_TONNE [t] </p>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a74350b15641412444a8c7ca10893d965" name="a4874d0d0fbf5374e0d945e5c21a57cd8a74350b15641412444a8c7ca10893d965"></a>eCOS303_SI_UNIT_KILOGRAM&#160;</td><td class="fielddoc"><p>kilogram [kg] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a0a44822e80df23d02228b6750ed8f5f3" name="a4874d0d0fbf5374e0d945e5c21a57cd8a0a44822e80df23d02228b6750ed8f5f3"></a>eCOS303_SI_UNIT_SECOND&#160;</td><td class="fielddoc"><p>second [s] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8ae73c3c24c711ffe89316943e6076f9d8" name="a4874d0d0fbf5374e0d945e5c21a57cd8ae73c3c24c711ffe89316943e6076f9d8"></a>eCOS303_SI_UNIT_AMPERE&#160;</td><td class="fielddoc"><p>ampere [A] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8abb21f44c8bd3263ff6771efb894e6b4b" name="a4874d0d0fbf5374e0d945e5c21a57cd8abb21f44c8bd3263ff6771efb894e6b4b"></a>eCOS303_SI_UNIT_KELVIN&#160;</td><td class="fielddoc"><p>kelvin [K] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a239e099154007d83602b72a763172904" name="a4874d0d0fbf5374e0d945e5c21a57cd8a239e099154007d83602b72a763172904"></a>eCOS303_SI_UNIT_MOLE&#160;</td><td class="fielddoc"><p>mole [mol] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a66d611a791c5bf660f024927650aa042" name="a4874d0d0fbf5374e0d945e5c21a57cd8a66d611a791c5bf660f024927650aa042"></a>eCOS303_SI_UNIT_CANDELA&#160;</td><td class="fielddoc"><p>candela [cd] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a829def3c399b7a0fe7a59702636cafd8" name="a4874d0d0fbf5374e0d945e5c21a57cd8a829def3c399b7a0fe7a59702636cafd8"></a>eCOS303_SI_UNIT_RADIAN&#160;</td><td class="fielddoc"><p>radian [rad] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a1aeda71b50990145cb7ba3df9286cbe7" name="a4874d0d0fbf5374e0d945e5c21a57cd8a1aeda71b50990145cb7ba3df9286cbe7"></a>eCOS303_SI_UNIT_STERADIN&#160;</td><td class="fielddoc"><p>steradian [sr] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a064eba7611e82cad24b1a11d473657b9" name="a4874d0d0fbf5374e0d945e5c21a57cd8a064eba7611e82cad24b1a11d473657b9"></a>eCOS303_SI_UNIT_HERTZ&#160;</td><td class="fielddoc"><p>hertz [Hz] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8ac7af96c6d4ae6f5cbbc5a1ec752083e6" name="a4874d0d0fbf5374e0d945e5c21a57cd8ac7af96c6d4ae6f5cbbc5a1ec752083e6"></a>eCOS303_SI_UNIT_NEWTON&#160;</td><td class="fielddoc"><p>newton [N] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8ac3659bd52a6be607716f03f8f25a08b0" name="a4874d0d0fbf5374e0d945e5c21a57cd8ac3659bd52a6be607716f03f8f25a08b0"></a>eCOS303_SI_UNIT_PASCAL&#160;</td><td class="fielddoc"><p>pascal [Pa] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a7dd7952d06c834d1e1c26fa7ba8b1adb" name="a4874d0d0fbf5374e0d945e5c21a57cd8a7dd7952d06c834d1e1c26fa7ba8b1adb"></a>eCOS303_SI_UNIT_JOULE&#160;</td><td class="fielddoc"><p>joule [J] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a1f683ab63738b877b2288f6f9a3c6697" name="a4874d0d0fbf5374e0d945e5c21a57cd8a1f683ab63738b877b2288f6f9a3c6697"></a>eCOS303_SI_UNIT_WATT&#160;</td><td class="fielddoc"><p>watt [W] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8ad28c5b838bea834fe3b463ce4054badf" name="a4874d0d0fbf5374e0d945e5c21a57cd8ad28c5b838bea834fe3b463ce4054badf"></a>eCOS303_SI_UNIT_COULOMB&#160;</td><td class="fielddoc"><p>coulomb [C] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8ac6a73651e37d8c3ea0ba64d3c3a98709" name="a4874d0d0fbf5374e0d945e5c21a57cd8ac6a73651e37d8c3ea0ba64d3c3a98709"></a>eCOS303_SI_UNIT_VOLT&#160;</td><td class="fielddoc"><p>volt [V] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a19f3a1f87d902f035ba8b1c396c2d545" name="a4874d0d0fbf5374e0d945e5c21a57cd8a19f3a1f87d902f035ba8b1c396c2d545"></a>eCOS303_SI_UNIT_FARAD&#160;</td><td class="fielddoc"><p>farad [F] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a6c984a8914f06a1ffa8e01182b1b7520" name="a4874d0d0fbf5374e0d945e5c21a57cd8a6c984a8914f06a1ffa8e01182b1b7520"></a>eCOS303_SI_UNIT_OHM&#160;</td><td class="fielddoc"><p>ohm [&Omega;] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a036ef617aafefe594ee9f35f83fbdc89" name="a4874d0d0fbf5374e0d945e5c21a57cd8a036ef617aafefe594ee9f35f83fbdc89"></a>eCOS303_SI_UNIT_SIEMENS&#160;</td><td class="fielddoc"><p>siemens [S] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8ac1ec5b1fb961f486dd2ede1c0491ced1" name="a4874d0d0fbf5374e0d945e5c21a57cd8ac1ec5b1fb961f486dd2ede1c0491ced1"></a>eCOS303_SI_UNIT_WEBER&#160;</td><td class="fielddoc"><p>weber [Wb] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a4edfa431da42e02b739ec7e23dcda7cc" name="a4874d0d0fbf5374e0d945e5c21a57cd8a4edfa431da42e02b739ec7e23dcda7cc"></a>eCOS303_SI_UNIT_TESLA&#160;</td><td class="fielddoc"><p>tesla [T] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a28196da376528777cadfa20b8da61318" name="a4874d0d0fbf5374e0d945e5c21a57cd8a28196da376528777cadfa20b8da61318"></a>eCOS303_SI_UNIT_HENRY&#160;</td><td class="fielddoc"><p>henry [H] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a512ed9028d7f7412ae380d4de537f7ee" name="a4874d0d0fbf5374e0d945e5c21a57cd8a512ed9028d7f7412ae380d4de537f7ee"></a>eCOS303_SI_UNIT_DEGREE_CELSIUS&#160;</td><td class="fielddoc"><p>degree celsius [°C] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a56bd106ec5287bfd7c4d02fc675d3de8" name="a4874d0d0fbf5374e0d945e5c21a57cd8a56bd106ec5287bfd7c4d02fc675d3de8"></a>eCOS303_SI_UNIT_LUMEN&#160;</td><td class="fielddoc"><p>lumen [lm] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a8075843334009fc57c24424649338fef" name="a4874d0d0fbf5374e0d945e5c21a57cd8a8075843334009fc57c24424649338fef"></a>eCOS303_SI_UNIT_LUX&#160;</td><td class="fielddoc"><p>lux [lx] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a1faf30692cef2ad61b2e4ee2326ebc91" name="a4874d0d0fbf5374e0d945e5c21a57cd8a1faf30692cef2ad61b2e4ee2326ebc91"></a>eCOS303_SI_UNIT_LITRE&#160;</td><td class="fielddoc"><p>litre [l] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a33b6ad9a53742d5b20577b1934cef659" name="a4874d0d0fbf5374e0d945e5c21a57cd8a33b6ad9a53742d5b20577b1934cef659"></a>eCOS303_SI_UNIT_HOUR&#160;</td><td class="fielddoc"><p>hour [h] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a1827d810e19b5ed04e3d21e442c03284" name="a4874d0d0fbf5374e0d945e5c21a57cd8a1827d810e19b5ed04e3d21e442c03284"></a>eCOS303_SI_UNIT_DAY&#160;</td><td class="fielddoc"><p>day [d] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a0dc29bddab606aad745afabffeb58670" name="a4874d0d0fbf5374e0d945e5c21a57cd8a0dc29bddab606aad745afabffeb58670"></a>eCOS303_SI_UNIT_YEAR&#160;</td><td class="fielddoc"><p>year [a] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a3266d18a72bfdeb6f528bb18a462b94e" name="a4874d0d0fbf5374e0d945e5c21a57cd8a3266d18a72bfdeb6f528bb18a462b94e"></a>eCOS303_SI_UNIT_GRAM&#160;</td><td class="fielddoc"><p>gram [g] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a1144848e85f16f9f43f663cb008b9d23" name="a4874d0d0fbf5374e0d945e5c21a57cd8a1144848e85f16f9f43f663cb008b9d23"></a>eCOS303_SI_UNIT_TONNE&#160;</td><td class="fielddoc"><p>tonne [t] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8adf33e7a1c5cd6ed0c047754389a366a0" name="a4874d0d0fbf5374e0d945e5c21a57cd8adf33e7a1c5cd6ed0c047754389a366a0"></a>eCOS303_SI_UNIT_PARSEC&#160;</td><td class="fielddoc"><p>parsec [pc] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4874d0d0fbf5374e0d945e5c21a57cd8a61269ee68b2d324988eb2303e5058bef" name="a4874d0d0fbf5374e0d945e5c21a57cd8a61269ee68b2d324988eb2303e5058bef"></a>eCOS303_SI_UNIT_METER_PER_SQUARE_SECOND&#160;</td><td class="fielddoc"><p>acceleration [m/s^2] </p>
 </td></tr>
 </table>
 
@@ -185,7 +359,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a class="el" href="cos303_8h.html">cos303.h</a></li>
-    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Thu Nov 23 2023 </li>
+    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Mon Dec 4 2023 </li>
   </ul>
 </div>
 </body>

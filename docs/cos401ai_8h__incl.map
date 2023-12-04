@@ -1,5 +1,5 @@
 <map id="cos401ai.h" name="cos401ai.h">
-<area shape="rect" id="Node000001" title="Object Dictionary for CiA 401 (Analogue Inputs) ." alt="" coords="123,5,207,31"/>
+<area shape="rect" id="Node000001" title="Object Dictionary for CiA 401 (Analog Inputs) ." alt="" coords="123,5,207,31"/>
 <area shape="rect" id="Node000002" href="$cos__defs_8h.html" title="CANopen Slave Stack &#45; General definitions ." alt="" coords="122,79,208,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,31,168,63,162,63,162,31"/>
 <area shape="rect" id="Node000003" href="$cp__core_8h.html" title="CANpie core functions ." alt="" coords="14,153,92,178"/>

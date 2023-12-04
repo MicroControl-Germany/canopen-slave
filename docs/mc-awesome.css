@@ -1521,7 +1521,7 @@ h2.memtitle {
     border-top-right-radius: var(--border-radius-medium);
     word-break: break-all;
     position: relative;
-    width: 350px;
+    width: 360px;
 }
 
 h2.memtitle:after {

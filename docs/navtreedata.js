@@ -59,6 +59,10 @@ var NAVTREE =
         [ "Timer support", "cos__time_8h.html#COS_TIME", null ],
         [ "Add-ons", "cos_add_on_overview.html", [
           [ "Profile CiA 401", "cos_add_on_cia_401.html", null ],
+          [ "Profile CiA 404", "cos_add_on_cia_404.html", [
+            [ "Analog In", "cos404ai_8h.html#COS_CIA404_AI", null ],
+            [ "Analog Out", "cos404ao_8h.html#COS_CIA404_AO", null ]
+          ] ],
           [ "Profile CiA 406", "cos_add_on_cia_406.html", null ],
           [ "Safety", "cos_add_on_safety.html", null ]
         ] ]

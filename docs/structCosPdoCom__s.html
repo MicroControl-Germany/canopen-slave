@@ -42,7 +42,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectbrief">CANopen Slave Documentation</div>
-   <div id="projectnumber">Version 6.14.04</div>
+   <div id="projectnumber">Version 6.16.02</div>
   </td>
  </tr>
  </tbody>
@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('structCosPdoCom__s.html',''); initResi
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="structCosPdoCom__s__coll__graph.png" border="0" usemap="#aCosPdoCom__s_coll__map" alt="Collaboration graph"/></div>
 <map name="aCosPdoCom__s_coll__map" id="aCosPdoCom__s_coll__map">
-<area shape="rect" title="PDO communication parameter." alt="" coords="5,5,157,211"/>
+<area shape="rect" title="PDO communication parameter." alt="" coords="5,5,157,171"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -138,10 +138,6 @@ Data Fields</h2></td></tr>
 <tr class="separator:af987d414722e8083a8ecf59f499f993d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5f2ad30f8d467c33666f405f1a58644" id="r_ab5f2ad30f8d467c33666f405f1a58644"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCosPdoCom__s.html#ab5f2ad30f8d467c33666f405f1a58644">ubSyncCount</a></td></tr>
 <tr class="separator:ab5f2ad30f8d467c33666f405f1a58644"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e07ed4591d11cbf3ffb2a0f9e7c9a6f" id="r_a2e07ed4591d11cbf3ffb2a0f9e7c9a6f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCosPdoCom__s.html#a2e07ed4591d11cbf3ffb2a0f9e7c9a6f">uwInhibitTime</a></td></tr>
-<tr class="separator:a2e07ed4591d11cbf3ffb2a0f9e7c9a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31952918946ec914e17eb7cb1e77602b" id="r_a31952918946ec914e17eb7cb1e77602b"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCosPdoCom__s.html#a31952918946ec914e17eb7cb1e77602b">uwInhibitTick</a></td></tr>
-<tr class="separator:a31952918946ec914e17eb7cb1e77602b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecb562d8b9a183418973e19661336981" id="r_aecb562d8b9a183418973e19661336981"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCosPdoCom__s.html#aecb562d8b9a183418973e19661336981">uwEventTime</a></td></tr>
 <tr class="separator:aecb562d8b9a183418973e19661336981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a481a889d212f9b14fd7b4b33bac078a2" id="r_a481a889d212f9b14fd7b4b33bac078a2"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCosPdoCom__s.html#a481a889d212f9b14fd7b4b33bac078a2">uwEventTick</a></td></tr>
@@ -237,37 +233,9 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Inhibit timer value, this field is only available when <a class="el" href="cos__conf_8h.html#a53d45da5426bd9f9f55b5ac766260714" title="Support Inhibit time for transmit PDOs.">COS_PDO_INHIBIT</a> is set</p>
+<p>Inhibit timer ticks, this field is only available when <a class="el" href="cos__conf_8h.html#a53d45da5426bd9f9f55b5ac766260714" title="Support Inhibit time for transmit PDOs.">COS_PDO_INHIBIT</a> is set</p>
 <p>Event timer value </p>
-
-</div>
-</div>
-<a id="a31952918946ec914e17eb7cb1e77602b" name="a31952918946ec914e17eb7cb1e77602b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31952918946ec914e17eb7cb1e77602b">&#9670;&#160;</a></span>uwInhibitTick</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t CosPdoCom_s::uwInhibitTick</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Inhibit timer ticks, this field is only available when COS_PDO_INHIBIT is set </p>
-
-</div>
-</div>
-<a id="a2e07ed4591d11cbf3ffb2a0f9e7c9a6f" name="a2e07ed4591d11cbf3ffb2a0f9e7c9a6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e07ed4591d11cbf3ffb2a0f9e7c9a6f">&#9670;&#160;</a></span>uwInhibitTime</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t CosPdoCom_s::uwInhibitTime</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Inhibit timer value, this field is only available when COS_PDO_INHIBIT is set </p>
 
 </div>
 </div>
@@ -278,7 +246,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structCosPdoCom__s.html">CosPdoCom_s</a></li>
-    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Thu Nov 23 2023 </li>
+    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Mon Dec 4 2023 </li>
   </ul>
 </div>
 </body>

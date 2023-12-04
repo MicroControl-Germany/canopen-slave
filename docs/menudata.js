@@ -55,6 +55,9 @@ var menudata={children:[
 {text:"Timer support",url:"cos__time_8h.html#COS_TIME"},
 {text:"Add-ons",url:"cos_add_on_overview.html",children:[
 {text:"Profile CiA 401",url:"cos_add_on_cia_401.html"},
+{text:"Profile CiA 404",url:"cos_add_on_cia_404.html",children:[
+{text:"Analog In",url:"cos404ai_8h.html#COS_CIA404_AI"},
+{text:"Analog Out",url:"cos404ao_8h.html#COS_CIA404_AO"}]},
 {text:"Profile CiA 406",url:"cos_add_on_cia_406.html"},
 {text:"Safety",url:"cos_add_on_safety.html"}]}]},
 {text:"CANpie FD",url:"cos_api_canpie.html",children:[
