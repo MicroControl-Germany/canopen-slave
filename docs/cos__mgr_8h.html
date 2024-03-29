@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5X74N6G74T"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-83LKN3YC2H"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -14,7 +14,7 @@
 </script>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CANopen (FD) Slave Protocol Stack | cos_mgr.h File Reference</title>
+<title>CANopen Slave Protocol Stack | cos_mgr.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -42,7 +42,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectbrief">CANopen Slave Documentation</div>
-   <div id="projectnumber">Version 6.16.02</div>
+   <div id="projectnumber">Version 6.16.04</div>
   </td>
  </tr>
  </tbody>
@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('cos__mgr_8h.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This module holds all functions for the initialisation and control of the CANopen slave. Some functions of this module need to be adopted to the target application: </p><ul>
+<div class="textblock"><p>This module holds all functions for the initialization and control of the CANopen slave. Some functions of this module need to be adopted to the target application: </p><ul>
 <li><a class="el" href="cos__mgr_8h.html#ad0a1d3a875c7db08553fbf5952aa31f9" title="Get module bit-rate.">CosMgrGetBitrate()</a> </li>
 <li><a class="el" href="cos__mgr_8h.html#a26773e7845db7a7a2b352fcb52a058c4">CosMgrGetNodeId()</a> </li>
 <li><a class="el" href="cos__mgr_8h.html#a79647921b24fe5a996e4b2b147492fb1">CosMgrGetProductCode()</a> </li>
@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('cos__mgr_8h.html',''); initResizable()
 <li><a class="el" href="cos__mgr_8h.html#ac890e7904bc138656f7ca0de661036e7" title="Handle Bus-Off condition.">CosMgrOnBusOff()</a> </li>
 <li><a class="el" href="cos__mgr_8h.html#a66f8a2f399c9e83cc14e622ddaf4c4a7">CosMgrOnStart()</a></li>
 </ul>
-<p>These functions are located in the cos_user.c file. Please refer to <a class="el" href="cos_example_start.html">Initialisation Process</a> for details about the <a class="el" href="cos__mgr_8h.html#a1ac846f2ac39ff649997614d26192a40" title="Initialise the CANopen Slave.">CosMgrInit()</a> function and also check the <a class="el" href="cos_example_main.html">Complete Startup Process</a> for reference. </p>
+<p>These functions are located in the cos_user.c file. Please refer to <a class="el" href="cos_example_start.html">Initialization Process</a> for details about the <a class="el" href="cos__mgr_8h.html#a1ac846f2ac39ff649997614d26192a40" title="Initialise the CANopen Slave.">CosMgrInit()</a> function and also check the <a class="el" href="cos_example_main.html">Complete Startup Process</a> for reference. </p>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for cos_mgr.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -425,11 +425,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ubCallerResultV</td><td>Result of CANopen service initialisation</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ubCallerResultV</td><td>Result of CANopen service initialization</td></tr>
   </table>
   </dd>
 </dl>
-<p>This event is called during the initialisation of CANopen services (refer to <a class="el" href="cos__mgr_8h.html#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a>). The parameter <em>ubCallerResultV</em> holds the state of the initialisation process. Possible values are defined by the <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296" title="Error Codes of protocol stack.">CosErr_e</a> enumeration. On successful initialisation the value for <em>ubCallerResultV</em> is <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a>. </p>
+<p>This event is called during the initialization of CANopen services (refer to <a class="el" href="cos__mgr_8h.html#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a>). The parameter <em>ubCallerResultV</em> holds the state of the initialization process. Possible values are defined by the <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296" title="Error Codes of protocol stack.">CosErr_e</a> enumeration. On successful initialization the value for <em>ubCallerResultV</em> is <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a>. </p>
 <p>The following example shows how to change default settings for the heartbeat and the SYNC producer, as well as registration of <a class="el" href="cos__emcy_8h.html#COS_EMCY">EMCY</a> codes. </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="cos__mgr_8h.html#a66f8a2f399c9e83cc14e622ddaf4c4a7">CosMgrOnStart</a>(uint8_t ubCallerResultV)</div>
 <div class="line">{</div>
 <div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
@@ -444,7 +444,7 @@ Functions</h2></td></tr>
 <div class="line">   <a class="code hl_function" href="cos__emcy_8h.html#a9710afd5540c0ff85228ea35e9aef7dc">CosEmcyErrorRegister</a>(<a class="code hl_enumvalue" href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a544fa6d63b99916012769364ad2590e0">eEMCY_301_DEVICE_TEMPERATURE</a>,    <a class="code hl_define" href="group__EMCY__CODES.html#ga19e95d0a0770e316f5548b1416102629">EMCY_ERR_TEMP_DEVICE</a>,  <a class="code hl_enumvalue" href="canopen_8h.html#aad9a4c2f6c14753f8e43e418abf37fefad4dc8e5d3b1c6cc32f33a9a475e5cfc9">eCoErrReg_TEMPERATURE</a>, 0);</div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
-<div class="line">   <span class="comment">// Check status of initialisation</span></div>
+<div class="line">   <span class="comment">// Check status of initialization</span></div>
 <div class="line">   <span class="comment">//</span></div>
 <div class="line">   <span class="keywordflow">switch</span> (ubCallerResultV)</div>
 <div class="line">   {</div>
@@ -623,7 +623,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Error Code </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="cos__mgr_8h.html#a658ad26f2a00ecab90b425916e3de216">CosMgrOnBootUp()</a>, <a class="el" href="cos__mgr_8h.html#a66f8a2f399c9e83cc14e622ddaf4c4a7">CosMgrOnStart()</a></dd></dl>
-<p>This routine starts the CANopen protocol stack on the given node-ID and bit rate. The initialisation routines from other CANopen services are called and the Boot-up message is sent. The function returns <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a> on success. </p>
+<p>This routine starts the CANopen protocol stack on the given node-ID and bit rate. The initialization routines from other CANopen services are called and the Boot-up message is sent. The function returns <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a> on success. </p>
 <p>In case the device shall be started in classical CANopen mode the parameter <code>slBitrateDatSelV</code> must be set to <a class="el" href="canpie_8h.html#a1701ab116f6fb6d511dfc34e5115de2baad510570f0bc89dc1101adbce0434771">eCP_BITRATE_NONE</a>. </p>
 <dl class="section attention"><dt>Attention</dt><dd>The number and position of parameters has been changed with major version 6 (CANopen FD) of the protocol stack. </dd></dl>
 
@@ -636,7 +636,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a class="el" href="cos__mgr_8h.html">cos_mgr.h</a></li>
-    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Mon Dec 4 2023 </li>
+    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Fri Mar 29 2024 </li>
   </ul>
 </div>
 </body>

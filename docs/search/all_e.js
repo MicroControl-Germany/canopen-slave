@@ -74,5 +74,5 @@ var searchData=
   ['messages_71',['Mask values for CAN messages',['../group__CP__MASK.html',1,'']]],
   ['mimxrt1170_5fevk_20board_72',['MIMXRT1170_EVK board',['../cos_ex_board_MIMXRT1170_EVK.html',1,'']]],
   ['module_20version_73',['module version',['../group__COS__DS401__VERSION.html',1,'CiA 401 module version'],['../group__COS__DS404__VERSION.html',1,'CiA 404 module version'],['../group__COS__DS406__VERSION.html',1,'CiA 406 module version'],['../group__COS__SAFETY__VERSION.html',1,'Safety module version']]],
-  ['modules_74',['CANopen (FD) Slave Add-on modules',['../cos_add_on_overview.html',1,'']]]
+  ['modules_74',['CANopen Slave Add-on modules',['../cos_add_on_overview.html',1,'']]]
 ];

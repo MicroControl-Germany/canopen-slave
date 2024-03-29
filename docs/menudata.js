@@ -28,7 +28,7 @@ var menudata={children:[
 {text:"First steps",url:"cos_getting_started.html"},
 {text:"Protocol Stack Overview",url:"cos_api_overview.html"},
 {text:"Code Examples",url:"cos_examples.html",children:[
-{text:"Initialisation",url:"cos_example_start.html"},
+{text:"Initialization",url:"cos_example_start.html"},
 {text:"PDO communication",url:"cos_example_pdo_com.html"},
 {text:"PDO mapping",url:"cos_example_pdo_map.html"},
 {text:"STM32G474E-EVAL board",url:"cos_ex_board_STM32G474E_EVAL.html"},
@@ -36,7 +36,7 @@ var menudata={children:[
 {text:"Template Files",url:"cos_api_templates.html",children:[
 {text:"Stack configuration",url:"cos__conf_8h.html#COS_CONF"},
 {text:"Demo functions",url:"cos__demo__app_8h.html#COS_DEMO_APP"},
-{text:"Stack initialisation",url:"cos_example_main.html"},
+{text:"Stack initialization",url:"cos_example_main.html"},
 {text:"Manufacturer objects",url:"cos__mobj_8h.html#COS_MOBJ"},
 {text:"Stack callbacks",url:"cos_example_user.html"}]}]},
 {text:"Reference",url:"",children:[

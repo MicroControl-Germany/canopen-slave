@@ -1,11 +1,11 @@
 var searchData=
 [
   ['abstraction_20layer_0',['Hardware Abstraction Layer',['../cos_api_hal.html',1,'']]],
-  ['add_20on_20modules_1',['CANopen (FD) Slave Add-on modules',['../cos_add_on_overview.html',1,'']]],
+  ['add_20on_20modules_1',['CANopen Slave Add-on modules',['../cos_add_on_overview.html',1,'']]],
   ['add_20on_20safety_2',['Add-on Safety',['../cos_add_on_safety.html',1,'']]],
   ['and_20position_20defines_3',['mask and position defines',['../group__COS__PDO__MAPENTRY.html',1,'']]],
   ['api_4',['CANpie FD API',['../cos_api_canpie.html',1,'']]],
-  ['api_20overview_5',['CANopen (FD) Slave API overview',['../cos_api_overview.html',1,'']]],
+  ['api_20overview_5',['CANopen Slave API overview',['../cos_api_overview.html',1,'']]],
   ['aswmboxcounter_6',['aswMboxCounter',['../structCpNrlCoreData__s.html#a65d867c20648949ebb6a32c2a77f2a2a',1,'CpNrlCoreData_s']]],
   ['atscos404_5fai_5fprocessdatag_7',['atsCos404_AI_ProcessDataG',['../cos404ai_8h.html#a97445f3a7a8287fb9aefc4588b31cfe6',1,'cos404ai.h']]],
   ['atsrcvpdocomg_8',['atsRcvPdoComG',['../cos__pdo_8h.html#a96888e4ce8c8e5e2652b7ecd8d1bd545',1,'cos_pdo.h']]],

@@ -9,12 +9,12 @@ var searchData=
   ['pfnoperatingmodeevent_6',['pfnOperatingModeEvent',['../structCos404__AI__Config__s.html#a39d3629c9aa1fa8c2bac27952c74696c',1,'Cos404_AI_Config_s']]],
   ['pfnsensortypehandler_7',['pfnSensorTypeHandler',['../structCos404__AI__Config__s.html#a853f825bc030e52a7e47b399ef68b368',1,'Cos404_AI_Config_s']]],
   ['position_20defines_8',['mask and position defines',['../group__COS__PDO__MAPENTRY.html',1,'']]],
-  ['process_9',['process',['../cos_example_main.html',1,'Complete Startup Process'],['../cos_example_start.html',1,'Initialisation Process']]],
+  ['process_9',['process',['../cos_example_main.html',1,'Complete Startup Process'],['../cos_example_start.html',1,'Initialization Process']]],
   ['profile_20cia_20401_10',['CANopen Device Profile CiA 401',['../cos_add_on_cia_401.html',1,'']]],
   ['profile_20cia_20404_11',['CANopen Device Profile CiA 404',['../cos_add_on_cia_404.html',1,'']]],
   ['profile_20cia_20406_12',['CANopen Device Profile CiA 406',['../cos_add_on_cia_406.html',1,'']]],
   ['profile_20cia_20406_20definitions_13',['Device profile CiA 406 definitions',['../group__DS406.html',1,'']]],
-  ['protocol_20stack_14',['protocol stack',['../cos_api_stack.html',1,'CANopen (FD) Slave Protocol Stack'],['../index.html',1,'CANopen (FD) Slave Protocol Stack']]],
+  ['protocol_20stack_14',['protocol stack',['../cos_api_stack.html',1,'CANopen Slave Protocol Stack'],['../index.html',1,'CANopen Slave Protocol Stack']]],
   ['ptscanmsg_15',['ptsCanMsg',['../structCpFifo__s.html#aa53d68f824eb03646858e149ac570234',1,'CpFifo_s']]],
   ['pvddata_16',['pvddata',['../structMcFifoCtrl__s.html#aea1f7f8445f2e90dfad251a57fa811a4',1,'McFifoCtrl_s::pvdData'],['../structCosPdoMapping__s.html#a14fa7c1c2e066e94b1ecc482ae2188fd',1,'CosPdoMapping_s::pvdData']]]
 ];

@@ -24,12 +24,12 @@
 */
 var NAVTREE =
 [
-  [ "CANopen (FD) Slave Protocol Stack", "index.html", [
+  [ "CANopen Slave Protocol Stack", "index.html", [
     [ "Getting Started", null, [
       [ "First steps", "cos_getting_started.html", null ],
       [ "Protocol Stack Overview", "cos_api_overview.html", null ],
       [ "Code Examples", "cos_examples.html", [
-        [ "Initialisation", "cos_example_start.html", null ],
+        [ "Initialization", "cos_example_start.html", null ],
         [ "PDO communication", "cos_example_pdo_com.html", null ],
         [ "PDO mapping", "cos_example_pdo_map.html", null ],
         [ "STM32G474E-EVAL board", "cos_ex_board_STM32G474E_EVAL.html", null ],
@@ -38,7 +38,7 @@ var NAVTREE =
       [ "Template Files", "cos_api_templates.html", [
         [ "Stack configuration", "cos__conf_8h.html#COS_CONF", null ],
         [ "Demo functions", "cos__demo__app_8h.html#COS_DEMO_APP", null ],
-        [ "Stack initialisation", "cos_example_main.html", null ],
+        [ "Stack initialization", "cos_example_main.html", null ],
         [ "Manufacturer objects", "cos__mobj_8h.html#COS_MOBJ", null ],
         [ "Stack callbacks", "cos_example_user.html", null ]
       ] ]

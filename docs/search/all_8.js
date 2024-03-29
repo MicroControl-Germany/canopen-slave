@@ -478,5 +478,5 @@ var searchData=
   ['ewarn_5fotlw_475',['eWARN_OTLW',['../cos406_8h.html#acde878c0741220548e16e0a73416e9aaa07d980feb7e3cc2708d72e09c93bec42',1,'cos406.h']]],
   ['ewarn_5frp_476',['eWARN_RP',['../cos406_8h.html#acde878c0741220548e16e0a73416e9aaa5d542cea87167fd9cb322807f324ae36',1,'cos406.h']]],
   ['example_477',['example',['../cos_example_pdo_map.html#cos_pdo_mapping_rpdo',1,'RPDO mapping example'],['../cos_example_pdo_map.html#cos_pdo_mapping_tpdo',1,'TPDO mapping example']]],
-  ['examples_478',['CANopen (FD) Slave Code Examples',['../cos_examples.html',1,'']]]
+  ['examples_478',['CANopen Slave Code Examples',['../cos_examples.html',1,'']]]
 ];

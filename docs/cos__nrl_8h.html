@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5X74N6G74T"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-83LKN3YC2H"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -14,7 +14,7 @@
 </script>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CANopen (FD) Slave Protocol Stack | cos_nrl.h File Reference</title>
+<title>CANopen Slave Protocol Stack | cos_nrl.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -42,7 +42,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectbrief">CANopen Slave Documentation</div>
-   <div id="projectnumber">Version 6.16.02</div>
+   <div id="projectnumber">Version 6.16.04</div>
   </td>
  </tr>
  </tbody>
@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('cos__nrl_8h.html',''); initResizable()
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This module adds the Network Redundancy Layer (NRL) to the CANopen FD Slave protocol stack. The NRL is an <b>optional add-on module</b> for the CANopen FD Slave protocol stack. The NRL is enabled by setting the symbol <a class="el" href="cos__conf_8h.html#a265395f5b80910de2697604580e59547" title="Support of Network Redundancy Layer.">COS_NRL_SUPPORT</a> to 1. </p>
-<p>The NRL must be started in advance to the CANopen FD Slave protocol stack. The following example depicts the initialisation of the NRL: </p><div class="fragment"><div class="line"><span class="comment">//----------------------------------------------------------------------------------------------</span></div>
+<p>The NRL must be started in advance to the CANopen FD Slave protocol stack. The following example depicts the initialization of the NRL: </p><div class="fragment"><div class="line"><span class="comment">//----------------------------------------------------------------------------------------------</span></div>
 <div class="line"><span class="comment">// Initialise the Network Redundancy Layer</span></div>
 <div class="line"><span class="comment">// The DCL is on CAN interface 1, the RCL is on CAN interface 2</span></div>
 <div class="line"><span class="comment">//</span></div>
@@ -403,7 +403,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Error code defined by the <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296" title="Error Codes of protocol stack.">CosErr_e</a> enumeration. If no error occurred, the function will return the value <code><a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a></code>.</dd></dl>
-<p>This function must be called by the application program after <a class="el" href="cos__mgr_8h.html#a1ac846f2ac39ff649997614d26192a40" title="Initialise the CANopen Slave.">CosMgrInit()</a>. It is responsible for initialisation of the NRL control service. </p>
+<p>This function must be called by the application program after <a class="el" href="cos__mgr_8h.html#a1ac846f2ac39ff649997614d26192a40" title="Initialise the CANopen Slave.">CosMgrInit()</a>. It is responsible for initialization of the NRL control service. </p>
 <p>The function returns an error code defined the the enumeration <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296" title="Error Codes of protocol stack.">CosErr_e</a>. </p>
 
 </div>
@@ -447,7 +447,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a class="el" href="dir_930852f8ebed179784dd2644174fdc77.html">redundancy</a></li><li class="navelem"><a class="el" href="cos__nrl_8h.html">cos_nrl.h</a></li>
-    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Mon Dec 4 2023 </li>
+    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Fri Mar 29 2024 </li>
   </ul>
 </div>
 </body>
