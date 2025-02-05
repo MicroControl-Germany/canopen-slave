@@ -1,17 +1,17 @@
 <map id="cos_nrl.h" name="cos_nrl.h">
-<area shape="rect" id="Node000001" title="CANopen Slave Stack &#45; Network Redundancy Layer." alt="" coords="65,5,140,31"/>
-<area shape="rect" id="Node000002" href="$cos__defs_8h.html" title="CANopen Slave Stack &#45; General definitions ." alt="" coords="110,79,196,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,30,138,65,134,68,109,33"/>
-<area shape="rect" id="Node000014" href="$cp__nrl_8h.html" title="CANpie Network Redundancy Layer (NRL)" alt="" coords="19,79,87,105"/>
-<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="96,33,72,68,68,65,92,30"/>
+<area shape="rect" id="Node000001" title="CANopen Slave Stack &#45; Network Redundancy Layer." alt="" coords="177,5,252,31"/>
+<area shape="rect" id="Node000002" href="$cos__defs_8h.html" title="CANopen Slave Stack &#45; General definitions ." alt="" coords="122,79,208,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,33,184,68,180,65,204,30"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="231,79,299,105"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="225,30,250,65,246,68,221,33"/>
 <area shape="rect" id="Node000003" href="$cp__core_8h.html" title="CANpie core functions ." alt="" coords="14,153,92,178"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="138,107,84,145,81,141,134,103"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,107,86,146,83,142,145,103"/>
 <area shape="rect" id="Node000011" href="$cp__msg_8h.html" title="CANpie message access" alt="" coords="101,226,179,252"/>
-<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="155,105,145,211,139,211,149,105"/>
-<area shape="rect" id="Node000012" href="$canopen_8h.html" title="General CANopen definitions ." alt="" coords="203,226,284,252"/>
-<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="163,104,230,212,226,214,158,106"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="166,105,147,211,142,210,160,105"/>
+<area shape="rect" id="Node000012" href="$canopen_8h.html" title=" " alt="" coords="203,226,284,252"/>
+<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="174,104,232,211,228,214,169,106"/>
 <area shape="rect" id="Node000013" href="$cos__conf_8h.html" title="CANopen Slave Stack &#45; General configuration ." alt="" coords="228,153,313,178"/>
-<area shape="poly" id="edge14_Node000002_Node000013" title=" " alt="" coords="174,103,239,142,236,147,172,107"/>
+<area shape="poly" id="edge14_Node000002_Node000013" title=" " alt="" coords="184,103,241,141,238,146,181,107"/>
 <area shape="rect" id="Node000004" href="$cp__fifo_8h.html" title="CANpie FIFO functions ." alt="" coords="5,226,77,252"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="54,179,48,211,43,210,48,178"/>
 <area shape="rect" id="Node000005" href="$canpie_8h.html" title="CANpie constants, structures and enumerations" alt="" coords="93,300,163,326"/>
@@ -28,5 +28,4 @@
 <area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="261,398,311,436,308,440,258,402"/>
 <area shape="poly" id="edge11_Node000011_Node000005" title=" " alt="" coords="140,253,135,285,130,284,135,252"/>
 <area shape="poly" id="edge13_Node000012_Node000006" title=" " alt="" coords="246,252,246,358,241,358,241,252"/>
-<area shape="poly" id="edge16_Node000014_Node000003" title=" " alt="" coords="56,105,56,137,50,137,50,105"/>
 </map>

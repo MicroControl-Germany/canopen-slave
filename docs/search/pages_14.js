@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['templates_0',['CANopen Slave Templates',['../cos_api_templates.html',1,'']]],
-  ['to_20can_1',['Introduction to CAN',['../intro_can.html',1,'']]],
-  ['todo_20list_2',['Todo List',['../todo.html',1,'']]]
+  ['references_0',['References',['../cos_references.html',1,'']]],
+  ['releases_1',['releases',['../cos_version_2.html',1,'Version History for major 2 releases'],['../cos_version_3.html',1,'Version History for major 3 releases'],['../cos_version_4.html',1,'Version History for major 4 releases'],['../cos_version_5.html',1,'Version History for major 5 releases'],['../cos_version_6.html',1,'Version History for major 6 releases']]]
 ];

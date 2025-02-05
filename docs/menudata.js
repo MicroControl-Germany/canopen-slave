@@ -31,8 +31,12 @@ var menudata={children:[
 {text:"Initialization",url:"cos_example_start.html"},
 {text:"PDO communication",url:"cos_example_pdo_com.html"},
 {text:"PDO mapping",url:"cos_example_pdo_map.html"},
+{text:"EVAL boards",url:"cos_examples_boards.html",children:[
 {text:"STM32G474E-EVAL board",url:"cos_ex_board_STM32G474E_EVAL.html"},
-{text:"STM32L476G-EVAL board",url:"cos_ex_board_STM32L476G_EVAL.html"}]},
+{text:"STM32H735G-DK board",url:"cos_ex_board_STM32H735G_DK.html"},
+{text:"STM32L476G-EVAL board",url:"cos_ex_board_STM32L476G_EVAL.html"},
+{text:"STM32U575-EV board",url:"cos_ex_board_STM32U575I_EV.html"},
+{text:"STM32373-EVAL board",url:"cos_ex_board_STM32373C_EVAL.html"}]}]},
 {text:"Template Files",url:"cos_api_templates.html",children:[
 {text:"Stack configuration",url:"cos__conf_8h.html#COS_CONF"},
 {text:"Demo functions",url:"cos__demo__app_8h.html#COS_DEMO_APP"},
@@ -41,6 +45,7 @@ var menudata={children:[
 {text:"Stack callbacks",url:"cos_example_user.html"}]}]},
 {text:"Reference",url:"",children:[
 {text:"Protocol Stack",url:"cos_api_stack.html",children:[
+{text:"Bootloader support",url:"cos710_8h.html#COS_CIA710"},
 {text:"Definitions - CANopen",url:"canopen_8h.html#CANOPEN"},
 {text:"Definitions - Stack",url:"cos__defs_8h.html#COS_DEFS"},
 {text:"Object dictionary",url:"cos__dict_8h.html#COS_DICT"},
@@ -67,6 +72,7 @@ var menudata={children:[
 {text:"Structures",url:"canpie_8h.html#CANPIE_H"}]},
 {text:"Hardware Abstraction Layer",url:"cos_api_hal.html",children:[
 {text:"CPU",url:"mc__cpu_8h.html#MC_CPU"},
+{text:"In-Application programming",url:"mc__iap_8h.html#MC_IAP"},
 {text:"Non-volatile memory",url:"mc__nvm_8h.html#MC_NVM"},
 {text:"Timer",url:"mc__tmr_8h.html#MC_TMR"},
 {text:"Watchdog",url:"mc__wdt_8h.html#MC_WDT"},

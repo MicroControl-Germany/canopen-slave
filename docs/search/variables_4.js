@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['sldatbitrate_0',['slDatBitRate',['../structCpHdi__s.html#a8743f82067a0fcd66594e6fbacadabfe',1,'CpHdi_s']]],
-  ['slnombitrate_1',['slNomBitRate',['../structCpHdi__s.html#a028744948c35628b50f394e30b699522',1,'CpHdi_s']]],
-  ['szcosmob_5fstr2008g_2',['szCosMob_Str2008G',['../cos__mobj_8h.html#a0cf930b3e7afabc12b547e4a656e2b8e',1,'cos_mobj.h']]]
+  ['tumsgdata_0',['tuMsgData',['../structCpCanMsg__s.html#ab3bdb774abaa0cfd891b275d261326ff',1,'CpCanMsg_s']]],
+  ['tuvalue_1',['tuValue',['../structCosDicEntry__s.html#a82baeee1ac70909a098da2030a9b4d3e',1,'CosDicEntry_s']]]
 ];

@@ -1,27 +1,5 @@
 var searchData=
 [
-  ['c_0',['c',['../cos_template_main.html',1,'cos_main.c'],['../cos_template_user.html',1,'cos_user.c']]],
-  ['callbacks_1',['Complete list of callbacks',['../cos_example_user.html',1,'']]],
-  ['can_2',['Introduction to CAN',['../intro_can.html',1,'']]],
-  ['canopen_20device_20profile_20cia_20401_3',['CANopen Device Profile CiA 401',['../cos_add_on_cia_401.html',1,'']]],
-  ['canopen_20device_20profile_20cia_20404_4',['CANopen Device Profile CiA 404',['../cos_add_on_cia_404.html',1,'']]],
-  ['canopen_20device_20profile_20cia_20406_5',['CANopen Device Profile CiA 406',['../cos_add_on_cia_406.html',1,'']]],
-  ['canopen_20slave_20add_20on_20modules_6',['CANopen Slave Add-on modules',['../cos_add_on_overview.html',1,'']]],
-  ['canopen_20slave_20api_20overview_7',['CANopen Slave API overview',['../cos_api_overview.html',1,'']]],
-  ['canopen_20slave_20code_20examples_8',['CANopen Slave Code Examples',['../cos_examples.html',1,'']]],
-  ['canopen_20slave_20protocol_20stack_9',['canopen slave protocol stack',['../index.html',1,'CANopen Slave Protocol Stack'],['../cos_api_stack.html',1,'CANopen Slave Protocol Stack']]],
-  ['canopen_20slave_20templates_10',['CANopen Slave Templates',['../cos_api_templates.html',1,'']]],
-  ['canpie_20fd_20api_11',['CANpie FD API',['../cos_api_canpie.html',1,'']]],
-  ['changelog_12',['changelog',['../cos_ds401_changelog.html',1,'CiA 401 Changelog'],['../cos_ds404_changelog.html',1,'CiA 404 Changelog']]],
-  ['cia_20401_13',['CANopen Device Profile CiA 401',['../cos_add_on_cia_401.html',1,'']]],
-  ['cia_20401_20changelog_14',['CiA 401 Changelog',['../cos_ds401_changelog.html',1,'']]],
-  ['cia_20404_15',['CANopen Device Profile CiA 404',['../cos_add_on_cia_404.html',1,'']]],
-  ['cia_20404_20changelog_16',['CiA 404 Changelog',['../cos_ds404_changelog.html',1,'']]],
-  ['cia_20406_17',['CANopen Device Profile CiA 406',['../cos_add_on_cia_406.html',1,'']]],
-  ['code_20examples_18',['CANopen Slave Code Examples',['../cos_examples.html',1,'']]],
-  ['communication_20parameter_19',['Setting PDO communication parameter',['../cos_example_pdo_com.html',1,'']]],
-  ['complete_20list_20of_20callbacks_20',['Complete list of callbacks',['../cos_example_user.html',1,'']]],
-  ['complete_20startup_20process_21',['Complete Startup Process',['../cos_example_main.html',1,'']]],
-  ['cos_5fmain_20c_22',['cos_main.c',['../cos_template_main.html',1,'']]],
-  ['cos_5fuser_20c_23',['cos_user.c',['../cos_template_user.html',1,'']]]
+  ['board_0',['board',['../cos_ex_board_MIMXRT1170_EVK.html',1,'MIMXRT1170_EVK board'],['../cos_ex_board_NUCLEO_C092RC.html',1,'NUCLEO-C092RC board'],['../cos_ex_board_S32K146EVB_Q144.html',1,'S32K146EVB-Q144 board'],['../cos_ex_board_STM32373C_EVAL.html',1,'STM32373C-EVAL board'],['../cos_ex_board_STM32G474E_EVAL.html',1,'STM32G474E-EVAL board'],['../cos_ex_board_STM32H735G_DK.html',1,'STM32H735G-DK board'],['../cos_ex_board_STM32L476G_EVAL.html',1,'STM32L476G-EVAL board'],['../cos_ex_board_STM32U575I_EV.html',1,'STM32U575I-EV board']]],
+  ['boards_1',['Examples for evaluation boards',['../cos_examples_boards.html',1,'']]]
 ];

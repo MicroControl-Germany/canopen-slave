@@ -1,4 +1,9 @@
 var searchData=
 [
-  ['board_0',['board',['../cos_ex_board_MIMXRT1170_EVK.html',1,'MIMXRT1170_EVK board'],['../cos_ex_board_S32K146EVB_Q144.html',1,'S32K146EVB-Q144 board'],['../cos_ex_board_STM32373C_EVAL.html',1,'STM32373C-EVAL board'],['../cos_ex_board_STM32G474E_EVAL.html',1,'STM32G474E-EVAL board'],['../cos_ex_board_STM32H735G_DK.html',1,'STM32H735G-DK board'],['../cos_ex_board_STM32L476G_EVAL.html',1,'STM32L476G-EVAL board']]]
+  ['abstraction_20layer_0',['Hardware Abstraction Layer',['../cos_api_hal.html',1,'']]],
+  ['add_20on_20mini_20master_1',['Add-on Mini-Master',['../cos_add_on_mini_master.html',1,'']]],
+  ['add_20on_20modules_2',['CANopen Slave Add-on modules',['../cos_add_on_overview.html',1,'']]],
+  ['add_20on_20safety_3',['Add-on Safety',['../cos_add_on_safety.html',1,'']]],
+  ['api_4',['CANpie FD API',['../cos_api_canpie.html',1,'']]],
+  ['api_20overview_5',['CANopen Slave API overview',['../cos_api_overview.html',1,'']]]
 ];

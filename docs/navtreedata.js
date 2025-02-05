@@ -32,8 +32,13 @@ var NAVTREE =
         [ "Initialization", "cos_example_start.html", null ],
         [ "PDO communication", "cos_example_pdo_com.html", null ],
         [ "PDO mapping", "cos_example_pdo_map.html", null ],
-        [ "STM32G474E-EVAL board", "cos_ex_board_STM32G474E_EVAL.html", null ],
-        [ "STM32L476G-EVAL board", "cos_ex_board_STM32L476G_EVAL.html", null ]
+        [ "EVAL boards", "cos_examples_boards.html", [
+          [ "STM32G474E-EVAL board", "cos_ex_board_STM32G474E_EVAL.html", null ],
+          [ "STM32H735G-DK board", "cos_ex_board_STM32H735G_DK.html", null ],
+          [ "STM32L476G-EVAL board", "cos_ex_board_STM32L476G_EVAL.html", null ],
+          [ "STM32U575-EV board", "cos_ex_board_STM32U575I_EV.html", null ],
+          [ "STM32373-EVAL board", "cos_ex_board_STM32373C_EVAL.html", null ]
+        ] ]
       ] ],
       [ "Template Files", "cos_api_templates.html", [
         [ "Stack configuration", "cos__conf_8h.html#COS_CONF", null ],
@@ -45,6 +50,7 @@ var NAVTREE =
     ] ],
     [ "Reference", null, [
       [ "Protocol Stack", "cos_api_stack.html", [
+        [ "Bootloader support", "cos710_8h.html#COS_CIA710", null ],
         [ "Definitions - CANopen", "canopen_8h.html#CANOPEN", null ],
         [ "Definitions - Stack", "cos__defs_8h.html#COS_DEFS", null ],
         [ "Object dictionary", "cos__dict_8h.html#COS_DICT", null ],
@@ -75,6 +81,7 @@ var NAVTREE =
       ] ],
       [ "Hardware Abstraction Layer", "cos_api_hal.html", [
         [ "CPU", "mc__cpu_8h.html#MC_CPU", null ],
+        [ "In-Application programming", "mc__iap_8h.html#MC_IAP", null ],
         [ "Non-volatile memory", "mc__nvm_8h.html#MC_NVM", null ],
         [ "Timer", "mc__tmr_8h.html#MC_TMR", null ],
         [ "Watchdog", "mc__wdt_8h.html#MC_WDT", null ],

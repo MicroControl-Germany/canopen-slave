@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['layer_0',['Hardware Abstraction Layer',['../cos_api_hal.html',1,'']]],
-  ['license_1',['License',['../stack_license.html',1,'']]],
-  ['list_2',['list',['../deprecated.html',1,'Deprecated List'],['../todo.html',1,'Todo List']]],
-  ['list_20of_20callbacks_3',['Complete list of callbacks',['../cos_example_user.html',1,'']]]
+  ['initialization_20process_0',['Initialization Process',['../cos_example_start.html',1,'']]],
+  ['introduction_20to_20can_1',['Introduction to CAN',['../intro_can.html',1,'']]]
 ];
