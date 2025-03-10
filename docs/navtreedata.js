@@ -37,7 +37,8 @@ var NAVTREE =
           [ "STM32H735G-DK board", "cos_ex_board_STM32H735G_DK.html", null ],
           [ "STM32L476G-EVAL board", "cos_ex_board_STM32L476G_EVAL.html", null ],
           [ "STM32U575-EV board", "cos_ex_board_STM32U575I_EV.html", null ],
-          [ "STM32373-EVAL board", "cos_ex_board_STM32373C_EVAL.html", null ]
+          [ "STM32373-EVAL board", "cos_ex_board_STM32373C_EVAL.html", null ],
+          [ "NUCLEO-C092RC board", "cos_ex_board_NUCLEO_C092RC.html", null ]
         ] ]
       ] ],
       [ "Template Files", "cos_api_templates.html", [
@@ -70,6 +71,7 @@ var NAVTREE =
             [ "Analog Out", "cos404ao_8h.html#COS_CIA404_AO", null ]
           ] ],
           [ "Profile CiA 406", "cos_add_on_cia_406.html", null ],
+          [ "Profile CiA 410", "cos_add_on_cia_410.html", null ],
           [ "Safety", "cos_add_on_safety.html", null ]
         ] ]
       ] ],

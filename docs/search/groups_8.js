@@ -8,5 +8,5 @@ var searchData=
   ['message_20control_5',['Bit mask for message control',['../group__CP__MSG__CTRL.html',1,'']]],
   ['messages_6',['Mask values for CAN messages',['../group__CP__MASK.html',1,'']]],
   ['mini_20master_20module_20version_7',['Mini-Master module version',['../group__COS__MM__VERSION.html',1,'']]],
-  ['module_20version_8',['module version',['../group__COS__DS401__VERSION.html',1,'CiA 401 module version'],['../group__COS__DS404__VERSION.html',1,'CiA 404 module version'],['../group__COS__DS406__VERSION.html',1,'CiA 406 module version'],['../group__COS__MM__VERSION.html',1,'Mini-Master module version'],['../group__COS__SAFETY__VERSION.html',1,'Safety module version'],['../group__COS__SECURE__CONFIG__VERSION.html',1,'Secure Configuration module version']]]
+  ['module_20version_8',['module version',['../group__COS__DS401__VERSION.html',1,'CiA 401 module version'],['../group__COS__DS404__VERSION.html',1,'CiA 404 module version'],['../group__COS__DS406__VERSION.html',1,'CiA 406 module version'],['../group__COS__DS410__VERSION.html',1,'CiA 410 module version'],['../group__COS__MM__VERSION.html',1,'Mini-Master module version'],['../group__COS__SAFETY__VERSION.html',1,'Safety module version'],['../group__COS__SECURE__CONFIG__VERSION.html',1,'Secure Configuration module version']]]
 ];

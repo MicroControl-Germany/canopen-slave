@@ -43,7 +43,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectbrief">CANopen Slave Documentation</div>
-   <div id="projectnumber">Version 7.00.00</div>
+   <div id="projectnumber">Version 7.00.02</div>
   </td>
  </tr>
  </tbody>
@@ -1100,7 +1100,7 @@ $(function(){initNavTree('cos_example_user.html',''); initResizable(true); });
 <div class="line"><span class="comment">//                                                                                                                    //</span></div>
 <div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
 <div class="line"><span class="preprocessor">#if COS_SECURE_CONFIG_SUPPORT &gt; 0</span></div>
-<div class="line">uint8_t * CosSecureConfigBufferAllocate(uint32_t ulSizeV)</div>
+<div class="line">uint8_t * <a class="code hl_function" href="cos__secure__config_8h.html#ab59feedda3247c58ae21e7c183ad5204">CosSecureConfigBufferAllocate</a>(uint32_t ulSizeV)</div>
 <div class="line">{</div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
@@ -1118,7 +1118,7 @@ $(function(){initNavTree('cos_example_user.html',''); initResizable(true); });
 <div class="line"><span class="comment">//                                                                                                                    //</span></div>
 <div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
 <div class="line"><span class="preprocessor">#if COS_SECURE_CONFIG_SUPPORT &gt; 0</span></div>
-<div class="line"><span class="keywordtype">void</span> CosSecureConfigBufferRelease(<span class="keywordtype">void</span>)</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="cos__secure__config_8h.html#a42eecd61d461232d55c59ac7f6a8eb14">CosSecureConfigBufferRelease</a>(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
 <div class="line">   <span class="comment">// release buffer here</span></div>
@@ -1172,7 +1172,56 @@ $(function(){initNavTree('cos_example_user.html',''); initResizable(true); });
 <div class="line">      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110afc0dbfd533bfded2b18c0f04414ef679">eCOS_SECURE_CONFIG_EVENT_BLOCK_ACCESS</a>:</div>
 <div class="line"> </div>
 <div class="line">         <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110ac0b30c45a0db4c41c56f45ffcba08fc7">eCOS_SECURE_CONFIG_EVENT_DCF_APPLIED</a>:</div>
+<div class="line"> </div>
+<div class="line">         <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110ae5b542af2bc5a325530bf419d4e1332e">eCOS_SECURE_CONFIG_EVENT_DCF_FAILED</a>:</div>
+<div class="line"> </div>
+<div class="line">         <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
 <div class="line">   }</div>
+<div class="line">}</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
+<div class="line"><span class="comment">// CosSecureConfigFileLoad()                                                                                          //</span></div>
+<div class="line"><span class="comment">//                                                                                                                    //</span></div>
+<div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
+<div class="line"><span class="preprocessor">#if COS_SECURE_CONFIG_SUPPORT &gt; 0</span></div>
+<div class="line">uint8_t <a class="code hl_function" href="cos__secure__config_8h.html#ab1b715ec55c81fb777f8524e781c4311">CosSecureConfigFileLoad</a>(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">   uint8_t  ubResultT = <a class="code hl_enumvalue" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a29c9946c3d66178de67350502b5af232">eCOS_ERR_PARM_LOAD</a>;</div>
+<div class="line">   uint8_t  *pubSecureConfigT = (uint8_t *) 0L;</div>
+<div class="line">   uint32_t ulSizeT = 0;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// get Secure Concise DCF data here and setup the variables &#39;pubSecureConfigT&#39; and &#39;ulSizeT&#39;</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// provide data to secure config module</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   ubResultT = CosSecureConfigParmLoad(pubSecureConfigT, ulSizeT);</div>
+<div class="line"> </div>
+<div class="line">   <span class="keywordflow">return</span> (ubResultT);</div>
+<div class="line">}</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
+<div class="line"><span class="comment">// CosSecureConfigFileSave()                                                                                          //</span></div>
+<div class="line"><span class="comment">//                                                                                                                    //</span></div>
+<div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
+<div class="line"><span class="preprocessor">#if COS_SECURE_CONFIG_SUPPORT &gt; 0</span></div>
+<div class="line">uint8_t <a class="code hl_function" href="cos__secure__config_8h.html#a53b53daf487d78c1f9b72b38adb6ff70">CosSecureConfigFileSave</a>(uint8_t *pubSecureConfigV, uint32_t ulSizeV)</div>
+<div class="line">{</div>
+<div class="line">   (void) pubSecureConfigV;</div>
+<div class="line">   (void) ulSizeV;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a>;</div>
 <div class="line">}</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"> </div>
@@ -1182,7 +1231,7 @@ $(function(){initNavTree('cos_example_user.html',''); initResizable(true); });
 <div class="line"><span class="comment">//                                                                                                                    //</span></div>
 <div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
 <div class="line"><span class="preprocessor">#if COS_SECURE_CONFIG_SUPPORT &gt; 0</span></div>
-<div class="line">uint8_t * CosSecureConfigGetDcfBuffer(uint32_t ulSizeV)</div>
+<div class="line">uint8_t * <a class="code hl_function" href="cos__secure__config_8h.html#a9cd8f3318aa79d2ba6a39bb7a518b23c">CosSecureConfigGetDcfBuffer</a>(uint32_t ulSizeV)</div>
 <div class="line">{</div>
 <div class="line">   <span class="keywordflow">if</span> (pubDcfConfigS != 0L)</div>
 <div class="line">   {</div>
@@ -1322,13 +1371,20 @@ $(function(){initNavTree('cos_example_user.html',''); initResizable(true); });
 <div class="ttc" id="acos__sdo__cln_8h_html_ad69739d2ba6925de8692721a72eef51b"><div class="ttname"><a href="cos__sdo__cln_8h.html#ad69739d2ba6925de8692721a72eef51b">CosSdoClnEventTimeout</a></div><div class="ttdeci">void CosSdoClnEventTimeout(uint8_t ubNodeIdV, CoObject_ts *ptsCoObjV)</div></div>
 <div class="ttc" id="acos__secure__config_8h_html"><div class="ttname"><a href="cos__secure__config_8h.html">cos_secure_config.h</a></div><div class="ttdoc">CANopen Slave Stack - Secure Configuration .</div></div>
 <div class="ttc" id="acos__secure__config_8h_html_a3912755c2c11e27c9fa7a4bd4bff98d9"><div class="ttname"><a href="cos__secure__config_8h.html#a3912755c2c11e27c9fa7a4bd4bff98d9">CosSecureConfigEvent</a></div><div class="ttdeci">void CosSecureConfigEvent(uint8_t ubSecureConfigEventV)</div></div>
+<div class="ttc" id="acos__secure__config_8h_html_a42eecd61d461232d55c59ac7f6a8eb14"><div class="ttname"><a href="cos__secure__config_8h.html#a42eecd61d461232d55c59ac7f6a8eb14">CosSecureConfigBufferRelease</a></div><div class="ttdeci">void CosSecureConfigBufferRelease(void)</div></div>
 <div class="ttc" id="acos__secure__config_8h_html_a4e07dc1b48391c9761c31728e998c586"><div class="ttname"><a href="cos__secure__config_8h.html#a4e07dc1b48391c9761c31728e998c586">CosSecureConfigGetSeed</a></div><div class="ttdeci">uint64_t CosSecureConfigGetSeed(void)</div></div>
+<div class="ttc" id="acos__secure__config_8h_html_a53b53daf487d78c1f9b72b38adb6ff70"><div class="ttname"><a href="cos__secure__config_8h.html#a53b53daf487d78c1f9b72b38adb6ff70">CosSecureConfigFileSave</a></div><div class="ttdeci">uint8_t CosSecureConfigFileSave(uint8_t *pubSecureConfigV, uint32_t ulSizeV)</div></div>
 <div class="ttc" id="acos__secure__config_8h_html_a7ddc9a9b835558769cc5e14777d40106"><div class="ttname"><a href="cos__secure__config_8h.html#a7ddc9a9b835558769cc5e14777d40106">CosSecureConfigBuildNonce</a></div><div class="ttdeci">uint64_t CosSecureConfigBuildNonce(uint64_t uqSeedV)</div></div>
-<div class="ttc" id="acos__secure__config_8h_html_ad8d75cd2dd0bd9fa794fbc8555e47110a50b22459252997e657418ecaf1fc14b7"><div class="ttname"><a href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110a50b22459252997e657418ecaf1fc14b7">eCOS_SECURE_CONFIG_EVENT_START_FULL</a></div><div class="ttdeci">@ eCOS_SECURE_CONFIG_EVENT_START_FULL</div><div class="ttdef"><b>Definition</b> cos_secure_config.h:103</div></div>
-<div class="ttc" id="acos__secure__config_8h_html_ad8d75cd2dd0bd9fa794fbc8555e47110a9f8ce04a45c8c2c3ab54f2005dde5340"><div class="ttname"><a href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110a9f8ce04a45c8c2c3ab54f2005dde5340">eCOS_SECURE_CONFIG_EVENT_ALLOW_ACCESS</a></div><div class="ttdeci">@ eCOS_SECURE_CONFIG_EVENT_ALLOW_ACCESS</div><div class="ttdef"><b>Definition</b> cos_secure_config.h:112</div></div>
-<div class="ttc" id="acos__secure__config_8h_html_ad8d75cd2dd0bd9fa794fbc8555e47110aaca294f70b9b504cc428601af56f3ad2"><div class="ttname"><a href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110aaca294f70b9b504cc428601af56f3ad2">eCOS_SECURE_CONFIG_EVENT_DESTROY_NONCE</a></div><div class="ttdeci">@ eCOS_SECURE_CONFIG_EVENT_DESTROY_NONCE</div><div class="ttdef"><b>Definition</b> cos_secure_config.h:109</div></div>
-<div class="ttc" id="acos__secure__config_8h_html_ad8d75cd2dd0bd9fa794fbc8555e47110ac257f703edc78b8879cc03cd8e99b424"><div class="ttname"><a href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110ac257f703edc78b8879cc03cd8e99b424">eCOS_SECURE_CONFIG_EVENT_START_PART</a></div><div class="ttdeci">@ eCOS_SECURE_CONFIG_EVENT_START_PART</div><div class="ttdef"><b>Definition</b> cos_secure_config.h:106</div></div>
-<div class="ttc" id="acos__secure__config_8h_html_ad8d75cd2dd0bd9fa794fbc8555e47110afc0dbfd533bfded2b18c0f04414ef679"><div class="ttname"><a href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110afc0dbfd533bfded2b18c0f04414ef679">eCOS_SECURE_CONFIG_EVENT_BLOCK_ACCESS</a></div><div class="ttdeci">@ eCOS_SECURE_CONFIG_EVENT_BLOCK_ACCESS</div><div class="ttdef"><b>Definition</b> cos_secure_config.h:115</div></div>
+<div class="ttc" id="acos__secure__config_8h_html_a9cd8f3318aa79d2ba6a39bb7a518b23c"><div class="ttname"><a href="cos__secure__config_8h.html#a9cd8f3318aa79d2ba6a39bb7a518b23c">CosSecureConfigGetDcfBuffer</a></div><div class="ttdeci">uint8_t * CosSecureConfigGetDcfBuffer(uint32_t ulSizeV)</div></div>
+<div class="ttc" id="acos__secure__config_8h_html_ab1b715ec55c81fb777f8524e781c4311"><div class="ttname"><a href="cos__secure__config_8h.html#ab1b715ec55c81fb777f8524e781c4311">CosSecureConfigFileLoad</a></div><div class="ttdeci">uint8_t CosSecureConfigFileLoad(void)</div></div>
+<div class="ttc" id="acos__secure__config_8h_html_ab59feedda3247c58ae21e7c183ad5204"><div class="ttname"><a href="cos__secure__config_8h.html#ab59feedda3247c58ae21e7c183ad5204">CosSecureConfigBufferAllocate</a></div><div class="ttdeci">uint8_t * CosSecureConfigBufferAllocate(uint32_t ulSizeV)</div></div>
+<div class="ttc" id="acos__secure__config_8h_html_ad8d75cd2dd0bd9fa794fbc8555e47110a50b22459252997e657418ecaf1fc14b7"><div class="ttname"><a href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110a50b22459252997e657418ecaf1fc14b7">eCOS_SECURE_CONFIG_EVENT_START_FULL</a></div><div class="ttdeci">@ eCOS_SECURE_CONFIG_EVENT_START_FULL</div><div class="ttdef"><b>Definition</b> cos_secure_config.h:135</div></div>
+<div class="ttc" id="acos__secure__config_8h_html_ad8d75cd2dd0bd9fa794fbc8555e47110a9f8ce04a45c8c2c3ab54f2005dde5340"><div class="ttname"><a href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110a9f8ce04a45c8c2c3ab54f2005dde5340">eCOS_SECURE_CONFIG_EVENT_ALLOW_ACCESS</a></div><div class="ttdeci">@ eCOS_SECURE_CONFIG_EVENT_ALLOW_ACCESS</div><div class="ttdef"><b>Definition</b> cos_secure_config.h:144</div></div>
+<div class="ttc" id="acos__secure__config_8h_html_ad8d75cd2dd0bd9fa794fbc8555e47110aaca294f70b9b504cc428601af56f3ad2"><div class="ttname"><a href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110aaca294f70b9b504cc428601af56f3ad2">eCOS_SECURE_CONFIG_EVENT_DESTROY_NONCE</a></div><div class="ttdeci">@ eCOS_SECURE_CONFIG_EVENT_DESTROY_NONCE</div><div class="ttdef"><b>Definition</b> cos_secure_config.h:141</div></div>
+<div class="ttc" id="acos__secure__config_8h_html_ad8d75cd2dd0bd9fa794fbc8555e47110ac0b30c45a0db4c41c56f45ffcba08fc7"><div class="ttname"><a href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110ac0b30c45a0db4c41c56f45ffcba08fc7">eCOS_SECURE_CONFIG_EVENT_DCF_APPLIED</a></div><div class="ttdeci">@ eCOS_SECURE_CONFIG_EVENT_DCF_APPLIED</div><div class="ttdef"><b>Definition</b> cos_secure_config.h:150</div></div>
+<div class="ttc" id="acos__secure__config_8h_html_ad8d75cd2dd0bd9fa794fbc8555e47110ac257f703edc78b8879cc03cd8e99b424"><div class="ttname"><a href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110ac257f703edc78b8879cc03cd8e99b424">eCOS_SECURE_CONFIG_EVENT_START_PART</a></div><div class="ttdeci">@ eCOS_SECURE_CONFIG_EVENT_START_PART</div><div class="ttdef"><b>Definition</b> cos_secure_config.h:138</div></div>
+<div class="ttc" id="acos__secure__config_8h_html_ad8d75cd2dd0bd9fa794fbc8555e47110ae5b542af2bc5a325530bf419d4e1332e"><div class="ttname"><a href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110ae5b542af2bc5a325530bf419d4e1332e">eCOS_SECURE_CONFIG_EVENT_DCF_FAILED</a></div><div class="ttdeci">@ eCOS_SECURE_CONFIG_EVENT_DCF_FAILED</div><div class="ttdef"><b>Definition</b> cos_secure_config.h:153</div></div>
+<div class="ttc" id="acos__secure__config_8h_html_ad8d75cd2dd0bd9fa794fbc8555e47110afc0dbfd533bfded2b18c0f04414ef679"><div class="ttname"><a href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110afc0dbfd533bfded2b18c0f04414ef679">eCOS_SECURE_CONFIG_EVENT_BLOCK_ACCESS</a></div><div class="ttdeci">@ eCOS_SECURE_CONFIG_EVENT_BLOCK_ACCESS</div><div class="ttdef"><b>Definition</b> cos_secure_config.h:147</div></div>
 <div class="ttc" id="acos__sync_8h_html"><div class="ttname"><a href="cos__sync_8h.html">cos_sync.h</a></div><div class="ttdoc">CANopen Slave Stack - Synchronisation functions (SYNC) .</div></div>
 <div class="ttc" id="acos__sync_8h_html_a8b8d496bc3ce2b64c4ba8fecb5816eb4"><div class="ttname"><a href="cos__sync_8h.html#a8b8d496bc3ce2b64c4ba8fecb5816eb4">CosSyncEventRcvPdo</a></div><div class="ttdeci">void CosSyncEventRcvPdo(void)</div><div class="ttdoc">Handle RPDOs on SYNC reception.</div></div>
 <div class="ttc" id="acos__time_8h_html"><div class="ttname"><a href="cos__time_8h.html">cos_time.h</a></div><div class="ttdoc">CANopen Slave Stack - Timing functions .</div></div>
@@ -1368,7 +1424,7 @@ $(function(){initNavTree('cos_example_user.html',''); initResizable(true); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Wed Feb 5 2025 </li>
+    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Mon Mar 10 2025 </li>
   </ul>
 </div>
 </body>

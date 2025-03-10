@@ -43,7 +43,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectbrief">CANopen Slave Documentation</div>
-   <div id="projectnumber">Version 7.00.00</div>
+   <div id="projectnumber">Version 7.00.02</div>
   </td>
  </tr>
  </tbody>
@@ -141,7 +141,7 @@ $(function(){initNavTree('cos_add_on_cia_401.html',''); initResizable(true); });
 <p>Use the header file <code>cos401.h</code> to get access to the <a class="el" href="cos_add_on_cia_401.html">CANopen Device Profile CiA 401</a> API.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;cos401.h&quot;</span></div>
 </div><!-- fragment --><h2>Digital inputs</h2>
-<p>Digital inputs are read by the application and passed to the protocol stack by means of <a class="el" href="cos401di_8h.html#ac40a20a2751d9cec106ba7eda2476b6a">Cos401_DI_Set()</a>. If dynamic PDO mapping is supported (<a class="el" href="cos__conf_8h.html#a7373184e34672bcbfbb62749349e0be2">COS_PDO_MAPPING</a> &gt; 0) the default mapping can be set inside the <a class="el" href="cos__pdo_8h.html#a8256e60baae0150258f4e5556f27b351" title="Setup application specific PDO communication parameter.">CosPdoComSetup()</a> function, as shown in the following example:</p>
+<p>Digital inputs are read by the application and forwarded to the protocol stack by means of <a class="el" href="cos401di_8h.html#ac40a20a2751d9cec106ba7eda2476b6a">Cos401_DI_Set()</a>. If dynamic PDO mapping is supported (<a class="el" href="cos__conf_8h.html#a7373184e34672bcbfbb62749349e0be2">COS_PDO_MAPPING</a> &gt; 0) the default mapping can be set inside the <a class="el" href="cos__pdo_8h.html#a8256e60baae0150258f4e5556f27b351" title="Setup application specific PDO communication parameter.">CosPdoComSetup()</a> function, as shown in the following example:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="cos__pdo_8h.html#a8256e60baae0150258f4e5556f27b351">CosPdoComSetup</a>(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line">   <span class="comment">// .. other code ..</span></div>
@@ -190,7 +190,7 @@ $(function(){initNavTree('cos_add_on_cia_401.html',''); initResizable(true); });
 <div class="ttc" id="acos__pdo_8h_html_aa9130151873d0c20e1137748560e9935"><div class="ttname"><a href="cos__pdo_8h.html#aa9130151873d0c20e1137748560e9935">atsRcvPdoComG</a></div><div class="ttdeci">CosPdoCom_ts atsRcvPdoComG[]</div></div>
 <div class="ttc" id="acos__pdo_8h_html_af0535c263b4160048bd47e145c70c6a2"><div class="ttname"><a href="cos__pdo_8h.html#af0535c263b4160048bd47e145c70c6a2">CosPdoRcvMapEnable</a></div><div class="ttdeci">uint8_t CosPdoRcvMapEnable(uint8_t ubPdoNumberV, uint8_t ubMapNumberV)</div></div>
 </div><!-- fragment --><h2>Analog inputs</h2>
-<p>Analog inputs are read by the application and passed to the protocol stack by means of <a class="el" href="cos401ai_8h.html#a36b915bffd39e6c13b1f48ee3228d99a">Cos401_AI_SetProcessValue16()</a>. If dynamic PDO mapping is supported (<a class="el" href="cos__conf_8h.html#a7373184e34672bcbfbb62749349e0be2">COS_PDO_MAPPING</a> &gt; 0) the default mapping can be set inside the <a class="el" href="cos__pdo_8h.html#a8256e60baae0150258f4e5556f27b351" title="Setup application specific PDO communication parameter.">CosPdoComSetup()</a> function, as shown in the following example:</p>
+<p>Analog inputs are read by the application and forwarded to the protocol stack by means of <a class="el" href="cos401ai_8h.html#a36b915bffd39e6c13b1f48ee3228d99a">Cos401_AI_SetProcessValue16()</a>. If dynamic PDO mapping is supported (<a class="el" href="cos__conf_8h.html#a7373184e34672bcbfbb62749349e0be2">COS_PDO_MAPPING</a> &gt; 0) the default mapping can be set inside the <a class="el" href="cos__pdo_8h.html#a8256e60baae0150258f4e5556f27b351" title="Setup application specific PDO communication parameter.">CosPdoComSetup()</a> function, as shown in the following example:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="cos__pdo_8h.html#a8256e60baae0150258f4e5556f27b351">CosPdoComSetup</a>(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line">   <span class="comment">// .. other code ..</span></div>
@@ -255,7 +255,7 @@ $(function(){initNavTree('cos_add_on_cia_401.html',''); initResizable(true); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Wed Feb 5 2025 </li>
+    <li class="footer"><a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> Mon Mar 10 2025 </li>
   </ul>
 </div>
 </body>

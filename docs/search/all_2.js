@@ -9,5 +9,7 @@ var searchData=
   ['404_20module_20version_6',['CiA 404 module version',['../group__COS__DS404__VERSION.html',1,'']]],
   ['406_7',['CANopen Device Profile CiA 406',['../cos_add_on_cia_406.html',1,'']]],
   ['406_20definitions_8',['Device profile CiA 406 definitions',['../group__DS406.html',1,'']]],
-  ['406_20module_20version_9',['CiA 406 module version',['../group__COS__DS406__VERSION.html',1,'']]]
+  ['406_20module_20version_9',['CiA 406 module version',['../group__COS__DS406__VERSION.html',1,'']]],
+  ['410_10',['CANopen Device Profile CiA 410',['../cos_add_on_cia_410.html',1,'']]],
+  ['410_20module_20version_11',['CiA 410 module version',['../group__COS__DS410__VERSION.html',1,'']]]
 ];

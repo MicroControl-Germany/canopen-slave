@@ -36,7 +36,8 @@ var menudata={children:[
 {text:"STM32H735G-DK board",url:"cos_ex_board_STM32H735G_DK.html"},
 {text:"STM32L476G-EVAL board",url:"cos_ex_board_STM32L476G_EVAL.html"},
 {text:"STM32U575-EV board",url:"cos_ex_board_STM32U575I_EV.html"},
-{text:"STM32373-EVAL board",url:"cos_ex_board_STM32373C_EVAL.html"}]}]},
+{text:"STM32373-EVAL board",url:"cos_ex_board_STM32373C_EVAL.html"},
+{text:"NUCLEO-C092RC board",url:"cos_ex_board_NUCLEO_C092RC.html"}]}]},
 {text:"Template Files",url:"cos_api_templates.html",children:[
 {text:"Stack configuration",url:"cos__conf_8h.html#COS_CONF"},
 {text:"Demo functions",url:"cos__demo__app_8h.html#COS_DEMO_APP"},
@@ -64,6 +65,7 @@ var menudata={children:[
 {text:"Analog In",url:"cos404ai_8h.html#COS_CIA404_AI"},
 {text:"Analog Out",url:"cos404ao_8h.html#COS_CIA404_AO"}]},
 {text:"Profile CiA 406",url:"cos_add_on_cia_406.html"},
+{text:"Profile CiA 410",url:"cos_add_on_cia_410.html"},
 {text:"Safety",url:"cos_add_on_safety.html"}]}]},
 {text:"CANpie FD",url:"cos_api_canpie.html",children:[
 {text:"Core",url:"cp__core_8h.html#CP_CORE_H"},
