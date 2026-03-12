@@ -33,12 +33,14 @@ var NAVTREE =
         [ "PDO communication", "cos_example_pdo_com.html", null ],
         [ "PDO mapping", "cos_example_pdo_map.html", null ],
         [ "EVAL boards", "cos_examples_boards.html", [
+          [ "NUCLEO-C092RC board", "cos_ex_board_NUCLEO_C092RC.html", null ],
+          [ "STM32G0C1E-EV board", "cos_ex_board_STM32G0C1E_EV.html", null ],
           [ "STM32G474E-EVAL board", "cos_ex_board_STM32G474E_EVAL.html", null ],
           [ "STM32H735G-DK board", "cos_ex_board_STM32H735G_DK.html", null ],
           [ "STM32L476G-EVAL board", "cos_ex_board_STM32L476G_EVAL.html", null ],
           [ "STM32U575-EV board", "cos_ex_board_STM32U575I_EV.html", null ],
           [ "STM32373-EVAL board", "cos_ex_board_STM32373C_EVAL.html", null ],
-          [ "NUCLEO-C092RC board", "cos_ex_board_NUCLEO_C092RC.html", null ]
+          [ "STM32437I-EVAL board", "cos_ex_board_STM32437I_EVAL.html", null ]
         ] ]
       ] ],
       [ "Template Files", "cos_api_templates.html", [
@@ -91,9 +93,10 @@ var NAVTREE =
       ] ],
       [ "Version history", "cos_version.html", null ]
     ] ],
-    [ "Overviews", null, [
-      [ "Introduction to CAN", "intro_can.html", null ],
-      [ "References", "cos_references.html", null ],
+    [ "Resources", null, [
+      [ "CAN abbreviations", "can_abbreviations.html", null ],
+      [ "CAN introduction", "can_introduction.html", null ],
+      [ "Specifications", "cos_specifications.html", null ],
       [ "Support", "stack_support.html", null ],
       [ "License", "stack_license.html", null ]
     ] ]
@@ -102,8 +105,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"canopen_8h.html#CANOPEN"
+"can_abbreviations.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';

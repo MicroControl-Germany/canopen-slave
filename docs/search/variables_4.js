@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tumsgdata_0',['tuMsgData',['../structCpCanMsg__s.html#ab3bdb774abaa0cfd891b275d261326ff',1,'CpCanMsg_s']]],
-  ['tuvalue_1',['tuValue',['../structCosDicEntry__s.html#a82baeee1ac70909a098da2030a9b4d3e',1,'CosDicEntry_s']]]
+  ['tumsgdata_0',['tuMsgData',['../structCpCanMsg__s.html#a04148546b5eab14ba7a779bff177b794',1,'CpCanMsg_s']]],
+  ['tuvalue_1',['tuValue',['../structCosDicEntry__s.html#a8d6b2770fe7fd882fe01b0db680f7b35',1,'CosDicEntry_s']]]
 ];

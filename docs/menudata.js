@@ -32,12 +32,14 @@ var menudata={children:[
 {text:"PDO communication",url:"cos_example_pdo_com.html"},
 {text:"PDO mapping",url:"cos_example_pdo_map.html"},
 {text:"EVAL boards",url:"cos_examples_boards.html",children:[
+{text:"NUCLEO-C092RC board",url:"cos_ex_board_NUCLEO_C092RC.html"},
+{text:"STM32G0C1E-EV board",url:"cos_ex_board_STM32G0C1E_EV.html"},
 {text:"STM32G474E-EVAL board",url:"cos_ex_board_STM32G474E_EVAL.html"},
 {text:"STM32H735G-DK board",url:"cos_ex_board_STM32H735G_DK.html"},
 {text:"STM32L476G-EVAL board",url:"cos_ex_board_STM32L476G_EVAL.html"},
 {text:"STM32U575-EV board",url:"cos_ex_board_STM32U575I_EV.html"},
 {text:"STM32373-EVAL board",url:"cos_ex_board_STM32373C_EVAL.html"},
-{text:"NUCLEO-C092RC board",url:"cos_ex_board_NUCLEO_C092RC.html"}]}]},
+{text:"STM32437I-EVAL board",url:"cos_ex_board_STM32437I_EVAL.html"}]}]},
 {text:"Template Files",url:"cos_api_templates.html",children:[
 {text:"Stack configuration",url:"cos__conf_8h.html#COS_CONF"},
 {text:"Demo functions",url:"cos__demo__app_8h.html#COS_DEMO_APP"},
@@ -80,8 +82,9 @@ var menudata={children:[
 {text:"Watchdog",url:"mc__wdt_8h.html#MC_WDT"},
 {text:"Compiler definitions",url:"mc__compiler_8h.html#MC_COMPILER_H"}]},
 {text:"Version history",url:"cos_version.html"}]},
-{text:"Overviews",url:"",children:[
-{text:"Introduction to CAN",url:"intro_can.html"},
-{text:"References",url:"cos_references.html"},
+{text:"Resources",url:"",children:[
+{text:"CAN abbreviations",url:"can_abbreviations.html"},
+{text:"CAN introduction",url:"can_introduction.html"},
+{text:"Specifications",url:"cos_specifications.html"},
 {text:"Support",url:"stack_support.html"},
 {text:"License",url:"stack_license.html"}]}]}

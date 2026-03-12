@@ -11,5 +11,6 @@ var searchData=
   ['406_20definitions_8',['Device profile CiA 406 definitions',['../group__DS406.html',1,'']]],
   ['406_20module_20version_9',['CiA 406 module version',['../group__COS__DS406__VERSION.html',1,'']]],
   ['410_10',['CANopen Device Profile CiA 410',['../cos_add_on_cia_410.html',1,'']]],
-  ['410_20module_20version_11',['CiA 410 module version',['../group__COS__DS410__VERSION.html',1,'']]]
+  ['410_20changelog_11',['CiA 410 Changelog',['../cos_ds410_changelog.html',1,'']]],
+  ['410_20module_20version_12',['CiA 410 module version',['../group__COS__DS410__VERSION.html',1,'']]]
 ];

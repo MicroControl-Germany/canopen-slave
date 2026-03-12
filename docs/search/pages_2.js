@@ -6,5 +6,6 @@ var searchData=
   ['404_3',['CANopen Device Profile CiA 404',['../cos_add_on_cia_404.html',1,'']]],
   ['404_20changelog_4',['CiA 404 Changelog',['../cos_ds404_changelog.html',1,'']]],
   ['406_5',['CANopen Device Profile CiA 406',['../cos_add_on_cia_406.html',1,'']]],
-  ['410_6',['CANopen Device Profile CiA 410',['../cos_add_on_cia_410.html',1,'']]]
+  ['410_6',['CANopen Device Profile CiA 410',['../cos_add_on_cia_410.html',1,'']]],
+  ['410_20changelog_7',['CiA 410 Changelog',['../cos_ds410_changelog.html',1,'']]]
 ];

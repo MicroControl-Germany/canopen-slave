@@ -1,7 +1,0 @@
-<map id="CpNrlState_s" name="CpNrlState_s">
-<area shape="rect" id="Node000001" title="State structure for NRL." alt="" coords="48,209,231,394"/>
-<area shape="rect" id="Node000002" href="$structCpState__s.html" title="CAN state structure." alt="" coords="5,5,129,131"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,130,108,192,103,194,84,131"/>
-<area shape="rect" id="Node000003" href="$structCpStatistic__s.html" title="CAN statistic structure." alt="" coords="154,15,271,121"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,121,186,185,183,194,178,192,181,184,198,120"/>
-</map>
