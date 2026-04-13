@@ -27,6 +27,7 @@ var NAVTREEINDEX0 =
 "cos_add_on_cia_410.html":[1,0,13,3],
 "cos_add_on_overview.html":[1,0,13],
 "cos_add_on_safety.html":[1,0,13,4],
+"cos_add_on_secure_config.html":[1,0,13,5],
 "cos_api_canpie.html":[1,1],
 "cos_api_hal.html":[1,2],
 "cos_api_overview.html":[0,1],

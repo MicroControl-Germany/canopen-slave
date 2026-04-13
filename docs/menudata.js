@@ -68,7 +68,8 @@ var menudata={children:[
 {text:"Analog Out",url:"cos404ao_8h.html#COS_CIA404_AO"}]},
 {text:"Profile CiA 406",url:"cos_add_on_cia_406.html"},
 {text:"Profile CiA 410",url:"cos_add_on_cia_410.html"},
-{text:"Safety",url:"cos_add_on_safety.html"}]}]},
+{text:"Safety",url:"cos_add_on_safety.html"},
+{text:"Secure Configuration",url:"cos_add_on_secure_config.html"}]}]},
 {text:"CANpie FD",url:"cos_api_canpie.html",children:[
 {text:"Core",url:"cp__core_8h.html#CP_CORE_H"},
 {text:"FIFO",url:"cp__fifo_8h.html#CP_FIFO_H"},

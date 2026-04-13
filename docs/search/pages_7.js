@@ -28,6 +28,7 @@ var searchData=
   ['communication_20parameter_25',['Setting PDO communication parameter',['../cos_example_pdo_com.html',1,'']]],
   ['complete_20list_20of_20callbacks_26',['Complete list of callbacks',['../cos_example_user.html',1,'']]],
   ['complete_20startup_20process_27',['Complete Startup Process',['../cos_example_main.html',1,'']]],
-  ['cos_5fmain_20c_28',['cos_main.c',['../cos_template_main.html',1,'']]],
-  ['cos_5fuser_20c_29',['cos_user.c',['../cos_template_user.html',1,'']]]
+  ['configuration_28',['Add-on Secure Configuration',['../cos_add_on_secure_config.html',1,'']]],
+  ['cos_5fmain_20c_29',['cos_main.c',['../cos_template_main.html',1,'']]],
+  ['cos_5fuser_20c_30',['cos_user.c',['../cos_template_user.html',1,'']]]
 ];
