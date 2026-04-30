@@ -1,3 +1,5 @@
 <map id="Cos404_AI_ProcessData_s" name="Cos404_AI_ProcessData_s">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,178,72"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,178,250"/>
+<area shape="rect" id="Node000002" href="$unionCos404DT__u.html" title="Use Type Union to handle with values in CiA 404 AI module." alt="" coords="48,5,136,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,72,94,166,89,166,89,72"/>
 </map>
