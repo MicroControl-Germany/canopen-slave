@@ -88,4 +88,7 @@ var menudata={children:[
 {text:"CAN introduction",url:"can_introduction.html"},
 {text:"Specifications",url:"cos_specifications.html"},
 {text:"Support",url:"stack_support.html"},
-{text:"License",url:"stack_license.html"}]}]}
+{text:"License",url:"stack_license.html"}]},
+{text:"Compliance",url:"",children:[
+{text:"MISRA C:2025",url:"cos_misra2025.html",children:[
+{text:"Exceptions",url:"misra_exceptions.html"}]}]}]}

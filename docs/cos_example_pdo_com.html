@@ -1,8 +1,8 @@
 <!-- HTML header for doxygen 1.14.0-->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-83LKN3YC2H"></script>
@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.04.02</div>
+   <div id="projectbrief">Version 7.06.00</div>
   </td>
  </tr>
  </tbody>
@@ -114,7 +114,7 @@ $(function(){initNavTree('cos_example_pdo_com.html','',''); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_pages_2cos-01-start_2cos__example__pdo__com"></a></p>
 <p>During initialization of the <a class="el" href="cos__pdo_8h.html#COS_PDO">PDO</a> module the function <a class="el" href="cos__pdo_8h.html#a8256e60baae0150258f4e5556f27b351" title="Setup application specific PDO communication parameter.">CosPdoComSetup()</a> is called. Within this function, any default PDO communication parameter can be modified by the application. </p>
-<p>For that purpose, the application has access to the structure <a class="el" href="structCosPdoCom__s.html" title="PDO communication parameter.">CosPdoCom_s</a> for Receive PDOs (<code><a class="el" href="cos__pdo_8h.html#aa9130151873d0c20e1137748560e9935">atsRcvPdoComG</a></code>[]) and Transmit PDOs (<code><a class="el" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a></code>). </p>
+<p>For that purpose, the application has access to the structure <a class="el" href="structCosPdoCom__s.html" title="PDO communication parameter.">CosPdoCom_s</a> for Receive PDOs (<code><a class="el" href="cos__pdo_8h.html#a28f84492718adb1f0c3a8c533ef81341">atsRcvPdoComG</a></code>[]) and Transmit PDOs (<code><a class="el" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a></code>). </p>
 <h1>Modifying the transmission type</h1>
 <p>The transmission type is modified the setting the element <a class="el" href="structCosPdoCom__s.html#af987d414722e8083a8ecf59f499f993d">CosPdoCom_s::ubTransType</a> with a value from the enumeration <a class="el" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0" title="PDO transmission types.">PdoType_e</a>.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="cos__pdo_8h.html#a8256e60baae0150258f4e5556f27b351">CosPdoComSetup</a>(<span class="keywordtype">void</span>)</div>
@@ -124,19 +124,19 @@ $(function(){initNavTree('cos_example_pdo_com.html','',''); });
 <div class="line">   <span class="comment">//------------------------------------------------------------------------------------</span></div>
 <div class="line">   <span class="comment">// set Transmit PDO 1 to cyclic, every SYNC message</span></div>
 <div class="line">   <span class="comment">//</span></div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[0].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a67aa82fc7c72a155a26dfc2040a3bd6f">ePDO_TYPE_SYNC_1</a>;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[0].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a67aa82fc7c72a155a26dfc2040a3bd6f">ePDO_TYPE_SYNC_1</a>;</div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">//------------------------------------------------------------------------------------</span></div>
 <div class="line">   <span class="comment">// set Transmit PDO 2 to cyclic, every second SYNC message</span></div>
 <div class="line">   <span class="comment">//</span></div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[1].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a45b5a1e3ee540c4f85727bc813d142f9">ePDO_TYPE_SYNC_2</a>;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[1].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a45b5a1e3ee540c4f85727bc813d142f9">ePDO_TYPE_SYNC_2</a>;</div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">// .. other code </span></div>
 <div class="line">}</div>
 <div class="ttc" id="acos__pdo_8h_html_a823566c24f3948511b7e3861fa992bb0a45b5a1e3ee540c4f85727bc813d142f9"><div class="ttname"><a href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a45b5a1e3ee540c4f85727bc813d142f9">ePDO_TYPE_SYNC_2</a></div><div class="ttdeci">@ ePDO_TYPE_SYNC_2</div><div class="ttdef"><b>Definition</b> cos_pdo.h:163</div></div>
 <div class="ttc" id="acos__pdo_8h_html_a823566c24f3948511b7e3861fa992bb0a67aa82fc7c72a155a26dfc2040a3bd6f"><div class="ttname"><a href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a67aa82fc7c72a155a26dfc2040a3bd6f">ePDO_TYPE_SYNC_1</a></div><div class="ttdeci">@ ePDO_TYPE_SYNC_1</div><div class="ttdef"><b>Definition</b> cos_pdo.h:160</div></div>
 <div class="ttc" id="acos__pdo_8h_html_a8256e60baae0150258f4e5556f27b351"><div class="ttname"><a href="cos__pdo_8h.html#a8256e60baae0150258f4e5556f27b351">CosPdoComSetup</a></div><div class="ttdeci">void CosPdoComSetup(void)</div><div class="ttdoc">Setup application specific PDO communication parameter.</div></div>
-<div class="ttc" id="acos__pdo_8h_html_afe41f4e3c37212d099ddbca2af3c474e"><div class="ttname"><a href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a></div><div class="ttdeci">CosPdoCom_ts atsTrmPdoComG[]</div></div>
+<div class="ttc" id="acos__pdo_8h_html_abc61982bc9b837e1eb32bbda87364e9d"><div class="ttname"><a href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a></div><div class="ttdeci">CosPdoCom_ts atsTrmPdoComG[COS_PDO_TRM_NUMBER]</div></div>
 </div><!-- fragment --><h1>Setting the Event Timer</h1>
 <p>In order to use the event timer, the transmission type of the PDO must have a value &gt; 253 (i.e. <a class="el" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0ac453a41cf8a68f4510a4f49662ec7e25">ePDO_TYPE_EVENT_MANUFACTURER</a> or <a class="el" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0ae27a5037f888fc02e592c7ee24aea106">ePDO_TYPE_EVENT_PROFILE</a>). </p>
 <p>All timer values are internally converted into timer ticks, hence a required time must be converted into tick value by means of <a class="el" href="cos__time_8h.html#ae6117c7ea06d6b9f1ce4fe9c1e357f7e">CosTmrCalcTicks()</a>. The following example shows how to configure Transmit PDO 1 with an event timer value of 100 ms.</p>
@@ -147,13 +147,13 @@ $(function(){initNavTree('cos_example_pdo_com.html','',''); });
 <div class="line">   <span class="comment">//------------------------------------------------------------------------------------</span></div>
 <div class="line">   <span class="comment">// set Transmit PDO 1 to event</span></div>
 <div class="line">   <span class="comment">//</span></div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[0].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0ac453a41cf8a68f4510a4f49662ec7e25">ePDO_TYPE_EVENT_MANUFACTURER</a>;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[0].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0ac453a41cf8a68f4510a4f49662ec7e25">ePDO_TYPE_EVENT_MANUFACTURER</a>;</div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">//------------------------------------------------------------------------------------</span></div>
 <div class="line">   <span class="comment">// configure both, tick value and reload value with 100 ms</span></div>
 <div class="line">   <span class="comment">//</span></div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[0].uwEventTime = <a class="code hl_function" href="cos__time_8h.html#ae6117c7ea06d6b9f1ce4fe9c1e357f7e">CosTmrCalcTicks</a>(100);</div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[0].uwEventTick = <a class="code hl_function" href="cos__time_8h.html#ae6117c7ea06d6b9f1ce4fe9c1e357f7e">CosTmrCalcTicks</a>(100);</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[0].uwEventTime = <a class="code hl_function" href="cos__time_8h.html#ae6117c7ea06d6b9f1ce4fe9c1e357f7e">CosTmrCalcTicks</a>(100);</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[0].uwEventTick = <a class="code hl_function" href="cos__time_8h.html#ae6117c7ea06d6b9f1ce4fe9c1e357f7e">CosTmrCalcTicks</a>(100);</div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">// .. other code </span></div>
 <div class="line">}</div>
@@ -168,7 +168,7 @@ $(function(){initNavTree('cos_example_pdo_com.html','',''); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Thu May 14 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
   </ul>
 </div>
 </body>

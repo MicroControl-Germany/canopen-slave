@@ -11,5 +11,7 @@ var searchData=
   ['master_20changelog_8',['Mini-Master Changelog',['../cos_mini_master_changelog.html',1,'']]],
   ['mini_20master_9',['Add-on Mini-Master',['../cos_add_on_mini_master.html',1,'']]],
   ['mini_20master_20changelog_10',['Mini-Master Changelog',['../cos_mini_master_changelog.html',1,'']]],
-  ['modules_11',['CANopen Slave Add-on modules',['../cos_add_on_overview.html',1,'']]]
+  ['misra_20c_3a2025_20compliance_20summary_20tables_11',['MISRA C:2025 Compliance Summary Tables',['../cos_misra2025.html',1,'']]],
+  ['misra_20c_3a2025_20exceptions_12',['MISRA C:2025 Exceptions',['../misra_exceptions.html',1,'']]],
+  ['modules_13',['CANopen Slave Add-on modules',['../cos_add_on_overview.html',1,'']]]
 ];

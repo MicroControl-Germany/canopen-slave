@@ -1,8 +1,8 @@
 <!-- HTML header for doxygen 1.14.0-->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-83LKN3YC2H"></script>
@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.04.02</div>
+   <div id="projectbrief">Version 7.06.00</div>
   </td>
  </tr>
  </tbody>
@@ -805,7 +805,7 @@ $(function(){initNavTree('cos_template_user.html','',''); });
 <div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
 <div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="cos__nmt_8h.html#a987248df8ba06fb828e89ea1eb550c93">CosNmtServiceOnGuardingEvent</a>(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
-<div class="line">   <a class="code hl_function" href="cos__emcy_8h.html#aae59d0d0933a448a0d44cbd55f6fcabf">CosEmcyErrorSet</a>(<a class="code hl_enumvalue" href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a73c3bcf1c1bda5c1a945be15d9915f4e">eEMCY_301_CAN_LIFEGUARD</a>, (uint8_t *) 0);</div>
+<div class="line">   <a class="code hl_function" href="cos__emcy_8h.html#a5ef328c06839a1093a6143932cd44af7">CosEmcyErrorSet</a>(<a class="code hl_enumvalue" href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a73c3bcf1c1bda5c1a945be15d9915f4e">eEMCY_301_CAN_LIFEGUARD</a>, (uint8_t *) 0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
@@ -815,7 +815,7 @@ $(function(){initNavTree('cos_template_user.html','',''); });
 <div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
 <div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="cos__nmt_8h.html#a149aa50b102c0091c89f213535bc3566">CosNmtServiceOnHeartbeatEvent</a>(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
-<div class="line">   <a class="code hl_function" href="cos__emcy_8h.html#aae59d0d0933a448a0d44cbd55f6fcabf">CosEmcyErrorSet</a>(<a class="code hl_enumvalue" href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a73c3bcf1c1bda5c1a945be15d9915f4e">eEMCY_301_CAN_LIFEGUARD</a>, (uint8_t *) 0);</div>
+<div class="line">   <a class="code hl_function" href="cos__emcy_8h.html#a5ef328c06839a1093a6143932cd44af7">CosEmcyErrorSet</a>(<a class="code hl_enumvalue" href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a73c3bcf1c1bda5c1a945be15d9915f4e">eEMCY_301_CAN_LIFEGUARD</a>, (uint8_t *) 0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
@@ -879,44 +879,44 @@ $(function(){initNavTree('cos_template_user.html','',''); });
 <div class="line">   <span class="comment">// communication parameter record.</span></div>
 <div class="line">   <span class="comment">//</span></div>
 <div class="line"><span class="preprocessor">   #if COS_PDO_TRM_NUMBER &gt; 0</span></div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[0].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a67aa82fc7c72a155a26dfc2040a3bd6f">ePDO_TYPE_SYNC_1</a>;</div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[0].uwEventTime   = 0;</div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[0].uwEventTick   = 0;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[0].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a67aa82fc7c72a155a26dfc2040a3bd6f">ePDO_TYPE_SYNC_1</a>;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[0].uwEventTime   = 0;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[0].uwEventTick   = 0;</div>
 <div class="line"><span class="preprocessor">   #endif</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">   #if COS_PDO_TRM_NUMBER &gt; 1</span></div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[1].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a67aa82fc7c72a155a26dfc2040a3bd6f">ePDO_TYPE_SYNC_1</a>;</div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[1].uwEventTime   = <a class="code hl_function" href="cos__time_8h.html#ae6117c7ea06d6b9f1ce4fe9c1e357f7e">CosTmrCalcTicks</a>(500);</div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[1].uwEventTick   = <a class="code hl_function" href="cos__time_8h.html#ae6117c7ea06d6b9f1ce4fe9c1e357f7e">CosTmrCalcTicks</a>(500);</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[1].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a67aa82fc7c72a155a26dfc2040a3bd6f">ePDO_TYPE_SYNC_1</a>;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[1].uwEventTime   = <a class="code hl_function" href="cos__time_8h.html#ae6117c7ea06d6b9f1ce4fe9c1e357f7e">CosTmrCalcTicks</a>(500);</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[1].uwEventTick   = <a class="code hl_function" href="cos__time_8h.html#ae6117c7ea06d6b9f1ce4fe9c1e357f7e">CosTmrCalcTicks</a>(500);</div>
 <div class="line"><span class="preprocessor">   #endif</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">   #if COS_PDO_TRM_NUMBER &gt; 2</span></div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[2].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a67aa82fc7c72a155a26dfc2040a3bd6f">ePDO_TYPE_SYNC_1</a>;</div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[2].uwEventTick   = 0;</div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[2].uwEventTime   = 0;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[2].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a67aa82fc7c72a155a26dfc2040a3bd6f">ePDO_TYPE_SYNC_1</a>;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[2].uwEventTick   = 0;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[2].uwEventTime   = 0;</div>
 <div class="line"><span class="preprocessor">   #endif</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">   #if COS_PDO_TRM_NUMBER &gt; 3</span></div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[3].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a67aa82fc7c72a155a26dfc2040a3bd6f">ePDO_TYPE_SYNC_1</a>;</div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[3].uwEventTime   = 0;</div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[3].uwEventTick   = 0;</div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a>[3].ulIdentifier |= 0x80000000;          <span class="comment">// disable TPDO4</span></div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[3].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a67aa82fc7c72a155a26dfc2040a3bd6f">ePDO_TYPE_SYNC_1</a>;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[3].uwEventTime   = 0;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[3].uwEventTick   = 0;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a>[3].ulIdentifier |= 0x80000000;          <span class="comment">// disable TPDO4</span></div>
 <div class="line"><span class="preprocessor">   #endif</span></div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
 <div class="line">   <span class="comment">// Receive PDO communication parameter</span></div>
 <div class="line">   <span class="comment">//</span></div>
 <div class="line"><span class="preprocessor">   #if COS_PDO_RCV_NUMBER &gt; 0</span></div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#aa9130151873d0c20e1137748560e9935">atsRcvPdoComG</a>[0].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0ae27a5037f888fc02e592c7ee24aea106">ePDO_TYPE_EVENT_PROFILE</a>;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#a28f84492718adb1f0c3a8c533ef81341">atsRcvPdoComG</a>[0].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0ae27a5037f888fc02e592c7ee24aea106">ePDO_TYPE_EVENT_PROFILE</a>;</div>
 <div class="line"><span class="preprocessor">   #endif</span></div>
 <div class="line"><span class="preprocessor">   #if COS_PDO_RCV_NUMBER &gt; 1</span></div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#aa9130151873d0c20e1137748560e9935">atsRcvPdoComG</a>[1].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0ae27a5037f888fc02e592c7ee24aea106">ePDO_TYPE_EVENT_PROFILE</a>;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#a28f84492718adb1f0c3a8c533ef81341">atsRcvPdoComG</a>[1].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0ae27a5037f888fc02e592c7ee24aea106">ePDO_TYPE_EVENT_PROFILE</a>;</div>
 <div class="line"><span class="preprocessor">   #endif</span></div>
 <div class="line"><span class="preprocessor">   #if COS_PDO_RCV_NUMBER &gt; 2</span></div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#aa9130151873d0c20e1137748560e9935">atsRcvPdoComG</a>[2].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0ae27a5037f888fc02e592c7ee24aea106">ePDO_TYPE_EVENT_PROFILE</a>;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#a28f84492718adb1f0c3a8c533ef81341">atsRcvPdoComG</a>[2].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0ae27a5037f888fc02e592c7ee24aea106">ePDO_TYPE_EVENT_PROFILE</a>;</div>
 <div class="line"><span class="preprocessor">   #endif</span></div>
 <div class="line"><span class="preprocessor">   #if COS_PDO_RCV_NUMBER &gt; 3</span></div>
-<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#aa9130151873d0c20e1137748560e9935">atsRcvPdoComG</a>[3].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0ae27a5037f888fc02e592c7ee24aea106">ePDO_TYPE_EVENT_PROFILE</a>;</div>
+<div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#a28f84492718adb1f0c3a8c533ef81341">atsRcvPdoComG</a>[3].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0ae27a5037f888fc02e592c7ee24aea106">ePDO_TYPE_EVENT_PROFILE</a>;</div>
 <div class="line"><span class="preprocessor">   #endif</span></div>
 <div class="line"> </div>
 <div class="line">}</div>
@@ -1344,17 +1344,17 @@ $(function(){initNavTree('cos_template_user.html','',''); });
 <div class="ttc" id="acos710_8h_html_af621df51ed6421c3eb62bc010515b494a3ed2685e22769ab78c3211171594be32"><div class="ttname"><a href="cos710_8h.html#af621df51ed6421c3eb62bc010515b494a3ed2685e22769ab78c3211171594be32">eCOS_BOOTLOADER_EVENT_APPLICATION_BUSY</a></div><div class="ttdeci">@ eCOS_BOOTLOADER_EVENT_APPLICATION_BUSY</div><div class="ttdef"><b>Definition</b> cos710.h:93</div></div>
 <div class="ttc" id="acos710_8h_html_af621df51ed6421c3eb62bc010515b494ae6f4234f4dad2a56f25c9970aafaa407"><div class="ttname"><a href="cos710_8h.html#af621df51ed6421c3eb62bc010515b494ae6f4234f4dad2a56f25c9970aafaa407">eCOS_BOOTLOADER_EVENT_ACCESS_GRANTED</a></div><div class="ttdeci">@ eCOS_BOOTLOADER_EVENT_ACCESS_GRANTED</div><div class="ttdef"><b>Definition</b> cos710.h:87</div></div>
 <div class="ttc" id="acos710_8h_html_af621df51ed6421c3eb62bc010515b494aeb0426bb3fb37ff360afe25bb4c9a35f"><div class="ttname"><a href="cos710_8h.html#af621df51ed6421c3eb62bc010515b494aeb0426bb3fb37ff360afe25bb4c9a35f">eCOS_BOOTLOADER_EVENT_ACCESS_EXPIRED</a></div><div class="ttdeci">@ eCOS_BOOTLOADER_EVENT_ACCESS_EXPIRED</div><div class="ttdef"><b>Definition</b> cos710.h:90</div></div>
-<div class="ttc" id="acos__defs_8h_html_a5f2ea5d4c0d5cff718531f6f83b0f98fa1e386bda90429c996628f4e03f99bb4f"><div class="ttname"><a href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98fa1e386bda90429c996628f4e03f99bb4f">eCosSdo_WRITE_OK</a></div><div class="ttdeci">@ eCosSdo_WRITE_OK</div><div class="ttdef"><b>Definition</b> cos_defs.h:317</div></div>
+<div class="ttc" id="acos__defs_8h_html_a5f2ea5d4c0d5cff718531f6f83b0f98fa1e386bda90429c996628f4e03f99bb4f"><div class="ttname"><a href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98fa1e386bda90429c996628f4e03f99bb4f">eCosSdo_WRITE_OK</a></div><div class="ttdeci">@ eCosSdo_WRITE_OK</div><div class="ttdef"><b>Definition</b> cos_defs.h:318</div></div>
 <div class="ttc" id="acos__defs_8h_html_ad3aefa0a1ed58399a94659a932bd7f52a2db6133737ea786c08b4cd3eaff07888"><div class="ttname"><a href="cos__defs_8h.html#ad3aefa0a1ed58399a94659a932bd7f52a2db6133737ea786c08b4cd3eaff07888">eCosBuf_PDO1_RCV</a></div><div class="ttdeci">@ eCosBuf_PDO1_RCV</div><div class="ttdef"><b>Definition</b> cos_defs.h:212</div></div>
-<div class="ttc" id="acos__defs_8h_html_ad3aefa0a1ed58399a94659a932bd7f52ae24220bf040351e78d82e7933f20ef2c"><div class="ttname"><a href="cos__defs_8h.html#ad3aefa0a1ed58399a94659a932bd7f52ae24220bf040351e78d82e7933f20ef2c">eCosBuf_PDO1_TRM</a></div><div class="ttdeci">@ eCosBuf_PDO1_TRM</div><div class="ttdef"><b>Definition</b> cos_defs.h:217</div></div>
-<div class="ttc" id="acos__defs_8h_html_ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9"><div class="ttname"><a href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a></div><div class="ttdeci">@ eCOS_ERR_NONE</div><div class="ttdef"><b>Definition</b> cos_defs.h:505</div></div>
-<div class="ttc" id="acos__defs_8h_html_ad559c6541faef4f8afa177362deed296a29c9946c3d66178de67350502b5af232"><div class="ttname"><a href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a29c9946c3d66178de67350502b5af232">eCOS_ERR_PARM_LOAD</a></div><div class="ttdeci">@ eCOS_ERR_PARM_LOAD</div><div class="ttdef"><b>Definition</b> cos_defs.h:538</div></div>
-<div class="ttc" id="acos__defs_8h_html_ad559c6541faef4f8afa177362deed296a5eee242344c0fba63c3219c22b0d7348"><div class="ttname"><a href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a5eee242344c0fba63c3219c22b0d7348">eCOS_ERR_VALUE_NODE_ID</a></div><div class="ttdeci">@ eCOS_ERR_VALUE_NODE_ID</div><div class="ttdef"><b>Definition</b> cos_defs.h:520</div></div>
-<div class="ttc" id="acos__defs_8h_html_ad559c6541faef4f8afa177362deed296ae64d07e98b7586ecc5580db221650165"><div class="ttname"><a href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296ae64d07e98b7586ecc5580db221650165">eCOS_ERR_CAN_INIT</a></div><div class="ttdeci">@ eCOS_ERR_CAN_INIT</div><div class="ttdef"><b>Definition</b> cos_defs.h:508</div></div>
+<div class="ttc" id="acos__defs_8h_html_ad3aefa0a1ed58399a94659a932bd7f52ae24220bf040351e78d82e7933f20ef2c"><div class="ttname"><a href="cos__defs_8h.html#ad3aefa0a1ed58399a94659a932bd7f52ae24220bf040351e78d82e7933f20ef2c">eCosBuf_PDO1_TRM</a></div><div class="ttdeci">@ eCosBuf_PDO1_TRM</div><div class="ttdef"><b>Definition</b> cos_defs.h:218</div></div>
+<div class="ttc" id="acos__defs_8h_html_ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9"><div class="ttname"><a href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a></div><div class="ttdeci">@ eCOS_ERR_NONE</div><div class="ttdef"><b>Definition</b> cos_defs.h:506</div></div>
+<div class="ttc" id="acos__defs_8h_html_ad559c6541faef4f8afa177362deed296a29c9946c3d66178de67350502b5af232"><div class="ttname"><a href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a29c9946c3d66178de67350502b5af232">eCOS_ERR_PARM_LOAD</a></div><div class="ttdeci">@ eCOS_ERR_PARM_LOAD</div><div class="ttdef"><b>Definition</b> cos_defs.h:539</div></div>
+<div class="ttc" id="acos__defs_8h_html_ad559c6541faef4f8afa177362deed296a5eee242344c0fba63c3219c22b0d7348"><div class="ttname"><a href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a5eee242344c0fba63c3219c22b0d7348">eCOS_ERR_VALUE_NODE_ID</a></div><div class="ttdeci">@ eCOS_ERR_VALUE_NODE_ID</div><div class="ttdef"><b>Definition</b> cos_defs.h:521</div></div>
+<div class="ttc" id="acos__defs_8h_html_ad559c6541faef4f8afa177362deed296ae64d07e98b7586ecc5580db221650165"><div class="ttname"><a href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296ae64d07e98b7586ecc5580db221650165">eCOS_ERR_CAN_INIT</a></div><div class="ttdeci">@ eCOS_ERR_CAN_INIT</div><div class="ttdef"><b>Definition</b> cos_defs.h:509</div></div>
 <div class="ttc" id="acos__dict_8h_html"><div class="ttname"><a href="cos__dict_8h.html">cos_dict.h</a></div><div class="ttdoc">CANopen Slave Stack - Dictionary .</div></div>
 <div class="ttc" id="acos__emcy_8h_html"><div class="ttname"><a href="cos__emcy_8h.html">cos_emcy.h</a></div><div class="ttdoc">CANopen Slave Stack - Emergency functions (EMCY) .</div></div>
 <div class="ttc" id="acos__emcy_8h_html_a2064e8da648758eba453650d5f776366a73c3bcf1c1bda5c1a945be15d9915f4e"><div class="ttname"><a href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a73c3bcf1c1bda5c1a945be15d9915f4e">eEMCY_301_CAN_LIFEGUARD</a></div><div class="ttdeci">@ eEMCY_301_CAN_LIFEGUARD</div><div class="ttdef"><b>Definition</b> cos_emcy.h:384</div></div>
-<div class="ttc" id="acos__emcy_8h_html_aae59d0d0933a448a0d44cbd55f6fcabf"><div class="ttname"><a href="cos__emcy_8h.html#aae59d0d0933a448a0d44cbd55f6fcabf">CosEmcyErrorSet</a></div><div class="ttdeci">Status_tv CosEmcyErrorSet(uint8_t ubErrConditionV, uint8_t *pubCustomerCodeV)</div></div>
+<div class="ttc" id="acos__emcy_8h_html_a5ef328c06839a1093a6143932cd44af7"><div class="ttname"><a href="cos__emcy_8h.html#a5ef328c06839a1093a6143932cd44af7">CosEmcyErrorSet</a></div><div class="ttdeci">Status_tv CosEmcyErrorSet(uint8_t ubErrConditionV, const uint8_t *pubCustomerCodeV)</div></div>
 <div class="ttc" id="acos__mgr_8h_html"><div class="ttname"><a href="cos__mgr_8h.html">cos_mgr.h</a></div><div class="ttdoc">CANopen Slave Stack - Management functions .</div></div>
 <div class="ttc" id="acos__mgr_8h_html_a0e05dbcac98eff4ee069a10784116bb9"><div class="ttname"><a href="cos__mgr_8h.html#a0e05dbcac98eff4ee069a10784116bb9">CosMgrRelease</a></div><div class="ttdeci">uint8_t CosMgrRelease(void)</div><div class="ttdoc">Release the CANopen Slave protocol stack.</div></div>
 <div class="ttc" id="acos__mgr_8h_html_a26773e7845db7a7a2b352fcb52a058c4"><div class="ttname"><a href="cos__mgr_8h.html#a26773e7845db7a7a2b352fcb52a058c4">CosMgrGetNodeId</a></div><div class="ttdeci">uint8_t CosMgrGetNodeId(void)</div></div>
@@ -1379,15 +1379,15 @@ $(function(){initNavTree('cos_template_user.html','',''); });
 <div class="ttc" id="acos__nvm_8h_html_abc42c9dec3fe3b0615dc9f4916e85827a0278363f222a25c56872fc42bea9d42e"><div class="ttname"><a href="cos__nvm_8h.html#abc42c9dec3fe3b0615dc9f4916e85827a0278363f222a25c56872fc42bea9d42e">eNVM_301_OBJ_1018_2_U32</a></div><div class="ttdeci">@ eNVM_301_OBJ_1018_2_U32</div><div class="ttdef"><b>Definition</b> cos_nvm.h:101</div></div>
 <div class="ttc" id="acos__nvm_8h_html_abc42c9dec3fe3b0615dc9f4916e85827a9f29b89a28f5af40e6dbb6bedfaebb16"><div class="ttname"><a href="cos__nvm_8h.html#abc42c9dec3fe3b0615dc9f4916e85827a9f29b89a28f5af40e6dbb6bedfaebb16">eNVM_301_OBJ_1018_4_U32</a></div><div class="ttdeci">@ eNVM_301_OBJ_1018_4_U32</div><div class="ttdef"><b>Definition</b> cos_nvm.h:105</div></div>
 <div class="ttc" id="acos__pdo_8h_html"><div class="ttname"><a href="cos__pdo_8h.html">cos_pdo.h</a></div><div class="ttdoc">CANopen Slave Stack - Process Data Objects (PDO) .</div></div>
+<div class="ttc" id="acos__pdo_8h_html_a28f84492718adb1f0c3a8c533ef81341"><div class="ttname"><a href="cos__pdo_8h.html#a28f84492718adb1f0c3a8c533ef81341">atsRcvPdoComG</a></div><div class="ttdeci">CosPdoCom_ts atsRcvPdoComG[COS_PDO_RCV_NUMBER]</div></div>
 <div class="ttc" id="acos__pdo_8h_html_a2eef50278733fcfa2af8e9dad55ff4f7"><div class="ttname"><a href="cos__pdo_8h.html#a2eef50278733fcfa2af8e9dad55ff4f7">CosPdoMap_ts</a></div><div class="ttdeci">struct CosPdoMap_s CosPdoMap_ts</div><div class="ttdoc">PDO mapping parameter (static mapping)</div></div>
 <div class="ttc" id="acos__pdo_8h_html_a823566c24f3948511b7e3861fa992bb0a67aa82fc7c72a155a26dfc2040a3bd6f"><div class="ttname"><a href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0a67aa82fc7c72a155a26dfc2040a3bd6f">ePDO_TYPE_SYNC_1</a></div><div class="ttdeci">@ ePDO_TYPE_SYNC_1</div><div class="ttdef"><b>Definition</b> cos_pdo.h:160</div></div>
 <div class="ttc" id="acos__pdo_8h_html_a823566c24f3948511b7e3861fa992bb0ae27a5037f888fc02e592c7ee24aea106"><div class="ttname"><a href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0ae27a5037f888fc02e592c7ee24aea106">ePDO_TYPE_EVENT_PROFILE</a></div><div class="ttdeci">@ ePDO_TYPE_EVENT_PROFILE</div><div class="ttdef"><b>Definition</b> cos_pdo.h:190</div></div>
 <div class="ttc" id="acos__pdo_8h_html_a8256e60baae0150258f4e5556f27b351"><div class="ttname"><a href="cos__pdo_8h.html#a8256e60baae0150258f4e5556f27b351">CosPdoComSetup</a></div><div class="ttdeci">void CosPdoComSetup(void)</div><div class="ttdoc">Setup application specific PDO communication parameter.</div></div>
 <div class="ttc" id="acos__pdo_8h_html_a8d479bc8405ae338f1033d8b44034c86"><div class="ttname"><a href="cos__pdo_8h.html#a8d479bc8405ae338f1033d8b44034c86">CosPdoRcvDataUpdate</a></div><div class="ttdeci">void CosPdoRcvDataUpdate(uint8_t ubPdoNumberV)</div></div>
 <div class="ttc" id="acos__pdo_8h_html_a9589f708189f71ec1cdcebe6f66ce0c1"><div class="ttname"><a href="cos__pdo_8h.html#a9589f708189f71ec1cdcebe6f66ce0c1">CosPdoRcvTimeout</a></div><div class="ttdeci">void CosPdoRcvTimeout(uint8_t ubPdoNumberV)</div></div>
-<div class="ttc" id="acos__pdo_8h_html_aa9130151873d0c20e1137748560e9935"><div class="ttname"><a href="cos__pdo_8h.html#aa9130151873d0c20e1137748560e9935">atsRcvPdoComG</a></div><div class="ttdeci">CosPdoCom_ts atsRcvPdoComG[]</div></div>
+<div class="ttc" id="acos__pdo_8h_html_abc61982bc9b837e1eb32bbda87364e9d"><div class="ttname"><a href="cos__pdo_8h.html#abc61982bc9b837e1eb32bbda87364e9d">atsTrmPdoComG</a></div><div class="ttdeci">CosPdoCom_ts atsTrmPdoComG[COS_PDO_TRM_NUMBER]</div></div>
 <div class="ttc" id="acos__pdo_8h_html_acf96d3e8d1aee7e0fc6304dc86c1a7df"><div class="ttname"><a href="cos__pdo_8h.html#acf96d3e8d1aee7e0fc6304dc86c1a7df">CosPdoTrmDataUpdate</a></div><div class="ttdeci">bool_t CosPdoTrmDataUpdate(uint8_t ubPdoNumberV)</div></div>
-<div class="ttc" id="acos__pdo_8h_html_afe41f4e3c37212d099ddbca2af3c474e"><div class="ttname"><a href="cos__pdo_8h.html#afe41f4e3c37212d099ddbca2af3c474e">atsTrmPdoComG</a></div><div class="ttdeci">CosPdoCom_ts atsTrmPdoComG[]</div></div>
 <div class="ttc" id="acos__safety_8h_html"><div class="ttname"><a href="cos__safety_8h.html">cos_safety.h</a></div><div class="ttdoc">CANopen Slave Stack - Functional safety .</div></div>
 <div class="ttc" id="acos__safety_8h_html_a1d59c364586b9630eb7ca8cf0734c0c7"><div class="ttname"><a href="cos__safety_8h.html#a1d59c364586b9630eb7ca8cf0734c0c7">CosSafetySrdoRcvDataUpdate</a></div><div class="ttdeci">void CosSafetySrdoRcvDataUpdate(uint8_t ubSrdoNumberV)</div></div>
 <div class="ttc" id="acos__safety_8h_html_a41a8be9cdd979c4060a58ffbb0bfbb8e"><div class="ttname"><a href="cos__safety_8h.html#a41a8be9cdd979c4060a58ffbb0bfbb8e">CosSafetySrdoSetData</a></div><div class="ttdeci">enum CosSafetyState_e CosSafetySrdoSetData(uint8_t ubSrdoNumberV, uint8_t *pubSrcDataV)</div></div>
@@ -1436,8 +1436,8 @@ $(function(){initNavTree('cos_template_user.html','',''); });
 <div class="ttc" id="amc__iap_8h_html_a0055afd3e1db0ae658a9eb0477c4934a"><div class="ttname"><a href="mc__iap_8h.html#a0055afd3e1db0ae658a9eb0477c4934a">McIapJumpToBoot</a></div><div class="ttdeci">void McIapJumpToBoot(void)</div></div>
 <div class="ttc" id="amc__nvm_8h_html_a086f8f02c078a92c6f20ada2ee324199"><div class="ttname"><a href="mc__nvm_8h.html#a086f8f02c078a92c6f20ada2ee324199">McNvmBuildChecksum</a></div><div class="ttdeci">uint16_t McNvmBuildChecksum(NvmAddr_tv tvStartAddressV, NvmSize_tv tvDataCountV)</div><div class="ttdoc">Build Checksum.</div></div>
 <div class="ttc" id="amc__nvm_8h_html_ad72fb16362a6262fa9f3658768c11dda"><div class="ttname"><a href="mc__nvm_8h.html#ad72fb16362a6262fa9f3658768c11dda">McNvmRead</a></div><div class="ttdeci">Status_tv McNvmRead(NvmAddr_tv tvAddressV, uint8_t *pubDataV, NvmSize_tv tvSizeV)</div><div class="ttdoc">Read data.</div></div>
-<div class="ttc" id="astructCosTimeOfDay__s_html_a0477db686ac49e219604cb879cf7c9cb"><div class="ttname"><a href="structCosTimeOfDay__s.html#a0477db686ac49e219604cb879cf7c9cb">CosTimeOfDay_s::ulMilliseconds</a></div><div class="ttdeci">uint32_t ulMilliseconds</div><div class="ttdef"><b>Definition</b> cos_time.h:84</div></div>
-<div class="ttc" id="astructCosTimeOfDay__s_html_abc8476655736519d9ae4bb6afe9f3958"><div class="ttname"><a href="structCosTimeOfDay__s.html#abc8476655736519d9ae4bb6afe9f3958">CosTimeOfDay_s::uwDays</a></div><div class="ttdeci">uint16_t uwDays</div><div class="ttdef"><b>Definition</b> cos_time.h:89</div></div>
+<div class="ttc" id="astructCosTimeOfDay__s_html_a0477db686ac49e219604cb879cf7c9cb"><div class="ttname"><a href="structCosTimeOfDay__s.html#a0477db686ac49e219604cb879cf7c9cb">CosTimeOfDay_s::ulMilliseconds</a></div><div class="ttdeci">uint32_t ulMilliseconds</div><div class="ttdef"><b>Definition</b> cos_time.h:85</div></div>
+<div class="ttc" id="astructCosTimeOfDay__s_html_abc8476655736519d9ae4bb6afe9f3958"><div class="ttname"><a href="structCosTimeOfDay__s.html#abc8476655736519d9ae4bb6afe9f3958">CosTimeOfDay_s::uwDays</a></div><div class="ttdeci">uint16_t uwDays</div><div class="ttdef"><b>Definition</b> cos_time.h:90</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -1447,7 +1447,7 @@ $(function(){initNavTree('cos_template_user.html','',''); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Thu May 14 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
   </ul>
 </div>
 </body>

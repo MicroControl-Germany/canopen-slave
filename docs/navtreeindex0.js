@@ -49,6 +49,7 @@ var NAVTREEINDEX0 =
 "cos_examples.html":[0,2],
 "cos_examples_boards.html":[0,2,3],
 "cos_getting_started.html":[0,0],
+"cos_misra2025.html":[3,0],
 "cos_specifications.html":[2,2],
 "cos_version.html":[1,3],
 "cp__core_8h.html#CP_CORE_H":[1,1,0],
@@ -61,6 +62,7 @@ var NAVTREEINDEX0 =
 "mc__nvm_8h.html#MC_NVM":[1,2,2],
 "mc__tmr_8h.html#MC_TMR":[1,2,3],
 "mc__wdt_8h.html#MC_WDT":[1,2,4],
+"misra_exceptions.html":[3,0,0],
 "pages.html":[],
 "stack_license.html":[2,4],
 "stack_support.html":[2,3]

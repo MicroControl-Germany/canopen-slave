@@ -21,5 +21,6 @@ var searchData=
   ['stm32h735g_20dk_20board_18',['STM32H735G-DK board',['../cos_ex_board_STM32H735G_DK.html',1,'']]],
   ['stm32l476g_20eval_20board_19',['STM32L476G-EVAL board',['../cos_ex_board_STM32L476G_EVAL.html',1,'']]],
   ['stm32u575i_20ev_20board_20',['STM32U575I-EV board',['../cos_ex_board_STM32U575I_EV.html',1,'']]],
-  ['support_21',['Support',['../stack_support.html',1,'']]]
+  ['summary_20tables_21',['Summary Tables',['../cos_certc.html',1,'CERT C Compliance Summary Tables'],['../cos_misra2025.html',1,'MISRA C:2025 Compliance Summary Tables']]],
+  ['support_22',['Support',['../stack_support.html',1,'']]]
 ];

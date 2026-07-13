@@ -1,8 +1,8 @@
 <!-- HTML header for doxygen 1.14.0-->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-83LKN3YC2H"></script>
@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.04.02</div>
+   <div id="projectbrief">Version 7.06.00</div>
   </td>
  </tr>
  </tbody>
@@ -116,114 +116,141 @@ $(function(){initNavTree('cos404ai_8h.html','',''); });
 <div class="textblock"><p>This module implements the variables and callback functions for the object dictionary from CiA 404 (analog inputs). The module adds the following objects to the object dictionary: </p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadLeft">Index  </th><th class="markdownTableHeadLeft">Description  </th><th class="markdownTableHeadLeft">Function / Variable  </th><th class="markdownTableHeadNone">Configuration Symbol  </th></tr>
+<th class="markdownTableHeadLeft">Index  </th><th class="markdownTableHeadLeft">Description  </th><th class="markdownTableHeadLeft">Function / Variable  </th><th class="markdownTableHeadLeft">Configuration Symbol  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">6100<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI input FV (<span class="tt">float</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#ad2b93a856875ac31219e50b31c43b840">Cos404_AI_SetFV_Real32()</a>  </td><td class="markdownTableBodyNone"><a class="el" href="cos__conf_8h.html#a3cff35b0cce3abcba76432c85c6f04af" title="CiA 404 data type.">COS_DS404_DT_FLOAT</a>  </td></tr>
+<td class="markdownTableBodyLeft">6100<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI input FV (<span class="tt">float</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#a017c679d21e0631e725231299f7cc8df">Cos404_AI_SetFieldValue()</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a3cff35b0cce3abcba76432c85c6f04af" title="CiA 404 data type.">COS_DS404_DT_FLOAT</a>  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft">6110<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI sensor type  </td><td class="markdownTableBodyLeft"><a class="el" href="#ad55cd69b42b88149c1713f2443d1c113">Cos404_AI_Init()</a>  </td><td class="markdownTableBodyNone">-  </td></tr>
+<td class="markdownTableBodyLeft">6101<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI physical unit FV  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"></td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">6112<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI operating mode  </td><td class="markdownTableBodyLeft"><a class="el" href="#ad55cd69b42b88149c1713f2443d1c113">Cos404_AI_Init()</a>  </td><td class="markdownTableBodyNone">-  </td></tr>
+<td class="markdownTableBodyLeft">6102<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI decimal digits FV  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"></td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft">6126<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI scaling factor  </td><td class="markdownTableBodyLeft">-  </td><td class="markdownTableBodyNone"><a class="el" href="cos__conf_8h.html#a5ffb38f9e72a77c72e3ae6737e9fc75c" title="Support filter within CiA 404, analog inputs.">COS_DS404_AI_SCALING</a>  </td></tr>
+<td class="markdownTableBodyLeft">6110<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI sensor type  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"></td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">6127<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI scaling offset  </td><td class="markdownTableBodyLeft">-  </td><td class="markdownTableBodyNone"><a class="el" href="cos__conf_8h.html#a5ffb38f9e72a77c72e3ae6737e9fc75c" title="Support filter within CiA 404, analog inputs.">COS_DS404_AI_SCALING</a>  </td></tr>
+<td class="markdownTableBodyLeft">6112<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI operating mode  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"></td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft">6130<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI input PV (<span class="tt">float</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#ad2b93a856875ac31219e50b31c43b840">Cos404_AI_SetFV_Real32()</a>  </td><td class="markdownTableBodyNone"><a class="el" href="cos__conf_8h.html#a3cff35b0cce3abcba76432c85c6f04af" title="CiA 404 data type.">COS_DS404_DT_FLOAT</a>  </td></tr>
+<td class="markdownTableBodyLeft">6126<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI scaling factor  </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a5ffb38f9e72a77c72e3ae6737e9fc75c" title="Support filter within CiA 404, analog inputs.">COS_DS404_AI_SCALING</a>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">6131<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI physical unit PV  </td><td class="markdownTableBodyLeft"><a class="el" href="#acc7c0dca885d996a3e07a34757ed38a6">Cos404_AI_SetPhysicalUnitPV()</a>  </td><td class="markdownTableBodyNone">-  </td></tr>
+<td class="markdownTableBodyLeft">6127<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI scaling offset  </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a5ffb38f9e72a77c72e3ae6737e9fc75c" title="Support filter within CiA 404, analog inputs.">COS_DS404_AI_SCALING</a>  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft">6132<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI decimal digits PV  </td><td class="markdownTableBodyLeft"><a class="el" href="#af9a9d956fbaa5c91bd7f35d50508c4ae">Cos404_AI_SetDecimalDigitsPV()</a>  </td><td class="markdownTableBodyNone">-  </td></tr>
+<td class="markdownTableBodyLeft">6130<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI input PV (<span class="tt">float</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#a017c679d21e0631e725231299f7cc8df">Cos404_AI_SetFieldValue()</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a3cff35b0cce3abcba76432c85c6f04af" title="CiA 404 data type.">COS_DS404_DT_FLOAT</a>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">6150<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI status  </td><td class="markdownTableBodyLeft"><a class="el" href="#a9aeb4fce2b42c270d490b2b61fa16a92">Cos404_AI_SetFV_Int16()</a>  </td><td class="markdownTableBodyNone">-  </td></tr>
+<td class="markdownTableBodyLeft">6131<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI physical unit PV  </td><td class="markdownTableBodyLeft"><a class="el" href="#acc7c0dca885d996a3e07a34757ed38a6">Cos404_AI_SetPhysicalUnitPV()</a>  </td><td class="markdownTableBodyLeft"></td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft">61A0<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI filter type  </td><td class="markdownTableBodyLeft">#Cos404_AI_FilterParm_ts  </td><td class="markdownTableBodyNone"><a class="el" href="cos__conf_8h.html#a5d57ee3da661221bd2af7e7ad922c708" title="Support filter within CiA 404, analog inputs.">COS_DS404_AI_FILTER</a>  </td></tr>
+<td class="markdownTableBodyLeft">6132<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI decimal digits PV  </td><td class="markdownTableBodyLeft"><a class="el" href="#af9a9d956fbaa5c91bd7f35d50508c4ae">Cos404_AI_SetDecimalDigitsPV()</a>  </td><td class="markdownTableBodyLeft"></td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">61A1<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI filter constant  </td><td class="markdownTableBodyLeft">Cos404_AI_FilterParm_ts  </td><td class="markdownTableBodyNone"><a class="el" href="cos__conf_8h.html#a5d57ee3da661221bd2af7e7ad922c708" title="Support filter within CiA 404, analog inputs.">COS_DS404_AI_FILTER</a>  </td></tr>
+<td class="markdownTableBodyLeft">6138<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI tare Zero (<span class="tt">float</span>)  </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a592e8882e650df30464f0b7a3b5e79b5" title="Support tare function within CiA 404, analog inputs.">COS_DS404_AI_TARE</a>  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft">7100<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI input FV (<span class="tt">int16_t</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#a9aeb4fce2b42c270d490b2b61fa16a92">Cos404_AI_SetFV_Int16()</a>  </td><td class="markdownTableBodyNone"><a class="el" href="cos__conf_8h.html#ae90b40621f2b1e0c30749fe57ee9306f" title="CiA 404 data type.">COS_DS404_DT_INT16</a>  </td></tr>
+<td class="markdownTableBodyLeft">6139<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI autotare  </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a592e8882e650df30464f0b7a3b5e79b5" title="Support tare function within CiA 404, analog inputs.">COS_DS404_AI_TARE</a>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">7130<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI input PV (<span class="tt">int16_t</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#a9aeb4fce2b42c270d490b2b61fa16a92">Cos404_AI_SetFV_Int16()</a>  </td><td class="markdownTableBodyNone"><a class="el" href="cos__conf_8h.html#ae90b40621f2b1e0c30749fe57ee9306f" title="CiA 404 data type.">COS_DS404_DT_INT16</a>  </td></tr>
+<td class="markdownTableBodyLeft">6140<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI net PV (<span class="tt">float</span>)  </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a592e8882e650df30464f0b7a3b5e79b5" title="Support tare function within CiA 404, analog inputs.">COS_DS404_AI_TARE</a>  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft">9100<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI input FV (<span class="tt">int32_t</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#aaebfc71890f273b8a4d5b9d9507fd868">Cos404_AI_SetFV_Int32()</a>  </td><td class="markdownTableBodyNone"><a class="el" href="cos__conf_8h.html#a10777971d4d6a121e6f4acf1d72a2bf1" title="CiA 404 data type.">COS_DS404_DT_INT32</a>  </td></tr>
+<td class="markdownTableBodyLeft">6148<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI span start (<span class="tt">float</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"></td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">9130<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI input PV (<span class="tt">int32_t</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#aaebfc71890f273b8a4d5b9d9507fd868">Cos404_AI_SetFV_Int32()</a>  </td><td class="markdownTableBodyNone"><a class="el" href="cos__conf_8h.html#a10777971d4d6a121e6f4acf1d72a2bf1" title="CiA 404 data type.">COS_DS404_DT_INT32</a>  </td></tr>
+<td class="markdownTableBodyLeft">6149<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI span stop (<span class="tt">float</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">614A<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI lower error limit (<span class="tt">float</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">614B<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI upper error limit (<span class="tt">float</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">6150<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI status  </td><td class="markdownTableBodyLeft"><a class="el" href="#a017c679d21e0631e725231299f7cc8df">Cos404_AI_SetFieldValue()</a>  </td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">61A0<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI filter type  </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a5d57ee3da661221bd2af7e7ad922c708" title="Support filter within CiA 404, analog inputs.">COS_DS404_AI_FILTER</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">61A1<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI filter constant  </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a5d57ee3da661221bd2af7e7ad922c708" title="Support filter within CiA 404, analog inputs.">COS_DS404_AI_FILTER</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">7100<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI input FV (<span class="tt">int16_t</span>)  </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#ae90b40621f2b1e0c30749fe57ee9306f" title="CiA 404 data type.">COS_DS404_DT_INT16</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">7130<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI input PV (<span class="tt">int16_t</span>)  </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#ae90b40621f2b1e0c30749fe57ee9306f" title="CiA 404 data type.">COS_DS404_DT_INT16</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">7138<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI tare Zero (<span class="tt">int16_t</span>)  </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a592e8882e650df30464f0b7a3b5e79b5" title="Support tare function within CiA 404, analog inputs.">COS_DS404_AI_TARE</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">7140<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI net PV (<span class="tt">int16_t</span>)  </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a592e8882e650df30464f0b7a3b5e79b5" title="Support tare function within CiA 404, analog inputs.">COS_DS404_AI_TARE</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">7148<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI span start (<span class="tt">int16_t</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#ae90b40621f2b1e0c30749fe57ee9306f" title="CiA 404 data type.">COS_DS404_DT_INT16</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">7149<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI span stop (<span class="tt">int16_t</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#ae90b40621f2b1e0c30749fe57ee9306f" title="CiA 404 data type.">COS_DS404_DT_INT16</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">714A<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI lower error limit (<span class="tt">int16_t</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#ae90b40621f2b1e0c30749fe57ee9306f" title="CiA 404 data type.">COS_DS404_DT_INT16</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">714B<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI upper error limit (<span class="tt">int16_t</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#ae90b40621f2b1e0c30749fe57ee9306f" title="CiA 404 data type.">COS_DS404_DT_INT16</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">9100<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI input FV (<span class="tt">int32_t</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#a017c679d21e0631e725231299f7cc8df">Cos404_AI_SetFieldValue()</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a10777971d4d6a121e6f4acf1d72a2bf1" title="CiA 404 data type.">COS_DS404_DT_INT32</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">9130<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI input PV (<span class="tt">int32_t</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#a017c679d21e0631e725231299f7cc8df">Cos404_AI_SetFieldValue()</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a10777971d4d6a121e6f4acf1d72a2bf1" title="CiA 404 data type.">COS_DS404_DT_INT32</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">9138<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI tare Zero (<span class="tt">int32_t</span>)  </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a592e8882e650df30464f0b7a3b5e79b5" title="Support tare function within CiA 404, analog inputs.">COS_DS404_AI_TARE</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">9140<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI net PV (<span class="tt">int32_t</span>)  </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a592e8882e650df30464f0b7a3b5e79b5" title="Support tare function within CiA 404, analog inputs.">COS_DS404_AI_TARE</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">9148<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI span start (<span class="tt">int32_t</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a10777971d4d6a121e6f4acf1d72a2bf1" title="CiA 404 data type.">COS_DS404_DT_INT32</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">9149<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI span stop (<span class="tt">int32_t</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a10777971d4d6a121e6f4acf1d72a2bf1" title="CiA 404 data type.">COS_DS404_DT_INT32</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">914A<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI lower error limit (<span class="tt">int32_t</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a10777971d4d6a121e6f4acf1d72a2bf1" title="CiA 404 data type.">COS_DS404_DT_INT32</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">914B<sub>h</sub>  </td><td class="markdownTableBodyLeft">AI upper error limit (<span class="tt">int32_t</span>)  </td><td class="markdownTableBodyLeft"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a10777971d4d6a121e6f4acf1d72a2bf1" title="CiA 404 data type.">COS_DS404_DT_INT32</a>  </td></tr>
 </table>
 <p>An example for the module is given inside the file <code>cos404ai_app.c</code> which is located inside the <code>template-cos</code> directory.</p>
-<p><a class="anchor" id="COS_CIA404_AI_INIT"></a></p><h2>Module initialization</h2>
-<p>The analog input module is initialized for each individual analog input by calling by calling <a class="el" href="#ad55cd69b42b88149c1713f2443d1c113">Cos404_AI_Init()</a> prior to <a class="el" href="cos__mgr_8h.html#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a>. The order of function calls is important because <a class="el" href="cos__mgr_8h.html#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a> may overwrite parameters of the analog input module in case a values have been stored in non-volatile memory (refer to object 1010<sub>h</sub>).  </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> Cos404_AI_AppInit(<span class="keywordtype">void</span>)</div>
+<p><a class="anchor" id="COS_CIA404_AI_INIT"></a></p><h2>Module initialisation</h2>
+<p>The analog input module is initialised for each individual analog input by calling <a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a> prior to <a class="el" href="cos__mgr_8h.html#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a>. The order of function calls is important because <a class="el" href="cos__mgr_8h.html#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a> may overwrite parameters of the analog input module in case values have been stored in non-volatile memory (refer to object 1010<sub>h</sub>).  </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> Cos404_AI_AppInit(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
-<div class="line">   uint8_t              ubChannelT;</div>
 <div class="line">   uint32_t             ulPhysicalUnitT;</div>
-<div class="line">   Cos404_AI_Config_ts  tsConfigurationT;</div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
 <div class="line">   <span class="comment">// perform initial configuration for CiA 404 AI software module by user application</span></div>
 <div class="line">   <span class="comment">//</span></div>
-<div class="line">   memset(&amp;tsConfigurationT, 0, <span class="keyword">sizeof</span>(Cos404_AI_Config_ts));</div>
+<div class="line">   memset(&amp;tsConfigurationS, 0, <span class="keyword">sizeof</span>(Cos404_AI_Config_ts));</div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
 <div class="line">   <span class="comment">// set sensor type and operation mode</span></div>
 <div class="line">   <span class="comment">//</span></div>
-<div class="line">   tsConfigurationT.<a class="code hl_variable" href="structCos404__AI__Config__s.html#a9b0b598c4b63a1aee44f186c8b30444f">uwObj6110_SensorType</a>  = <a class="code hl_enumvalue" href="#a1d82af0cd146d1895788e8a66d85e726a0cc0f9a5f129fedf2976551780744e1d">eCOS404_AI_ST_THERMO_J</a>;</div>
-<div class="line">   tsConfigurationT.<a class="code hl_variable" href="structCos404__AI__Config__s.html#abb4321b80d963e2667e6b76e55bd03a7">ubObj6112_OpMode</a>      = <span class="keyword">true</span>;</div>
+<div class="line">   tsConfigurationS.uwIdx6110_DefaultSensorType        = <a class="code hl_enumvalue" href="#a1d82af0cd146d1895788e8a66d85e726a339e6dd9e34a1aa4d18d784ca651d2e7">eCOS404_AI_ST_VOLT_10V_BIP</a>;</div>
+<div class="line">   tsConfigurationS.ubIdx6112_DefaultOpMode            = 1;</div>
+<div class="line"> </div>
+<div class="line">   ulPhysicalUnitT = <a class="code hl_define" href="cos890_8h.html#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT</a>(<a class="code hl_enumvalue" href="cos890_8h.html#ae12812612e901e1a61a86edd9e0fff0eabb00648888e592539c77ac8f39cc6bb0">eCOS890_SI_PREFIX_NONE</a>, <a class="code hl_enumvalue" href="cos890_8h.html#a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5">eCOS890_SI_UNIT_VOLT</a>, <a class="code hl_enumvalue" href="cos890_8h.html#a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29">eCOS890_SI_UNIT_NONE</a>, 0);</div>
+<div class="line">   tsConfigurationS.ulIdx6101_PhysicalUnitFV       = ulPhysicalUnitT;</div>
+<div class="line">   tsConfigurationS.ubIdx6102_DecimalDigitsInt16FV = COS_DS404_AI_FV_DIGITS_INT16;</div>
+<div class="line">   tsConfigurationS.ubIdx6102_DecimalDigitsInt32FV = COS_DS404_AI_FV_DIGITS_INT32;</div>
+<div class="line"> </div>
+<div class="line">   tsConfigurationS.ulIdx6131_PhysicalUnitPV       = ulPhysicalUnitT;</div>
+<div class="line">   tsConfigurationS.ubIdx6132_DecimalDigitsInt32PV = COS_DS404_AI_FV_DIGITS_INT32;</div>
+<div class="line"> </div>
+<div class="line">   tsConfigurationS.slIdx9148_SpanStart            = -100000000;</div>
+<div class="line">   tsConfigurationS.slIdx9149_SpanEnd              =  100000000;</div>
+<div class="line">   tsConfigurationS.slIdx914A_LowerErrorLimit      = -110000000;</div>
+<div class="line">   tsConfigurationS.slIdx914B_UpperErrorLimit      =  110000000;</div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
 <div class="line">   <span class="comment">// if filter support is enabled: register function for filter parameter update</span></div>
 <div class="line">   <span class="comment">//</span></div>
 <div class="line"><span class="preprocessor">   #if COS_DS404_AI_FILTER &gt; 0</span></div>
-<div class="line">   tsConfigurationT.<a class="code hl_variable" href="structCos404__AI__Config__s.html#a0d1813a7252c09f14e1de00ad8467e2d">pfnFilterChangeEvent</a>  = Cos404_AI_AppFilterParamEvent;</div>
+<div class="line">   tsConfigurationS.pfnFilterUpdateEvent  = Cos404_AI_AppEventFilterUpdate;</div>
 <div class="line"><span class="preprocessor">   #endif</span></div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
 <div class="line">   <span class="comment">// register function for sensor type update</span></div>
 <div class="line">   <span class="comment">//</span></div>
-<div class="line">   tsConfigurationT.<a class="code hl_variable" href="structCos404__AI__Config__s.html#a853f825bc030e52a7e47b399ef68b368">pfnSensorTypeHandler</a>  = Cos404_AI_AppSensorTypeHandler;</div>
+<div class="line">   tsConfigurationS.pfnSensorTypeEvent    = Cos404_AI_AppEventSensorType;</div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
 <div class="line">   <span class="comment">// register function for operating mode update</span></div>
 <div class="line">   <span class="comment">//</span></div>
-<div class="line">   tsConfigurationT.<a class="code hl_variable" href="structCos404__AI__Config__s.html#a39d3629c9aa1fa8c2bac27952c74696c">pfnOperatingModeEvent</a> = Cos404_AI_AppOperatingModeEvent;</div>
+<div class="line">   tsConfigurationS.pfnOperatingModeEvent = Cos404_AI_AppEventOperatingMode;</div>
 <div class="line"> </div>
-<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
-<div class="line">   <span class="comment">// physical unit is degree celsius</span></div>
-<div class="line">   <span class="comment">//</span></div>
-<div class="line">   ulPhysicalUnitT =    <a class="code hl_define" href="cos303_8h.html#a7c9b57a4b2536b451854c604189b8c0d">COS303_PHYSICAL_UNIT</a>(<a class="code hl_enumvalue" href="cos303_8h.html#adc36a74d28405b1de88459340ef08778a1b4b760e027f59188b85d243a716f33d">eCOS303_SI_PREFIX_NONE</a>, </div>
-<div class="line">                                             <a class="code hl_enumvalue" href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8a512ed9028d7f7412ae380d4de537f7ee">eCOS303_SI_UNIT_DEGREE_CELSIUS</a>,</div>
-<div class="line">                                             <a class="code hl_enumvalue" href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8a01ccfcd99cde26be4159f2f4c51859e7">eCOS303_SI_UNIT_NONE</a>,</div>
-<div class="line">                                             0);</div>
 <div class="line"> </div>
-<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
-<div class="line">   <span class="comment">// now provide the same configuration to all available channels</span></div>
-<div class="line">   <span class="comment">//</span></div>
-<div class="line">   <span class="keywordflow">for</span> (ubChannelT = <a class="code hl_enumvalue" href="cos404_8h.html#aff4f34372ff6f4ae21dbc84778ce67b5a30c7128bb59b858401e37366786664b3">eCOS404_CHANNEL_1</a>; ubChannelT &lt; <a class="code hl_define" href="cos__conf_8h.html#a79edb1c4147128e472e550f5924ea30c">COS_DS404_AI</a>; ubChannelT++)</div>
-<div class="line">   {</div>
-<div class="line">      <a class="code hl_function" href="#ad55cd69b42b88149c1713f2443d1c113">Cos404_AI_Init</a>(ubChannelT, &amp;tsConfigurationT);</div>
-<div class="line">      <a class="code hl_function" href="#af9a9d956fbaa5c91bd7f35d50508c4ae">Cos404_AI_SetDecimalDigitsPV</a>(ubChannelT, 1);</div>
-<div class="line">      <a class="code hl_function" href="#acc7c0dca885d996a3e07a34757ed38a6">Cos404_AI_SetPhysicalUnitPV</a>(ubChannelT, ulPhysicalUnitT);</div>
-<div class="line">   }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="ttc" id="acos303_8h_html_a4874d0d0fbf5374e0d945e5c21a57cd8a01ccfcd99cde26be4159f2f4c51859e7"><div class="ttname"><a href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8a01ccfcd99cde26be4159f2f4c51859e7">eCOS303_SI_UNIT_NONE</a></div><div class="ttdeci">@ eCOS303_SI_UNIT_NONE</div><div class="ttdoc">dimensionless</div><div class="ttdef"><b>Definition</b> cos303.h:65</div></div>
-<div class="ttc" id="acos303_8h_html_a4874d0d0fbf5374e0d945e5c21a57cd8a512ed9028d7f7412ae380d4de537f7ee"><div class="ttname"><a href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8a512ed9028d7f7412ae380d4de537f7ee">eCOS303_SI_UNIT_DEGREE_CELSIUS</a></div><div class="ttdeci">@ eCOS303_SI_UNIT_DEGREE_CELSIUS</div><div class="ttdoc">degree celsius [°C]</div><div class="ttdef"><b>Definition</b> cos303.h:90</div></div>
-<div class="ttc" id="acos303_8h_html_a7c9b57a4b2536b451854c604189b8c0d"><div class="ttname"><a href="cos303_8h.html#a7c9b57a4b2536b451854c604189b8c0d">COS303_PHYSICAL_UNIT</a></div><div class="ttdeci">#define COS303_PHYSICAL_UNIT(SiPrefix, SiNumerator, SiDenominator, Profile)</div><div class="ttdef"><b>Definition</b> cos303.h:152</div></div>
-<div class="ttc" id="acos303_8h_html_adc36a74d28405b1de88459340ef08778a1b4b760e027f59188b85d243a716f33d"><div class="ttname"><a href="cos303_8h.html#adc36a74d28405b1de88459340ef08778a1b4b760e027f59188b85d243a716f33d">eCOS303_SI_PREFIX_NONE</a></div><div class="ttdeci">@ eCOS303_SI_PREFIX_NONE</div><div class="ttdoc">no prefix, 100</div><div class="ttdef"><b>Definition</b> cos303.h:53</div></div>
-<div class="ttc" id="acos404_8h_html_aff4f34372ff6f4ae21dbc84778ce67b5a30c7128bb59b858401e37366786664b3"><div class="ttname"><a href="cos404_8h.html#aff4f34372ff6f4ae21dbc84778ce67b5a30c7128bb59b858401e37366786664b3">eCOS404_CHANNEL_1</a></div><div class="ttdeci">@ eCOS404_CHANNEL_1</div><div class="ttdef"><b>Definition</b> cos404.h:161</div></div>
-<div class="ttc" id="acos404ai_8h_html_a1d82af0cd146d1895788e8a66d85e726a0cc0f9a5f129fedf2976551780744e1d"><div class="ttname"><a href="#a1d82af0cd146d1895788e8a66d85e726a0cc0f9a5f129fedf2976551780744e1d">eCOS404_AI_ST_THERMO_J</a></div><div class="ttdeci">@ eCOS404_AI_ST_THERMO_J</div><div class="ttdef"><b>Definition</b> cos404ai.h:250</div></div>
-<div class="ttc" id="acos404ai_8h_html_acc7c0dca885d996a3e07a34757ed38a6"><div class="ttname"><a href="#acc7c0dca885d996a3e07a34757ed38a6">Cos404_AI_SetPhysicalUnitPV</a></div><div class="ttdeci">uint8_t Cos404_AI_SetPhysicalUnitPV(uint8_t ubChannelV, uint32_t ulPhysicalUnitV)</div></div>
-<div class="ttc" id="acos404ai_8h_html_ad55cd69b42b88149c1713f2443d1c113"><div class="ttname"><a href="#ad55cd69b42b88149c1713f2443d1c113">Cos404_AI_Init</a></div><div class="ttdeci">void Cos404_AI_Init(uint8_t ubChannelV, Cos404_AI_Config_ts *ptsConfigurationV)</div></div>
-<div class="ttc" id="acos404ai_8h_html_af9a9d956fbaa5c91bd7f35d50508c4ae"><div class="ttname"><a href="#af9a9d956fbaa5c91bd7f35d50508c4ae">Cos404_AI_SetDecimalDigitsPV</a></div><div class="ttdeci">uint8_t Cos404_AI_SetDecimalDigitsPV(uint8_t ubChannelV, uint8_t ubDigitsV)</div></div>
-<div class="ttc" id="acos__conf_8h_html_a79edb1c4147128e472e550f5924ea30c"><div class="ttname"><a href="cos__conf_8h.html#a79edb1c4147128e472e550f5924ea30c">COS_DS404_AI</a></div><div class="ttdeci">#define COS_DS404_AI</div><div class="ttdoc">Support CiA 404, analog inputs.</div><div class="ttdef"><b>Definition</b> cos_conf.h:249</div></div>
-<div class="ttc" id="astructCos404__AI__Config__s_html_a0d1813a7252c09f14e1de00ad8467e2d"><div class="ttname"><a href="structCos404__AI__Config__s.html#a0d1813a7252c09f14e1de00ad8467e2d">Cos404_AI_Config_s::pfnFilterChangeEvent</a></div><div class="ttdeci">Cos404AiEvent_fn pfnFilterChangeEvent</div><div class="ttdef"><b>Definition</b> cos404ai.h:631</div></div>
-<div class="ttc" id="astructCos404__AI__Config__s_html_a39d3629c9aa1fa8c2bac27952c74696c"><div class="ttname"><a href="structCos404__AI__Config__s.html#a39d3629c9aa1fa8c2bac27952c74696c">Cos404_AI_Config_s::pfnOperatingModeEvent</a></div><div class="ttdeci">Cos404AiEvent_fn pfnOperatingModeEvent</div><div class="ttdef"><b>Definition</b> cos404ai.h:615</div></div>
-<div class="ttc" id="astructCos404__AI__Config__s_html_a853f825bc030e52a7e47b399ef68b368"><div class="ttname"><a href="structCos404__AI__Config__s.html#a853f825bc030e52a7e47b399ef68b368">Cos404_AI_Config_s::pfnSensorTypeHandler</a></div><div class="ttdeci">Cos404AiHandler_fn pfnSensorTypeHandler</div><div class="ttdef"><b>Definition</b> cos404ai.h:599</div></div>
-<div class="ttc" id="astructCos404__AI__Config__s_html_a9b0b598c4b63a1aee44f186c8b30444f"><div class="ttname"><a href="structCos404__AI__Config__s.html#a9b0b598c4b63a1aee44f186c8b30444f">Cos404_AI_Config_s::uwObj6110_SensorType</a></div><div class="ttdeci">uint16_t uwObj6110_SensorType</div><div class="ttdef"><b>Definition</b> cos404ai.h:570</div></div>
-<div class="ttc" id="astructCos404__AI__Config__s_html_abb4321b80d963e2667e6b76e55bd03a7"><div class="ttname"><a href="structCos404__AI__Config__s.html#abb4321b80d963e2667e6b76e55bd03a7">Cos404_AI_Config_s::ubObj6112_OpMode</a></div><div class="ttdeci">uint8_t ubObj6112_OpMode</div><div class="ttdef"><b>Definition</b> cos404ai.h:580</div></div>
+<div class="ttc" id="acos404ai_8h_html_a1d82af0cd146d1895788e8a66d85e726a339e6dd9e34a1aa4d18d784ca651d2e7"><div class="ttname"><a href="#a1d82af0cd146d1895788e8a66d85e726a339e6dd9e34a1aa4d18d784ca651d2e7">eCOS404_AI_ST_VOLT_10V_BIP</a></div><div class="ttdeci">@ eCOS404_AI_ST_VOLT_10V_BIP</div><div class="ttdef"><b>Definition</b> cos404ai.h:349</div></div>
+<div class="ttc" id="acos890_8h_html_a7bb539b6c100f0f5e243d8cb7d7319aa"><div class="ttname"><a href="cos890_8h.html#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT</a></div><div class="ttdeci">#define COS890_PHYSICAL_UNIT(SiPrefix, SiNumerator, SiDenominator, Profile)</div><div class="ttdef"><b>Definition</b> cos890.h:157</div></div>
+<div class="ttc" id="acos890_8h_html_a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29"><div class="ttname"><a href="cos890_8h.html#a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29">eCOS890_SI_UNIT_NONE</a></div><div class="ttdeci">@ eCOS890_SI_UNIT_NONE</div><div class="ttdoc">dimensionless</div><div class="ttdef"><b>Definition</b> cos890.h:70</div></div>
+<div class="ttc" id="acos890_8h_html_a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5"><div class="ttname"><a href="cos890_8h.html#a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5">eCOS890_SI_UNIT_VOLT</a></div><div class="ttdeci">@ eCOS890_SI_UNIT_VOLT</div><div class="ttdoc">volt [V]</div><div class="ttdef"><b>Definition</b> cos890.h:88</div></div>
+<div class="ttc" id="acos890_8h_html_ae12812612e901e1a61a86edd9e0fff0eabb00648888e592539c77ac8f39cc6bb0"><div class="ttname"><a href="cos890_8h.html#ae12812612e901e1a61a86edd9e0fff0eabb00648888e592539c77ac8f39cc6bb0">eCOS890_SI_PREFIX_NONE</a></div><div class="ttdeci">@ eCOS890_SI_PREFIX_NONE</div><div class="ttdoc">no prefix, 100</div><div class="ttdef"><b>Definition</b> cos890.h:58</div></div>
 </div><!-- fragment --><p> <a class="anchor" id="COS_CIA404_AI_PROCESS"></a></p><h2>Analog value processing</h2>
-<p>The values for AI status, Ai field value and AI process value are provided to the module by calling <a class="el" href="#a9aeb4fce2b42c270d490b2b61fa16a92">Cos404_AI_SetFV_Int16()</a> or the corresponding function for data type <span class="tt">int32_t</span> or <span class="tt">float</span>.</p>
+<p>The values for AI status and AI field value are provided to the module by calling <a class="el" href="#a017c679d21e0631e725231299f7cc8df">Cos404_AI_SetFieldValue()</a>. To consider the CiA 404 AI filter configuration, the user must call Cos404_AI_Filter() beforehand and provide the filtered value to the <a class="el" href="#a017c679d21e0631e725231299f7cc8df">Cos404_AI_SetFieldValue()</a> function.</p>
+<p>The field value will be scaled according to the scaling parameters defined via index 6126<sub>h</sub> and 6127<sub>h</sub>. Additionally, the user can provide a pointer to a scale handler during initialisation that will be called to scale the field value.</p>
  <div class="fragment"><div class="line"><span class="keywordtype">void</span> Cos404_AI_AppProcess(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line">   int32_t slFieldValueT   = 10000;</div>
-<div class="line">   <span class="keywordtype">float</span>   ftProcessValueT = 100.0f;</div>
 <div class="line">   uint8_t ubChannelT;</div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
@@ -243,14 +270,14 @@ $(function(){initNavTree('cos404ai_8h.html','',''); });
 <div class="line">      <span class="comment">//-------------------------------------------------------------------------------------------</span></div>
 <div class="line">      <span class="comment">// provide values and their status to the CiA 404</span></div>
 <div class="line">      <span class="comment">//</span></div>
-<div class="line">      <a class="code hl_function" href="#ad2b93a856875ac31219e50b31c43b840">Cos404_AI_SetFV_Real32</a>(ubChannelT, <a class="code hl_enumvalue" href="#a6b361b6b8cdf3ae589bd15943d89652faed643d97636e064df26e489346d49d3b">eCOS404_AI_STATUS_OK</a>, slFieldValueT, ftProcessValueT);</div>
-<div class="line"> </div>
+<div class="line">      <a class="code hl_function" href="#a017c679d21e0631e725231299f7cc8df">Cos404_AI_SetFieldValue</a>(ubChannelT, slFieldValueT, <span class="keyword">true</span>);</div>
 <div class="line">      ubChannelT++;</div>
 <div class="line">   }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="ttc" id="acos404ai_8h_html_a6b361b6b8cdf3ae589bd15943d89652faed643d97636e064df26e489346d49d3b"><div class="ttname"><a href="#a6b361b6b8cdf3ae589bd15943d89652faed643d97636e064df26e489346d49d3b">eCOS404_AI_STATUS_OK</a></div><div class="ttdeci">@ eCOS404_AI_STATUS_OK</div><div class="ttdef"><b>Definition</b> cos404ai.h:446</div></div>
-<div class="ttc" id="acos404ai_8h_html_ad2b93a856875ac31219e50b31c43b840"><div class="ttname"><a href="#ad2b93a856875ac31219e50b31c43b840">Cos404_AI_SetFV_Real32</a></div><div class="ttdeci">void Cos404_AI_SetFV_Real32(uint8_t ubChannelV, uint8_t ubStatusV, int32_t slFieldValueV, float ftProcessValueV)</div></div>
+<div class="ttc" id="acos404_8h_html_aff4f34372ff6f4ae21dbc84778ce67b5a30c7128bb59b858401e37366786664b3"><div class="ttname"><a href="cos404_8h.html#aff4f34372ff6f4ae21dbc84778ce67b5a30c7128bb59b858401e37366786664b3">eCOS404_CHANNEL_1</a></div><div class="ttdeci">@ eCOS404_CHANNEL_1</div><div class="ttdef"><b>Definition</b> cos404.h:161</div></div>
+<div class="ttc" id="acos404ai_8h_html_a017c679d21e0631e725231299f7cc8df"><div class="ttname"><a href="#a017c679d21e0631e725231299f7cc8df">Cos404_AI_SetFieldValue</a></div><div class="ttdeci">void Cos404_AI_SetFieldValue(uint8_t ubChannelV, int32_t slFieldValueV, bool_t btStatusV)</div></div>
+<div class="ttc" id="acos__conf_8h_html_a79edb1c4147128e472e550f5924ea30c"><div class="ttname"><a href="cos__conf_8h.html#a79edb1c4147128e472e550f5924ea30c">COS_DS404_AI</a></div><div class="ttdeci">#define COS_DS404_AI</div><div class="ttdoc">Support CiA 404, analog inputs.</div><div class="ttdef"><b>Definition</b> cos_conf.h:249</div></div>
 </div><!-- fragment --> </div><div class="textblock"><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Include dependency graph for cos404ai.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -292,10 +319,23 @@ Data Structures</h2></td></tr>
 <tr class="memitem:Cos404_5FAI_5FConfig_5Fs" id="r_Cos404_5FAI_5FConfig_5Fs"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCos404__AI__Config__s.html">Cos404_AI_Config_s</a></td></tr>
 <tr class="memitem:Cos404_5FAI_5FProcessData_5Fs" id="r_Cos404_5FAI_5FProcessData_5Fs"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCos404__AI__ProcessData__s.html">Cos404_AI_ProcessData_s</a></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a4da21af32b56b25edb6df7fe2bc83bc3" id="r_a4da21af32b56b25edb6df7fe2bc83bc3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4da21af32b56b25edb6df7fe2bc83bc3">COS_DS404_AI_FV_REAL32_OFF</a>&#160;&#160;&#160;(float)(0.0)</td></tr>
+<tr class="memitem:ab3165484920e06558aeb180c5d756544" id="r_ab3165484920e06558aeb180c5d756544"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3165484920e06558aeb180c5d756544">COS_DS404_AI_PV_REAL32_OFF</a>&#160;&#160;&#160;(float)(0.0)</td></tr>
+<tr class="memitem:a20294f35fbcfb4812bd260565ff37eba" id="r_a20294f35fbcfb4812bd260565ff37eba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20294f35fbcfb4812bd260565ff37eba">COS_DS404_AI_FV_INT16_OFF</a>&#160;&#160;&#160;(int16_t)(0)</td></tr>
+<tr class="memitem:a0f79c373da99e9afa182624450557a96" id="r_a0f79c373da99e9afa182624450557a96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f79c373da99e9afa182624450557a96">COS_DS404_AI_PV_INT16_OFF</a>&#160;&#160;&#160;(int16_t)(0)</td></tr>
+<tr class="memitem:a3f5a26c76e42b6a3b9c7b44effc85a94" id="r_a3f5a26c76e42b6a3b9c7b44effc85a94"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f5a26c76e42b6a3b9c7b44effc85a94">COS_DS404_AI_FV_INT32_OFF</a>&#160;&#160;&#160;(int32_t)(0)</td></tr>
+<tr class="memitem:a44f04f2ba253c4f9594f97f13090924e" id="r_a44f04f2ba253c4f9594f97f13090924e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44f04f2ba253c4f9594f97f13090924e">COS_DS404_AI_PV_INT32_OFF</a>&#160;&#160;&#160;(int32_t)(0)</td></tr>
+<tr class="memitem:ae5050eca0a49340734c4ca8da4b3a48e" id="r_ae5050eca0a49340734c4ca8da4b3a48e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5050eca0a49340734c4ca8da4b3a48e">COS_DS404_AI_TARE_SIGNATURE</a>&#160;&#160;&#160;0x65726174</td></tr>
+<tr class="memitem:a993877230a873e723923e5341f64b247" id="r_a993877230a873e723923e5341f64b247"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a993877230a873e723923e5341f64b247">COS_DS404_AI_FILTER_MOV_AV</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:a76302e93813757ecb930e31a428a21bd" id="r_a76302e93813757ecb930e31a428a21bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76302e93813757ecb930e31a428a21bd">COS_DS404_AI_FILTER_REP_AV</a>&#160;&#160;&#160;0</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a1d425ca79221caf1b856dbc50985faca" id="r_a1d425ca79221caf1b856dbc50985faca"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d425ca79221caf1b856dbc50985faca">Cos404AiEvent_fn</a>) (uint8_t ubChannelV)</td></tr>
-<tr class="memitem:a0d04a2120b28e8da9ac1334a3417dce6" id="r_a0d04a2120b28e8da9ac1334a3417dce6"><td class="memItemLeft" align="right" valign="top">typedef uint8_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d04a2120b28e8da9ac1334a3417dce6">Cos404AiHandler_fn</a>) (uint8_t ubInputV, void *pvdDataV)</td></tr>
+<tr class="memitem:a23b130044ed9e5924d4c3f6da61c5f2b" id="r_a23b130044ed9e5924d4c3f6da61c5f2b"><td class="memItemLeft" align="right" valign="top">typedef uint8_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23b130044ed9e5924d4c3f6da61c5f2b">Cos404AiOpMode_fn</a>) (uint8_t ubChannelV, uint8_t ubModeV)</td></tr>
+<tr class="memitem:a45a741e933a58dc8fffc06a825f858f5" id="r_a45a741e933a58dc8fffc06a825f858f5"><td class="memItemLeft" align="right" valign="top">typedef uint8_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45a741e933a58dc8fffc06a825f858f5">Cos404AiSensorType_fn</a>) (uint8_t ubChannelV, uint16_t uwSensorTypeV)</td></tr>
+<tr class="memitem:af832605188061a7e50a45fc4a12c850d" id="r_af832605188061a7e50a45fc4a12c850d"><td class="memItemLeft" align="right" valign="top">typedef int32_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af832605188061a7e50a45fc4a12c850d">Cos404AiLinearisation_fn</a>) (uint8_t ubChannelV, int32_t slValueV, uint16_t uwSensorTypeV)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -321,6 +361,12 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="#a1d82af0cd146d1895788e8a66d85e726a2cabc24381de86a16a1d29b35f15b66e">eCOS404_AI_ST_THERMO_S</a>
 , <br />
 &#160;&#160;<a class="el" href="#a1d82af0cd146d1895788e8a66d85e726a849005ab8fbed519e6628e054b4883b5">eCOS404_AI_ST_THERMO_T</a>
+, <br />
+&#160;&#160;<a class="el" href="#a1d82af0cd146d1895788e8a66d85e726a5660b5db1319594c51ce05f76ceccf84">eCOS404_AI_ST_THERMO_U</a>
+, <br />
+&#160;&#160;<a class="el" href="#a1d82af0cd146d1895788e8a66d85e726a251a00aa324528eb119bfc482aa76233">eCOS404_AI_ST_THERMO_E</a>
+, <br />
+&#160;&#160;<a class="el" href="#a1d82af0cd146d1895788e8a66d85e726a979a6c37f1c68dfdd6731dc88148c0c6">eCOS404_AI_ST_THERMO_B</a>
 , <br />
 &#160;&#160;<a class="el" href="#a1d82af0cd146d1895788e8a66d85e726ae42000b867a54c438763a00b6de35a21">eCOS404_AI_ST_PT100</a> = 30
 , <br />
@@ -387,93 +433,289 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="#a1d82af0cd146d1895788e8a66d85e726a28d10f3dc61c5ae6165044beb1f3cade">eCOS404_AI_ST_MANUFACTURER_5</a>
 <br />
  }</td></tr>
-<tr class="memitem:a6b361b6b8cdf3ae589bd15943d89652f" id="r_a6b361b6b8cdf3ae589bd15943d89652f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b361b6b8cdf3ae589bd15943d89652f">Cos404_AI_Status_e</a> { <br />
-&#160;&#160;<a class="el" href="#a6b361b6b8cdf3ae589bd15943d89652faed643d97636e064df26e489346d49d3b">eCOS404_AI_STATUS_OK</a> = 0x00
+<tr class="memitem:ae45dbba965d4457cc3b6e1041edee95e" id="r_ae45dbba965d4457cc3b6e1041edee95e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae45dbba965d4457cc3b6e1041edee95e">Cos404_AI_Status_te</a> { <br />
+&#160;&#160;<a class="el" href="#ae45dbba965d4457cc3b6e1041edee95eaed643d97636e064df26e489346d49d3b">eCOS404_AI_STATUS_OK</a> = 0x00
 , <br />
-&#160;&#160;<a class="el" href="#a6b361b6b8cdf3ae589bd15943d89652fa10215c57b695a771aa124f10f3a65f93">eCOS404_AI_STATUS_NOT_VALID</a> = 0x01
+&#160;&#160;<a class="el" href="#ae45dbba965d4457cc3b6e1041edee95ea10215c57b695a771aa124f10f3a65f93">eCOS404_AI_STATUS_NOT_VALID</a> = 0x01
 , <br />
-&#160;&#160;<a class="el" href="#a6b361b6b8cdf3ae589bd15943d89652fa255c967cbf4486f3fb2acdb87db1b2bc">eCOS404_AI_STATUS_POS_OVERLOAD</a> = 0x02
+&#160;&#160;<a class="el" href="#ae45dbba965d4457cc3b6e1041edee95ea255c967cbf4486f3fb2acdb87db1b2bc">eCOS404_AI_STATUS_POS_OVERLOAD</a> = 0x02
 , <br />
-&#160;&#160;<a class="el" href="#a6b361b6b8cdf3ae589bd15943d89652fac1d4fd2d922b52225d0741ea1d22b843">eCOS404_AI_STATUS_NEG_OVERLOAD</a> = 0x04
+&#160;&#160;<a class="el" href="#ae45dbba965d4457cc3b6e1041edee95eac1d4fd2d922b52225d0741ea1d22b843">eCOS404_AI_STATUS_NEG_OVERLOAD</a> = 0x04
 , <br />
-&#160;&#160;<a class="el" href="#a6b361b6b8cdf3ae589bd15943d89652fa458a751afa6dc55462b57c3b77feecbd">eCOS404_AI_STATUS_SYNC_LOST</a> = 0x08
+&#160;&#160;<a class="el" href="#ae45dbba965d4457cc3b6e1041edee95ea458a751afa6dc55462b57c3b77feecbd">eCOS404_AI_STATUS_SYNC_LOST</a> = 0x08
 , <br />
-&#160;&#160;<a class="el" href="#a6b361b6b8cdf3ae589bd15943d89652fa3e099e423d6cb47ccd91d9f483b3d73f">eCOS404_AI_STATUS_TEDS_ERROR</a> = 0x10
+&#160;&#160;<a class="el" href="#ae45dbba965d4457cc3b6e1041edee95ea3e099e423d6cb47ccd91d9f483b3d73f">eCOS404_AI_STATUS_TEDS_ERROR</a> = 0x10
 , <br />
-&#160;&#160;<a class="el" href="#a6b361b6b8cdf3ae589bd15943d89652fa5a8ff61cb8b88935569b08a91b73ea42">eCOS404_AI_STATUS_TEDS_PRESENT</a> = 0x20
+&#160;&#160;<a class="el" href="#ae45dbba965d4457cc3b6e1041edee95ea5a8ff61cb8b88935569b08a91b73ea42">eCOS404_AI_STATUS_TEDS_PRESENT</a> = 0x20
 , <br />
-&#160;&#160;<a class="el" href="#a6b361b6b8cdf3ae589bd15943d89652fa2fce1000927398c7b3e908d000472de6">eCOS404_AI_STATUS_DICT_CHANGED</a> = 0x40
+&#160;&#160;<a class="el" href="#ae45dbba965d4457cc3b6e1041edee95ea2fce1000927398c7b3e908d000472de6">eCOS404_AI_STATUS_DICT_CHANGED</a> = 0x40
+, <br />
+&#160;&#160;<a class="el" href="#ae45dbba965d4457cc3b6e1041edee95ea18d9021c9b9a60982abdbfbd4102afbf">eCOS404_AI_STATUS_ERROR_LIMIT</a> = 0x80
 <br />
+ }</td></tr>
+<tr class="memitem:a7cb749210036bb6b865c22014d1f19bd" id="r_a7cb749210036bb6b865c22014d1f19bd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cb749210036bb6b865c22014d1f19bd">Cos404_AI_FilterType_e</a> { <a class="el" href="#a7cb749210036bb6b865c22014d1f19bda6d9f9fac73ab316fa38fc7b0b384ab9e">eCOS404_AI_FILTER_TYPE_NONE</a> = 0
+, <b>eCOS404_AI_FILTER_TYPE_MOVING_AVERAGE</b> = 1
+, <b>eCOS404_AI_FILTER_TYPE_REPEATING_AVERAGE</b> = 2
+, <b>eCOS404_AI_FILTER_TYPE_MANUFACTURER_01</b> = 100
+, <b>eCOS404_AI_FILTER_TYPE_MANUFACTURER_02</b> = 101
+, <b>eCOS404_AI_FILTER_TYPE_MANUFACTURER_03</b> = 102
+, <b>eCOS404_AI_FILTER_TYPE_MANUFACTURER_04</b> = 103
  }</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:afdc67007b3dbb43af70fec75f169e71c" id="r_afdc67007b3dbb43af70fec75f169e71c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCos404__AI__Config__s.html">Cos404_AI_Config_ts</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration</a> (uint8_t ubChannelV)</td></tr>
+<tr class="memitem:a520515f4488267e35f7d52a4261aaa20" id="r_a520515f4488267e35f7d52a4261aaa20"><td class="memItemLeft" align="right" valign="top">Cos404_AI_FilterParm_ts *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a520515f4488267e35f7d52a4261aaa20">Cos404_AI_GetFilterParameter</a> (uint8_t ubChannelV)</td></tr>
 <tr class="memitem:a1a242d7082f6a545f0943a07186c80e5" id="r_a1a242d7082f6a545f0943a07186c80e5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a242d7082f6a545f0943a07186c80e5">Cos404_AI_GetOperatingMode</a> (uint8_t ubChannelV)</td></tr>
 <tr class="memitem:af0806462e7fe44260ad4355bba6507b5" id="r_af0806462e7fe44260ad4355bba6507b5"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0806462e7fe44260ad4355bba6507b5">Cos404_AI_GetSensorType</a> (uint8_t ubChannelV)</td></tr>
-<tr class="memitem:ad55cd69b42b88149c1713f2443d1c113" id="r_ad55cd69b42b88149c1713f2443d1c113"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad55cd69b42b88149c1713f2443d1c113">Cos404_AI_Init</a> (uint8_t ubChannelV, <a class="el" href="structCos404__AI__Config__s.html">Cos404_AI_Config_ts</a> *ptsConfigurationV)</td></tr>
+<tr class="memitem:ad0cbbe1bb0849e24f2d749723ca15ebd" id="r_ad0cbbe1bb0849e24f2d749723ca15ebd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae45dbba965d4457cc3b6e1041edee95e">Cos404_AI_Status_te</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0cbbe1bb0849e24f2d749723ca15ebd">Cos404_AI_Process</a> (uint8_t ubChannelV)</td></tr>
 <tr class="memitem:af9a9d956fbaa5c91bd7f35d50508c4ae" id="r_af9a9d956fbaa5c91bd7f35d50508c4ae"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9a9d956fbaa5c91bd7f35d50508c4ae">Cos404_AI_SetDecimalDigitsPV</a> (uint8_t ubChannelV, uint8_t ubDigitsV)</td></tr>
+<tr class="memitem:a017c679d21e0631e725231299f7cc8df" id="r_a017c679d21e0631e725231299f7cc8df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a017c679d21e0631e725231299f7cc8df">Cos404_AI_SetFieldValue</a> (uint8_t ubChannelV, int32_t slFieldValueV, bool_t btStatusV)</td></tr>
 <tr class="memitem:acc7c0dca885d996a3e07a34757ed38a6" id="r_acc7c0dca885d996a3e07a34757ed38a6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc7c0dca885d996a3e07a34757ed38a6">Cos404_AI_SetPhysicalUnitPV</a> (uint8_t ubChannelV, uint32_t ulPhysicalUnitV)</td></tr>
-<tr class="memitem:a9aeb4fce2b42c270d490b2b61fa16a92" id="r_a9aeb4fce2b42c270d490b2b61fa16a92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9aeb4fce2b42c270d490b2b61fa16a92">Cos404_AI_SetFV_Int16</a> (uint8_t ubChannelV, uint8_t ubStatusV, int16_t swFieldValueV, int16_t swProcessValueV)</td></tr>
-<tr class="memitem:aaebfc71890f273b8a4d5b9d9507fd868" id="r_aaebfc71890f273b8a4d5b9d9507fd868"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaebfc71890f273b8a4d5b9d9507fd868">Cos404_AI_SetFV_Int32</a> (uint8_t ubChannelV, uint8_t ubStatusV, int32_t slFieldValueV, int32_t slProcessValueV)</td></tr>
-<tr class="memitem:ad2b93a856875ac31219e50b31c43b840" id="r_ad2b93a856875ac31219e50b31c43b840"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2b93a856875ac31219e50b31c43b840">Cos404_AI_SetFV_Real32</a> (uint8_t ubChannelV, uint8_t ubStatusV, int32_t slFieldValueV, float ftProcessValueV)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:adf78ecb03fb2721539a7ebdb59473985" id="r_adf78ecb03fb2721539a7ebdb59473985"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCos404__AI__ProcessData__s.html">Cos404_AI_ProcessData_ts</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf78ecb03fb2721539a7ebdb59473985">atsCos404_AI_ProcessDataG</a> []</td></tr>
 </table>
-<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
-<a id="a1d425ca79221caf1b856dbc50985faca" name="a1d425ca79221caf1b856dbc50985faca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d425ca79221caf1b856dbc50985faca">&#9670;&#160;</a></span>Cos404AiEvent_fn</h2>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="a993877230a873e723923e5341f64b247" name="a993877230a873e723923e5341f64b247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a993877230a873e723923e5341f64b247">&#9670;&#160;</a></span>COS_DS404_AI_FILTER_MOV_AV</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* Cos404AiEvent_fn) (uint8_t ubChannelV)</td>
+          <td class="memname">#define COS_DS404_AI_FILTER_MOV_AV&#160;&#160;&#160;0</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>An event handler can be registered during initialization by <a class="el" href="#ad55cd69b42b88149c1713f2443d1c113">Cos404_AI_Init()</a> for each channel. Supported events are:</p><ul>
-<li>change of filter parameter (<a class="el" href="structCos404__AI__Config__s.html#a0d1813a7252c09f14e1de00ad8467e2d">Cos404_AI_Config_ts::pfnFilterChangeEvent</a>)</li>
-<li>change of operating mode (<a class="el" href="structCos404__AI__Config__s.html#a39d3629c9aa1fa8c2bac27952c74696c">Cos404_AI_Config_ts::pfnOperatingModeEvent</a>)</li>
+
+<p>Support of CiA 404 moving average filter. </p>
+<ul>
+<li>0 : do not support CiA 404 moving average filter </li>
+<li>1 : support CiA 404 moving average filter </li>
 </ul>
-<p>The parameter <code>ubChannelV</code> defines the channel number, the first channel starts at <code><a class="el" href="cos404_8h.html#aff4f34372ff6f4ae21dbc84778ce67b5a30c7128bb59b858401e37366786664b3">eCOS404_CHANNEL_1</a></code>. </p>
 
 </div>
 </div>
-<a id="a0d04a2120b28e8da9ac1334a3417dce6" name="a0d04a2120b28e8da9ac1334a3417dce6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d04a2120b28e8da9ac1334a3417dce6">&#9670;&#160;</a></span>Cos404AiHandler_fn</h2>
+<a id="a76302e93813757ecb930e31a428a21bd" name="a76302e93813757ecb930e31a428a21bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76302e93813757ecb930e31a428a21bd">&#9670;&#160;</a></span>COS_DS404_AI_FILTER_REP_AV</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef uint8_t(* Cos404AiHandler_fn) (uint8_t ubInputV, void *pvdDataV)</td>
+          <td class="memname">#define COS_DS404_AI_FILTER_REP_AV&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Support of CiA 404 repeating average filter. </p>
+<ul>
+<li>0 : do not support CiA 404 repeating average filter </li>
+<li>N : support CiA 404 repeating average filter </li>
+</ul>
+
+</div>
+</div>
+<a id="a20294f35fbcfb4812bd260565ff37eba" name="a20294f35fbcfb4812bd260565ff37eba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20294f35fbcfb4812bd260565ff37eba">&#9670;&#160;</a></span>COS_DS404_AI_FV_INT16_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COS_DS404_AI_FV_INT16_OFF&#160;&#160;&#160;(int16_t)(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Definition for field value of data type <span class="tt">int16_t</span> when channel is disabled. </p>
+
+</div>
+</div>
+<a id="a3f5a26c76e42b6a3b9c7b44effc85a94" name="a3f5a26c76e42b6a3b9c7b44effc85a94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f5a26c76e42b6a3b9c7b44effc85a94">&#9670;&#160;</a></span>COS_DS404_AI_FV_INT32_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COS_DS404_AI_FV_INT32_OFF&#160;&#160;&#160;(int32_t)(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Definition for field value of data type <span class="tt">int32_t</span> when channel is disabled. </p>
+
+</div>
+</div>
+<a id="a4da21af32b56b25edb6df7fe2bc83bc3" name="a4da21af32b56b25edb6df7fe2bc83bc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4da21af32b56b25edb6df7fe2bc83bc3">&#9670;&#160;</a></span>COS_DS404_AI_FV_REAL32_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COS_DS404_AI_FV_REAL32_OFF&#160;&#160;&#160;(float)(0.0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Definition for field value of data type <span class="tt">float</span> when channel is disabled. </p>
+
+</div>
+</div>
+<a id="a0f79c373da99e9afa182624450557a96" name="a0f79c373da99e9afa182624450557a96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f79c373da99e9afa182624450557a96">&#9670;&#160;</a></span>COS_DS404_AI_PV_INT16_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COS_DS404_AI_PV_INT16_OFF&#160;&#160;&#160;(int16_t)(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Definition for process value of data type <span class="tt">int16_t</span> when channel is disabled. </p>
+
+</div>
+</div>
+<a id="a44f04f2ba253c4f9594f97f13090924e" name="a44f04f2ba253c4f9594f97f13090924e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44f04f2ba253c4f9594f97f13090924e">&#9670;&#160;</a></span>COS_DS404_AI_PV_INT32_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COS_DS404_AI_PV_INT32_OFF&#160;&#160;&#160;(int32_t)(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Definition for process value of data type <span class="tt">int32_t</span> when channel is disabled. </p>
+
+</div>
+</div>
+<a id="ab3165484920e06558aeb180c5d756544" name="ab3165484920e06558aeb180c5d756544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3165484920e06558aeb180c5d756544">&#9670;&#160;</a></span>COS_DS404_AI_PV_REAL32_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COS_DS404_AI_PV_REAL32_OFF&#160;&#160;&#160;(float)(0.0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Definition for process value of data type <span class="tt">float</span> when channel is disabled. </p>
+
+</div>
+</div>
+<a id="ae5050eca0a49340734c4ca8da4b3a48e" name="ae5050eca0a49340734c4ca8da4b3a48e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5050eca0a49340734c4ca8da4b3a48e">&#9670;&#160;</a></span>COS_DS404_AI_TARE_SIGNATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COS_DS404_AI_TARE_SIGNATURE&#160;&#160;&#160;0x65726174</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Define specified 'tare' value for write access to AI tare index 6139h </p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
+<a id="af832605188061a7e50a45fc4a12c850d" name="af832605188061a7e50a45fc4a12c850d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af832605188061a7e50a45fc4a12c850d">&#9670;&#160;</a></span>Cos404AiLinearisation_fn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int32_t(* Cos404AiLinearisation_fn) (uint8_t ubChannelV, int32_t slValueV, uint16_t uwSensorTypeV)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pvdDataV</td><td>Pointer to handler specific data</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">slValueV</td><td>Field value to be linearised</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Linearised field value</dd></dl>
+<p>Event handler for manufacturer-specific linearisation of the field value, called by the module during value processing. The handler can be registered during initialisation by <a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a> for each channel.</p>
+<p>The parameter <code>ubChannelV</code> defines the channel number, the first channel starts at <code><a class="el" href="cos404_8h.html#aff4f34372ff6f4ae21dbc84778ce67b5a30c7128bb59b858401e37366786664b3">eCOS404_CHANNEL_1</a></code>. </p>
+
+</div>
+</div>
+<a id="a23b130044ed9e5924d4c3f6da61c5f2b" name="a23b130044ed9e5924d4c3f6da61c5f2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23b130044ed9e5924d4c3f6da61c5f2b">&#9670;&#160;</a></span>Cos404AiOpMode_fn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint8_t(* Cos404AiOpMode_fn) (uint8_t ubChannelV, uint8_t ubModeV)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ubModeV</td><td>Requested operating mode</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98fa1e386bda90429c996628f4e03f99bb4f">eCosSdo_WRITE_OK</a></code> on success or any other value from <a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98f" title="Return code for SDO callbacks.">CosSdo_e</a> in case of an error</dd></dl>
-<p>A data handler can be registered during initialization by <a class="el" href="#ad55cd69b42b88149c1713f2443d1c113">Cos404_AI_Init()</a> for each channel. Supported handlers are:</p><ul>
-<li>change of sensor type (<a class="el" href="structCos404__AI__Config__s.html#a853f825bc030e52a7e47b399ef68b368">Cos404_AI_Config_ts::pfnSensorTypeHandler</a>)</li>
-</ul>
-<p>The parameter <code>ubChannelV</code> defines the channel number, the first channel starts at <code><a class="el" href="cos404_8h.html#aff4f34372ff6f4ae21dbc84778ce67b5a30c7128bb59b858401e37366786664b3">eCOS404_CHANNEL_1</a></code>. The data contents of pointer <code>pvdDataV</code> is specific for every handler. </p>
+<p>Event handler which is called upon a change of operating mode, defined by parameter <code>ubModeV</code>. The handler can be registered during initialisation by <a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a> for each channel.</p>
+<p>The parameter <code>ubChannelV</code> defines the channel number, the first channel starts at <code><a class="el" href="cos404_8h.html#aff4f34372ff6f4ae21dbc84778ce67b5a30c7128bb59b858401e37366786664b3">eCOS404_CHANNEL_1</a></code>. </p>
+
+</div>
+</div>
+<a id="a45a741e933a58dc8fffc06a825f858f5" name="a45a741e933a58dc8fffc06a825f858f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45a741e933a58dc8fffc06a825f858f5">&#9670;&#160;</a></span>Cos404AiSensorType_fn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint8_t(* Cos404AiSensorType_fn) (uint8_t ubChannelV, uint16_t uwSensorTypeV)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uwSensorTypeV</td><td>Requested sensor type value</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98fa1e386bda90429c996628f4e03f99bb4f">eCosSdo_WRITE_OK</a></code> on success or any other value from <a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98f" title="Return code for SDO callbacks.">CosSdo_e</a> in case of an error</dd></dl>
+<p>Event handler which is called upon a change of sensor type, defined by parameter <code>uwSensorTypeV</code>. The handler can be registered during initialisation by <a class="el" href="#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a> for each channel.</p>
+<p>The parameter <code>ubChannelV</code> defines the channel number, the first channel starts at <code><a class="el" href="cos404_8h.html#aff4f34372ff6f4ae21dbc84778ce67b5a30c7128bb59b858401e37366786664b3">eCOS404_CHANNEL_1</a></code>. </p>
 
 </div>
 </div>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="a7cb749210036bb6b865c22014d1f19bd" name="a7cb749210036bb6b865c22014d1f19bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cb749210036bb6b865c22014d1f19bd">&#9670;&#160;</a></span>Cos404_AI_FilterType_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a7cb749210036bb6b865c22014d1f19bd">Cos404_AI_FilterType_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Values for AI Filter type from CiA 404, object 61A0h </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7cb749210036bb6b865c22014d1f19bda6d9f9fac73ab316fa38fc7b0b384ab9e" name="a7cb749210036bb6b865c22014d1f19bda6d9f9fac73ab316fa38fc7b0b384ab9e"></a>eCOS404_AI_FILTER_TYPE_NONE&#160;</td><td class="fielddoc"><p>No filter </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a4310b89768f9ae5ebb32ac70358435ed" name="a4310b89768f9ae5ebb32ac70358435ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4310b89768f9ae5ebb32ac70358435ed">&#9670;&#160;</a></span>Cos404_AI_OpMode_e</h2>
 
@@ -523,6 +765,12 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a1d82af0cd146d1895788e8a66d85e726a2cabc24381de86a16a1d29b35f15b66e" name="a1d82af0cd146d1895788e8a66d85e726a2cabc24381de86a16a1d29b35f15b66e"></a>eCOS404_AI_ST_THERMO_S&#160;</td><td class="fielddoc"><p>Thermocouple type S </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1d82af0cd146d1895788e8a66d85e726a849005ab8fbed519e6628e054b4883b5" name="a1d82af0cd146d1895788e8a66d85e726a849005ab8fbed519e6628e054b4883b5"></a>eCOS404_AI_ST_THERMO_T&#160;</td><td class="fielddoc"><p>Thermocouple type T </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1d82af0cd146d1895788e8a66d85e726a5660b5db1319594c51ce05f76ceccf84" name="a1d82af0cd146d1895788e8a66d85e726a5660b5db1319594c51ce05f76ceccf84"></a>eCOS404_AI_ST_THERMO_U&#160;</td><td class="fielddoc"><p>Thermocouple type U </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1d82af0cd146d1895788e8a66d85e726a251a00aa324528eb119bfc482aa76233" name="a1d82af0cd146d1895788e8a66d85e726a251a00aa324528eb119bfc482aa76233"></a>eCOS404_AI_ST_THERMO_E&#160;</td><td class="fielddoc"><p>Thermocouple type E </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1d82af0cd146d1895788e8a66d85e726a979a6c37f1c68dfdd6731dc88148c0c6" name="a1d82af0cd146d1895788e8a66d85e726a979a6c37f1c68dfdd6731dc88148c0c6"></a>eCOS404_AI_ST_THERMO_B&#160;</td><td class="fielddoc"><p>Thermocouple type B </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1d82af0cd146d1895788e8a66d85e726ae42000b867a54c438763a00b6de35a21" name="a1d82af0cd146d1895788e8a66d85e726ae42000b867a54c438763a00b6de35a21"></a>eCOS404_AI_ST_PT100&#160;</td><td class="fielddoc"><p>PT100 </p>
 </td></tr>
@@ -592,40 +840,93 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a6b361b6b8cdf3ae589bd15943d89652f" name="a6b361b6b8cdf3ae589bd15943d89652f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b361b6b8cdf3ae589bd15943d89652f">&#9670;&#160;</a></span>Cos404_AI_Status_e</h2>
+<a id="ae45dbba965d4457cc3b6e1041edee95e" name="ae45dbba965d4457cc3b6e1041edee95e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae45dbba965d4457cc3b6e1041edee95e">&#9670;&#160;</a></span>Cos404_AI_Status_te</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#a6b361b6b8cdf3ae589bd15943d89652f">Cos404_AI_Status_e</a></td>
+          <td class="memname">enum <a class="el" href="#ae45dbba965d4457cc3b6e1041edee95e">Cos404_AI_Status_te</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Values for AI Status from CiA 404, object 6150h </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6b361b6b8cdf3ae589bd15943d89652faed643d97636e064df26e489346d49d3b" name="a6b361b6b8cdf3ae589bd15943d89652faed643d97636e064df26e489346d49d3b"></a>eCOS404_AI_STATUS_OK&#160;</td><td class="fielddoc"><p>All OK </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae45dbba965d4457cc3b6e1041edee95eaed643d97636e064df26e489346d49d3b" name="ae45dbba965d4457cc3b6e1041edee95eaed643d97636e064df26e489346d49d3b"></a>eCOS404_AI_STATUS_OK&#160;</td><td class="fielddoc"><p>All OK </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6b361b6b8cdf3ae589bd15943d89652fa10215c57b695a771aa124f10f3a65f93" name="a6b361b6b8cdf3ae589bd15943d89652fa10215c57b695a771aa124f10f3a65f93"></a>eCOS404_AI_STATUS_NOT_VALID&#160;</td><td class="fielddoc"><p>Not valid </p>
+<tr><td class="fieldname"><a id="ae45dbba965d4457cc3b6e1041edee95ea10215c57b695a771aa124f10f3a65f93" name="ae45dbba965d4457cc3b6e1041edee95ea10215c57b695a771aa124f10f3a65f93"></a>eCOS404_AI_STATUS_NOT_VALID&#160;</td><td class="fielddoc"><p>Not valid </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6b361b6b8cdf3ae589bd15943d89652fa255c967cbf4486f3fb2acdb87db1b2bc" name="a6b361b6b8cdf3ae589bd15943d89652fa255c967cbf4486f3fb2acdb87db1b2bc"></a>eCOS404_AI_STATUS_POS_OVERLOAD&#160;</td><td class="fielddoc"><p>Positive overload </p>
+<tr><td class="fieldname"><a id="ae45dbba965d4457cc3b6e1041edee95ea255c967cbf4486f3fb2acdb87db1b2bc" name="ae45dbba965d4457cc3b6e1041edee95ea255c967cbf4486f3fb2acdb87db1b2bc"></a>eCOS404_AI_STATUS_POS_OVERLOAD&#160;</td><td class="fielddoc"><p>Positive overload </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6b361b6b8cdf3ae589bd15943d89652fac1d4fd2d922b52225d0741ea1d22b843" name="a6b361b6b8cdf3ae589bd15943d89652fac1d4fd2d922b52225d0741ea1d22b843"></a>eCOS404_AI_STATUS_NEG_OVERLOAD&#160;</td><td class="fielddoc"><p>Negative overload </p>
+<tr><td class="fieldname"><a id="ae45dbba965d4457cc3b6e1041edee95eac1d4fd2d922b52225d0741ea1d22b843" name="ae45dbba965d4457cc3b6e1041edee95eac1d4fd2d922b52225d0741ea1d22b843"></a>eCOS404_AI_STATUS_NEG_OVERLOAD&#160;</td><td class="fielddoc"><p>Negative overload </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6b361b6b8cdf3ae589bd15943d89652fa458a751afa6dc55462b57c3b77feecbd" name="a6b361b6b8cdf3ae589bd15943d89652fa458a751afa6dc55462b57c3b77feecbd"></a>eCOS404_AI_STATUS_SYNC_LOST&#160;</td><td class="fielddoc"><p>Synchronization of the signal lost </p>
+<tr><td class="fieldname"><a id="ae45dbba965d4457cc3b6e1041edee95ea458a751afa6dc55462b57c3b77feecbd" name="ae45dbba965d4457cc3b6e1041edee95ea458a751afa6dc55462b57c3b77feecbd"></a>eCOS404_AI_STATUS_SYNC_LOST&#160;</td><td class="fielddoc"><p>Synchronisation of the signal lost </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6b361b6b8cdf3ae589bd15943d89652fa3e099e423d6cb47ccd91d9f483b3d73f" name="a6b361b6b8cdf3ae589bd15943d89652fa3e099e423d6cb47ccd91d9f483b3d73f"></a>eCOS404_AI_STATUS_TEDS_ERROR&#160;</td><td class="fielddoc"><p>TEDS error warning </p>
+<tr><td class="fieldname"><a id="ae45dbba965d4457cc3b6e1041edee95ea3e099e423d6cb47ccd91d9f483b3d73f" name="ae45dbba965d4457cc3b6e1041edee95ea3e099e423d6cb47ccd91d9f483b3d73f"></a>eCOS404_AI_STATUS_TEDS_ERROR&#160;</td><td class="fielddoc"><p>TEDS error warning </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6b361b6b8cdf3ae589bd15943d89652fa5a8ff61cb8b88935569b08a91b73ea42" name="a6b361b6b8cdf3ae589bd15943d89652fa5a8ff61cb8b88935569b08a91b73ea42"></a>eCOS404_AI_STATUS_TEDS_PRESENT&#160;</td><td class="fielddoc"><p>TEDS sensor present </p>
+<tr><td class="fieldname"><a id="ae45dbba965d4457cc3b6e1041edee95ea5a8ff61cb8b88935569b08a91b73ea42" name="ae45dbba965d4457cc3b6e1041edee95ea5a8ff61cb8b88935569b08a91b73ea42"></a>eCOS404_AI_STATUS_TEDS_PRESENT&#160;</td><td class="fielddoc"><p>TEDS sensor present </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6b361b6b8cdf3ae589bd15943d89652fa2fce1000927398c7b3e908d000472de6" name="a6b361b6b8cdf3ae589bd15943d89652fa2fce1000927398c7b3e908d000472de6"></a>eCOS404_AI_STATUS_DICT_CHANGED&#160;</td><td class="fielddoc"><p>Object dictionary changed </p>
+<tr><td class="fieldname"><a id="ae45dbba965d4457cc3b6e1041edee95ea2fce1000927398c7b3e908d000472de6" name="ae45dbba965d4457cc3b6e1041edee95ea2fce1000927398c7b3e908d000472de6"></a>eCOS404_AI_STATUS_DICT_CHANGED&#160;</td><td class="fielddoc"><p>Object dictionary changed </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae45dbba965d4457cc3b6e1041edee95ea18d9021c9b9a60982abdbfbd4102afbf" name="ae45dbba965d4457cc3b6e1041edee95ea18d9021c9b9a60982abdbfbd4102afbf"></a>eCOS404_AI_STATUS_ERROR_LIMIT&#160;</td><td class="fielddoc"><p>Error limit exceeded </p>
 </td></tr>
 </table>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="afdc67007b3dbb43af70fec75f169e71c" name="afdc67007b3dbb43af70fec75f169e71c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdc67007b3dbb43af70fec75f169e71c">&#9670;&#160;</a></span>Cos404_AI_DefaultConfiguration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCos404__AI__Config__s.html">Cos404_AI_Config_ts</a> * Cos404_AI_DefaultConfiguration </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>ubChannelV</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel, starting at <code><a class="el" href="cos404_8h.html#aff4f34372ff6f4ae21dbc84778ce67b5a30c7128bb59b858401e37366786664b3">eCOS404_CHANNEL_1</a></code>, maximum value is defined by <code><a class="el" href="cos__conf_8h.html#a79edb1c4147128e472e550f5924ea30c" title="Support CiA 404, analog inputs.">COS_DS404_AI</a></code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to configuration data of type <code>Cos404_AI_Config_ts</code> </dd></dl>
+<p>This function is called during initialisation of an analog input channel defined by <code>ubChannelV</code>. It returns a pointer to a static default configuration of type <code>Cos404_AI_Config_ts</code> for that channel. </p>
+
+</div>
+</div>
+<a id="a520515f4488267e35f7d52a4261aaa20" name="a520515f4488267e35f7d52a4261aaa20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a520515f4488267e35f7d52a4261aaa20">&#9670;&#160;</a></span>Cos404_AI_GetFilterParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Cos404_AI_FilterParm_ts * Cos404_AI_GetFilterParameter </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>ubChannelV</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel, starting at <code><a class="el" href="cos404_8h.html#aff4f34372ff6f4ae21dbc84778ce67b5a30c7128bb59b858401e37366786664b3">eCOS404_CHANNEL_1</a></code>, maximum value is defined by <code><a class="el" href="cos__conf_8h.html#a79edb1c4147128e472e550f5924ea30c" title="Support CiA 404, analog inputs.">COS_DS404_AI</a></code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the filter parameter structure of type <code>#Cos404_AI_FilterParm_ts</code> for the given channel, or <code>NULL</code> in case of an invalid channel parameter.</dd></dl>
+<p>This function returns a pointer to the filter parameter structure of the analog input channel defined by <code>ubChannelV</code>. The structure provides read access to the active filter type (object 61A0<sub>h</sub>) and filter constant (object 61A1<sub>h</sub>), as well as the internal filter state data used by the filter implementation. <br  />
+This function is only available if <code><a class="el" href="cos__conf_8h.html#a5d57ee3da661221bd2af7e7ad922c708" title="Support filter within CiA 404, analog inputs.">COS_DS404_AI_FILTER</a></code> is greater than 0. </p>
+
+</div>
+</div>
 <a id="a1a242d7082f6a545f0943a07186c80e5" name="a1a242d7082f6a545f0943a07186c80e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a242d7082f6a545f0943a07186c80e5">&#9670;&#160;</a></span>Cos404_AI_GetOperatingMode()</h2>
 
@@ -640,15 +941,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Get pending operating mode of a channel. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Value from <code><a class="el" href="#a4310b89768f9ae5ebb32ac70358435ed">Cos404_AI_OpMode_e</a></code> enumeration. In case of wrong channel parameter or not fully initialised channel the return value is <code>eCOS404_AI_OP_MODE_OFF</code> .  </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Value from <code><a class="el" href="#a4310b89768f9ae5ebb32ac70358435ed">Cos404_AI_OpMode_e</a></code> enumeration. In case of a wrong channel parameter or a not fully initialised channel the return value is <code>eCOS404_AI_OP_MODE_OFF</code> .</dd></dl>
+<p>This function returns the currently active operating mode of the analog input channel defined by <code>ubChannelV</code> (object 6112<sub>h</sub>). </p>
 
 </div>
 </div>
@@ -666,46 +966,38 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Get pending sensor type of a channel. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Value from <code><a class="el" href="#a1d82af0cd146d1895788e8a66d85e726">Cos404_AI_SensorType_e</a></code> enumeration. In case of wrong channel parameter or not fully initialised channel the return value is <code>eCOS404_AI_ST_UNKNOWN</code> . </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Value from <code><a class="el" href="#a1d82af0cd146d1895788e8a66d85e726">Cos404_AI_SensorType_e</a></code> enumeration. In case of a wrong channel parameter or a not fully initialised channel the return value is <code>eCOS404_AI_ST_UNKNOWN</code> .</dd></dl>
+<p>This function returns the currently active sensor type of the analog input channel defined by <code>ubChannelV</code> (object 6110<sub>h</sub>). </p>
 
 </div>
 </div>
-<a id="ad55cd69b42b88149c1713f2443d1c113" name="ad55cd69b42b88149c1713f2443d1c113"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad55cd69b42b88149c1713f2443d1c113">&#9670;&#160;</a></span>Cos404_AI_Init()</h2>
+<a id="ad0cbbe1bb0849e24f2d749723ca15ebd" name="ad0cbbe1bb0849e24f2d749723ca15ebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0cbbe1bb0849e24f2d749723ca15ebd">&#9670;&#160;</a></span>Cos404_AI_Process()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Cos404_AI_Init </td>
+          <td class="memname"><a class="el" href="#ae45dbba965d4457cc3b6e1041edee95e">Cos404_AI_Status_te</a> Cos404_AI_Process </td>
           <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>ubChannelV</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>ubChannelV</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structCos404__AI__Config__s.html">Cos404_AI_Config_ts</a> *</td>          <td class="paramname"><span class="paramname"><em>ptsConfigurationV</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ptsConfigurationV</td><td>Pointer to memory with configuration data of struct <code>Cos404_AI_Config_ts</code> </td></tr>
   </table>
   </dd>
 </dl>
-<p>This function performs an initialization of the analog input channel defined by <code>ubChannelV</code>, the value for the parameter starts at <code><a class="el" href="cos404_8h.html#aff4f34372ff6f4ae21dbc84778ce67b5a30c7128bb59b858401e37366786664b3">eCOS404_CHANNEL_1</a></code> and is limited by the definition of <code><a class="el" href="cos__conf_8h.html#a79edb1c4147128e472e550f5924ea30c" title="Support CiA 404, analog inputs.">COS_DS404_AI</a></code>. The parameter <code>ptsConfigurationV</code> is a pointer to the configuration structure <code>Cos404_AI_Config_ts</code>. </p>
-<p>Please refer to the section <a class="el" href="#COS_CIA404_AI_INIT">Module Initialization</a> for an example.</p>
-<dl class="section note"><dt>Note</dt><dd>This function shall be called by the application prior to the <code><a class="el" href="cos__mgr_8h.html#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a></code> function. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98fa1e386bda90429c996628f4e03f99bb4f">eCosSdo_WRITE_OK</a></code> on success, or any other value from <code><a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98f" title="Return code for SDO callbacks.">CosSdo_e</a></code> in case of an error </dd></dl>
 
 </div>
 </div>
@@ -739,63 +1031,16 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a9aeb4fce2b42c270d490b2b61fa16a92" name="a9aeb4fce2b42c270d490b2b61fa16a92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9aeb4fce2b42c270d490b2b61fa16a92">&#9670;&#160;</a></span>Cos404_AI_SetFV_Int16()</h2>
+<a id="a017c679d21e0631e725231299f7cc8df" name="a017c679d21e0631e725231299f7cc8df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a017c679d21e0631e725231299f7cc8df">&#9670;&#160;</a></span>Cos404_AI_SetFieldValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Cos404_AI_SetFV_Int16 </td>
+          <td class="memname">void Cos404_AI_SetFieldValue </td>
           <td>(</td>
           <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>ubChannelV</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>ubStatusV</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>swFieldValueV</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>swProcessValueV</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ubStatusV</td><td>Status of analog input values, provided by <code><a class="el" href="#a6b361b6b8cdf3ae589bd15943d89652f">Cos404_AI_Status_e</a></code> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">swFieldValueV</td><td>16-bit field value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">swProcessValueV</td><td>16-bit process value</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ad2b93a856875ac31219e50b31c43b840">Cos404_AI_SetFV_Real32()</a></dd></dl>
-<p>This function converts the field value <code>swFieldValueV</code> and process value <code>swProcessValueV</code> to a <span class="tt">float</span> representation and calls <a class="el" href="#ad2b93a856875ac31219e50b31c43b840">Cos404_AI_SetFV_Real32()</a>. </p>
-
-</div>
-</div>
-<a id="aaebfc71890f273b8a4d5b9d9507fd868" name="aaebfc71890f273b8a4d5b9d9507fd868"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaebfc71890f273b8a4d5b9d9507fd868">&#9670;&#160;</a></span>Cos404_AI_SetFV_Int32()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Cos404_AI_SetFV_Int32 </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>ubChannelV</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>ubStatusV</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -805,62 +1050,19 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>slProcessValueV</em></span>&#160;)</td>
+          <td class="paramtype">bool_t</td>          <td class="paramname"><span class="paramname"><em>btStatusV</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ubStatusV</td><td>Status of analog input values, provided by <code><a class="el" href="#a6b361b6b8cdf3ae589bd15943d89652f">Cos404_AI_Status_e</a></code> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">slFieldValueV</td><td>32-bit field value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">slProcessValueV</td><td>32-bit process value</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ad2b93a856875ac31219e50b31c43b840">Cos404_AI_SetFV_Real32()</a></dd></dl>
-<p>This function converts the field value <code>slFieldValueV</code> and process value <code>slProcessValueV</code> to a <span class="tt">float</span> representation and calls <a class="el" href="#ad2b93a856875ac31219e50b31c43b840">Cos404_AI_SetFV_Real32()</a>. </p>
-
-</div>
-</div>
-<a id="ad2b93a856875ac31219e50b31c43b840" name="ad2b93a856875ac31219e50b31c43b840"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2b93a856875ac31219e50b31c43b840">&#9670;&#160;</a></span>Cos404_AI_SetFV_Real32()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Cos404_AI_SetFV_Real32 </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>ubChannelV</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>ubStatusV</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>slFieldValueV</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>ftProcessValueV</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ubStatusV</td><td>Status of analog input values, provided by <code><a class="el" href="#a6b361b6b8cdf3ae589bd15943d89652f">Cos404_AI_Status_e</a></code> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">slFieldValueV</td><td>32 bit value, that represent RAW value for example of an ADC </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ftProcessValueV</td><td>float process value, scaled value representing a physical quantity</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">btStatusV</td><td>Provides the status that the analog input values are valid or not</td></tr>
   </table>
   </dd>
 </dl>
-<p>This function sets the field value (index x100<sub>h</sub>) <code>slFieldValueV</code>, the process value (index x130<sub>h</sub>) <code>ftProcessValueV</code> and the input status (index 6150<sub>h</sub>) <code>ubStatusV</code> for the analog input channel defined by <code>ubChannelV</code>. </p>
+<p>This function sets the field value (index x100<sub>h</sub>) <code>slFieldValueV</code> and the input status (index 6150<sub>h</sub>) <code>ubStatusV</code> for the analog input channel defined by <code>ubChannelV</code>. </p>
 <p>The function updates the objects for all supported data types (refer to <a class="el" href="cos__conf_8h.html#ae90b40621f2b1e0c30749fe57ee9306f" title="CiA 404 data type.">COS_DS404_DT_INT16</a>, <a class="el" href="cos__conf_8h.html#a10777971d4d6a121e6f4acf1d72a2bf1" title="CiA 404 data type.">COS_DS404_DT_INT32</a> and <a class="el" href="cos__conf_8h.html#a3cff35b0cce3abcba76432c85c6f04af" title="CiA 404 data type.">COS_DS404_DT_FLOAT</a>). </p>
 <p>Please refer to the section <a class="el" href="#COS_CIA404_AI_PROCESS">Analog value processing</a> for an example. </p>
 
@@ -893,7 +1095,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98fa1e386bda90429c996628f4e03f99bb4f">eCosSdo_WRITE_OK</a> on success or any other value from <a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98f" title="Return code for SDO callbacks.">CosSdo_e</a> in case of an error</dd></dl>
 <p>This function should be called by application at change of sensor type to define corresponding physical unit of provided process value.</p>
-<p>The <code><a class="el" href="cos303_8h.html">cos303.h</a></code> contains the <code><a class="el" href="cos303_8h.html#a7c9b57a4b2536b451854c604189b8c0d">COS303_PHYSICAL_UNIT()</a></code> macro and <code><a class="el" href="cos303_8h.html#a4874d0d0fbf5374e0d945e5c21a57cd8">Cos303_SI_Unit_e</a></code> to setup this value. </p>
+<p>The <code><a class="el" href="cos890_8h.html">cos890.h</a></code> contains the <code><a class="el" href="cos890_8h.html#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT()</a></code> macro and <code><a class="el" href="cos890_8h.html#a824d814bdfd91f4aa0d4e8fe42c07012">Cos890_SI_Unit_e</a></code> to setup this value. </p>
 
 </div>
 </div>
@@ -917,7 +1119,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This array holds processing values that can are accessed SDO and PDO. The access via PDO and possibility to map values is the reason why it is declared as a global variable. </p>
+<p>This array holds process data values that are accessible via SDO and PDO. It is declared as a global variable to allow PDO mapping. </p>
 
 </div>
 </div>
@@ -937,7 +1139,7 @@ Variables</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="dir_d076c7804b3b00786f269cf3e8d1e511.html">profile-404</a></li><li class="navelem"><a href="cos404ai_8h.html">cos404ai.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Thu May 14 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
   </ul>
 </div>
 </body>

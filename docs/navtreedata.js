@@ -100,6 +100,11 @@ var NAVTREE =
       [ "Specifications", "cos_specifications.html", null ],
       [ "Support", "stack_support.html", null ],
       [ "License", "stack_license.html", null ]
+    ] ],
+    [ "Compliance", null, [
+      [ "MISRA C:2025", "cos_misra2025.html", [
+        [ "Exceptions", "misra_exceptions.html", null ]
+      ] ]
     ] ]
   ] ]
 ];

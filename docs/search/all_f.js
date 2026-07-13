@@ -102,6 +102,8 @@ var searchData=
   ['mini_20master_99',['Add-on Mini-Master',['../cos_add_on_mini_master.html',1,'']]],
   ['mini_20master_20changelog_100',['Mini-Master Changelog',['../cos_mini_master_changelog.html',1,'']]],
   ['mini_20master_20module_20version_101',['Mini-Master module version',['../group__COS__MM__VERSION.html',1,'']]],
-  ['module_20version_102',['module version',['../group__COS__DS401__VERSION.html',1,'CiA 401 module version'],['../group__COS__DS404__VERSION.html',1,'CiA 404 module version'],['../group__COS__DS406__VERSION.html',1,'CiA 406 module version'],['../group__COS__DS410__VERSION.html',1,'CiA 410 module version'],['../group__COS__MM__VERSION.html',1,'Mini-Master module version'],['../group__COS__NRL__VERSION.html',1,'NRL module version'],['../group__COS__SAFETY__VERSION.html',1,'Safety module version'],['../group__COS__SECURE__CONFIG__VERSION.html',1,'Secure Configuration module version']]],
-  ['modules_103',['CANopen Slave Add-on modules',['../cos_add_on_overview.html',1,'']]]
+  ['misra_20c_3a2025_20compliance_20summary_20tables_102',['MISRA C:2025 Compliance Summary Tables',['../cos_misra2025.html',1,'']]],
+  ['misra_20c_3a2025_20exceptions_103',['MISRA C:2025 Exceptions',['../misra_exceptions.html',1,'']]],
+  ['module_20version_104',['module version',['../group__COS__DS401__VERSION.html',1,'CiA 401 module version'],['../group__COS__DS404__VERSION.html',1,'CiA 404 module version'],['../group__COS__DS406__VERSION.html',1,'CiA 406 module version'],['../group__COS__DS410__VERSION.html',1,'CiA 410 module version'],['../group__COS__MM__VERSION.html',1,'Mini-Master module version'],['../group__COS__NRL__VERSION.html',1,'NRL module version'],['../group__COS__SAFETY__VERSION.html',1,'Safety module version'],['../group__COS__SECURE__CONFIG__VERSION.html',1,'Secure Configuration module version']]],
+  ['modules_105',['CANopen Slave Add-on modules',['../cos_add_on_overview.html',1,'']]]
 ];

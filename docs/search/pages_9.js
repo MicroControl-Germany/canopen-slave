@@ -5,5 +5,6 @@ var searchData=
   ['evaluation_20boards_2',['Examples for evaluation boards',['../cos_examples_boards.html',1,'']]],
   ['example_3',['example',['../cos_example_pdo_map.html#cos_pdo_mapping_rpdo',1,'RPDO mapping example'],['../cos_example_pdo_map.html#cos_pdo_mapping_tpdo',1,'TPDO mapping example']]],
   ['examples_4',['CANopen Slave Code Examples',['../cos_examples.html',1,'']]],
-  ['examples_20for_20evaluation_20boards_5',['Examples for evaluation boards',['../cos_examples_boards.html',1,'']]]
+  ['examples_20for_20evaluation_20boards_5',['Examples for evaluation boards',['../cos_examples_boards.html',1,'']]],
+  ['exceptions_6',['MISRA C:2025 Exceptions',['../misra_exceptions.html',1,'']]]
 ];

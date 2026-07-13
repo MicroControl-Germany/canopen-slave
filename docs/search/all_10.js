@@ -14,7 +14,8 @@ var searchData=
   ['node_5fstate_5fstopped_11',['NODE_STATE_STOPPED',['../group__NODE__STATE.html#ga453de9e03cab98c1b4c9853309636c57',1,'cos_nmt.h']]],
   ['nrl_20module_20version_12',['NRL module version',['../group__COS__NRL__VERSION.html',1,'']]],
   ['nucleo_20c092rc_20board_13',['NUCLEO-C092RC board',['../cos_ex_board_NUCLEO_C092RC.html',1,'']]],
-  ['nvm_5ferr_5fe_14',['NVM_ERR_e',['../mc__nvm_8h.html#a22d0b2f03fb002c963ba2f4ce6496fd1',1,'mc_nvm.h']]],
-  ['nvmaddr_5ftv_15',['NvmAddr_tv',['../mc__nvm_8h.html#a92ec97bccd0cd988b5bb87802bc82f6b',1,'mc_nvm.h']]],
-  ['nvmsize_5ftv_16',['NvmSize_tv',['../mc__nvm_8h.html#a3a6fe3e47f632a337c757bdada45f2b8',1,'mc_nvm.h']]]
+  ['nucleo_20h563zi_20board_14',['NUCLEO-H563ZI board',['../cos_ex_board_NUCLEO_H563ZI.html',1,'']]],
+  ['nvm_5ferr_5fe_15',['NVM_ERR_e',['../mc__nvm_8h.html#a22d0b2f03fb002c963ba2f4ce6496fd1',1,'mc_nvm.h']]],
+  ['nvmaddr_5ftv_16',['NvmAddr_tv',['../mc__nvm_8h.html#a92ec97bccd0cd988b5bb87802bc82f6b',1,'mc_nvm.h']]],
+  ['nvmsize_5ftv_17',['NvmSize_tv',['../mc__nvm_8h.html#a3a6fe3e47f632a337c757bdada45f2b8',1,'mc_nvm.h']]]
 ];
