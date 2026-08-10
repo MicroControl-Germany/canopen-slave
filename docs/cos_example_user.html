@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -647,7 +647,7 @@ $(function(){initNavTree('cos_example_user.html','',''); });
 <div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
 <div class="line"><span class="comment">// CosMgrGetNominalBitrate()                                                                                          //</span></div>
 <div class="line"><span class="comment">// get nominal bit rate value                                                                                         //</span></div>
-<div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------// </span></div>
+<div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
 <div class="line">int32_t  <a class="code hl_function" href="cos__mgr_8h.html#a89b07761f74fea0cdf67a4e5980bf502">CosMgrGetNominalBitrate</a>(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line">   <span class="keywordflow">return</span> (<a class="code hl_enumvalue" href="canpie_8h.html#a1701ab116f6fb6d511dfc34e5115de2ba76f1cb913600045e3dcc80455fc21487">eCP_BITRATE_500K</a>);</div>
@@ -657,7 +657,7 @@ $(function(){initNavTree('cos_example_user.html','',''); });
 <div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
 <div class="line"><span class="comment">// CosMgrGetProductCode()                                                                                             //</span></div>
 <div class="line"><span class="comment">// get Product Code of module                                                                                         //</span></div>
-<div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------// </span></div>
+<div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
 <div class="line">uint32_t <a class="code hl_function" href="cos__mgr_8h.html#a79647921b24fe5a996e4b2b147492fb1">CosMgrGetProductCode</a>(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line"><span class="preprocessor">   #if COS_DICT_OBJ_1010 &gt; 0</span></div>
@@ -692,7 +692,7 @@ $(function(){initNavTree('cos_example_user.html','',''); });
 <div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
 <div class="line"><span class="comment">// CosMgrGetSerialNumber()                                                                                            //</span></div>
 <div class="line"><span class="comment">// get Serial Number of module                                                                                        //</span></div>
-<div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------// </span></div>
+<div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
 <div class="line">uint32_t  <a class="code hl_function" href="cos__mgr_8h.html#a7dbbb77838bbc73832205615b89df7e8">CosMgrGetSerialNumber</a>(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line"><span class="preprocessor">   #if COS_DICT_OBJ_1010 &gt; 0</span></div>
@@ -794,7 +794,13 @@ $(function(){initNavTree('cos_example_user.html','',''); });
 <div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
 <div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="cos__nmt_8h.html#a1f0166d320eaae8d79f1307901b805d6">CosNmtServiceOnError</a>(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
-<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// An unknown or malformed NMT frame was received (CAN-ID 0).</span></div>
+<div class="line">   <span class="comment">// No mandatory reaction is defined by the standard; the application may count or log the event.</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   <span class="comment">// Example:</span></div>
+<div class="line">   <span class="comment">//   CosEmcyErrorSet(eEMCY_301_CAN_GENERIC, (uint8_t *) 0);</span></div>
+<div class="line">   <span class="comment">//</span></div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
@@ -853,7 +859,13 @@ $(function(){initNavTree('cos_example_user.html','',''); });
 <div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
 <div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="cos__nmt_8h.html#a5df11c99952b7f0ffdd8bf87f9f31862">CosNmtServiceOnStop</a>(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
-<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// NMT Stopped state: all PDO and SDO communication is suspended.</span></div>
+<div class="line">   <span class="comment">// Set application outputs to a defined safe state and disable process data updates.</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   <span class="comment">// Example:</span></div>
+<div class="line">   <span class="comment">//   AppSetSafeOutputs();</span></div>
+<div class="line">   <span class="comment">//</span></div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
@@ -863,7 +875,13 @@ $(function(){initNavTree('cos_example_user.html','',''); });
 <div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------------------------//</span></div>
 <div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="cos__nmt_8h.html#a54830cdd4a14ac98e55958748b2a9f20">CosNmtServiceOnPreOperational</a>(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
-<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// NMT Pre-Operational state: PDO communication is suspended, SDO remains active.</span></div>
+<div class="line">   <span class="comment">// Disable application outputs or hold the last valid process values.</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   <span class="comment">// Example:</span></div>
+<div class="line">   <span class="comment">//   AppDisableOutputs();</span></div>
+<div class="line">   <span class="comment">//</span></div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
@@ -1034,7 +1052,7 @@ $(function(){initNavTree('cos_example_user.html','',''); });
 <div class="line">   (void) uwIndexV;</div>
 <div class="line">   (void) ubSubIndexV;</div>
 <div class="line">   (void) ulObjectSizeV;</div>
-<div class="line">   </div>
+<div class="line"> </div>
 <div class="line">   <span class="keywordflow">return</span> (<a class="code hl_enumvalue" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98fa1e386bda90429c996628f4e03f99bb4f">eCosSdo_WRITE_OK</a>);</div>
 <div class="line">}</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
@@ -1355,15 +1373,15 @@ $(function(){initNavTree('cos_example_user.html','',''); });
 <div class="ttc" id="acos__emcy_8h_html_a2064e8da648758eba453650d5f776366a73c3bcf1c1bda5c1a945be15d9915f4e"><div class="ttname"><a href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a73c3bcf1c1bda5c1a945be15d9915f4e">eEMCY_301_CAN_LIFEGUARD</a></div><div class="ttdeci">@ eEMCY_301_CAN_LIFEGUARD</div><div class="ttdef"><b>Definition</b> cos_emcy.h:384</div></div>
 <div class="ttc" id="acos__emcy_8h_html_a5ef328c06839a1093a6143932cd44af7"><div class="ttname"><a href="cos__emcy_8h.html#a5ef328c06839a1093a6143932cd44af7">CosEmcyErrorSet</a></div><div class="ttdeci">Status_tv CosEmcyErrorSet(uint8_t ubErrConditionV, const uint8_t *pubCustomerCodeV)</div></div>
 <div class="ttc" id="acos__mgr_8h_html"><div class="ttname"><a href="cos__mgr_8h.html">cos_mgr.h</a></div><div class="ttdoc">CANopen Slave Stack - Management functions .</div></div>
-<div class="ttc" id="acos__mgr_8h_html_a0e05dbcac98eff4ee069a10784116bb9"><div class="ttname"><a href="cos__mgr_8h.html#a0e05dbcac98eff4ee069a10784116bb9">CosMgrRelease</a></div><div class="ttdeci">uint8_t CosMgrRelease(void)</div><div class="ttdoc">Release the CANopen Slave protocol stack.</div></div>
+<div class="ttc" id="acos__mgr_8h_html_a0e05dbcac98eff4ee069a10784116bb9"><div class="ttname"><a href="cos__mgr_8h.html#a0e05dbcac98eff4ee069a10784116bb9">CosMgrRelease</a></div><div class="ttdeci">uint8_t CosMgrRelease(void)</div></div>
 <div class="ttc" id="acos__mgr_8h_html_a26773e7845db7a7a2b352fcb52a058c4"><div class="ttname"><a href="cos__mgr_8h.html#a26773e7845db7a7a2b352fcb52a058c4">CosMgrGetNodeId</a></div><div class="ttdeci">uint8_t CosMgrGetNodeId(void)</div></div>
 <div class="ttc" id="acos__mgr_8h_html_a658ad26f2a00ecab90b425916e3de216"><div class="ttname"><a href="cos__mgr_8h.html#a658ad26f2a00ecab90b425916e3de216">CosMgrOnBootUp</a></div><div class="ttdeci">void CosMgrOnBootUp(void)</div></div>
 <div class="ttc" id="acos__mgr_8h_html_a66f8a2f399c9e83cc14e622ddaf4c4a7"><div class="ttname"><a href="cos__mgr_8h.html#a66f8a2f399c9e83cc14e622ddaf4c4a7">CosMgrOnStart</a></div><div class="ttdeci">void CosMgrOnStart(uint8_t ubCallerResultV)</div></div>
 <div class="ttc" id="acos__mgr_8h_html_a79647921b24fe5a996e4b2b147492fb1"><div class="ttname"><a href="cos__mgr_8h.html#a79647921b24fe5a996e4b2b147492fb1">CosMgrGetProductCode</a></div><div class="ttdeci">uint32_t CosMgrGetProductCode(void)</div></div>
 <div class="ttc" id="acos__mgr_8h_html_a7dbbb77838bbc73832205615b89df7e8"><div class="ttname"><a href="cos__mgr_8h.html#a7dbbb77838bbc73832205615b89df7e8">CosMgrGetSerialNumber</a></div><div class="ttdeci">uint32_t CosMgrGetSerialNumber(void)</div></div>
-<div class="ttc" id="acos__mgr_8h_html_a82f94eb674ea4c0c47bc62130759f9f1"><div class="ttname"><a href="cos__mgr_8h.html#a82f94eb674ea4c0c47bc62130759f9f1">CosMgrProfileUpdate</a></div><div class="ttdeci">void CosMgrProfileUpdate(uint16_t uwIndexV, uint8_t ubSubIndexV)</div><div class="ttdoc">Update parameter of device profile.</div></div>
+<div class="ttc" id="acos__mgr_8h_html_a82f94eb674ea4c0c47bc62130759f9f1"><div class="ttname"><a href="cos__mgr_8h.html#a82f94eb674ea4c0c47bc62130759f9f1">CosMgrProfileUpdate</a></div><div class="ttdeci">void CosMgrProfileUpdate(uint16_t uwIndexV, uint8_t ubSubIndexV)</div></div>
 <div class="ttc" id="acos__mgr_8h_html_a89b07761f74fea0cdf67a4e5980bf502"><div class="ttname"><a href="cos__mgr_8h.html#a89b07761f74fea0cdf67a4e5980bf502">CosMgrGetNominalBitrate</a></div><div class="ttdeci">int32_t CosMgrGetNominalBitrate(void)</div></div>
-<div class="ttc" id="acos__mgr_8h_html_ac890e7904bc138656f7ca0de661036e7"><div class="ttname"><a href="cos__mgr_8h.html#ac890e7904bc138656f7ca0de661036e7">CosMgrOnBusOff</a></div><div class="ttdeci">void CosMgrOnBusOff(void)</div><div class="ttdoc">Handle Bus-Off condition.</div></div>
+<div class="ttc" id="acos__mgr_8h_html_ac890e7904bc138656f7ca0de661036e7"><div class="ttname"><a href="cos__mgr_8h.html#ac890e7904bc138656f7ca0de661036e7">CosMgrOnBusOff</a></div><div class="ttdeci">void CosMgrOnBusOff(void)</div></div>
 <div class="ttc" id="acos__mobj_8h_html"><div class="ttname"><a href="cos__mobj_8h.html">cos_mobj.h</a></div><div class="ttdoc">CANopen Slave Stack - Manufacturer specific objects .</div></div>
 <div class="ttc" id="acos__mobj_8h_html_a26a4c765402ab04e03bc3c9fa589cd1c"><div class="ttname"><a href="cos__mobj_8h.html#a26a4c765402ab04e03bc3c9fa589cd1c">CosMob_PdoTrmHandler</a></div><div class="ttdeci">void CosMob_PdoTrmHandler(uint32_t ulMapEntryV)</div><div class="ttdoc">Demo implementation of callback handler for a mapping entry.</div></div>
 <div class="ttc" id="acos__mobj_8h_html_a7a2854fa48737fd20963404f6fcec0dc"><div class="ttname"><a href="cos__mobj_8h.html#a7a2854fa48737fd20963404f6fcec0dc">CosMob_PdoRcvHandler</a></div><div class="ttdeci">void CosMob_PdoRcvHandler(uint32_t ulMapEntryV)</div><div class="ttdoc">Demo implementation of callback handler for a mapping entry.</div></div>
@@ -1374,9 +1392,9 @@ $(function(){initNavTree('cos_example_user.html','',''); });
 <div class="ttc" id="acos__nmt_8h_html_a5df11c99952b7f0ffdd8bf87f9f31862"><div class="ttname"><a href="cos__nmt_8h.html#a5df11c99952b7f0ffdd8bf87f9f31862">CosNmtServiceOnStop</a></div><div class="ttdeci">void CosNmtServiceOnStop(void)</div></div>
 <div class="ttc" id="acos__nmt_8h_html_a987248df8ba06fb828e89ea1eb550c93"><div class="ttname"><a href="cos__nmt_8h.html#a987248df8ba06fb828e89ea1eb550c93">CosNmtServiceOnGuardingEvent</a></div><div class="ttdeci">void CosNmtServiceOnGuardingEvent(void)</div></div>
 <div class="ttc" id="acos__nmt_8h_html_aa5bbb1447cea18b0fe286832d2c9595a"><div class="ttname"><a href="cos__nmt_8h.html#aa5bbb1447cea18b0fe286832d2c9595a">CosNmtServiceOnStart</a></div><div class="ttdeci">void CosNmtServiceOnStart(void)</div></div>
-<div class="ttc" id="acos__nvm_8h_html"><div class="ttname"><a href="cos__nvm_8h.html">cos_nvm.h</a></div><div class="ttdoc">CANopen Slave Stack - Non-volatile memory support.</div></div>
-<div class="ttc" id="acos__nvm_8h_html_abc42c9dec3fe3b0615dc9f4916e85827a0278363f222a25c56872fc42bea9d42e"><div class="ttname"><a href="cos__nvm_8h.html#abc42c9dec3fe3b0615dc9f4916e85827a0278363f222a25c56872fc42bea9d42e">eNVM_301_OBJ_1018_2_U32</a></div><div class="ttdeci">@ eNVM_301_OBJ_1018_2_U32</div><div class="ttdef"><b>Definition</b> cos_nvm.h:101</div></div>
-<div class="ttc" id="acos__nvm_8h_html_abc42c9dec3fe3b0615dc9f4916e85827a9f29b89a28f5af40e6dbb6bedfaebb16"><div class="ttname"><a href="cos__nvm_8h.html#abc42c9dec3fe3b0615dc9f4916e85827a9f29b89a28f5af40e6dbb6bedfaebb16">eNVM_301_OBJ_1018_4_U32</a></div><div class="ttdeci">@ eNVM_301_OBJ_1018_4_U32</div><div class="ttdef"><b>Definition</b> cos_nvm.h:105</div></div>
+<div class="ttc" id="acos__nvm_8h_html"><div class="ttname"><a href="cos__nvm_8h.html">cos_nvm.h</a></div><div class="ttdoc">CANopen Slave Stack - Non-volatile memory support .</div></div>
+<div class="ttc" id="acos__nvm_8h_html_abc42c9dec3fe3b0615dc9f4916e85827a0278363f222a25c56872fc42bea9d42e"><div class="ttname"><a href="cos__nvm_8h.html#abc42c9dec3fe3b0615dc9f4916e85827a0278363f222a25c56872fc42bea9d42e">eNVM_301_OBJ_1018_2_U32</a></div><div class="ttdeci">@ eNVM_301_OBJ_1018_2_U32</div><div class="ttdef"><b>Definition</b> cos_nvm.h:102</div></div>
+<div class="ttc" id="acos__nvm_8h_html_abc42c9dec3fe3b0615dc9f4916e85827a9f29b89a28f5af40e6dbb6bedfaebb16"><div class="ttname"><a href="cos__nvm_8h.html#abc42c9dec3fe3b0615dc9f4916e85827a9f29b89a28f5af40e6dbb6bedfaebb16">eNVM_301_OBJ_1018_4_U32</a></div><div class="ttdeci">@ eNVM_301_OBJ_1018_4_U32</div><div class="ttdef"><b>Definition</b> cos_nvm.h:106</div></div>
 <div class="ttc" id="acos__pdo_8h_html"><div class="ttname"><a href="cos__pdo_8h.html">cos_pdo.h</a></div><div class="ttdoc">CANopen Slave Stack - Process Data Objects (PDO) .</div></div>
 <div class="ttc" id="acos__pdo_8h_html_a28f84492718adb1f0c3a8c533ef81341"><div class="ttname"><a href="cos__pdo_8h.html#a28f84492718adb1f0c3a8c533ef81341">atsRcvPdoComG</a></div><div class="ttdeci">CosPdoCom_ts atsRcvPdoComG[COS_PDO_RCV_NUMBER]</div></div>
 <div class="ttc" id="acos__pdo_8h_html_a2eef50278733fcfa2af8e9dad55ff4f7"><div class="ttname"><a href="cos__pdo_8h.html#a2eef50278733fcfa2af8e9dad55ff4f7">CosPdoMap_ts</a></div><div class="ttdeci">struct CosPdoMap_s CosPdoMap_ts</div><div class="ttdoc">PDO mapping parameter (static mapping)</div></div>
@@ -1418,8 +1436,8 @@ $(function(){initNavTree('cos_example_user.html','',''); });
 <div class="ttc" id="acos__secure__config_8h_html_ad8d75cd2dd0bd9fa794fbc8555e47110ae5b542af2bc5a325530bf419d4e1332e"><div class="ttname"><a href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110ae5b542af2bc5a325530bf419d4e1332e">eCOS_SECURE_CONFIG_EVENT_DCF_FAILED</a></div><div class="ttdeci">@ eCOS_SECURE_CONFIG_EVENT_DCF_FAILED</div><div class="ttdef"><b>Definition</b> cos_secure_config.h:153</div></div>
 <div class="ttc" id="acos__secure__config_8h_html_ad8d75cd2dd0bd9fa794fbc8555e47110afc0dbfd533bfded2b18c0f04414ef679"><div class="ttname"><a href="cos__secure__config_8h.html#ad8d75cd2dd0bd9fa794fbc8555e47110afc0dbfd533bfded2b18c0f04414ef679">eCOS_SECURE_CONFIG_EVENT_BLOCK_ACCESS</a></div><div class="ttdeci">@ eCOS_SECURE_CONFIG_EVENT_BLOCK_ACCESS</div><div class="ttdef"><b>Definition</b> cos_secure_config.h:147</div></div>
 <div class="ttc" id="acos__sync_8h_html"><div class="ttname"><a href="cos__sync_8h.html">cos_sync.h</a></div><div class="ttdoc">CANopen Slave Stack - Synchronisation functions (SYNC) .</div></div>
-<div class="ttc" id="acos__sync_8h_html_a3528d19d0083d682b4e22ebb1f45d05b"><div class="ttname"><a href="cos__sync_8h.html#a3528d19d0083d682b4e22ebb1f45d05b">CosSyncEvent</a></div><div class="ttdeci">void CosSyncEvent(uint8_t ubSyncCounterValueV)</div><div class="ttdoc">Notify SYNC reception.</div></div>
-<div class="ttc" id="acos__sync_8h_html_a8b8d496bc3ce2b64c4ba8fecb5816eb4"><div class="ttname"><a href="cos__sync_8h.html#a8b8d496bc3ce2b64c4ba8fecb5816eb4">CosSyncEventRcvPdo</a></div><div class="ttdeci">void CosSyncEventRcvPdo(void)</div><div class="ttdoc">Handle RPDOs on SYNC reception.</div></div>
+<div class="ttc" id="acos__sync_8h_html_a3528d19d0083d682b4e22ebb1f45d05b"><div class="ttname"><a href="cos__sync_8h.html#a3528d19d0083d682b4e22ebb1f45d05b">CosSyncEvent</a></div><div class="ttdeci">void CosSyncEvent(uint8_t ubSyncCounterValueV)</div></div>
+<div class="ttc" id="acos__sync_8h_html_a8b8d496bc3ce2b64c4ba8fecb5816eb4"><div class="ttname"><a href="cos__sync_8h.html#a8b8d496bc3ce2b64c4ba8fecb5816eb4">CosSyncEventRcvPdo</a></div><div class="ttdeci">void CosSyncEventRcvPdo(void)</div></div>
 <div class="ttc" id="acos__time_8h_html"><div class="ttname"><a href="cos__time_8h.html">cos_time.h</a></div><div class="ttdoc">CANopen Slave Stack - Timing functions .</div></div>
 <div class="ttc" id="acos__time_8h_html_a05e50d83a044ab5d4bccd373f813d966"><div class="ttname"><a href="cos__time_8h.html#a05e50d83a044ab5d4bccd373f813d966">CosTmrTimeStampConsume</a></div><div class="ttdeci">void CosTmrTimeStampConsume(CosTimeOfDay_ts *ptsTimeStampV)</div></div>
 <div class="ttc" id="acos__time_8h_html_ae6117c7ea06d6b9f1ce4fe9c1e357f7e"><div class="ttname"><a href="cos__time_8h.html#ae6117c7ea06d6b9f1ce4fe9c1e357f7e">CosTmrCalcTicks</a></div><div class="ttdeci">uint16_t CosTmrCalcTicks(uint16_t uwReqTimingV)</div></div>
@@ -1450,7 +1468,7 @@ $(function(){initNavTree('cos_example_user.html','',''); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -138,7 +138,7 @@ $(function(){initNavTree('cos__nrl_8h.html','',''); });
 <div class="ttc" id="acanpie_8h_html_a1701ab116f6fb6d511dfc34e5115de2baad510570f0bc89dc1101adbce0434771"><div class="ttname"><a href="canpie_8h.html#a1701ab116f6fb6d511dfc34e5115de2baad510570f0bc89dc1101adbce0434771">eCP_BITRATE_NONE</a></div><div class="ttdeci">@ eCP_BITRATE_NONE</div><div class="ttdef"><b>Definition</b> canpie.h:625</div></div>
 <div class="ttc" id="acanpie_8h_html_a364ad643291389f2be3c52e7e0d5f0bfa26614fc016c4d703d11e39e5481d2ffd"><div class="ttname"><a href="canpie_8h.html#a364ad643291389f2be3c52e7e0d5f0bfa26614fc016c4d703d11e39e5481d2ffd">eCP_CHANNEL_2</a></div><div class="ttdeci">@ eCP_CHANNEL_2</div><div class="ttdef"><b>Definition</b> canpie.h:717</div></div>
 <div class="ttc" id="acanpie_8h_html_a364ad643291389f2be3c52e7e0d5f0bfa6339424fe05aa422027f98daa81a5cce"><div class="ttname"><a href="canpie_8h.html#a364ad643291389f2be3c52e7e0d5f0bfa6339424fe05aa422027f98daa81a5cce">eCP_CHANNEL_1</a></div><div class="ttdeci">@ eCP_CHANNEL_1</div><div class="ttdef"><b>Definition</b> canpie.h:714</div></div>
-<div class="ttc" id="acos__mgr_8h_html_a1ac846f2ac39ff649997614d26192a40"><div class="ttname"><a href="cos__mgr_8h.html#a1ac846f2ac39ff649997614d26192a40">CosMgrInit</a></div><div class="ttdeci">uint8_t CosMgrInit(uint8_t ubCanIfV, uint16_t uwConfigV)</div><div class="ttdoc">Initialize the CANopen Slave.</div></div>
+<div class="ttc" id="acos__mgr_8h_html_a1ac846f2ac39ff649997614d26192a40"><div class="ttname"><a href="cos__mgr_8h.html#a1ac846f2ac39ff649997614d26192a40">CosMgrInit</a></div><div class="ttdeci">uint8_t CosMgrInit(uint8_t ubCanIfV, uint16_t uwConfigV)</div></div>
 <div class="ttc" id="acos__mgr_8h_html_ae7793c1c85041faf9583c01fb465832b"><div class="ttname"><a href="cos__mgr_8h.html#ae7793c1c85041faf9583c01fb465832b">CosMgrStart</a></div><div class="ttdeci">uint8_t CosMgrStart(uint8_t ubNodeIdV, int32_t slBitrateNomSelV, int32_t slBitrateDatSelV)</div></div>
 <div class="ttc" id="acos__nrl_8h_html_a15e948f2d7e7e3574d329b2b72984fe1"><div class="ttname"><a href="#a15e948f2d7e7e3574d329b2b72984fe1">CosNrlInit</a></div><div class="ttdeci">Status_tv CosNrlInit(uint8_t ubNrlChannelV, uint8_t ubPhyIfDclV, uint8_t ubPhyIfRclV, CpNrlDriver_ts *ptsNrlDriverV)</div></div>
 <div class="ttc" id="acos__nrl_8h_html_a942469bae8ee8729b15de9154f206ed2"><div class="ttname"><a href="#a942469bae8ee8729b15de9154f206ed2">CosNrlStart</a></div><div class="ttdeci">Status_tv CosNrlStart(uint8_t ubNrlChannelV)</div></div>
@@ -375,7 +375,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Error code defined by the <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296" title="Error Codes of protocol stack.">CosErr_e</a> enumeration. If no error occurred, the function will return the value <code><a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a></code>.</dd></dl>
-<p>This function must be called by the application program after <a class="el" href="cos__mgr_8h.html#a1ac846f2ac39ff649997614d26192a40" title="Initialize the CANopen Slave.">CosMgrInit()</a>. It is responsible for initialization of the NRL control service. </p>
+<p>This function must be called by the application program after <a class="el" href="cos__mgr_8h.html#a1ac846f2ac39ff649997614d26192a40">CosMgrInit()</a>. It is responsible for initialization of the NRL control service. </p>
 <p>The function returns an error code defined the the enumeration <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296" title="Error Codes of protocol stack.">CosErr_e</a>. </p>
 
 </div>
@@ -427,7 +427,7 @@ Functions</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="dir_930852f8ebed179784dd2644174fdc77.html">redundancy</a></li><li class="navelem"><a href="cos__nrl_8h.html">cos_nrl.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

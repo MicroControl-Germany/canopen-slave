@@ -12,10 +12,11 @@ var searchData=
   ['cia_20406_20definitions_9',['Device profile CiA 406 definitions',['../group__DS406.html',1,'']]],
   ['cia_20406_20module_20version_10',['CiA 406 module version',['../group__COS__DS406__VERSION.html',1,'']]],
   ['cia_20410_20module_20version_11',['CiA 410 module version',['../group__COS__DS410__VERSION.html',1,'']]],
-  ['cob_20id_20value_12',['Mask for COB-ID value',['../group__ID__MASK.html',1,'']]],
-  ['codes_13',['codes',['../group__EMCY__CODES.html',1,'EMCY error codes'],['../group__SDO__ERR.html',1,'SDO error codes']]],
-  ['configuration_14',['CANopen Slave protocol stacks configuration',['../group__COS__CONFIG.html',1,'']]],
-  ['configuration_20module_20version_15',['Secure Configuration module version',['../group__COS__SECURE__CONFIG__VERSION.html',1,'']]],
-  ['configuration_20options_16',['CANpie FD configuration options',['../group__CP__CONF.html',1,'']]],
-  ['control_17',['Bit mask for frame control',['../group__CP__MSG__CTRL.html',1,'']]]
+  ['cia_20453_20module_20version_12',['CiA 453 module version',['../group__COS__DS453__VERSION.html',1,'']]],
+  ['cob_20id_20value_13',['Mask for COB-ID value',['../group__ID__MASK.html',1,'']]],
+  ['codes_14',['codes',['../group__EMCY__CODES.html',1,'EMCY error codes'],['../group__SDO__ERR.html',1,'SDO error codes']]],
+  ['configuration_15',['CANopen Slave protocol stacks configuration',['../group__COS__CONFIG.html',1,'']]],
+  ['configuration_20module_20version_16',['Secure Configuration module version',['../group__COS__SECURE__CONFIG__VERSION.html',1,'']]],
+  ['configuration_20options_17',['CANpie FD configuration options',['../group__CP__CONF.html',1,'']]],
+  ['control_18',['Bit mask for frame control',['../group__CP__MSG__CTRL.html',1,'']]]
 ];

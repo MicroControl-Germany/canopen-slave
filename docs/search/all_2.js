@@ -12,5 +12,8 @@ var searchData=
   ['406_20module_20version_9',['CiA 406 module version',['../group__COS__DS406__VERSION.html',1,'']]],
   ['410_10',['CANopen Device Profile CiA 410',['../cos_add_on_cia_410.html',1,'']]],
   ['410_20changelog_11',['CiA 410 Changelog',['../cos_ds410_changelog.html',1,'']]],
-  ['410_20module_20version_12',['CiA 410 module version',['../group__COS__DS410__VERSION.html',1,'']]]
+  ['410_20module_20version_12',['CiA 410 module version',['../group__COS__DS410__VERSION.html',1,'']]],
+  ['453_13',['CANopen Device Profile CiA 453',['../cos_add_on_cia_453.html',1,'']]],
+  ['453_20changelog_14',['CiA 453 Changelog',['../cos_ds453_changelog.html',1,'']]],
+  ['453_20module_20version_15',['CiA 453 module version',['../group__COS__DS453__VERSION.html',1,'']]]
 ];

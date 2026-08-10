@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -113,6 +113,18 @@ $(function(){initNavTree('cos_ds404_changelog.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__2Users_2koppe_2Projekte_2CANopen-FD-Slave_2source_2stack-cos_2profile-404_2CHANGELOG"></a></p>
+<h1>[2.10] - 2026-08-06</h1>
+<h2>Added</h2>
+<ul>
+<li><span class="tt">slIdx914C_Hysteresis</span> field in <span class="tt">Cos404_AI_Config_ts</span>: hysteresis for span and error limit detection (AI function block)</li>
+</ul>
+<h2>Changed</h2>
+<ul>
+<li>internal function <span class="tt">ProcessLimits()</span> reworked: status bits <span class="tt">NOT_VALID</span>, <span class="tt">POS_OVERLOAD</span>, <span class="tt">NEG_OVERLOAD</span>, and <span class="tt">ERROR_LIMIT</span> are now cleared only when the input has moved back past the threshold by the configured hysteresis amount</li>
+<li>Fix scale offset (index 6127h) for <span class="tt">int32_t</span> data type: offset is now multiplied by powers of 10 based on the number of decimal digits of the process value (<span class="tt">ubIdx6132_DecimalDigitsInt32PV</span>)</li>
+<li>Fix <span class="tt">int32_t</span>-to-<span class="tt">int16_t</span> divisor calculation: now derived from the difference between <span class="tt">int32_t</span> and <span class="tt">int16_t</span> decimal digit counts (separate limits <span class="tt">COS404_AI_DECIMAL_DIGITS_INT16_MAX</span> and <span class="tt">COS404_AI_DECIMAL_DIGITS_INT32_MAX</span>)</li>
+<li>CO default parameter macros (<span class="tt">COS_DS404_CO_XP1_DEFAULT</span>, <span class="tt">COS_DS404_CO_XP2_DEFAULT</span>, <span class="tt">COS_DS404_CO_TN1_DEFAULT</span>) wrapped in preprocessor guards to allow user-side override</li>
+</ul>
 <h1>[2.08] - 2026-07-08</h1>
 <h2>Added</h2>
 <ul>
@@ -131,7 +143,7 @@ $(function(){initNavTree('cos_ds404_changelog.html','',''); });
 <h2>Added</h2>
 <ul>
 <li>Minimum DI and DO function block</li>
-<li>callback <a class="el" href="cos__mgr_8h.html#a82f94eb674ea4c0c47bc62130759f9f1" title="Update parameter of device profile.">CosMgrProfileUpdate()</a> added in CO function block</li>
+<li>callback <a class="el" href="cos__mgr_8h.html#a82f94eb674ea4c0c47bc62130759f9f1">CosMgrProfileUpdate()</a> added in CO function block</li>
 </ul>
 <h2>Changed</h2>
 <ul>
@@ -174,7 +186,7 @@ $(function(){initNavTree('cos_ds404_changelog.html','',''); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

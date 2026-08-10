@@ -63,9 +63,10 @@ var NAVTREE =
         [ "Management", "cos__mgr_8h.html#COS_MGR", null ],
         [ "NMT service", "cos__nmt_8h.html#COS_NMT", null ],
         [ "PDO service", "cos__pdo_8h.html#COS_PDO", null ],
-        [ "SDO service", "cos__sdo_8h.html#COS_SDO", null ],
+        [ "SDO server", "cos__sdo_8h.html#COS_SDO", null ],
         [ "SYNC service", "cos__sync_8h.html#COS_SYNC", null ],
         [ "Timer support", "cos__time_8h.html#COS_TIME", null ],
+        [ "USDO server", "cos__usdo__srv_8h.html#COS_USDO", null ],
         [ "Add-ons", "cos_add_on_overview.html", [
           [ "Profile CiA 401", "cos_add_on_cia_401.html", null ],
           [ "Profile CiA 404", "cos_add_on_cia_404.html", [
@@ -95,8 +96,10 @@ var NAVTREE =
       [ "Version history", "cos_version.html", null ]
     ] ],
     [ "Resources", null, [
-      [ "CAN abbreviations", "can_abbreviations.html", null ],
+      [ "CAN terms", "can_terms.html", null ],
       [ "CAN introduction", "can_introduction.html", null ],
+      [ "CANopen terms", "canopen_terms.html", null ],
+      [ "CANopen introduction", "canopen_introduction.html", null ],
       [ "Specifications", "cos_specifications.html", null ],
       [ "Support", "stack_support.html", null ],
       [ "License", "stack_license.html", null ]
@@ -111,7 +114,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"can_abbreviations.html"
+"can_introduction.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

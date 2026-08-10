@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -113,12 +113,60 @@ $(function(){initNavTree('cos__nmt_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The CANopen Network Management (NMT) is used to change the state of a CANopen slave node. In addition, the network state can be monitored via the Network Management Error Control (NMT-EC) service. This module provides the following functionality: </p><ul>
+<div class="textblock"><p>The CANopen Network Management (NMT) is used to change the state of a CANopen device (see <a class="el" href="canopen_terms.html">CANopen Terms and Definitions</a>). In addition, the network state can be monitored via the Network Management Error Control (NMT-EC) service. This module provides the following functionality: </p><ul>
 <li>NMT state change </li>
 <li>NMT Error Control (heartbeat/node-guarding) </li>
 <li>Send boot-up message </li>
 <li>Callbacks for NMT state change</li>
 </ul>
+<h2>NMT state machine</h2>
+<div class="dyncontent"> <div class="image">
+<img src="canopen-nmt-states.webp" alt="" width="500px"/>
+<div class="caption">
+NMT state machine</div></div>
+ </div><p>A CANopen device moves through four states. The current state can be queried with <a class="el" href="#ae6446b5b945a514680d174dcfcc18128">CosNmtGetNodeState()</a>; the possible return values are defined in <a class="el" href="group__NODE__STATE.html">NMT node state</a>.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">State  </th><th class="markdownTableHeadLeft">NODE_STATE value  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Initialization  </td><td class="markdownTableBodyLeft"><a class="el" href="group__NODE__STATE.html#ga4deab8a6ce2853a773455fa8133d853e">NODE_STATE_BOOTUP</a>  </td><td class="markdownTableBodyLeft">Device starts here after power-on or reset. <br  />
+SDO, PDO, and SYNC communication is not yet active.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Pre-Operational  </td><td class="markdownTableBodyLeft"><a class="el" href="group__NODE__STATE.html#ga32262ba36d8547d402266c6225c19fc0">NODE_STATE_PREOPERATIONAL</a>  </td><td class="markdownTableBodyLeft">Entered automatically after initialization completes. <br  />
+SDO communication is active; PDO communication is inhibited.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Operational  </td><td class="markdownTableBodyLeft"><a class="el" href="group__NODE__STATE.html#ga3fa971de2afdb65af21b6c7b7c634a2f">NODE_STATE_OPERATIONAL</a>  </td><td class="markdownTableBodyLeft">PDO communication is active. Normal device operation.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Stopped  </td><td class="markdownTableBodyLeft"><a class="el" href="group__NODE__STATE.html#ga453de9e03cab98c1b4c9853309636c57">NODE_STATE_STOPPED</a>  </td><td class="markdownTableBodyLeft">All communication except NMT and heartbeat is inhibited.  </td></tr>
+</table>
+<h2>NMT transitions and callbacks</h2>
+<p>NMT state transitions are triggered by NMT commands received on CAN-ID 0 from the NMT master. The following table maps each transition to the NMT command code and to the application callback that fires:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Transition  </th><th class="markdownTableHeadNone">NMT command  </th><th class="markdownTableHeadNone">Callback  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Initialization → Pre-Operational  </td><td class="markdownTableBodyNone">(automatic after boot-up)  </td><td class="markdownTableBodyNone"><a class="el" href="cos__mgr_8h.html#a66f8a2f399c9e83cc14e622ddaf4c4a7">CosMgrOnStart()</a> then <a class="el" href="cos__mgr_8h.html#a658ad26f2a00ecab90b425916e3de216">CosMgrOnBootUp()</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Pre-Operational → Operational  </td><td class="markdownTableBodyNone">Start Remote Node (01h)  </td><td class="markdownTableBodyNone"><a class="el" href="#aa5bbb1447cea18b0fe286832d2c9595a">CosNmtServiceOnStart()</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Operational → Pre-Operational  </td><td class="markdownTableBodyNone">Enter Pre-Operational (80h)  </td><td class="markdownTableBodyNone"><a class="el" href="#a54830cdd4a14ac98e55958748b2a9f20">CosNmtServiceOnPreOperational()</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Operational → Stopped  </td><td class="markdownTableBodyNone">Stop Remote Node (02h)  </td><td class="markdownTableBodyNone"><a class="el" href="#a5df11c99952b7f0ffdd8bf87f9f31862">CosNmtServiceOnStop()</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Stopped → Pre-Operational  </td><td class="markdownTableBodyNone">Enter Pre-Operational (80h)  </td><td class="markdownTableBodyNone"><a class="el" href="#a54830cdd4a14ac98e55958748b2a9f20">CosNmtServiceOnPreOperational()</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Stopped → Operational  </td><td class="markdownTableBodyNone">Start Remote Node (01h)  </td><td class="markdownTableBodyNone"><a class="el" href="#aa5bbb1447cea18b0fe286832d2c9595a">CosNmtServiceOnStart()</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Pre-Operational → Stopped  </td><td class="markdownTableBodyNone">Stop Remote Node (02h)  </td><td class="markdownTableBodyNone"><a class="el" href="#a5df11c99952b7f0ffdd8bf87f9f31862">CosNmtServiceOnStop()</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Any → Initialization  </td><td class="markdownTableBodyNone">Reset Node (81h) / Reset Communication (82h)  </td><td class="markdownTableBodyNone">—  </td></tr>
+</table>
+<p>Additional event callbacks are triggered by NMT error control: </p><ul>
+<li><a class="el" href="#a149aa50b102c0091c89f213535bc3566">CosNmtServiceOnHeartbeatEvent()</a> — a monitored node missed its heartbeat window </li>
+<li><a class="el" href="#a987248df8ba06fb828e89ea1eb550c93">CosNmtServiceOnGuardingEvent()</a> — node-guarding life time expired </li>
+<li><a class="el" href="#a1f0166d320eaae8d79f1307901b805d6">CosNmtServiceOnError()</a> — an NMT frame arrived with unknown or malformed content</li>
+</ul>
+<p>All callback implementations reside in <code>cos_user.c</code> and must be supplied by the integrator.</p>
 </div><div class="textblock"><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Include dependency graph for cos_nmt.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -259,9 +307,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function is called when the NMT state machine receives an unknown NMT command, i.e. the identifier 0 with a DLC that does not match or data that does not match. The reaction on this event is application specific. </p>
-<p>The function implementation is located in the file <code>cos_user.c</code>. </p>
-
+<dl class="section note"><dt>Note</dt><dd>The code located in the file <code>cos_user.c</code> provides an example and has to be adopted to the application.</dd></dl>
+<p>This function is called when the NMT state machine receives an unknown NMT command, i.e. a frame on CAN-ID 0 with a DLC that does not match or data that does not match any defined command code. The reaction on this event is application specific; it may be ignored or logged.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="#a1f0166d320eaae8d79f1307901b805d6">CosNmtServiceOnError</a>(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// An unknown or malformed NMT frame was received (CAN-ID 0).</span></div>
+<div class="line">   <span class="comment">// No mandatory reaction is defined by the standard; the application may count or log the event.</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   <span class="comment">// Example:</span></div>
+<div class="line">   <span class="comment">//   CosEmcyErrorSet(eEMCY_301_CAN_GENERIC, (uint8_t *) 0);</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a987248df8ba06fb828e89ea1eb550c93" name="a987248df8ba06fb828e89ea1eb550c93"></a>
@@ -278,9 +336,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This functions is called upon the occurrence of a guarding event. </p>
-<p>The function implementation is located in the file <code>cos_user.c</code>. </p>
-
+<dl class="section note"><dt>Note</dt><dd>The code located in the file <code>cos_user.c</code> provides an example and has to be adopted to the application.</dd></dl>
+<p>This function is called when a node-guarding life-time event occurs, i.e. the NMT master did not send the RTR guard frame within the guard time × life-time factor window (objects 100C<sub>h</sub> and 100D<sub>h</sub>). The typical reaction is to report an emergency via <a class="el" href="cos__emcy_8h.html#a5ef328c06839a1093a6143932cd44af7">CosEmcyErrorSet()</a> with error code <a class="el" href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a73c3bcf1c1bda5c1a945be15d9915f4e">eEMCY_301_CAN_LIFEGUARD</a>.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="#a987248df8ba06fb828e89ea1eb550c93">CosNmtServiceOnGuardingEvent</a>(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">   <a class="code hl_function" href="cos__emcy_8h.html#a5ef328c06839a1093a6143932cd44af7">CosEmcyErrorSet</a>(<a class="code hl_enumvalue" href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a73c3bcf1c1bda5c1a945be15d9915f4e">eEMCY_301_CAN_LIFEGUARD</a>, (uint8_t *) 0);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a149aa50b102c0091c89f213535bc3566" name="a149aa50b102c0091c89f213535bc3566"></a>
@@ -297,9 +359,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This functions is called upon the occurrence of a heartbeat event. </p>
-<p>The function implementation is located in the file <code>cos_user.c</code>. </p>
-
+<dl class="section note"><dt>Note</dt><dd>The code located in the file <code>cos_user.c</code> provides an example and has to be adopted to the application.</dd></dl>
+<p>This function is called when a heartbeat consumer timeout fires, i.e. a monitored node did not transmit its heartbeat within the expected cycle window (object 1016<sub>h</sub>). The typical reaction is to report an emergency via <a class="el" href="cos__emcy_8h.html#a5ef328c06839a1093a6143932cd44af7">CosEmcyErrorSet()</a> with error code <a class="el" href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a73c3bcf1c1bda5c1a945be15d9915f4e">eEMCY_301_CAN_LIFEGUARD</a>.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="#a149aa50b102c0091c89f213535bc3566">CosNmtServiceOnHeartbeatEvent</a>(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">   <a class="code hl_function" href="cos__emcy_8h.html#a5ef328c06839a1093a6143932cd44af7">CosEmcyErrorSet</a>(<a class="code hl_enumvalue" href="cos__emcy_8h.html#a2064e8da648758eba453650d5f776366a73c3bcf1c1bda5c1a945be15d9915f4e">eEMCY_301_CAN_LIFEGUARD</a>, (uint8_t *) 0);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a54830cdd4a14ac98e55958748b2a9f20" name="a54830cdd4a14ac98e55958748b2a9f20"></a>
@@ -316,9 +382,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This service routine is called when the NMT state machine changes into NMT pre-operational state. It can be used to perform device specific routines after reception of the NMT command. </p>
-<p>The function implementation is located in the file <code>cos_user.c</code>. </p>
-
+<dl class="section note"><dt>Note</dt><dd>The code located in the file <code>cos_user.c</code> provides an example and has to be adopted to the application.</dd></dl>
+<p>This function is called when the NMT state machine enters <a class="el" href="group__NODE__STATE.html#ga32262ba36d8547d402266c6225c19fc0">NODE_STATE_PREOPERATIONAL</a>, triggered by the NMT command Enter Pre-Operational (80h). PDO communication is suspended at this point; SDO communication remains active. Use this callback to disable application outputs or enter a safe state.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="#a54830cdd4a14ac98e55958748b2a9f20">CosNmtServiceOnPreOperational</a>(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// NMT Pre-Operational state: PDO communication is suspended, SDO remains active.</span></div>
+<div class="line">   <span class="comment">// Disable application outputs or hold the last valid process values.</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   <span class="comment">// Example:</span></div>
+<div class="line">   <span class="comment">//   AppDisableOutputs();</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="aa5bbb1447cea18b0fe286832d2c9595a" name="aa5bbb1447cea18b0fe286832d2c9595a"></a>
@@ -335,9 +411,32 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This service routine is called when the NMT state machine changes into NMT operational state. It can be used to perform device specific routines after reception of the NMT command. </p>
-<p>The function implementation is located in the file <code>cos_user.c</code>. </p>
-
+<dl class="section note"><dt>Note</dt><dd>The code located in the file <code>cos_user.c</code> provides an example and has to be adopted to the application.</dd></dl>
+<p>This function is called when the NMT state machine enters <a class="el" href="group__NODE__STATE.html#ga3fa971de2afdb65af21b6c7b7c634a2f">NODE_STATE_OPERATIONAL</a>, triggered by the NMT command Start Remote Node (01h). PDO communication becomes active at this point. Use this callback to enable application outputs and trigger an initial PDO transmission via CosPdoSend().</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="#aa5bbb1447cea18b0fe286832d2c9595a">CosNmtServiceOnStart</a>(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// this is an example for NMT start</span></div>
+<div class="line">   <span class="comment">// it has to be adopted to the device profile / application</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line"><span class="preprocessor">   #if COS_PDO_TRM_NUMBER &gt; 0</span></div>
+<div class="line">   CosPdoSend(0);</div>
+<div class="line"><span class="preprocessor">   #endif</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">   #if COS_PDO_TRM_NUMBER &gt; 1</span></div>
+<div class="line">   CosPdoSend(1);</div>
+<div class="line"><span class="preprocessor">   #endif</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">   #if COS_PDO_TRM_NUMBER &gt; 2</span></div>
+<div class="line">   CosPdoSend(2);</div>
+<div class="line"><span class="preprocessor">   #endif</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">   #if COS_PDO_TRM_NUMBER &gt; 3</span></div>
+<div class="line">   CosPdoSend(3);</div>
+<div class="line"><span class="preprocessor">   #endif</span></div>
+<div class="line"> </div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a5df11c99952b7f0ffdd8bf87f9f31862" name="a5df11c99952b7f0ffdd8bf87f9f31862"></a>
@@ -354,9 +453,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This service routine is called when the NMT state machine changes into NMT stopped state. It can be used to perform device specific routines after reception of the NMT command. </p>
-<p>The function implementation is located in the file <code>cos_user.c</code>. </p>
-
+<dl class="section note"><dt>Note</dt><dd>The code located in the file <code>cos_user.c</code> provides an example and has to be adopted to the application.</dd></dl>
+<p>This function is called when the NMT state machine enters <a class="el" href="group__NODE__STATE.html#ga453de9e03cab98c1b4c9853309636c57">NODE_STATE_STOPPED</a>, triggered by the NMT command Stop Remote Node (02h). All communication except NMT and heartbeat is suspended. Use this callback to set outputs to a defined safe state.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="#a5df11c99952b7f0ffdd8bf87f9f31862">CosNmtServiceOnStop</a>(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// NMT Stopped state: all PDO and SDO communication is suspended.</span></div>
+<div class="line">   <span class="comment">// Set application outputs to a defined safe state and disable process data updates.</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   <span class="comment">// Example:</span></div>
+<div class="line">   <span class="comment">//   AppSetSafeOutputs();</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a19aa65397cbc0d68e266a6cff2fe5f9d" name="a19aa65397cbc0d68e266a6cff2fe5f9d"></a>
@@ -435,7 +544,7 @@ Functions</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="cos__nmt_8h.html">cos_nmt.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

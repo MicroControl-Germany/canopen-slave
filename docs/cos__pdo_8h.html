@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -656,7 +656,7 @@ Variables</h2></td></tr>
 <p>The function enables or disables a mapping for a RPDO defined by the parameter <em class="arg">ubPdoNumberV</em>. The PDO mapping is disables when parameter <em class="arg">ubMapNumberV</em> is set to 0. A value &gt; 0 for a ubMapNumberV enables the mapping, the value defines how many mapping entries are valid. </p>
 <p>The following code snippet depicts how to enable one mapping entry for RPDO1: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98fa1e386bda90429c996628f4e03f99bb4f">eCosSdo_WRITE_OK</a> == <a class="code hl_function" href="#af0535c263b4160048bd47e145c70c6a2">CosPdoRcvMapEnable</a>(0, 1))</div>
 <div class="line">{</div>
-<div class="line">   <span class="comment">// successfully enabled one mapping entry for RPDO1 </span></div>
+<div class="line">   <span class="comment">// successfully enabled one mapping entry for RPDO1</span></div>
 <div class="line">}</div>
 <div class="ttc" id="acos__pdo_8h_html_af0535c263b4160048bd47e145c70c6a2"><div class="ttname"><a href="#af0535c263b4160048bd47e145c70c6a2">CosPdoRcvMapEnable</a></div><div class="ttdeci">uint8_t CosPdoRcvMapEnable(uint8_t ubPdoNumberV, uint8_t ubMapNumberV)</div></div>
 </div><!-- fragment --><p>Mapping entries can be added or modified by usage of <a class="el" href="#a4b72f4c9d77e77fa19038e2f8cd87e1a">CosPdoRcvMapAdd()</a>. </p>
@@ -796,7 +796,7 @@ Variables</h2></td></tr>
 <p>This function is called by the framework in order to update process data which is transmitted by the device via a TPDO. his function will be called by CANopen FD protocol stack only if the symbol <a class="el" href="cos__conf_8h.html#a7373184e34672bcbfbb62749349e0be2" title="Implementation of PDO mapping.">COS_PDO_MAPPING</a> is set to 0 (i.e. static PDO mapping is used). </p>
 <p>The implementation of the function is application specific. It should be provided by user application, typically within the file <code>cos_user.c</code> </p>
 <p>Returning a value of <code>false</code> will suppress PDO transmission. </p>
-<p>The following code snippet shows how to copy data into a transmit PDO.  </p><div class="fragment"><div class="line">bool_t <a class="code hl_function" href="#acf96d3e8d1aee7e0fc6304dc86c1a7df">CosPdoTrmDataUpdate</a>(uint8_t ubPdoNumberV)</div>
+<p>The following code snippet shows how to copy data into a transmit PDO. </p><div class="fragment"><div class="line">bool_t <a class="code hl_function" href="#acf96d3e8d1aee7e0fc6304dc86c1a7df">CosPdoTrmDataUpdate</a>(uint8_t ubPdoNumberV)</div>
 <div class="line">{</div>
 <div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
 <div class="line">   <span class="comment">// example for PDO transmit update</span></div>
@@ -815,11 +815,7 @@ Variables</h2></td></tr>
 <div class="line"> </div>
 <div class="line">   <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
 <div class="line">}</div>
-<div class="ttc" id="acos__defs_8h_html_ad3aefa0a1ed58399a94659a932bd7f52ae24220bf040351e78d82e7933f20ef2c"><div class="ttname"><a href="cos__defs_8h.html#ad3aefa0a1ed58399a94659a932bd7f52ae24220bf040351e78d82e7933f20ef2c">eCosBuf_PDO1_TRM</a></div><div class="ttdeci">@ eCosBuf_PDO1_TRM</div><div class="ttdef"><b>Definition</b> cos_defs.h:218</div></div>
-<div class="ttc" id="acos__pdo_8h_html_acf96d3e8d1aee7e0fc6304dc86c1a7df"><div class="ttname"><a href="#acf96d3e8d1aee7e0fc6304dc86c1a7df">CosPdoTrmDataUpdate</a></div><div class="ttdeci">bool_t CosPdoTrmDataUpdate(uint8_t ubPdoNumberV)</div></div>
-<div class="ttc" id="acp__core_8h_html_a2958781dc3321e8025ca81cc9f26fbb6"><div class="ttname"><a href="cp__core_8h.html#a2958781dc3321e8025ca81cc9f26fbb6">CpCoreBufferSetDlc</a></div><div class="ttdeci">CpStatus_tv CpCoreBufferSetDlc(CpPort_ts *ptsPortV, uint8_t ubBufferIdxV, uint8_t ubDlcV)</div></div>
-<div class="ttc" id="acp__core_8h_html_a5e83a70c0007854ac9c7bd47b71c3b4c"><div class="ttname"><a href="cp__core_8h.html#a5e83a70c0007854ac9c7bd47b71c3b4c">CpCoreBufferSetData</a></div><div class="ttdeci">CpStatus_tv CpCoreBufferSetData(CpPort_ts *ptsPortV, uint8_t ubBufferIdxV, uint8_t *pubSrcDataV, uint8_t ubStartPosV, uint8_t ubSizeV)</div></div>
-</div><!-- fragment -->
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ab7d6a6bdc85d2c4bbe5f101706fa4fb0" name="ab7d6a6bdc85d2c4bbe5f101706fa4fb0"></a>
@@ -919,7 +915,7 @@ Variables</h2></td></tr>
 <p>The function enables or disables a mapping for a TPDO defined by the parameter <em class="arg">ubPdoNumberV</em>. The PDO mapping is disables when parameter <em class="arg">ubMapNumberV</em> is set to 0. A value &gt; 0 for a ubMapNumberV enables the mapping, the value defines how many mapping entries are valid. </p>
 <p>The following code snippet depicts how to enable one mapping entry for TPDO1: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98fa1e386bda90429c996628f4e03f99bb4f">eCosSdo_WRITE_OK</a> == <a class="code hl_function" href="#a848b7692f7fa3d48b83b508cb5f3359b">CosPdoTrmMapEnable</a>(0, 1))</div>
 <div class="line">{</div>
-<div class="line">   <span class="comment">// successfully enabled one mapping entry for TPDO1 </span></div>
+<div class="line">   <span class="comment">// successfully enabled one mapping entry for TPDO1</span></div>
 <div class="line">}</div>
 <div class="ttc" id="acos__pdo_8h_html_a848b7692f7fa3d48b83b508cb5f3359b"><div class="ttname"><a href="#a848b7692f7fa3d48b83b508cb5f3359b">CosPdoTrmMapEnable</a></div><div class="ttdeci">uint8_t CosPdoTrmMapEnable(uint8_t ubPdoNumberV, uint8_t ubMapNumberV)</div></div>
 </div><!-- fragment --><p>Mapping entries can be added or modified by usage of <a class="el" href="#a9f891237793411810a849527effb0c46">CosPdoTrmMapAdd()</a>. </p>
@@ -1070,7 +1066,7 @@ Variables</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="cos__pdo_8h.html">cos_pdo.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

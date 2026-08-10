@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -113,12 +113,23 @@ $(function(){initNavTree('cos__lss_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>LSS offers the possibility to inquire and change the settings of certain parameters of the local layers on a CANopen module with LSS Slave capabilities by a CANopen module with LSS Master capabilities via the CAN Network. The following parameters can be inquired and/or changed by the use of LSS: </p><ul>
-<li>Node-ID of the CANopen Slave </li>
-<li>Bit timing parameters of the physical layer (baud rate) </li>
-<li>LSS address (Identity Object, Index 1018H)</li>
+<div class="textblock"><p>LSS (Layer Setting Services) allows the node-ID and bit timing of a CANopen device to be configured over the CAN bus without hardware switches. An LSS controller (master) addresses one or more LSS devices (slaves) and sets the following parameters: </p><ul>
+<li>Node-ID (NMT address) </li>
+<li>Bit timing parameters (nominal bit rate) </li>
+<li>LSS address (Identity Object, Index 1018h)</li>
 </ul>
-<p>By using LSS a LSS Slave can be configured for a CANopen network without using any devices like DIP-switches for setting the parameters. There are several solutions available for LSS Slaves with and without a unique LSS-address or non-volatile storage.</p>
+<dl class="section note"><dt>Note</dt><dd>This module is only compiled when <a class="el" href="cos__conf_8h.html#a57f978467cf1574c9389352ce670a1db" title="Implementation of Layer Setting Services and Protocol.">COS_LSS_SUPPORT</a> is set to 1 in <code><a class="el" href="cos__conf_8h.html" title="CANopen Slave Stack - General configuration .">cos_conf.h</a></code>. When LSS is active, <a class="el" href="cos__mgr_8h.html#a26773e7845db7a7a2b352fcb52a058c4">CosMgrGetNodeId()</a> must read the node-ID from non-volatile memory if no hardware switch is fitted (see <code>cos_user.c</code> for an example).</dd></dl>
+<h2>LSS configuration flow</h2>
+<p>A typical LSS node-ID assignment sequence is:</p><ol type="1">
+<li>The LSS controller selects the target device either globally (Switch Mode Global) or by its LSS address (Switch Mode Selective, using the four sub-indices of Identity Object 1018h).</li>
+<li>The device enters LSS Configuration mode. SDO, PDO, and NMT communication are inhibited during this phase.</li>
+<li>The LSS controller sends a Configure Node-ID command. The device validates the new node-ID and replies with a result code.</li>
+<li>Optionally the LSS controller sends a Configure Bit Timing command.</li>
+<li>The LSS controller sends a Store LSS Parameter command. The device saves the new node-ID (and optionally bit rate) to non-volatile memory.</li>
+<li>The LSS controller switches the device back to LSS Waiting mode.</li>
+<li>A Reset Node (NMT command 81h) or power cycle applies the stored settings.</li>
+</ol>
+<dl class="section note"><dt>Note</dt><dd>Further reading: <a href="https://files.microcontrol.net/appnotes/an1204.pdf">Application Note AN1204 — CANopen LSS configuration</a></dd></dl>
 </div><div class="textblock"><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Include dependency graph for cos_lss.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -154,81 +165,7 @@ $(function(){initNavTree('cos__lss_8h.html','',''); });
 <area shape="poly" title=" " alt="" coords="246,252,246,358,241,358,241,252"/>
 </map>
 </div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a63320ffb7b4358ca0cbb1a60a938d2b0" id="r_a63320ffb7b4358ca0cbb1a60a938d2b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63320ffb7b4358ca0cbb1a60a938d2b0">CosLssConfigureNodeId</a> (void)</td></tr>
-<tr class="memitem:a00f8c16a23bf920c5d2bdb98c1d38522" id="r_a00f8c16a23bf920c5d2bdb98c1d38522"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00f8c16a23bf920c5d2bdb98c1d38522">CosLssInquiryService</a> (uint8_t ubServiceV)</td></tr>
-<tr class="memitem:aca3eb1753533f81b8146d93dc54d2c93" id="r_aca3eb1753533f81b8146d93dc54d2c93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca3eb1753533f81b8146d93dc54d2c93">CosLssMessageHandler</a> (void)</td></tr>
-</table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a63320ffb7b4358ca0cbb1a60a938d2b0" name="a63320ffb7b4358ca0cbb1a60a938d2b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63320ffb7b4358ca0cbb1a60a938d2b0">&#9670;&#160;</a></span>CosLssConfigureNodeId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CosLssConfigureNodeId </td>
-          <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Configure Node ID. </p>
-<p>By means of this service the LSS Master configures the NMT-address parameter of a LSS Slave. This service allows only one LSS Slave in configuration mode. The remote result parameter confirms the success or failure of the service. In case of a failure optionally the reason is confirmed. </p>
-
-</div>
-</div>
-<a id="a00f8c16a23bf920c5d2bdb98c1d38522" name="a00f8c16a23bf920c5d2bdb98c1d38522"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00f8c16a23bf920c5d2bdb98c1d38522">&#9670;&#160;</a></span>CosLssInquiryService()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CosLssInquiryService </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>ubServiceV</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Inquiry services. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ubServiceV</td><td>service type</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>The inquiry services are available only in configuration mode. </p>
-
-</div>
-</div>
-<a id="aca3eb1753533f81b8146d93dc54d2c93" name="aca3eb1753533f81b8146d93dc54d2c93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca3eb1753533f81b8146d93dc54d2c93">&#9670;&#160;</a></span>CosLssMessageHandler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CosLssMessageHandler </td>
-          <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Evaluate LSS messages. </p>
-<p>This function is called by main message handler function CosMgrMessageHandler(). It evaluates the value of the first byte and calls the appropriate functions. </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>
@@ -244,7 +181,7 @@ Functions</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="cos__lss_8h.html">cos_lss.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

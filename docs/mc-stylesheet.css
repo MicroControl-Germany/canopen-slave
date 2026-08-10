@@ -386,7 +386,7 @@ div.line {
 	font-size: 13px;
 	min-height: 13px;
 	line-height: 1.2;
-	text-wrap: wrap; 
+	text-wrap: wrap;
 	word-break: break-all;
 	white-space: -moz-pre-wrap; /* Moz */
 	white-space: -pre-wrap;     /* Opera 4-6 */
@@ -618,19 +618,19 @@ span.xmlcdata {
 	color: black;
 }
 
-span.vhdldigit { 
+span.vhdldigit {
 	color: #FF00FF;
 }
 
-span.vhdlchar { 
+span.vhdlchar {
 	color: #000000;
 }
 
-span.vhdlkeyword { 
+span.vhdlkeyword {
 	color: #700070;
 }
 
-span.vhdllogic { 
+span.vhdllogic {
 	color: #FF0000;
 }
 
@@ -831,9 +831,9 @@ tr.template .memItemLeft, tr.template .memItemRight {
 	line-height: 1.25;
 	font-family: 'JetBrains Mono',Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace,fixed;
 	font-weight: 500;
-	font-size: 16px;
+	font-size: 15px;
 	float:left;
-   width: 380px;
+   width: 400px;
    box-sizing: border-box;
 	box-shadow: 0 10px 0 -1px #EEF1F7,
 	            0 2px 8px 0 rgba(0,0,0,.075);

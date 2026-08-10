@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -113,7 +113,29 @@ $(function(){initNavTree('cos301_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This module implements the variables and callback functions for the object dictionary from CiA 301 for various indices.</p>
+<div class="textblock"><p>This module implements the object dictionary handlers and support functions for CiA 301 communication profile objects. The following indices are handled:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Index  </th><th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Configuration symbol  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">1000h  </td><td class="markdownTableBodyLeft">Device Type  </td><td class="markdownTableBodyLeft">always present  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">1010h  </td><td class="markdownTableBodyLeft">Store Parameters  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a54b79d96ae29cdea162eb96267b8da22" title="Store Parameters.">COS_DICT_OBJ_1010</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">1011h  </td><td class="markdownTableBodyLeft">Restore Default Parameters  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a7bc86c04a43833ac045b87d574485c45" title="Restore Parameters.">COS_DICT_OBJ_1011</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">1018h  </td><td class="markdownTableBodyLeft">Identity Object  </td><td class="markdownTableBodyLeft">always present  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">1020h  </td><td class="markdownTableBodyLeft">Verify Configuration  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a1706eb051150323b3241cc887e528369" title="Verify Configuration.">COS_DICT_OBJ_1020</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">1021h  </td><td class="markdownTableBodyLeft">Store EDS  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a44ea374c816693ffe930c94fa9148d65" title="Support EDS store.">COS_DICT_OBJ_1021</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">1030h  </td><td class="markdownTableBodyLeft">Version Information  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a5bada5152a1f84187551842b69e40c7b" title="Support CANopen FD.">COS_FD_SUPPORT</a>  </td></tr>
+</table>
+<p>Two functions must be called by the application during initialization (typically inside <a class="el" href="cos__mgr_8h.html#a66f8a2f399c9e83cc14e622ddaf4c4a7">CosMgrOnStart()</a>): </p><ul>
+<li><a class="el" href="#a010d268152927b1763215036d1087b49">Cos301_SetDeviceType()</a> — sets object 1000h to the CiA device profile number and additional information. Must be called once per logical device before the node enters Operational state. </li>
+<li><a class="el" href="#ade8755e92610af0b15e13d1ede7a38f8">Cos301_SetErrorRegister()</a> / <a class="el" href="#a47734375e40aa4afb001910fbcbbaed7">Cos301_ClearErrorRegister()</a> — update object 1001h (Error Register) whenever the application detects or clears a fault condition.</li>
+</ul>
 </div><div class="textblock"><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Include dependency graph for cos301.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -153,6 +175,8 @@ $(function(){initNavTree('cos301_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a47734375e40aa4afb001910fbcbbaed7" id="r_a47734375e40aa4afb001910fbcbbaed7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47734375e40aa4afb001910fbcbbaed7">Cos301_ClearErrorRegister</a> (uint8_t ubErrorValueV)</td></tr>
+<tr class="memitem:adfd297752b73311aa74e5fbf3f2a7c31" id="r_adfd297752b73311aa74e5fbf3f2a7c31"><td class="memItemLeft" align="right" valign="top">const uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfd297752b73311aa74e5fbf3f2a7c31">Cos301_EDS_Data</a> (void)</td></tr>
+<tr class="memitem:aae13a82e88a9cf0704df207d36d3e719" id="r_aae13a82e88a9cf0704df207d36d3e719"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae13a82e88a9cf0704df207d36d3e719">Cos301_EDS_Size</a> (void)</td></tr>
 <tr class="memitem:a010d268152927b1763215036d1087b49" id="r_a010d268152927b1763215036d1087b49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a010d268152927b1763215036d1087b49">Cos301_SetDeviceType</a> (uint8_t ubLogicalDeviceV, uint32_t ulDeviceTypeV)</td></tr>
 <tr class="memitem:ade8755e92610af0b15e13d1ede7a38f8" id="r_ade8755e92610af0b15e13d1ede7a38f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade8755e92610af0b15e13d1ede7a38f8">Cos301_SetErrorRegister</a> (uint8_t ubErrorValueV)</td></tr>
 </table><table class="memberdecls">
@@ -191,6 +215,47 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ade8755e92610af0b15e13d1ede7a38f8">Cos301_SetErrorRegister()</a></dd></dl>
 <p>This function clears the value of object 1001<sub>h</sub>. The error flag <a class="el" href="canopen_8h.html#aad9a4c2f6c14753f8e43e418abf37fefad811be314fdb793ea08e4126c550aa20">eCO_ERR_REG_GENERIC</a> can only be cleared if no other error is currently active. </p>
+
+</div>
+</div>
+<a id="adfd297752b73311aa74e5fbf3f2a7c31" name="adfd297752b73311aa74e5fbf3f2a7c31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfd297752b73311aa74e5fbf3f2a7c31">&#9670;&#160;</a></span>Cos301_EDS_Data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t * Cos301_EDS_Data </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the EDS file byte array</dd></dl>
+<p>Returns a pointer to the EDS (Electronic Data Sheet) file content stored in the device. The function is implemented by the application in <code>cos_user_eds.c</code> and called by the stack when a CANopen master reads object 1021h (Store EDS) via SDO. </p>
+<dl class="section note"><dt>Note</dt><dd>The code located in the file <code>cos_user_eds.c</code> provides an example and has to be adopted to the application. Use the <code>eds-compress</code> tool to generate the <code>cos_user_eds.c</code> file from an EDS file.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#aae13a82e88a9cf0704df207d36d3e719">Cos301_EDS_Size()</a> </dd></dl>
+
+</div>
+</div>
+<a id="aae13a82e88a9cf0704df207d36d3e719" name="aae13a82e88a9cf0704df207d36d3e719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae13a82e88a9cf0704df207d36d3e719">&#9670;&#160;</a></span>Cos301_EDS_Size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Cos301_EDS_Size </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Size of the EDS file in bytes</dd></dl>
+<p>Returns the number of bytes in the EDS file provided by <a class="el" href="#adfd297752b73311aa74e5fbf3f2a7c31">Cos301_EDS_Data()</a>. The function is implemented by the application in <code>cos_user_eds.c</code>.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#adfd297752b73311aa74e5fbf3f2a7c31">Cos301_EDS_Data()</a> </dd></dl>
 
 </div>
 </div>
@@ -507,7 +572,7 @@ Variables</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="cos301_8h.html">cos301.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

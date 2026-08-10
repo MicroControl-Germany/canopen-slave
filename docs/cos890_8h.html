@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -113,8 +113,8 @@ $(function(){initNavTree('cos890_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The CiA 890 technical report defines the coding of SI units (international system of units) and prefixes to be used in CiA specifications. The predecessor document (CiA 303-2) was limited to CANopen documents.</p>
-<p>This file holds definitions for the CiA 890 specification. </p>
+<div class="textblock"><p><a class="anchor" id="COS_890"></a> The CiA 890 technical report (version 1.0.0, January 2023) defines the coding of SI units (international system of units) and prefixes to be used in CiA specifications. It replaces the predecessor document CiA 303-2, which was limited to classic CANopen profiles.</p>
+<p>The macro <a class="el" href="#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT</a> assembles the 32-bit unit configuration parameter from an SI prefix (<a class="el" href="#ae12812612e901e1a61a86edd9e0fff0e">Cos890_SI_Prefix_e</a>), an SI numerator unit (<a class="el" href="#a824d814bdfd91f4aa0d4e8fe42c07012">Cos890_SI_Unit_e</a>), an SI denominator unit, and a CiA-document-specific byte (profile byte, normally 0). </p>
 </div><div class="textblock"><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Include dependency graph for cos890.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -195,8 +195,7 @@ Enumerations</h2></td></tr>
 <div class="line">                                    (((uint32_t)SiDenominator &lt;&lt; 8) &amp; 0x0000FF00) |       \</div>
 <div class="line">                                    (((uint32_t)Profile) &amp; 0x000000FF)                    \</div>
 <div class="line">                                                                            ))</div>
-</div><!-- fragment --><p><br  />
- </p><dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">SiPrefix</td><td>value defined by <a class="el" href="#ae12812612e901e1a61a86edd9e0fff0e">Cos890_SI_Prefix_e</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">SiNumerator</td><td>value defined by <a class="el" href="#a824d814bdfd91f4aa0d4e8fe42c07012">Cos890_SI_Unit_e</a> </td></tr>
@@ -205,23 +204,23 @@ Enumerations</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The notation indexes represent hexadecimal code values for the ISO 80000 series’ physical units and prefixes in CiA documents, especially in device, interface and application profiles. The value structure of a configuration parameter, which determines the physical unit, should contain a notation index for SI prefix and notation indexes for SI unit as SI unit numerator and denominator. </p>
+<p>The notation indexes represent hexadecimal code values for the ISO 80000 series' physical units and prefixes in CiA documents, especially in device, interface and application profiles. The value structure of a configuration parameter, which determines the physical unit, should contain a notation index for SI prefix and notation indexes for SI unit as SI unit numerator and denominator. </p>
 <h2>Examples</h2>
-<div class="fragment"><div class="line">uiint32_t   ulDegreeCelsiusT = <a class="code hl_define" href="#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT</a>(<a class="code hl_enumvalue" href="#ae12812612e901e1a61a86edd9e0fff0eabb00648888e592539c77ac8f39cc6bb0">eCOS890_SI_PREFIX_NONE</a>, </div>
+<div class="fragment"><div class="line">uiint32_t   ulDegreeCelsiusT = <a class="code hl_define" href="#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT</a>(<a class="code hl_enumvalue" href="#ae12812612e901e1a61a86edd9e0fff0eabb00648888e592539c77ac8f39cc6bb0">eCOS890_SI_PREFIX_NONE</a>,</div>
 <div class="line">                                                    <a class="code hl_enumvalue" href="#a824d814bdfd91f4aa0d4e8fe42c07012a7a00537a79383f3dc949c0f54fc315a2">eCOS890_SI_UNIT_DEGREE_CELSIUS</a>,</div>
 <div class="line">                                                    <a class="code hl_enumvalue" href="#a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29">eCOS890_SI_UNIT_NONE</a>,</div>
 <div class="line">                                                    0);</div>
 <div class="line"> </div>
-<div class="line">uiint32_t   ulMilliVoltT     = <a class="code hl_define" href="#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT</a>(<a class="code hl_enumvalue" href="#ae12812612e901e1a61a86edd9e0fff0eae0c3e8b73f3efeb43c18bf3450e3e850">eCOS890_SI_PREFIX_MILLI</a>, </div>
+<div class="line">uiint32_t   ulMilliVoltT     = <a class="code hl_define" href="#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT</a>(<a class="code hl_enumvalue" href="#ae12812612e901e1a61a86edd9e0fff0eae0c3e8b73f3efeb43c18bf3450e3e850">eCOS890_SI_PREFIX_MILLI</a>,</div>
 <div class="line">                                                    <a class="code hl_enumvalue" href="#a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5">eCOS890_SI_UNIT_VOLT</a>,</div>
 <div class="line">                                                    <a class="code hl_enumvalue" href="#a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29">eCOS890_SI_UNIT_NONE</a>,</div>
 <div class="line">                                                    0);</div>
-<div class="ttc" id="acos890_8h_html_a7bb539b6c100f0f5e243d8cb7d7319aa"><div class="ttname"><a href="#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT</a></div><div class="ttdeci">#define COS890_PHYSICAL_UNIT(SiPrefix, SiNumerator, SiDenominator, Profile)</div><div class="ttdef"><b>Definition</b> cos890.h:157</div></div>
-<div class="ttc" id="acos890_8h_html_a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29"><div class="ttname"><a href="#a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29">eCOS890_SI_UNIT_NONE</a></div><div class="ttdeci">@ eCOS890_SI_UNIT_NONE</div><div class="ttdoc">dimensionless</div><div class="ttdef"><b>Definition</b> cos890.h:70</div></div>
-<div class="ttc" id="acos890_8h_html_a824d814bdfd91f4aa0d4e8fe42c07012a7a00537a79383f3dc949c0f54fc315a2"><div class="ttname"><a href="#a824d814bdfd91f4aa0d4e8fe42c07012a7a00537a79383f3dc949c0f54fc315a2">eCOS890_SI_UNIT_DEGREE_CELSIUS</a></div><div class="ttdeci">@ eCOS890_SI_UNIT_DEGREE_CELSIUS</div><div class="ttdoc">degree celsius [°C]</div><div class="ttdef"><b>Definition</b> cos890.h:95</div></div>
-<div class="ttc" id="acos890_8h_html_a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5"><div class="ttname"><a href="#a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5">eCOS890_SI_UNIT_VOLT</a></div><div class="ttdeci">@ eCOS890_SI_UNIT_VOLT</div><div class="ttdoc">volt [V]</div><div class="ttdef"><b>Definition</b> cos890.h:88</div></div>
-<div class="ttc" id="acos890_8h_html_ae12812612e901e1a61a86edd9e0fff0eabb00648888e592539c77ac8f39cc6bb0"><div class="ttname"><a href="#ae12812612e901e1a61a86edd9e0fff0eabb00648888e592539c77ac8f39cc6bb0">eCOS890_SI_PREFIX_NONE</a></div><div class="ttdeci">@ eCOS890_SI_PREFIX_NONE</div><div class="ttdoc">no prefix, 100</div><div class="ttdef"><b>Definition</b> cos890.h:58</div></div>
-<div class="ttc" id="acos890_8h_html_ae12812612e901e1a61a86edd9e0fff0eae0c3e8b73f3efeb43c18bf3450e3e850"><div class="ttname"><a href="#ae12812612e901e1a61a86edd9e0fff0eae0c3e8b73f3efeb43c18bf3450e3e850">eCOS890_SI_PREFIX_MILLI</a></div><div class="ttdeci">@ eCOS890_SI_PREFIX_MILLI</div><div class="ttdoc">milli, 10-3 [m]</div><div class="ttdef"><b>Definition</b> cos890.h:59</div></div>
+<div class="ttc" id="acos890_8h_html_a7bb539b6c100f0f5e243d8cb7d7319aa"><div class="ttname"><a href="#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT</a></div><div class="ttdeci">#define COS890_PHYSICAL_UNIT(SiPrefix, SiNumerator, SiDenominator, Profile)</div><div class="ttdef"><b>Definition</b> cos890.h:169</div></div>
+<div class="ttc" id="acos890_8h_html_a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29"><div class="ttname"><a href="#a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29">eCOS890_SI_UNIT_NONE</a></div><div class="ttdeci">@ eCOS890_SI_UNIT_NONE</div><div class="ttdoc">dimensionless</div><div class="ttdef"><b>Definition</b> cos890.h:75</div></div>
+<div class="ttc" id="acos890_8h_html_a824d814bdfd91f4aa0d4e8fe42c07012a7a00537a79383f3dc949c0f54fc315a2"><div class="ttname"><a href="#a824d814bdfd91f4aa0d4e8fe42c07012a7a00537a79383f3dc949c0f54fc315a2">eCOS890_SI_UNIT_DEGREE_CELSIUS</a></div><div class="ttdeci">@ eCOS890_SI_UNIT_DEGREE_CELSIUS</div><div class="ttdoc">Celsius temperature [°C].</div><div class="ttdef"><b>Definition</b> cos890.h:103</div></div>
+<div class="ttc" id="acos890_8h_html_a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5"><div class="ttname"><a href="#a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5">eCOS890_SI_UNIT_VOLT</a></div><div class="ttdeci">@ eCOS890_SI_UNIT_VOLT</div><div class="ttdoc">electric potential difference [V]</div><div class="ttdef"><b>Definition</b> cos890.h:96</div></div>
+<div class="ttc" id="acos890_8h_html_ae12812612e901e1a61a86edd9e0fff0eabb00648888e592539c77ac8f39cc6bb0"><div class="ttname"><a href="#ae12812612e901e1a61a86edd9e0fff0eabb00648888e592539c77ac8f39cc6bb0">eCOS890_SI_PREFIX_NONE</a></div><div class="ttdeci">@ eCOS890_SI_PREFIX_NONE</div><div class="ttdoc">no prefix, 100</div><div class="ttdef"><b>Definition</b> cos890.h:61</div></div>
+<div class="ttc" id="acos890_8h_html_ae12812612e901e1a61a86edd9e0fff0eae0c3e8b73f3efeb43c18bf3450e3e850"><div class="ttname"><a href="#ae12812612e901e1a61a86edd9e0fff0eae0c3e8b73f3efeb43c18bf3450e3e850">eCOS890_SI_PREFIX_MILLI</a></div><div class="ttdeci">@ eCOS890_SI_PREFIX_MILLI</div><div class="ttdoc">milli, 10-3 [m]</div><div class="ttdef"><b>Definition</b> cos890.h:62</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -268,75 +267,115 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Representation of SI units </p>
+<p>Representation of SI units (notation indexes per CiA 890, Tables 2–6). </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29" name="a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29"></a>eCOS890_SI_UNIT_NONE&#160;</td><td class="fielddoc"><p>dimensionless </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a3dac7c17a897ef88befe7df4c6302a7c" name="a824d814bdfd91f4aa0d4e8fe42c07012a3dac7c17a897ef88befe7df4c6302a7c"></a>eCOS890_SI_UNIT_METRE&#160;</td><td class="fielddoc"><p>meter [m] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a3dac7c17a897ef88befe7df4c6302a7c" name="a824d814bdfd91f4aa0d4e8fe42c07012a3dac7c17a897ef88befe7df4c6302a7c"></a>eCOS890_SI_UNIT_METRE&#160;</td><td class="fielddoc"><p>length [m] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012af401c7717abeb95037588d9dba8a8ee7" name="a824d814bdfd91f4aa0d4e8fe42c07012af401c7717abeb95037588d9dba8a8ee7"></a>eCOS890_SI_UNIT_KILOGRAM&#160;</td><td class="fielddoc"><p>kilogram [kg] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012af401c7717abeb95037588d9dba8a8ee7" name="a824d814bdfd91f4aa0d4e8fe42c07012af401c7717abeb95037588d9dba8a8ee7"></a>eCOS890_SI_UNIT_KILOGRAM&#160;</td><td class="fielddoc"><p>mass [kg] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012aa789c03d0c20643b08512df675736aa4" name="a824d814bdfd91f4aa0d4e8fe42c07012aa789c03d0c20643b08512df675736aa4"></a>eCOS890_SI_UNIT_SECOND&#160;</td><td class="fielddoc"><p>second [s] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012aa789c03d0c20643b08512df675736aa4" name="a824d814bdfd91f4aa0d4e8fe42c07012aa789c03d0c20643b08512df675736aa4"></a>eCOS890_SI_UNIT_SECOND&#160;</td><td class="fielddoc"><p>time [s] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012aa677cfb4775159b870af6132eac341d3" name="a824d814bdfd91f4aa0d4e8fe42c07012aa677cfb4775159b870af6132eac341d3"></a>eCOS890_SI_UNIT_AMPERE&#160;</td><td class="fielddoc"><p>ampere [A] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012aa677cfb4775159b870af6132eac341d3" name="a824d814bdfd91f4aa0d4e8fe42c07012aa677cfb4775159b870af6132eac341d3"></a>eCOS890_SI_UNIT_AMPERE&#160;</td><td class="fielddoc"><p>electric current [A] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a4103ce97ffc4c008bfc3c0e041bd5b8a" name="a824d814bdfd91f4aa0d4e8fe42c07012a4103ce97ffc4c008bfc3c0e041bd5b8a"></a>eCOS890_SI_UNIT_KELVIN&#160;</td><td class="fielddoc"><p>kelvin [K] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a4103ce97ffc4c008bfc3c0e041bd5b8a" name="a824d814bdfd91f4aa0d4e8fe42c07012a4103ce97ffc4c008bfc3c0e041bd5b8a"></a>eCOS890_SI_UNIT_KELVIN&#160;</td><td class="fielddoc"><p>thermodynamic temperature [K] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a2eed34aa8b7978c7826751d092dd288a" name="a824d814bdfd91f4aa0d4e8fe42c07012a2eed34aa8b7978c7826751d092dd288a"></a>eCOS890_SI_UNIT_MOLE&#160;</td><td class="fielddoc"><p>mole [mol] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a2eed34aa8b7978c7826751d092dd288a" name="a824d814bdfd91f4aa0d4e8fe42c07012a2eed34aa8b7978c7826751d092dd288a"></a>eCOS890_SI_UNIT_MOLE&#160;</td><td class="fielddoc"><p>amount of substance [mol] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012afbf8e7165c51f24587a1b86bd5fe5ad8" name="a824d814bdfd91f4aa0d4e8fe42c07012afbf8e7165c51f24587a1b86bd5fe5ad8"></a>eCOS890_SI_UNIT_CANDELA&#160;</td><td class="fielddoc"><p>candela [cd] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012afbf8e7165c51f24587a1b86bd5fe5ad8" name="a824d814bdfd91f4aa0d4e8fe42c07012afbf8e7165c51f24587a1b86bd5fe5ad8"></a>eCOS890_SI_UNIT_CANDELA&#160;</td><td class="fielddoc"><p>luminous intensity [cd] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a7fe78663a6793bec47bba9ceb65626c7" name="a824d814bdfd91f4aa0d4e8fe42c07012a7fe78663a6793bec47bba9ceb65626c7"></a>eCOS890_SI_UNIT_RADIAN&#160;</td><td class="fielddoc"><p>radian [rad] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a7fe78663a6793bec47bba9ceb65626c7" name="a824d814bdfd91f4aa0d4e8fe42c07012a7fe78663a6793bec47bba9ceb65626c7"></a>eCOS890_SI_UNIT_RADIAN&#160;</td><td class="fielddoc"><p>plane angle [rad] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a379a56160e94a9e06e238c01a884184e" name="a824d814bdfd91f4aa0d4e8fe42c07012a379a56160e94a9e06e238c01a884184e"></a>eCOS890_SI_UNIT_STERADIAN&#160;</td><td class="fielddoc"><p>steradian [sr] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a379a56160e94a9e06e238c01a884184e" name="a824d814bdfd91f4aa0d4e8fe42c07012a379a56160e94a9e06e238c01a884184e"></a>eCOS890_SI_UNIT_STERADIAN&#160;</td><td class="fielddoc"><p>solid angle [sr] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a9aeeb0d407a3faf58a78d7ea95a686e0" name="a824d814bdfd91f4aa0d4e8fe42c07012a9aeeb0d407a3faf58a78d7ea95a686e0"></a>eCOS890_SI_UNIT_HERTZ&#160;</td><td class="fielddoc"><p>hertz [Hz] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a9aeeb0d407a3faf58a78d7ea95a686e0" name="a824d814bdfd91f4aa0d4e8fe42c07012a9aeeb0d407a3faf58a78d7ea95a686e0"></a>eCOS890_SI_UNIT_HERTZ&#160;</td><td class="fielddoc"><p>frequency [Hz] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a5b5d3376b4ac68c41fb635275670241f" name="a824d814bdfd91f4aa0d4e8fe42c07012a5b5d3376b4ac68c41fb635275670241f"></a>eCOS890_SI_UNIT_NEWTON&#160;</td><td class="fielddoc"><p>newton [N] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a5b5d3376b4ac68c41fb635275670241f" name="a824d814bdfd91f4aa0d4e8fe42c07012a5b5d3376b4ac68c41fb635275670241f"></a>eCOS890_SI_UNIT_NEWTON&#160;</td><td class="fielddoc"><p>force [N] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012aec6f2ecb2c49e2a1f47e80f834f44d0c" name="a824d814bdfd91f4aa0d4e8fe42c07012aec6f2ecb2c49e2a1f47e80f834f44d0c"></a>eCOS890_SI_UNIT_PASCAL&#160;</td><td class="fielddoc"><p>pascal [Pa] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012aec6f2ecb2c49e2a1f47e80f834f44d0c" name="a824d814bdfd91f4aa0d4e8fe42c07012aec6f2ecb2c49e2a1f47e80f834f44d0c"></a>eCOS890_SI_UNIT_PASCAL&#160;</td><td class="fielddoc"><p>pressure, stress [Pa] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a34d19341e9c56383ad7234a60d571a20" name="a824d814bdfd91f4aa0d4e8fe42c07012a34d19341e9c56383ad7234a60d571a20"></a>eCOS890_SI_UNIT_JOULE&#160;</td><td class="fielddoc"><p>joule [J] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a34d19341e9c56383ad7234a60d571a20" name="a824d814bdfd91f4aa0d4e8fe42c07012a34d19341e9c56383ad7234a60d571a20"></a>eCOS890_SI_UNIT_JOULE&#160;</td><td class="fielddoc"><p>energy, work, heat [J] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a30112d613f77c11bfff787854a857376" name="a824d814bdfd91f4aa0d4e8fe42c07012a30112d613f77c11bfff787854a857376"></a>eCOS890_SI_UNIT_WATT&#160;</td><td class="fielddoc"><p>watt [W] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a30112d613f77c11bfff787854a857376" name="a824d814bdfd91f4aa0d4e8fe42c07012a30112d613f77c11bfff787854a857376"></a>eCOS890_SI_UNIT_WATT&#160;</td><td class="fielddoc"><p>power, radiant flux [W] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a386b3a82f690af88783e2512c457c536" name="a824d814bdfd91f4aa0d4e8fe42c07012a386b3a82f690af88783e2512c457c536"></a>eCOS890_SI_UNIT_COULOMB&#160;</td><td class="fielddoc"><p>coulomb [C] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a386b3a82f690af88783e2512c457c536" name="a824d814bdfd91f4aa0d4e8fe42c07012a386b3a82f690af88783e2512c457c536"></a>eCOS890_SI_UNIT_COULOMB&#160;</td><td class="fielddoc"><p>electric charge [C] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5" name="a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5"></a>eCOS890_SI_UNIT_VOLT&#160;</td><td class="fielddoc"><p>volt [V] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5" name="a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5"></a>eCOS890_SI_UNIT_VOLT&#160;</td><td class="fielddoc"><p>electric potential difference [V] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012aed0029c4f430cb78fd0d0c550b34c11c" name="a824d814bdfd91f4aa0d4e8fe42c07012aed0029c4f430cb78fd0d0c550b34c11c"></a>eCOS890_SI_UNIT_FARAD&#160;</td><td class="fielddoc"><p>farad [F] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012aed0029c4f430cb78fd0d0c550b34c11c" name="a824d814bdfd91f4aa0d4e8fe42c07012aed0029c4f430cb78fd0d0c550b34c11c"></a>eCOS890_SI_UNIT_FARAD&#160;</td><td class="fielddoc"><p>capacitance [F] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012abb7fbb3677aca429a9ba5d09baca2f01" name="a824d814bdfd91f4aa0d4e8fe42c07012abb7fbb3677aca429a9ba5d09baca2f01"></a>eCOS890_SI_UNIT_OHM&#160;</td><td class="fielddoc"><p>ohm [&Omega;] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012abb7fbb3677aca429a9ba5d09baca2f01" name="a824d814bdfd91f4aa0d4e8fe42c07012abb7fbb3677aca429a9ba5d09baca2f01"></a>eCOS890_SI_UNIT_OHM&#160;</td><td class="fielddoc"><p>electric resistance [&Omega;] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a1be1d821e334063295aaa19fb2ef7e53" name="a824d814bdfd91f4aa0d4e8fe42c07012a1be1d821e334063295aaa19fb2ef7e53"></a>eCOS890_SI_UNIT_SIEMENS&#160;</td><td class="fielddoc"><p>siemens [S] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a1be1d821e334063295aaa19fb2ef7e53" name="a824d814bdfd91f4aa0d4e8fe42c07012a1be1d821e334063295aaa19fb2ef7e53"></a>eCOS890_SI_UNIT_SIEMENS&#160;</td><td class="fielddoc"><p>electric conductance [S] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a6d68f7ab00da740cff65c0622e79c25c" name="a824d814bdfd91f4aa0d4e8fe42c07012a6d68f7ab00da740cff65c0622e79c25c"></a>eCOS890_SI_UNIT_WEBER&#160;</td><td class="fielddoc"><p>weber [Wb] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a6d68f7ab00da740cff65c0622e79c25c" name="a824d814bdfd91f4aa0d4e8fe42c07012a6d68f7ab00da740cff65c0622e79c25c"></a>eCOS890_SI_UNIT_WEBER&#160;</td><td class="fielddoc"><p>magnetic flux [Wb] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a5a639ebdba1e5d8ac4c0acea6233e3a8" name="a824d814bdfd91f4aa0d4e8fe42c07012a5a639ebdba1e5d8ac4c0acea6233e3a8"></a>eCOS890_SI_UNIT_TESLA&#160;</td><td class="fielddoc"><p>tesla [T] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a5a639ebdba1e5d8ac4c0acea6233e3a8" name="a824d814bdfd91f4aa0d4e8fe42c07012a5a639ebdba1e5d8ac4c0acea6233e3a8"></a>eCOS890_SI_UNIT_TESLA&#160;</td><td class="fielddoc"><p>magnetic flux density [T] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a326de13d3671e964105e03613a23457f" name="a824d814bdfd91f4aa0d4e8fe42c07012a326de13d3671e964105e03613a23457f"></a>eCOS890_SI_UNIT_HENRY&#160;</td><td class="fielddoc"><p>henry [H] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a326de13d3671e964105e03613a23457f" name="a824d814bdfd91f4aa0d4e8fe42c07012a326de13d3671e964105e03613a23457f"></a>eCOS890_SI_UNIT_HENRY&#160;</td><td class="fielddoc"><p>inductance [H] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a7a00537a79383f3dc949c0f54fc315a2" name="a824d814bdfd91f4aa0d4e8fe42c07012a7a00537a79383f3dc949c0f54fc315a2"></a>eCOS890_SI_UNIT_DEGREE_CELSIUS&#160;</td><td class="fielddoc"><p>degree celsius [°C] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a7a00537a79383f3dc949c0f54fc315a2" name="a824d814bdfd91f4aa0d4e8fe42c07012a7a00537a79383f3dc949c0f54fc315a2"></a>eCOS890_SI_UNIT_DEGREE_CELSIUS&#160;</td><td class="fielddoc"><p>Celsius temperature [&deg;C]. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012abbc8f65b1fa99507c9e1c03147b58027" name="a824d814bdfd91f4aa0d4e8fe42c07012abbc8f65b1fa99507c9e1c03147b58027"></a>eCOS890_SI_UNIT_LUMEN&#160;</td><td class="fielddoc"><p>lumen [lm] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012abbc8f65b1fa99507c9e1c03147b58027" name="a824d814bdfd91f4aa0d4e8fe42c07012abbc8f65b1fa99507c9e1c03147b58027"></a>eCOS890_SI_UNIT_LUMEN&#160;</td><td class="fielddoc"><p>luminous flux [lm] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a4fe23af3983f02457e97b4177f29e536" name="a824d814bdfd91f4aa0d4e8fe42c07012a4fe23af3983f02457e97b4177f29e536"></a>eCOS890_SI_UNIT_LUX&#160;</td><td class="fielddoc"><p>lux [lx] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a4fe23af3983f02457e97b4177f29e536" name="a824d814bdfd91f4aa0d4e8fe42c07012a4fe23af3983f02457e97b4177f29e536"></a>eCOS890_SI_UNIT_LUX&#160;</td><td class="fielddoc"><p>illuminance [lx] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a06f1259c47d8f0179b04047c36db25e3" name="a824d814bdfd91f4aa0d4e8fe42c07012a06f1259c47d8f0179b04047c36db25e3"></a>eCOS890_SI_UNIT_LITRE&#160;</td><td class="fielddoc"><p>litre [l] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a1fccb2b8b1913818337fd08893404b9f" name="a824d814bdfd91f4aa0d4e8fe42c07012a1fccb2b8b1913818337fd08893404b9f"></a>eCOS890_SI_UNIT_BECQUEREL&#160;</td><td class="fielddoc"><p>activity of a radionuclide [Bq] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a7bbb34b6174edf27373d318abdb6f0f0" name="a824d814bdfd91f4aa0d4e8fe42c07012a7bbb34b6174edf27373d318abdb6f0f0"></a>eCOS890_SI_UNIT_HOUR&#160;</td><td class="fielddoc"><p>hour [h] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a613c6b09b59b4230866a86e36eac5e24" name="a824d814bdfd91f4aa0d4e8fe42c07012a613c6b09b59b4230866a86e36eac5e24"></a>eCOS890_SI_UNIT_GRAY&#160;</td><td class="fielddoc"><p>absorbed dose, specific energy [Gy] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a107bb599e5546f3d6683f19d72d5f749" name="a824d814bdfd91f4aa0d4e8fe42c07012a107bb599e5546f3d6683f19d72d5f749"></a>eCOS890_SI_UNIT_DAY&#160;</td><td class="fielddoc"><p>day [d] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012afa5fd54c58fb858917c6cd17a1d1f289" name="a824d814bdfd91f4aa0d4e8fe42c07012afa5fd54c58fb858917c6cd17a1d1f289"></a>eCOS890_SI_UNIT_SIVERT&#160;</td><td class="fielddoc"><p>dose equivalent [Sv] (note: enumerator name misspells "sievert") </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a9aecbad4699e184213db1844b69a076f" name="a824d814bdfd91f4aa0d4e8fe42c07012a9aecbad4699e184213db1844b69a076f"></a>eCOS890_SI_UNIT_YEAR&#160;</td><td class="fielddoc"><p>year [a] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a4b15534ab1d5c8f0e1876011b4355fa6" name="a824d814bdfd91f4aa0d4e8fe42c07012a4b15534ab1d5c8f0e1876011b4355fa6"></a>eCOS890_SI_UNIT_ANGLE_GRADE&#160;</td><td class="fielddoc"><p>plane angle, grade / gon [g<sup>a</sup>] (1/400 of full rotation) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a7da6440672e90b6dcd60f477c77082f6" name="a824d814bdfd91f4aa0d4e8fe42c07012a7da6440672e90b6dcd60f477c77082f6"></a>eCOS890_SI_UNIT_GRAM&#160;</td><td class="fielddoc"><p>gram [g] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a73b85a610f9d96dc5bbb95ed0b3be2e7" name="a824d814bdfd91f4aa0d4e8fe42c07012a73b85a610f9d96dc5bbb95ed0b3be2e7"></a>eCOS890_SI_UNIT_ANGLE_DEGREE&#160;</td><td class="fielddoc"><p>plane angle, degree [&deg;<sup>a</sup>] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a9a3f0715ac2385efc70bb031a89fbe8f" name="a824d814bdfd91f4aa0d4e8fe42c07012a9a3f0715ac2385efc70bb031a89fbe8f"></a>eCOS890_SI_UNIT_TONNE&#160;</td><td class="fielddoc"><p>tonne [t] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012adabcd1b73e2ab1a366247340e92eea9e" name="a824d814bdfd91f4aa0d4e8fe42c07012adabcd1b73e2ab1a366247340e92eea9e"></a>eCOS890_SI_UNIT_ANGLE_MINUTE&#160;</td><td class="fielddoc"><p>plane angle, minute of arc [&prime;<sup>a</sup>] (1/60 of degree) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012aa796eee7a6c5a04496687a9c1cee3329" name="a824d814bdfd91f4aa0d4e8fe42c07012aa796eee7a6c5a04496687a9c1cee3329"></a>eCOS890_SI_UNIT_PARSEC&#160;</td><td class="fielddoc"><p>parsec [pc] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a822443307029d1ec039d7bd380e084ef" name="a824d814bdfd91f4aa0d4e8fe42c07012a822443307029d1ec039d7bd380e084ef"></a>eCOS890_SI_UNIT_ANGLE_SECOND&#160;</td><td class="fielddoc"><p>plane angle, second of arc [&Prime;<sup>a</sup>] (1/3600 of degree) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012adf9317a574a79dd128ddb4d34cb52f0f" name="a824d814bdfd91f4aa0d4e8fe42c07012adf9317a574a79dd128ddb4d34cb52f0f"></a>eCOS890_SI_UNIT_METER_PER_SQUARE_SECOND&#160;</td><td class="fielddoc"><p>acceleration [m/s^2] </p>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a06f1259c47d8f0179b04047c36db25e3" name="a824d814bdfd91f4aa0d4e8fe42c07012a06f1259c47d8f0179b04047c36db25e3"></a>eCOS890_SI_UNIT_LITRE&#160;</td><td class="fielddoc"><p>volume [l] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012ad923696aa108a427813ab33bb976d314" name="a824d814bdfd91f4aa0d4e8fe42c07012ad923696aa108a427813ab33bb976d314"></a>eCOS890_SI_UNIT_ARE&#160;</td><td class="fielddoc"><p>area [a] (= 100 m&sup2;) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a84d059a8e1f4ccb5daa7f0d1064d6c2d" name="a824d814bdfd91f4aa0d4e8fe42c07012a84d059a8e1f4ccb5daa7f0d1064d6c2d"></a>eCOS890_SI_UNIT_HECTARE&#160;</td><td class="fielddoc"><p>area [ha] (= 10&thinsp;000 m&sup2;) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012aceb9be5fca3eab8635a97bc2f69adb91" name="a824d814bdfd91f4aa0d4e8fe42c07012aceb9be5fca3eab8635a97bc2f69adb91"></a>eCOS890_SI_UNIT_MINUTE&#160;</td><td class="fielddoc"><p>time, minute [min] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a7bbb34b6174edf27373d318abdb6f0f0" name="a824d814bdfd91f4aa0d4e8fe42c07012a7bbb34b6174edf27373d318abdb6f0f0"></a>eCOS890_SI_UNIT_HOUR&#160;</td><td class="fielddoc"><p>time, hour [h] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a107bb599e5546f3d6683f19d72d5f749" name="a824d814bdfd91f4aa0d4e8fe42c07012a107bb599e5546f3d6683f19d72d5f749"></a>eCOS890_SI_UNIT_DAY&#160;</td><td class="fielddoc"><p>time, day [d] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a9aecbad4699e184213db1844b69a076f" name="a824d814bdfd91f4aa0d4e8fe42c07012a9aecbad4699e184213db1844b69a076f"></a>eCOS890_SI_UNIT_YEAR&#160;</td><td class="fielddoc"><p>time, year [a] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a7da6440672e90b6dcd60f477c77082f6" name="a824d814bdfd91f4aa0d4e8fe42c07012a7da6440672e90b6dcd60f477c77082f6"></a>eCOS890_SI_UNIT_GRAM&#160;</td><td class="fielddoc"><p>mass [g] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a9a3f0715ac2385efc70bb031a89fbe8f" name="a824d814bdfd91f4aa0d4e8fe42c07012a9a3f0715ac2385efc70bb031a89fbe8f"></a>eCOS890_SI_UNIT_TONNE&#160;</td><td class="fielddoc"><p>mass, metric ton [t] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a388d4ce05eb07e1bd84638f01330ba18" name="a824d814bdfd91f4aa0d4e8fe42c07012a388d4ce05eb07e1bd84638f01330ba18"></a>eCOS890_SI_UNIT_BAR&#160;</td><td class="fielddoc"><p>pressure [bar] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a1c0d196a850af65fa267739b46a3cf2d" name="a824d814bdfd91f4aa0d4e8fe42c07012a1c0d196a850af65fa267739b46a3cf2d"></a>eCOS890_SI_UNIT_POISE&#160;</td><td class="fielddoc"><p>dynamic viscosity [P] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012ab3bbe8f9a3280ed9f64a76db66e6dd69" name="a824d814bdfd91f4aa0d4e8fe42c07012ab3bbe8f9a3280ed9f64a76db66e6dd69"></a>eCOS890_SI_UNIT_STOKES&#160;</td><td class="fielddoc"><p>kinematic viscosity [St] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a26fde894845ebb31b3265ed0868ea587" name="a824d814bdfd91f4aa0d4e8fe42c07012a26fde894845ebb31b3265ed0868ea587"></a>eCOS890_SI_UNIT_ELECTRONVOLT&#160;</td><td class="fielddoc"><p>electric charge, electron-volt [eV] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012ae3f93f5cbed51ddff73fbbc5be1236b1" name="a824d814bdfd91f4aa0d4e8fe42c07012ae3f93f5cbed51ddff73fbbc5be1236b1"></a>eCOS890_SI_UNIT_ATOMIC_MASS_UNIT&#160;</td><td class="fielddoc"><p>atomic mass unit [u] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a89d5c51dd8daf0f81b5a6d4cc0201b67" name="a824d814bdfd91f4aa0d4e8fe42c07012a89d5c51dd8daf0f81b5a6d4cc0201b67"></a>eCOS890_SI_UNIT_ASTRONOMIC_UNIT&#160;</td><td class="fielddoc"><p>length, astronomic unit [AU] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012aa796eee7a6c5a04496687a9c1cee3329" name="a824d814bdfd91f4aa0d4e8fe42c07012aa796eee7a6c5a04496687a9c1cee3329"></a>eCOS890_SI_UNIT_PARSEC&#160;</td><td class="fielddoc"><p>length, parsec [pc] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012adf9317a574a79dd128ddb4d34cb52f0f" name="a824d814bdfd91f4aa0d4e8fe42c07012adf9317a574a79dd128ddb4d34cb52f0f"></a>eCOS890_SI_UNIT_METER_PER_SQUARE_SECOND&#160;</td><td class="fielddoc"><p>acceleration [m/s&sup2;] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012aadeda4bcb986e1d68a2024eed4f30183" name="a824d814bdfd91f4aa0d4e8fe42c07012aadeda4bcb986e1d68a2024eed4f30183"></a>eCOS890_SI_UNIT_NEWTON_METRE&#160;</td><td class="fielddoc"><p>moment of force / torque [Nm] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012ab8a3bdae9281144ad5a133e10227a1bd" name="a824d814bdfd91f4aa0d4e8fe42c07012ab8a3bdae9281144ad5a133e10227a1bd"></a>eCOS890_SI_UNIT_SQUARE_SECOND&#160;</td><td class="fielddoc"><p>square second [s&sup2;] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012ab9f4a27218e3e9074a2b2c67e1d787df" name="a824d814bdfd91f4aa0d4e8fe42c07012ab9f4a27218e3e9074a2b2c67e1d787df"></a>eCOS890_SI_UNIT_SQUARE_METRE&#160;</td><td class="fielddoc"><p>area [m&sup2;] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a824d814bdfd91f4aa0d4e8fe42c07012a3c83ffffc17d17d8597e3c7771f51dba" name="a824d814bdfd91f4aa0d4e8fe42c07012a3c83ffffc17d17d8597e3c7771f51dba"></a>eCOS890_SI_UNIT_QUBIC_METRE&#160;</td><td class="fielddoc"><p>volume, cubic metre [m&sup3;] (note: enumerator name misspells "cubic") </p>
 </td></tr>
 </table>
 
@@ -358,7 +397,7 @@ Enumerations</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="cos890_8h.html">cos890.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

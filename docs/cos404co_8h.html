@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -213,14 +213,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Run one controller process step for the given channel. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog output channel</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Controller channel</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>This function shall be called after the COS 404 module has initialized by Cos404_AO_ParmInit().</dd></dl>
-<p>This function is responsible to process the selected analog output channel defined by <code>ubChannelV</code> after new process values have been set by <a class="el" href="cos404ao_8h.html#a0116d99a281d070e1da3199129016c14">Cos404_AO_SetPV_Int16()</a>. As a result, this function will call <a class="el" href="cos404ao_8h.html#aa904cac8a41d77a15bb83bc8fa7ce3cd">McDacSetFV_Int16()</a>. </p>
+<dl class="section note"><dt>Note</dt><dd>This function shall be called after the COS 404 module has been initialized by Cos404_ParmInit().</dd></dl>
+<p>This function executes one PID step for the controller channel defined by <code>ubChannelV</code>. It reads the set point from object 7402<sub>h</sub>, applies the configured proportional band (7450<sub>h</sub>, 7451<sub>h</sub>) and integral action time (7452<sub>h</sub>), and writes the resulting output value to object 6410<sub>h</sub>. </p>
 
 </div>
 </div>
@@ -240,7 +242,7 @@ Functions</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="dir_d076c7804b3b00786f269cf3e8d1e511.html">profile-404</a></li><li class="navelem"><a href="cos404co_8h.html">cos404co.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

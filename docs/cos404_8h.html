@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -113,7 +113,22 @@ $(function(){initNavTree('cos404_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file holds definition CiA 404 version and includes all activated sub-modules. </p>
+<div class="textblock"><p>Include this header to access the complete <a class="el" href="cos_specifications.html#cia404-1">CiA 404</a> API. It conditionally includes the sub-module headers for each function block based on the <code><a class="el" href="cos__conf_8h.html" title="CANopen Slave Stack - General configuration .">cos_conf.h</a></code> configuration: </p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Function block  </th><th class="markdownTableHeadLeft">Header  </th><th class="markdownTableHeadLeft">Enabling define  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Analog input  </td><td class="markdownTableBodyLeft"><a class="el" href="cos404ai_8h.html" title="Object Dictionary for CiA 404 (Analog Inputs) .">cos404ai.h</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a79edb1c4147128e472e550f5924ea30c" title="Support CiA 404, analog inputs.">COS_DS404_AI</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Analog output  </td><td class="markdownTableBodyLeft"><a class="el" href="cos404ao_8h.html" title="Object Dictionary for CiA 404 (Analog Outputs) .">cos404ao.h</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#abe1f40e383386af69025a8d1bb4afa07" title="Support CiA 404, analog outputs.">COS_DS404_AO</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Controller  </td><td class="markdownTableBodyLeft"><a class="el" href="cos404co_8h.html" title="Object Dictionary for CiA 404 (Controller) .">cos404co.h</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#aaf488ac041a39e2ff33b2898cac081f2" title="Support CiA 404, controller.">COS_DS404_CO</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Digital input  </td><td class="markdownTableBodyLeft"><a class="el" href="cos404di_8h.html" title="Object Dictionary for CiA 404 (Digital input) .">cos404di.h</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#a5d31a12f01e8d0017753a6763676df53" title="Support CiA 404, digital inputs.">COS_DS404_DI</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Digital output  </td><td class="markdownTableBodyLeft"><a class="el" href="cos404do_8h.html" title="Object Dictionary for CiA 404 (Digital output) .">cos404do.h</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="cos__conf_8h.html#ac5347edcd433d457e2efbc67c89cc15d" title="Support CiA 404, digital outputs.">COS_DS404_DO</a>  </td></tr>
+</table>
+<p>Set each define to the number of channels (or groups) required, or to 0 to exclude that function block from the build. See <a class="el" href="cos_add_on_cia_404.html">CANopen Device Profile CiA 404</a> for integration details. </p>
 </div><div class="textblock"><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Include dependency graph for cos404.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -153,7 +168,7 @@ $(function(){initNavTree('cos404_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ga3965eb9a71586532d6df435bd1c3ac14" id="r_ga3965eb9a71586532d6df435bd1c3ac14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__COS__DS404__VERSION.html#ga3965eb9a71586532d6df435bd1c3ac14">COS_DS404_VERSION_MAJOR</a>&#160;&#160;&#160;2</td></tr>
-<tr class="memitem:gac835c1f5bb883a72f8cdbe15db5ab0ce" id="r_gac835c1f5bb883a72f8cdbe15db5ab0ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__COS__DS404__VERSION.html#gac835c1f5bb883a72f8cdbe15db5ab0ce">COS_DS404_VERSION_MINOR</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memitem:gac835c1f5bb883a72f8cdbe15db5ab0ce" id="r_gac835c1f5bb883a72f8cdbe15db5ab0ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__COS__DS404__VERSION.html#gac835c1f5bb883a72f8cdbe15db5ab0ce">COS_DS404_VERSION_MINOR</a>&#160;&#160;&#160;10</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -298,9 +313,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get <em>Active data type</em> according to CiA 404 Draft Standard Proposal. </p>
-<dl class="section return"><dt>Returns</dt><dd>Value from <code><a class="el" href="canopen_8h.html#ace58407a1e4b4ead7128f6ebea1d3c96">CoDT_e</a></code> </dd></dl>
-<p>This fuctions returns active data type of CiA 404 software module. </p>
+<p>Get the active data type for CiA 404 process and field values. </p>
+<dl class="section return"><dt>Returns</dt><dd>One of the following values from <code><a class="el" href="canopen_8h.html#ace58407a1e4b4ead7128f6ebea1d3c96">CoDT_e</a>:</code> <ul>
+<li><code><a class="el" href="canopen_8h.html#ace58407a1e4b4ead7128f6ebea1d3c96af786fb4737fee441a04d4e02befd30e4">eCO_DT_INTEGER16</a></code> (3) — data type <span class="tt">int16_t</span></li>
+<li><code><a class="el" href="canopen_8h.html#ace58407a1e4b4ead7128f6ebea1d3c96a795af978de04b7776bd5fcc5a7c4a5dd">eCO_DT_INTEGER32</a></code> (4) — data type <span class="tt">int32_t</span></li>
+<li><code><a class="el" href="canopen_8h.html#ace58407a1e4b4ead7128f6ebea1d3c96ac8dc32b95e066b250b8f80bb299396ed">eCO_DT_REAL32</a></code> (8) — data type <span class="tt">float</span></li>
+</ul>
+</dd></dl>
+<p>Returns the active data type of the CiA 404 module. Only the three types listed above are supported; the active type is set via <code><a class="el" href="#a1a982dfa3758cffc142c3bc37d5b092c" title="Set the active data type for CiA 404 process and field values.">Cos404_SetActiveDataType()</a></code> and controls which object indices are used for AI/AO process and field values (e.g. 7130<sub>h</sub> for <span class="tt">int16_t</span>, 9130<sub>h</sub> for <span class="tt">int32_t</span>, or 6130<sub>h</sub> for <span class="tt">float</span>). </p>
 
 </div>
 </div>
@@ -318,6 +338,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set the active data type for CiA 404 process and field values. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">uwDataTypeV</td><td>Value from <code><a class="el" href="canopen_8h.html#ace58407a1e4b4ead7128f6ebea1d3c96">CoDT_e</a></code> that corresponds to data type</td></tr>
@@ -350,7 +372,7 @@ Functions</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="dir_d076c7804b3b00786f269cf3e8d1e511.html">profile-404</a></li><li class="navelem"><a href="cos404_8h.html">cos404.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

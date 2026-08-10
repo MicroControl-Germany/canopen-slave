@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -122,13 +122,25 @@ $(function(){initNavTree('cos_add_on_cia_404.html','',''); });
 <tr>
 <td style="width:200px"><b>Define</b></td><td style="width:600px"><b>Description</b></td></tr>
 <tr>
-<td><a class="el" href="cos__conf_8h.html#a79edb1c4147128e472e550f5924ea30c">COS_DS404_AI</a></td><td>number of analog inputs</td></tr>
+<td><a class="el" href="cos__conf_8h.html#a79edb1c4147128e472e550f5924ea30c">COS_DS404_AI</a></td><td>number of analog input channels</td></tr>
 <tr>
-<td><a class="el" href="cos__conf_8h.html#a5d57ee3da661221bd2af7e7ad922c708">COS_DS404_AI_FILTER</a></td><td>support filter for analog inputs inputs</td></tr>
+<td><a class="el" href="cos__conf_8h.html#a5d57ee3da661221bd2af7e7ad922c708">COS_DS404_AI_FILTER</a></td><td>support filter for analog inputs</td></tr>
+<tr>
+<td><a class="el" href="cos404ai_8h.html#a993877230a873e723923e5341f64b247">COS_DS404_AI_FILTER_MOV_AV</a></td><td>support moving average filter for analog inputs</td></tr>
+<tr>
+<td><a class="el" href="cos404ai_8h.html#a76302e93813757ecb930e31a428a21bd">COS_DS404_AI_FILTER_REP_AV</a></td><td>support repeating average filter for analog inputs</td></tr>
 <tr>
 <td><a class="el" href="cos__conf_8h.html#a5ffb38f9e72a77c72e3ae6737e9fc75c">COS_DS404_AI_SCALING</a></td><td>support scaling for analog inputs</td></tr>
 <tr>
-<td><a class="el" href="cos__conf_8h.html#abe1f40e383386af69025a8d1bb4afa07">COS_DS404_AO</a></td><td>number of analog outputs</td></tr>
+<td><a class="el" href="cos__conf_8h.html#a592e8882e650df30464f0b7a3b5e79b5">COS_DS404_AI_TARE</a></td><td>support tare function for analog inputs (objects x138h, 6139h, x140h)</td></tr>
+<tr>
+<td><a class="el" href="cos__conf_8h.html#abe1f40e383386af69025a8d1bb4afa07">COS_DS404_AO</a></td><td>number of analog output channels</td></tr>
+<tr>
+<td><a class="el" href="cos__conf_8h.html#aaf488ac041a39e2ff33b2898cac081f2">COS_DS404_CO</a></td><td>number of controller channels</td></tr>
+<tr>
+<td><a class="el" href="cos__conf_8h.html#a5d31a12f01e8d0017753a6763676df53">COS_DS404_DI</a></td><td>number of digital input groups (8 lines per group)</td></tr>
+<tr>
+<td><a class="el" href="cos__conf_8h.html#ac5347edcd433d457e2efbc67c89cc15d">COS_DS404_DO</a></td><td>number of digital output groups (8 lines per group)</td></tr>
 </table>
 <p>The profile allows to support different data types. By means of the following symbols one or multiple data types can be selected. The symbols are located inside the <span class="tt"><a class="el" href="cos__conf_8h.html" title="CANopen Slave Stack - General configuration .">cos_conf.h</a></span> file:</p>
 <table class="doxtable" style="width:800px;">
@@ -146,7 +158,7 @@ $(function(){initNavTree('cos_add_on_cia_404.html','',''); });
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="cos404_8h.html">cos404.h</a>&quot;</span></div>
 <div class="ttc" id="acos404_8h_html"><div class="ttname"><a href="cos404_8h.html">cos404.h</a></div><div class="ttdoc">CiA 404 - Device profile for measuring devices and closed-loop controllers .</div></div>
 </div><!-- fragment --><h2>Analog inputs</h2>
-<p>Each analog input channel is initialized by calling Cos404_AI_Init() prior to <a class="el" href="cos__mgr_8h.html#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a>. An example initialization routine is located inside the <span class="tt">cos404_app_ai.c</span> file.</p>
+<p>Each analog input channel is initialized by calling <a class="el" href="cos404ai_8h.html#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a> prior to <a class="el" href="cos__mgr_8h.html#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a>. An example initialization routine is located inside the <span class="tt">cos404_app_ai.c</span> file.</p>
 <p>Analog inputs are read by the application and forwarded to the protocol stack by means of <a class="el" href="cos404ai_8h.html#a017c679d21e0631e725231299f7cc8df">Cos404_AI_SetFieldValue()</a>.</p>
 <p>If dynamic PDO mapping is supported (<a class="el" href="cos__conf_8h.html#a7373184e34672bcbfbb62749349e0be2">COS_PDO_MAPPING</a> &gt; 0) the default mapping can be set inside the <a class="el" href="cos__pdo_8h.html#a8256e60baae0150258f4e5556f27b351" title="Setup application specific PDO communication parameter.">CosPdoComSetup()</a> function, as shown in the following example:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="cos__pdo_8h.html#a8256e60baae0150258f4e5556f27b351">CosPdoComSetup</a>(<span class="keywordtype">void</span>)</div>
@@ -162,7 +174,7 @@ $(function(){initNavTree('cos_add_on_cia_404.html','',''); });
 <div class="line">   <span class="comment">// TPDO1 - map object 7130:01h</span></div>
 <div class="line">   <span class="comment">//</span></div>
 <div class="line">   <a class="code hl_function" href="cos__pdo_8h.html#a848b7692f7fa3d48b83b508cb5f3359b">CosPdoTrmMapEnable</a>(0, 0);              <span class="comment">// disable current mapping for TPDO1</span></div>
-<div class="line">   <a class="code hl_function" href="cos__pdo_8h.html#a9f891237793411810a849527effb0c46">CosPdoTrmMapAdd</a>(   0, 0 ,0x71300110);  <span class="comment">// add object 6000:01h, length = 16 bit</span></div>
+<div class="line">   <a class="code hl_function" href="cos__pdo_8h.html#a9f891237793411810a849527effb0c46">CosPdoTrmMapAdd</a>(   0, 0 ,0x71300110);  <span class="comment">// add object 7130:01h, length = 16 bit</span></div>
 <div class="line">   <a class="code hl_function" href="cos__pdo_8h.html#a848b7692f7fa3d48b83b508cb5f3359b">CosPdoTrmMapEnable</a>(0, 1);              <span class="comment">// enable current mapping for TPDO1</span></div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">// .. other code ..</span></div>
@@ -185,7 +197,7 @@ $(function(){initNavTree('cos_add_on_cia_404.html','',''); });
 <div class="line">   <a class="code hl_variable" href="cos__pdo_8h.html#a28f84492718adb1f0c3a8c533ef81341">atsRcvPdoComG</a>[0].ubTransType   = <a class="code hl_enumvalue" href="cos__pdo_8h.html#a823566c24f3948511b7e3861fa992bb0ae27a5037f888fc02e592c7ee24aea106">ePDO_TYPE_EVENT_PROFILE</a>;</div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">//------------------------------------------------------------------------------------</span></div>
-<div class="line">   <span class="comment">// RPDO1 - map object 6200:01h</span></div>
+<div class="line">   <span class="comment">// RPDO1 - map object 7300:01h</span></div>
 <div class="line">   <span class="comment">//</span></div>
 <div class="line">   <a class="code hl_function" href="cos__pdo_8h.html#af0535c263b4160048bd47e145c70c6a2">CosPdoRcvMapEnable</a>(0, 0);              <span class="comment">// disable current mapping for RPDO1</span></div>
 <div class="line">   <a class="code hl_function" href="cos__pdo_8h.html#a4b72f4c9d77e77fa19038e2f8cd87e1a">CosPdoRcvMapAdd</a>(   0, 0 ,0x73000110);  <span class="comment">// add object 7300:01h, length = 16 bit</span></div>
@@ -206,6 +218,12 @@ $(function(){initNavTree('cos_add_on_cia_404.html','',''); });
 <td><a class="el" href="cos404ai_8h.html#COS_CIA404_AI">cos404ai.h</a></td><td>CiA 404 - Analog inputs</td></tr>
 <tr>
 <td><a class="el" href="cos404ao_8h.html#COS_CIA404_AO">cos404ao.h</a></td><td>CiA 404 - Analog outputs</td></tr>
+<tr>
+<td><a class="el" href="cos404co_8h.html#COS_CIA404_CO">cos404co.h</a></td><td>CiA 404 - Controller function block</td></tr>
+<tr>
+<td><a class="el" href="cos404di_8h.html#COS_CIA404_DI">cos404di.h</a></td><td>CiA 404 - Digital inputs</td></tr>
+<tr>
+<td><a class="el" href="cos404do_8h.html#COS_CIA404_DO">cos404do.h</a></td><td>CiA 404 - Digital outputs</td></tr>
 </table>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -216,7 +234,7 @@ $(function(){initNavTree('cos_add_on_cia_404.html','',''); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

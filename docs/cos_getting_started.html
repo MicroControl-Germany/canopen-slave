@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -114,13 +114,14 @@ $(function(){initNavTree('cos_getting_started.html','',''); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_pages_2cos-01-start_2cos__getting__started"></a></p>
 <h1>Template code example</h1>
-<p>The source files tests the correct integration of the API (Compile and Build Process). The build file can be executed, but without any feedback.</p>
+<p>The source files test the correct integration of the API (Compile and Build Process). The build file can be executed, but without any feedback.</p>
 <h2>Prerequisites</h2>
 <p>In order to build the examples the following programs are required:</p>
 <ul>
 <li>C compiler supporting the C99 standard</li>
 <li>Installation of CMake when using the corresponding project files (recommended)</li>
 </ul>
+<p>Before building, the stack must be configured for the target hardware and application. The configuration is done in the file <span class="tt"><a class="el" href="cos__conf_8h.html" title="CANopen Slave Stack - General configuration .">cos_conf.h</a></span>, which is part of the application project (not the stack source tree). The template application already contains a working <span class="tt"><a class="el" href="cos__conf_8h.html" title="CANopen Slave Stack - General configuration .">cos_conf.h</a></span> under <span class="tt">source/application/template-cos/</span>. When starting a new integration, copy this file as the basis for the project-specific configuration and adjust the feature defines (e.g. <span class="tt">COS_PDO_RCV_NUMBER</span>, <span class="tt">COS_LSS_SUPPORT</span>) to match the device requirements.</p>
 <h2>Building template code</h2>
 <p>An example which runs on every target system is located inside the directory <span class="tt">source/application/template-cos</span>. This example uses a CANpie FD dummy driver (located in the directory <span class="tt">source/application/template-device</span>). Perform the following steps to build this example:</p>
 <div class="fragment"><div class="line">cd source/application/template-cos/</div>
@@ -129,7 +130,7 @@ $(function(){initNavTree('cos_getting_started.html','',''); });
 <div class="line">cmake ..</div>
 <div class="line">cmake --build .</div>
 </div><!-- fragment --><h2>Executing template code</h2>
-<div class="fragment"><div class="line">./cos-template-301 </div>
+<div class="fragment"><div class="line">./cos-template-301</div>
 <div class="line">*******************************************************************************</div>
 <div class="line">*</div>
 <div class="line">* CANopen Slave Protocol Stack template application</div>
@@ -143,7 +144,13 @@ $(function(){initNavTree('cos_getting_started.html','',''); });
 <div class="line"> Device name     : &#39;CANopen Stack template&#39;</div>
 <div class="line"> Hardware version: &#39;1.00&#39;</div>
 <div class="line"> Software version: &#39;1.00&#39;</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><h1>Next steps</h1>
+<p>After the template builds and runs successfully, continue with:</p>
+<ul>
+<li><a class="el" href="cos_example_start.html">Initialization Process</a> — how to initialise the stack and run the main application loop</li>
+<li><a class="el" href="cos_example_user.html">Complete list of callbacks</a> — the user callback functions that must be implemented for a real target </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 </div><!-- container -->
@@ -152,7 +159,7 @@ $(function(){initNavTree('cos_getting_started.html','',''); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

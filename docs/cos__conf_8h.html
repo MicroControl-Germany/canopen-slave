@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -148,6 +148,7 @@ Macros</h2></td></tr>
 <tr class="memitem:ab54ec168e6958480faed1bdbcf537f70" id="r_ab54ec168e6958480faed1bdbcf537f70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab54ec168e6958480faed1bdbcf537f70">COS_DS437_DO</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memitem:a9e94d2c44307b071a422bbabb656d26f" id="r_a9e94d2c44307b071a422bbabb656d26f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e94d2c44307b071a422bbabb656d26f">COS_DS437_AI</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memitem:aa651e0aae95efce5a6804d57696b610e" id="r_aa651e0aae95efce5a6804d57696b610e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa651e0aae95efce5a6804d57696b610e">COS_DS437_AO</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:afb49a27c074844c7ac8d6d4ba53c57a1" id="r_afb49a27c074844c7ac8d6d4ba53c57a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb49a27c074844c7ac8d6d4ba53c57a1">COS_DS453</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memitem:a1467ff8bee7aac03b6a4c11bc349d8af" id="r_a1467ff8bee7aac03b6a4c11bc349d8af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1467ff8bee7aac03b6a4c11bc349d8af">COS_DICT_MAN</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memitem:af69a985573f7d519029c7755a1510c50" id="r_af69a985573f7d519029c7755a1510c50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af69a985573f7d519029c7755a1510c50">COS_DICT_SEARCH_FAST</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memitem:aef6a24a24ea7fa3d1d789f2c2efb06a1" id="r_aef6a24a24ea7fa3d1d789f2c2efb06a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef6a24a24ea7fa3d1d789f2c2efb06a1">COS_DICT_ACCESS_MODIFICATION</a>&#160;&#160;&#160;0</td></tr>
@@ -282,7 +283,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of index 1003h. </p>
+<p>Implementation of index 1003<sub>h</sub> </p>
 <p>This symbol defines the maximum number of errors that can be stored by the device. Please note that the errors are kept in RAM and require 4 byte for each entry. A value of 0 means that this object is not supported. The maximum size of the list is 254. </p>
 
 </div>
@@ -299,11 +300,11 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of index 1005h. </p>
-<p>This symbol defines if the object 1005h (SYNC identifier) is supported by the device.</p>
+<p>Implementation of index 1005<sub>h</sub> </p>
+<p>This symbol defines if the object 1005<sub>h</sub> (SYNC identifier) is supported by the device.</p>
 <ul>
-<li>0 : do not support index 1005h </li>
-<li>1 : support index 1005h </li>
+<li>0 : do not support index 1005<sub>h</sub> </li>
+<li>1 : support index 1005<sub>h</sub> </li>
 </ul>
 
 </div>
@@ -320,11 +321,11 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of index 1006h. </p>
-<p>This symbol defines if the object 1006h (communication cycle period) is supported by the device. If the object is supported, the device can also be used as SYNC producer.</p>
+<p>Implementation of index 1006<sub>h</sub> </p>
+<p>This symbol defines if the object 1006<sub>h</sub> (communication cycle period) is supported by the device. If the object is supported, the device can also be used as SYNC producer.</p>
 <ul>
-<li>0 : do not support index 1006h </li>
-<li>1 : support index 1006h </li>
+<li>0 : do not support index 1006<sub>h</sub> </li>
+<li>1 : support index 1006<sub>h</sub> </li>
 </ul>
 
 </div>
@@ -341,11 +342,11 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of index 1008h. </p>
-<p>This symbol defines if the object 1008h (Manufacturer device name) is supported by the device.</p>
+<p>Implementation of index 1008<sub>h</sub> </p>
+<p>This symbol defines if the object 1008<sub>h</sub> (Manufacturer device name) is supported by the device.</p>
 <ul>
-<li>0 : do not support index 1008h </li>
-<li>1 : support index 1008h </li>
+<li>0 : do not support index 1008<sub>h</sub> </li>
+<li>1 : support index 1008<sub>h</sub> </li>
 </ul>
 
 </div>
@@ -362,11 +363,11 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of index 1009h. </p>
-<p>This symbol defines if the object 1009h (Manufacturer hardware version) is supported by the device.</p>
+<p>Implementation of index 1009<sub>h</sub> </p>
+<p>This symbol defines if the object 1009<sub>h</sub> (Manufacturer hardware version) is supported by the device.</p>
 <ul>
-<li>0 : do not support index 1009h </li>
-<li>1 : support index 1009h </li>
+<li>0 : do not support index 1009<sub>h</sub> </li>
+<li>1 : support index 1009<sub>h</sub> </li>
 </ul>
 
 </div>
@@ -383,11 +384,11 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of index 100Ah. </p>
-<p>This symbol defines if the object 100Ah (Manufacturer software version) is supported by the device.</p>
+<p>Implementation of index 100A<sub>h</sub> </p>
+<p>This symbol defines if the object 100A<sub>h</sub> (Manufacturer software version) is supported by the device.</p>
 <ul>
-<li>0 : do not support index 100Ah </li>
-<li>1 : support index 100Ah </li>
+<li>0 : do not support index 100A<sub>h</sub> </li>
+<li>1 : support index 100A<sub>h</sub> </li>
 </ul>
 
 </div>
@@ -404,8 +405,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of index 100Ch and 100Dh. </p>
-<p>Every CANopen slave must support the Heartbeat protocol. It is optional possible to use Node Guarding. It is recommended not to support Node Guarding for new implementations because of its technical drawbacks.</p>
+<p>Implementation of index 100C<sub>h</sub> and 100D<sub>h</sub> </p>
+<p>Every CANopen slave must support the Heartbeat protocol. It is also possible to use Node Guarding. It is recommended not to support Node Guarding for new implementations because of its technical drawbacks.</p>
 <ul>
 <li>0 : do not support Node Guarding </li>
 <li>1 : support node guarding </li>
@@ -426,7 +427,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Store Parameters. </p>
-<p>The symbol defines if the object 1010h is supported and how many sub-indices are used. A value of 0 means the object is not supported, i.e. the device can not store parameters. A value greater 0 denotes the highest supported sub-index. The value must be in the range from 0 to 4. </p>
+<p>The symbol defines if the object 1010<sub>h</sub> is supported and how many sub-indices are used. A value of 0 means the object is not supported, i.e. the device can not store parameters. A value greater 0 denotes the highest supported sub-index. The value must be in the range from 0 to 4. </p>
 
 </div>
 </div>
@@ -443,7 +444,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Restore Parameters. </p>
-<p>The symbol defines if the object 1011h is supported and how many sub-indices are used. A value of 0 means the object is not supported, i.e. the device can not restore parameters. A value greater 0 denotes the highest supported sub-index. The value must be in the range from 0 to 4. </p>
+<p>The symbol defines if the object 1011<sub>h</sub> is supported and how many sub-indices are used. A value of 0 means the object is not supported, i.e. the device can not restore parameters. A value greater 0 denotes the highest supported sub-index. The value must be in the range from 0 to 4. </p>
 
 </div>
 </div>
@@ -460,7 +461,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>COB-ID time stamp object. </p>
-<p>The symbol defines if the object 1012h is supported. A value of 0 means the object is not supported, i.e. the device has no Real-Time-Clock (RTC). A value of 1 denotes the device supports the TIME object. </p>
+<p>The symbol defines if the object 1012<sub>h</sub> is supported. A value of 0 means the object is not supported, i.e. the device has no Real-Time-Clock (RTC). A value of 1 denotes the device supports the TIME object. </p>
 
 </div>
 </div>
@@ -477,10 +478,10 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>High resolution time stamp. </p>
-<p>This object shall indicate the configured high resolution time stamp. It may be mapped into a PDO in order to exchange a high resolution time stamp message. Further application specific use is encouraged. The value of index 1013h is given in multiples of 1 microsecond.</p>
+<p>This object shall indicate the configured high resolution time stamp. It may be mapped into a PDO in order to exchange a high resolution time stamp message. Further application specific use is encouraged. The value of index 1013<sub>h</sub> is given in multiples of 1 microsecond.</p>
 <ul>
-<li>0 : do not support index 1013h </li>
-<li>1 : support index 1013h </li>
+<li>0 : do not support index 1013<sub>h</sub> </li>
+<li>1 : support index 1013<sub>h</sub> </li>
 </ul>
 
 </div>
@@ -498,7 +499,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Emergency message. </p>
-<p>The symbol defines if the object 1014h is supported and how many emergency messages can be queued. </p>
+<p>The symbol defines if the object 1014<sub>h</sub> is supported and how many emergency messages can be queued. </p>
 
 </div>
 </div>
@@ -515,10 +516,10 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Emergency inhibit time. </p>
-<p>This symbol defines if the object 1015 is supported by the device.</p>
+<p>This symbol defines if the object 1015<sub>h</sub> is supported by the device.</p>
 <ul>
-<li>0 : do not support index 1015h </li>
-<li>1 : support index 1015h </li>
+<li>0 : do not support index 1015<sub>h</sub> </li>
+<li>1 : support index 1015<sub>h</sub> </li>
 </ul>
 
 </div>
@@ -536,7 +537,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Consumer heartbeat. </p>
-<p>The symbol defines if the object 1016h is supported and how many sub-indices are used. A value of 0 means the object is not supported, i.e. the device has no consumer heartbeat. A value greater 0 denotes the highest supported sub-index. The maximum number of entries is limited to 4. </p>
+<p>The symbol defines if the object 1016<sub>h</sub> is supported and how many sub-indices are used. A value of 0 means the object is not supported, i.e. the device has no consumer heartbeat. A value greater 0 denotes the highest supported sub-index. The maximum number of entries is limited to 4. </p>
 
 </div>
 </div>
@@ -552,11 +553,11 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of index 1019h. </p>
-<p>This symbol defines if the object 1019h (SYNC counter) is supported by the device.</p>
+<p>Implementation of index 1019<sub>h</sub> </p>
+<p>This symbol defines if the object 1019<sub>h</sub> (SYNC counter) is supported by the device.</p>
 <ul>
-<li>0 : do not support index 1019h </li>
-<li>1 : support index 1019h </li>
+<li>0 : do not support index 1019<sub>h</sub> </li>
+<li>1 : support index 1019<sub>h</sub> </li>
 </ul>
 
 </div>
@@ -574,10 +575,10 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Verify Configuration. </p>
-<p>The symbol defines if the object 1020h is supported. If this object is supported, the device must be capable to store configuration data, i.e. object 1010 must also be supported.</p>
+<p>The symbol defines if the object 1020<sub>h</sub> is supported. If this object is supported, the device must be capable to store configuration data, i.e. object 1010<sub>h</sub> must also be supported.</p>
 <ul>
-<li>0 : do not support index 1020h </li>
-<li>1 : support index 1020h </li>
+<li>0 : do not support index 1020<sub>h</sub> </li>
+<li>1 : support index 1020<sub>h</sub> </li>
 </ul>
 
 </div>
@@ -595,11 +596,11 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Support EDS store. </p>
-<p>The symbol defines if the objects 1021h (EDS store) and 1022h (Store format) are supported. The storage format of the EDS may be compliant to ISO10646 (not compressed) or any manufacturer- specific format.</p>
+<p>The symbol defines if the objects 1021<sub>h</sub> (EDS store) and 1022<sub>h</sub> (Store format) are supported. The storage format of the EDS may be compliant to ISO10646 (not compressed) or any manufacturer-specific format.</p>
 <ul>
-<li>0 : do not support index 1021h and 1022h </li>
-<li>1 : EDS is not compressed, 1022h:00h = 00h </li>
-<li>2 : EDS has manufacturer specific format, 1022h:00h = 80h </li>
+<li>0 : do not support index 1021<sub>h</sub> and 1022<sub>h</sub> </li>
+<li>1 : EDS is not compressed, 1022:00<sub>h</sub> = 00<sub>h</sub> </li>
+<li>2 : EDS has manufacturer specific format, 1022:00<sub>h</sub> = 80<sub>h</sub> </li>
 </ul>
 
 </div>
@@ -617,10 +618,10 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Error behaviour object. </p>
-<p>The symbol defines if the object 1029h is supported. A value greater 0 denotes the highest supported sub-index. The maximum number of entries is limited to 4.</p>
+<p>The symbol defines if the object 1029<sub>h</sub> is supported. A value greater 0 denotes the highest supported sub-index. The maximum number of entries is limited to 4.</p>
 <ul>
-<li>0 : do not support index 1029h </li>
-<li>N : support index 1029h, sub-indices 1 - N </li>
+<li>0 : do not support index 1029<sub>h</sub> </li>
+<li>N : support index 1029<sub>h</sub>, sub-indices 1 - N </li>
 </ul>
 
 </div>
@@ -638,13 +639,13 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>NMT Startup. </p>
-<p>The symbol defines if the object 1F80h is supported.</p>
+<p>The symbol defines if the object 1F80<sub>h</sub> is supported.</p>
 <ul>
-<li>0 : do not support index 1F80h </li>
-<li>1 : support index 1F80h </li>
-<li>2 : support index 1F80h, backward compatibility mode</li>
+<li>0 : do not support index 1F80<sub>h</sub> </li>
+<li>1 : support index 1F80<sub>h</sub> </li>
+<li>2 : support index 1F80<sub>h</sub>, backward compatibility mode</li>
 </ul>
-<p>The backwards compatibility mode allows additional (obsolete) values for setting the startup behaviour. For new CANopen devices, use the value '1' for support of index 1F80h. </p>
+<p>The backward compatibility mode allows additional (obsolete) values for setting the startup behaviour. For new CANopen devices, use the value '1' for support of index 1F80<sub>h</sub>. </p>
 
 </div>
 </div>
@@ -873,8 +874,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Support ADC sample within CiA 404, analog inputs. </p>
-<p>This symbol defines if the object for ADC Sample Rate (index 6114<sub>h</sub>) from the device profile for sensors and closed-loop control (CiA 404) are included in the dictionary. </p>
+<p>Support ADC sample rate within CiA 404, analog inputs. </p>
+<p>This symbol defines if the object for ADC Sample Rate (index 6114<sub>h</sub>) from the device profile for sensors and closed-loop control (CiA 404) is included in the dictionary. </p>
 <p>The add-on <b>CANopen Device Profile CiA 404</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen Slave Add-on modules</a>).</p>
 <ul>
 <li>0 : not supported </li>
@@ -895,12 +896,12 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Support filter within CiA 404, analog inputs. </p>
+<p>Support scaling within CiA 404, analog inputs. </p>
 <p>This symbol defines if objects (index 6126<sub>h</sub> and 6127<sub>h</sub>) for scaling of analog inputs from the device profile for sensors and closed-loop control (CiA 404) are included in the dictionary. </p>
 <p>The add-on <b>CANopen Device Profile CiA 404</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen Slave Add-on modules</a>).</p>
 <ul>
-<li>0 : do not support CiA 404, analog input filters </li>
-<li>1 : support CiA 404, analog input filters </li>
+<li>0 : do not support CiA 404, analog input scaling </li>
+<li>1 : support CiA 404, analog input scaling </li>
 </ul>
 
 </div>
@@ -988,7 +989,7 @@ Macros</h2></td></tr>
 <p>The add-on <b>CANopen Device Profile CiA 404</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen Slave Add-on modules</a>).</p>
 <ul>
 <li>0 : do not support CiA 404, digital input block </li>
-<li>N : support CiA 404, digital input block block </li>
+<li>N : support CiA 404, digital input block </li>
 </ul>
 
 </div>
@@ -1028,7 +1029,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>CiA 404 data type. </p>
-<p>This symbol defines if the data type <span class="tt">float</span> is supported for the device profile for sensors and closed-loop Control (CiA 404). </p>
+<p>This symbol defines if the data type <span class="tt">float</span> is supported for the device profile for sensors and closed-loop control (CiA 404). </p>
 <p>The add-on <b>CANopen Device Profile CiA 404</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen Slave Add-on modules</a>).</p>
 <ul>
 <li>0 : not supported </li>
@@ -1050,7 +1051,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>CiA 404 data type. </p>
-<p>This symbol defines if the data type <span class="tt">int16_t</span> is supported for the device profile for sensors and closed-loop Control (CiA 404). </p>
+<p>This symbol defines if the data type <span class="tt">int16_t</span> is supported for the device profile for sensors and closed-loop control (CiA 404). </p>
 <p>The add-on <b>CANopen Device Profile CiA 404</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen Slave Add-on modules</a>).</p>
 <ul>
 <li>0 : not supported </li>
@@ -1280,6 +1281,28 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="afb49a27c074844c7ac8d6d4ba53c57a1" name="afb49a27c074844c7ac8d6d4ba53c57a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb49a27c074844c7ac8d6d4ba53c57a1">&#9670;&#160;</a></span>COS_DS453</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COS_DS453&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Support CiA 453. </p>
+<p>This symbol defines if objects for the device profile CiA 453 (Power supply) are included in the dictionary. According to CiA 453, the maximum number of outputs per power supply is 8. </p>
+<p>The add-on <b>CANopen Device Profile CiA 453</b> must be installed to support this option (refer to <a class="el" href="cos_add_on_overview.html">CANopen Slave Add-on modules</a>).</p>
+<ul>
+<li>0 : do not support CiA 453 </li>
+<li>N : support CiA 453, N is number of outputs (1 .. 8) </li>
+</ul>
+
+</div>
+</div>
 <a id="a5bada5152a1f84187551842b69e40c7b" name="a5bada5152a1f84187551842b69e40c7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5bada5152a1f84187551842b69e40c7b">&#9670;&#160;</a></span>COS_FD_SUPPORT</h2>
 
@@ -1300,7 +1323,7 @@ Macros</h2></td></tr>
 </ul>
 <p>If CANopen FD support is configured during compile time, it has to be enabled during run-time as depicted in the following example. </p><div class="fragment"><div class="line"><a class="code hl_function" href="cos__mgr_8h.html#a1ac846f2ac39ff649997614d26192a40">CosMgrInit</a>(<a class="code hl_enumvalue" href="canpie_8h.html#a364ad643291389f2be3c52e7e0d5f0bfa6339424fe05aa422027f98daa81a5cce">eCP_CHANNEL_1</a>, <a class="code hl_define" href="group__COS__CONFIG.html#ga45d1fde92317582fc1bdc1e1b463661e">COS_CONF_FD</a>);</div>
 <div class="ttc" id="acanpie_8h_html_a364ad643291389f2be3c52e7e0d5f0bfa6339424fe05aa422027f98daa81a5cce"><div class="ttname"><a href="canpie_8h.html#a364ad643291389f2be3c52e7e0d5f0bfa6339424fe05aa422027f98daa81a5cce">eCP_CHANNEL_1</a></div><div class="ttdeci">@ eCP_CHANNEL_1</div><div class="ttdef"><b>Definition</b> canpie.h:714</div></div>
-<div class="ttc" id="acos__mgr_8h_html_a1ac846f2ac39ff649997614d26192a40"><div class="ttname"><a href="cos__mgr_8h.html#a1ac846f2ac39ff649997614d26192a40">CosMgrInit</a></div><div class="ttdeci">uint8_t CosMgrInit(uint8_t ubCanIfV, uint16_t uwConfigV)</div><div class="ttdoc">Initialize the CANopen Slave.</div></div>
+<div class="ttc" id="acos__mgr_8h_html_a1ac846f2ac39ff649997614d26192a40"><div class="ttname"><a href="cos__mgr_8h.html#a1ac846f2ac39ff649997614d26192a40">CosMgrInit</a></div><div class="ttdeci">uint8_t CosMgrInit(uint8_t ubCanIfV, uint16_t uwConfigV)</div></div>
 <div class="ttc" id="agroup__COS__CONFIG_html_ga45d1fde92317582fc1bdc1e1b463661e"><div class="ttname"><a href="group__COS__CONFIG.html#ga45d1fde92317582fc1bdc1e1b463661e">COS_CONF_FD</a></div><div class="ttdeci">#define COS_CONF_FD</div><div class="ttdef"><b>Definition</b> cos_mgr.h:125</div></div>
 </div><!-- fragment --> 
 </div>
@@ -1559,7 +1582,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Transmit PDO identifier is constant. </p>
-<p>Depending on the device profile or application it may be required that the identifier of the transmit PDO is constant. This symbol defines if index 180xh, sub 1 is read-only:</p>
+<p>Depending on the device profile or application it may be required that the identifier of the transmit PDO is constant. This symbol defines if index 180x:01<sub>h</sub> is read-only:</p>
 <ul>
 <li>0 : PDO identifier is read-write </li>
 <li>1 : PDO identifier is read-only </li>
@@ -1654,7 +1677,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Support of Secure Configuration. </p>
-<p>With this symbol the support of the <a class="el" href="cos__secure__config_8h.html#COS_SECURE_CONFIG">Secure Configuration add-on</a> can be ++ enabled.</p>
+<p>With this symbol the support of the <a class="el" href="cos__secure__config_8h.html#COS_SECURE_CONFIG">Secure Configuration add-on</a> can be enabled.</p>
 <ul>
 <li>0 : do not support secure configuration </li>
 <li>1 : support secure configuration </li>
@@ -1752,7 +1775,7 @@ Macros</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_059b8d327d09617c411023af730a36c0.html">application</a></li><li class="navelem"><a href="dir_f11c742974e1d48748f43d8e1a986849.html">template-cos</a></li><li class="navelem"><a href="cos__conf_8h.html">cos_conf.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -113,14 +113,113 @@ $(function(){initNavTree('structCos404__AI__Config__s.html','',''); });
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This struct holds parameters that are used at initial startup of the CiA 404 AI software module. The values within this structure are provided to CiA 404 AI software module using the <code><a class="el" href="cos404ai_8h.html#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a></code> function. </p>
-</div><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Collaboration diagram for Cos404_AI_Config_s:</div>
+<div class="textblock"><p>This struct holds parameters that are used at initial startup of the CiA 404 AI software module. The values within this structure are provided to CiA 404 AI software module using the <code><a class="el" href="cos404ai_8h.html#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a></code> function. An example initialization for Pt100 is shown in the file <code>cos404_app_ai.c</code>. </p><div class="fragment"><div class="line"><span class="keyword">const</span>  Cos404_AI_Config_ts tsPt100_ConfigC =</div>
+<div class="line">{</div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// index 6102&lt;sub&gt;h&lt;/sub&gt;: number of decimal digits for field value (FV), in case active data</span></div>
+<div class="line">   <span class="comment">// type is `int16_t`</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .ubIdx6102_DecimalDigitsInt16FV  = 1,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// index 6102&lt;sub&gt;h&lt;/sub&gt;: number of decimal digits for field value (FV), in case active data</span></div>
+<div class="line">   <span class="comment">// type is `int32_t`</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .ubIdx6102_DecimalDigitsInt32FV  = 3,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// index 6132&lt;sub&gt;h&lt;/sub&gt;: number of decimal digits for process value (PV), in case active data</span></div>
+<div class="line">   <span class="comment">// type is `int16_t`</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .ubIdx6132_DecimalDigitsInt16PV  = 1,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// index 6132&lt;sub&gt;h&lt;/sub&gt;: number of decimal digits for process value (PV), in case active data</span></div>
+<div class="line">   <span class="comment">// type is `int32_t`</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .ubIdx6132_DecimalDigitsInt32PV  = 3,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// default sensor type is Pt100</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .uwIdx6110_DefaultSensorType      = <a class="code hl_enumvalue" href="cos404ai_8h.html#a1d82af0cd146d1895788e8a66d85e726ae42000b867a54c438763a00b6de35a21">eCOS404_AI_ST_PT100</a>,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// default operating mode = on</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .ubIdx6112_DefaultOpMode         = 1,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// physical unit of field value: Ohm</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .ulIdx6101_PhysicalUnitFV        = <a class="code hl_define" href="cos890_8h.html#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT</a>( <a class="code hl_enumvalue" href="cos890_8h.html#ae12812612e901e1a61a86edd9e0fff0eabb00648888e592539c77ac8f39cc6bb0">eCOS890_SI_PREFIX_NONE</a>, <a class="code hl_enumvalue" href="cos890_8h.html#a824d814bdfd91f4aa0d4e8fe42c07012abb7fbb3677aca429a9ba5d09baca2f01">eCOS890_SI_UNIT_OHM</a>,</div>
+<div class="line">                                                            <a class="code hl_enumvalue" href="cos890_8h.html#a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29">eCOS890_SI_UNIT_NONE</a>, 0),</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// physical unit of process value: degree Celsius</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .ulIdx6131_PhysicalUnitPV        = <a class="code hl_define" href="cos890_8h.html#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT</a>( <a class="code hl_enumvalue" href="cos890_8h.html#ae12812612e901e1a61a86edd9e0fff0eabb00648888e592539c77ac8f39cc6bb0">eCOS890_SI_PREFIX_NONE</a>, <a class="code hl_enumvalue" href="cos890_8h.html#a824d814bdfd91f4aa0d4e8fe42c07012a7a00537a79383f3dc949c0f54fc315a2">eCOS890_SI_UNIT_DEGREE_CELSIUS</a>,</div>
+<div class="line">                                                            <a class="code hl_enumvalue" href="cos890_8h.html#a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29">eCOS890_SI_UNIT_NONE</a>, 0),</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// span start: -200.0 degree Celsius</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .slIdx9148_SpanStart             = -200000,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// span end: +850.0 degree Celsius</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .slIdx9149_SpanEnd               =  850000,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// lower error limit: -201.0 degree Celsius</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .slIdx914A_LowerErrorLimit       = -201000,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// upper error limit: +851.0 degree Celsius</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .slIdx914B_UpperErrorLimit       =  851000,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// hysteresis for error signalling: 0.5 degree Celsius</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .slIdx914C_Hysteresis            = 500,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// configure event at change of sensor type</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .pfnSensorTypeEvent              = Cos404_AI_AppEventSensorType,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// configure event for operating mode change - not used for PT100</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .pfnOperatingModeEvent           = NULL,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// configure event for linearization</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .pfnLinearisationEvent           = Cos404_AI_AppEventLinearization,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// no manufacturer-specific filter - use built-in filter types only</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .pfnFilterEvent                  = NULL,</div>
+<div class="line">   .pfnFilterUpdateEvent            = NULL,</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// no status-change notification required - application polls object 6150h if needed</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   .pfnStatusUpdateEvent            = NULL</div>
+<div class="line"> </div>
+<div class="line">};</div>
+</div><!-- fragment --> </div><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Collaboration diagram for Cos404_AI_Config_s:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="structCos404__AI__Config__s__coll__graph.png" border="0" usemap="#aCos404__AI__Config__s_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aCos404__AI__Config__s_coll__map" id="aCos404__AI__Config__s_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,225,356"/>
+<area shape="rect" title=" " alt="" coords="5,5,225,275"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -138,11 +237,45 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a2aaeb86e852e558f2417acf72e4dbb99" id="r_a2aaeb86e852e558f2417acf72e4dbb99"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2aaeb86e852e558f2417acf72e4dbb99">slIdx9149_SpanEnd</a></td></tr>
 <tr class="memitem:ab5850827c296ee0c4fcabf0ae968d4f0" id="r_ab5850827c296ee0c4fcabf0ae968d4f0"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5850827c296ee0c4fcabf0ae968d4f0">slIdx914A_LowerErrorLimit</a></td></tr>
 <tr class="memitem:ac7a4f477404ee7e0a0ded5c735fecc29" id="r_ac7a4f477404ee7e0a0ded5c735fecc29"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7a4f477404ee7e0a0ded5c735fecc29">slIdx914B_UpperErrorLimit</a></td></tr>
+<tr class="memitem:a6b6019c308ee9c151f6b311f88a9644e" id="r_a6b6019c308ee9c151f6b311f88a9644e"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b6019c308ee9c151f6b311f88a9644e">slIdx914C_Hysteresis</a></td></tr>
 <tr class="memitem:ab57e60347bd6e5b07895390694bafef7" id="r_ab57e60347bd6e5b07895390694bafef7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cos404ai_8h.html#a45a741e933a58dc8fffc06a825f858f5">Cos404AiSensorType_fn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab57e60347bd6e5b07895390694bafef7">pfnSensorTypeEvent</a></td></tr>
 <tr class="memitem:a34812956e8722f4ccad197798b174660" id="r_a34812956e8722f4ccad197798b174660"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cos404ai_8h.html#a23b130044ed9e5924d4c3f6da61c5f2b">Cos404AiOpMode_fn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34812956e8722f4ccad197798b174660">pfnOperatingModeEvent</a></td></tr>
 <tr class="memitem:a61ea9c2d5155722b2c9c0f4a9ad1c496" id="r_a61ea9c2d5155722b2c9c0f4a9ad1c496"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cos404ai_8h.html#af832605188061a7e50a45fc4a12c850d">Cos404AiLinearisation_fn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61ea9c2d5155722b2c9c0f4a9ad1c496">pfnLinearisationEvent</a></td></tr>
+<tr class="memitem:a742f6925b243e09aa403a208ba12e58d" id="r_a742f6925b243e09aa403a208ba12e58d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cos404ai_8h.html#afc1d5b5d388fc26ffd2ad269576d1b39">Cos404AiFilter_fn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a742f6925b243e09aa403a208ba12e58d">pfnFilterEvent</a></td></tr>
+<tr class="memitem:a4fe8ce10548357d935001497a6be238a" id="r_a4fe8ce10548357d935001497a6be238a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cos404ai_8h.html#adde7eaa276798dd59d7bb2d3601665ad">Cos404AiFilterUpdate_fn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fe8ce10548357d935001497a6be238a">pfnFilterUpdateEvent</a></td></tr>
+<tr class="memitem:a84588090f76e36fb346bfc83b1cd8763" id="r_a84588090f76e36fb346bfc83b1cd8763"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cos404ai_8h.html#a9e775503eca3a5e3448d59400e4b7726">Cos404AiStatusUpdate_fn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84588090f76e36fb346bfc83b1cd8763">pfnStatusUpdateEvent</a></td></tr>
 </table>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a id="a742f6925b243e09aa403a208ba12e58d" name="a742f6925b243e09aa403a208ba12e58d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a742f6925b243e09aa403a208ba12e58d">&#9670;&#160;</a></span>pfnFilterEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="cos404ai_8h.html#afc1d5b5d388fc26ffd2ad269576d1b39">Cos404AiFilter_fn</a> Cos404_AI_Config_s::pfnFilterEvent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Manufacturer-specific filter callback (type <code><a class="el" href="cos404ai_8h.html#afc1d5b5d388fc26ffd2ad269576d1b39">Cos404AiFilter_fn</a></code>). When set, this function is called by <code><a class="el" href="cos404ai_8h.html#ad0cbbe1bb0849e24f2d749723ca15ebd" title="Execute one analog input processing step for the given channel.">Cos404_AI_Process()</a></code> in place of the built-in filter for filter types <code><a class="el" href="cos404ai_8h.html#a7cb749210036bb6b865c22014d1f19bda63396eeab2574287fc5ea1a1f69a5260">eCOS404_AI_FILTER_TYPE_MANUFACTURER_01</a></code> to <code><a class="el" href="cos404ai_8h.html#a7cb749210036bb6b865c22014d1f19bda6a6a9883cdbe6e8253d860032540e562">eCOS404_AI_FILTER_TYPE_MANUFACTURER_04</a></code>. Leave as <code>NULL</code> to use only the built-in filter types. </p>
+
+</div>
+</div>
+<a id="a4fe8ce10548357d935001497a6be238a" name="a4fe8ce10548357d935001497a6be238a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fe8ce10548357d935001497a6be238a">&#9670;&#160;</a></span>pfnFilterUpdateEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="cos404ai_8h.html#adde7eaa276798dd59d7bb2d3601665ad">Cos404AiFilterUpdate_fn</a> Cos404_AI_Config_s::pfnFilterUpdateEvent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Filter-update event handler (type <code><a class="el" href="cos404ai_8h.html#adde7eaa276798dd59d7bb2d3601665ad">Cos404AiFilterUpdate_fn</a></code>). Called when the filter type (object 61A0<sub>h</sub>) or filter constant (object 61A1<sub>h</sub>) changes via SDO/USDO write, and also during initialisation. Use this to re-initialize filter state when parameters change. Leave as <code>NULL</code> if no notification is required. </p>
+
+</div>
+</div>
 <a id="a61ea9c2d5155722b2c9c0f4a9ad1c496" name="a61ea9c2d5155722b2c9c0f4a9ad1c496"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a61ea9c2d5155722b2c9c0f4a9ad1c496">&#9670;&#160;</a></span>pfnLinearisationEvent</h2>
 
@@ -207,6 +340,21 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="a84588090f76e36fb346bfc83b1cd8763" name="a84588090f76e36fb346bfc83b1cd8763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84588090f76e36fb346bfc83b1cd8763">&#9670;&#160;</a></span>pfnStatusUpdateEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="cos404ai_8h.html#a9e775503eca3a5e3448d59400e4b7726">Cos404AiStatusUpdate_fn</a> Cos404_AI_Config_s::pfnStatusUpdateEvent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Status-change event handler (type <code><a class="el" href="cos404ai_8h.html#a9e775503eca3a5e3448d59400e4b7726">Cos404AiStatusUpdate_fn</a></code>). Called by <code><a class="el" href="cos404ai_8h.html#ad0cbbe1bb0849e24f2d749723ca15ebd" title="Execute one analog input processing step for the given channel.">Cos404_AI_Process()</a></code> whenever the channel status (object 6150<sub>h</sub>) transitions — e.g. from <code><a class="el" href="cos404ai_8h.html#ae45dbba965d4457cc3b6e1041edee95eaed643d97636e064df26e489346d49d3b">eCOS404_AI_STATUS_OK</a></code> to <code><a class="el" href="cos404ai_8h.html#ae45dbba965d4457cc3b6e1041edee95ea255c967cbf4486f3fb2acdb87db1b2bc">eCOS404_AI_STATUS_POS_OVERLOAD</a></code>. Leave as <code>NULL</code> if polling the status object is sufficient. </p>
+
+</div>
+</div>
 <a id="a0673669f2287b6a3d40cb7aa4cb5a853" name="a0673669f2287b6a3d40cb7aa4cb5a853"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0673669f2287b6a3d40cb7aa4cb5a853">&#9670;&#160;</a></span>slIdx9148_SpanStart</h2>
 
@@ -267,6 +415,22 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This variable defines the <em>upper error limit</em> of the analog input channel (object at index 914B<sub>h</sub>).</p>
+<p>The value is provided once initially by the application within the configuration at the call of <code><a class="el" href="cos404ai_8h.html#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a></code>. </p>
+
+</div>
+</div>
+<a id="a6b6019c308ee9c151f6b311f88a9644e" name="a6b6019c308ee9c151f6b311f88a9644e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b6019c308ee9c151f6b311f88a9644e">&#9670;&#160;</a></span>slIdx914C_Hysteresis</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t Cos404_AI_Config_s::slIdx914C_Hysteresis</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This variable defines the <em>hysteresis</em> for detection of span limits and error limits of the analog input channel (object at index 914C<sub>h</sub>).</p>
 <p>The value is provided once initially by the application within the configuration at the call of <code><a class="el" href="cos404ai_8h.html#afdc67007b3dbb43af70fec75f169e71c">Cos404_AI_DefaultConfiguration()</a></code>. </p>
 
 </div>
@@ -416,7 +580,7 @@ Data Fields</h2></td></tr>
   <ul>
     <li class="navelem"><a href="structCos404__AI__Config__s.html">Cos404_AI_Config_s</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

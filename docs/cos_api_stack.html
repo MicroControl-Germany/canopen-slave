@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -141,13 +141,17 @@ $(function(){initNavTree('cos_api_stack.html','',''); });
 <td class="markdownTableBodyNone">Error Codes  </td><td class="markdownTableBodyNone"><span class="tt">eCOS_ERR_&lt;NAME&gt;</span>  </td></tr>
 </table>
 <h1>CANopen Slave protocol stack files</h1>
-<table class="doxtable" style="width:800px;">
+<table class="doxtable" style="width:900px;">
 <tr>
 <td style="width:200px"><b>File</b></td><td style="width:600px"><b>Description</b></td></tr>
 <tr>
 <td><a class="el" href="canopen_8h.html#CANOPEN">canopen.h</a></td><td>General CANopen definitions</td></tr>
 <tr>
 <td><a class="el" href="cos__defs_8h.html#COS_DEFS">cos_defs.h</a></td><td>CANopen Slave definitions</td></tr>
+<tr>
+<td><a class="el" href="cos301_8h.html#COS_CIA301">cos301.h</a></td><td>CiA 301 communication profile object dictionary entries</td></tr>
+<tr>
+<td><a class="el" href="cos302_8h.html#COS_CIA302">cos302.h</a></td><td>CiA 302 network variable support</td></tr>
 <tr>
 <td><a class="el" href="cos__dict_8h.html#COS_DICT">cos_dict.h</a></td><td>CANopen Slave object dictionary</td></tr>
 <tr>
@@ -161,7 +165,9 @@ $(function(){initNavTree('cos_api_stack.html','',''); });
 <tr>
 <td><a class="el" href="cos__nmt_8h.html#COS_NMT">cos_nmt.h</a></td><td>CANopen Slave NMT service</td></tr>
 <tr>
-<td><a class="el" href="cos__pdo_8h.html#COS_PDO">com_pdo.h</a></td><td>CANopen Slave PDO service</td></tr>
+<td><a class="el" href="cos__nvm_8h.html#COS_NVM">cos_nvm.h</a></td><td>Non-volatile memory address definitions (required for LSS and parameter storage)</td></tr>
+<tr>
+<td><a class="el" href="cos__pdo_8h.html#COS_PDO">cos_pdo.h</a></td><td>CANopen Slave PDO service</td></tr>
 <tr>
 <td><a class="el" href="cos__sdo_8h.html#COS_SDO">cos_sdo.h</a></td><td>CANopen CC Slave SDO server service</td></tr>
 <tr>
@@ -169,7 +175,11 @@ $(function(){initNavTree('cos_api_stack.html','',''); });
 <tr>
 <td><a class="el" href="cos__time_8h.html#COS_TIME">cos_time.h</a></td><td>CANopen Slave TIME service</td></tr>
 <tr>
-<td><a class="el" href="cos__usdo__srv_8h.html#COS_USDO">com_usdo.h</a></td><td>CANopen FD Slave USDO server service</td></tr>
+<td><a class="el" href="cos__usdo__srv_8h.html#COS_USDO">cos_usdo_srv.h</a></td><td>CANopen FD Slave USDO server service</td></tr>
+<tr>
+<td><a class="el" href="cos710_8h.html#COS_CIA710">cos710.h</a></td><td>CiA 710 bootloader protocol</td></tr>
+<tr>
+<td><a class="el" href="cos890_8h.html#COS_890">cos890.h</a></td><td>CiA 890 SI unit and prefix notation indexes</td></tr>
 </table>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -180,7 +190,7 @@ $(function(){initNavTree('cos_api_stack.html','',''); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

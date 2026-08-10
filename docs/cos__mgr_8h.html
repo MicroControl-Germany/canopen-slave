@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -119,10 +119,10 @@ $(function(){initNavTree('cos__mgr_8h.html','',''); });
 <li><a class="el" href="#a79647921b24fe5a996e4b2b147492fb1">CosMgrGetProductCode()</a> </li>
 <li><a class="el" href="#a7dbbb77838bbc73832205615b89df7e8">CosMgrGetSerialNumber()</a> </li>
 <li><a class="el" href="#a658ad26f2a00ecab90b425916e3de216">CosMgrOnBootUp()</a> </li>
-<li><a class="el" href="#ac890e7904bc138656f7ca0de661036e7" title="Handle Bus-Off condition.">CosMgrOnBusOff()</a> </li>
+<li><a class="el" href="#ac890e7904bc138656f7ca0de661036e7">CosMgrOnBusOff()</a> </li>
 <li><a class="el" href="#a66f8a2f399c9e83cc14e622ddaf4c4a7">CosMgrOnStart()</a></li>
 </ul>
-<p>These functions are located in the cos_user.c file. Please refer to <a class="el" href="cos_example_start.html">Initialization Process</a> for details about the <a class="el" href="#a1ac846f2ac39ff649997614d26192a40" title="Initialize the CANopen Slave.">CosMgrInit()</a> function and also check the <a class="el" href="cos_example_main.html">Complete Startup Process</a> for reference. </p>
+<p>These functions are located in the cos_user.c file. Please refer to <a class="el" href="cos_example_start.html">Initialization Process</a> for details about the <a class="el" href="#a1ac846f2ac39ff649997614d26192a40">CosMgrInit()</a> function and also check the <a class="el" href="cos_example_main.html">Complete Startup Process</a> for reference. </p>
 </div><div class="textblock"><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Include dependency graph for cos_mgr.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -179,6 +179,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a7dbbb77838bbc73832205615b89df7e8" id="r_a7dbbb77838bbc73832205615b89df7e8"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7dbbb77838bbc73832205615b89df7e8">CosMgrGetSerialNumber</a> (void)</td></tr>
 <tr class="memitem:a1ac846f2ac39ff649997614d26192a40" id="r_a1ac846f2ac39ff649997614d26192a40"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ac846f2ac39ff649997614d26192a40">CosMgrInit</a> (uint8_t ubCanIfV, uint16_t uwConfigV)</td></tr>
 <tr class="memitem:a658ad26f2a00ecab90b425916e3de216" id="r_a658ad26f2a00ecab90b425916e3de216"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a658ad26f2a00ecab90b425916e3de216">CosMgrOnBootUp</a> (void)</td></tr>
+<tr class="memitem:ac890e7904bc138656f7ca0de661036e7" id="r_ac890e7904bc138656f7ca0de661036e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac890e7904bc138656f7ca0de661036e7">CosMgrOnBusOff</a> (void)</td></tr>
 <tr class="memitem:a66f8a2f399c9e83cc14e622ddaf4c4a7" id="r_a66f8a2f399c9e83cc14e622ddaf4c4a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66f8a2f399c9e83cc14e622ddaf4c4a7">CosMgrOnStart</a> (uint8_t ubCallerResultV)</td></tr>
 <tr class="memitem:adb67ceab70605f6fbc0027ce31ab96cc" id="r_adb67ceab70605f6fbc0027ce31ab96cc"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb67ceab70605f6fbc0027ce31ab96cc">CosMgrProcess</a> (void)</td></tr>
 <tr class="memitem:a82f94eb674ea4c0c47bc62130759f9f1" id="r_a82f94eb674ea4c0c47bc62130759f9f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82f94eb674ea4c0c47bc62130759f9f1">CosMgrProfileUpdate</a> (uint16_t uwIndexV, uint8_t ubSubIndexV)</td></tr>
@@ -264,7 +265,7 @@ Functions</h2></td></tr>
 <p>This function returns the CAN message frame format that shall be used for message buffer configuration. The value depends on the the stack configuration as shown in the table:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadLeft"><a class="el" href="#a1ac846f2ac39ff649997614d26192a40" title="Initialize the CANopen Slave.">CosMgrInit()</a> - uwConfigV  </th><th class="markdownTableHeadLeft">data bit rate  </th><th class="markdownTableHeadLeft">Frame Format  </th></tr>
+<th class="markdownTableHeadLeft"><a class="el" href="#a1ac846f2ac39ff649997614d26192a40">CosMgrInit()</a> - uwConfigV  </th><th class="markdownTableHeadLeft">data bit rate  </th><th class="markdownTableHeadLeft">Frame Format  </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">COS_CONF_FD not set  </td><td class="markdownTableBodyLeft">not evaluated  </td><td class="markdownTableBodyLeft">CP_MSG_FORMAT_CBFF  </td></tr>
 <tr class="markdownTableRowEven">
@@ -373,8 +374,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Initialize the CANopen Slave. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ubCanIfV</td><td>- Physical CAN interface </td></tr>
@@ -408,7 +407,35 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This event is called after successful transmission of the Boot-up message. </p>
+<p>This callback is invoked from the CAN transmit handler the moment the Boot-up message has physically left the bus. At this point the device is visible to the network in NMT Pre-Operational state. </p>
+<p>Use this callback for application startup tasks that must happen <b>after</b> the device has announced itself on the bus, e.g. enabling hardware outputs or driving safe initial values. </p>
+<dl class="section note"><dt>Note</dt><dd>Execution context: the callback is called from the CAN transmit handler (interrupt context in interrupt-driven builds). Keep the implementation short and avoid blocking calls. </dd>
+<dd>
+Difference to <a class="el" href="#a66f8a2f399c9e83cc14e622ddaf4c4a7">CosMgrOnStart()</a>: <a class="el" href="#a66f8a2f399c9e83cc14e622ddaf4c4a7">CosMgrOnStart()</a> is called inside <a class="el" href="#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a> <b>before</b> the Boot-up message is queued — use it to configure stack settings (heartbeat producer time, SYNC period, EMCY code registration). <a class="el" href="#a658ad26f2a00ecab90b425916e3de216">CosMgrOnBootUp()</a> fires <b>after</b> the Boot-up message has been transmitted — use it for hardware startup that requires the device to be on the bus.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a66f8a2f399c9e83cc14e622ddaf4c4a7">CosMgrOnStart()</a>, <a class="el" href="#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a> </dd></dl>
+
+</div>
+</div>
+<a id="ac890e7904bc138656f7ca0de661036e7" name="ac890e7904bc138656f7ca0de661036e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac890e7904bc138656f7ca0de661036e7">&#9670;&#160;</a></span>CosMgrOnBusOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CosMgrOnBusOff </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This callback is invoked when the CAN controller has entered the Bus-Off state. All CAN communication is suspended by the stack automatically. </p>
+<p>Typical response in this callback: </p><ul>
+<li>Set application outputs to a defined safe state (e.g. disable actuators). </li>
+<li>Do <b>not</b> call <a class="el" href="#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a> from within this callback. </li>
+</ul>
+<p>Bus-Off recovery is managed by the stack. Once the controller has recovered, <a class="el" href="#adb67ceab70605f6fbc0027ce31ab96cc">CosMgrProcess()</a> returns <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a13c467a79f8e320ce0e361dfe8fe3225">eCOS_ERR_NODE_RESET</a>. The application should then call <a class="el" href="#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a> from the main loop to restart the CANopen stack. </p>
 
 </div>
 </div>
@@ -432,7 +459,9 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>This event is called during the initialization of CANopen services (refer to <a class="el" href="#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a>). The parameter <em class="arg">ubCallerResultV</em> holds the state of the initialization process. Possible values are defined by the <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296" title="Error Codes of protocol stack.">CosErr_e</a> enumeration. On successful initialization the value for <em class="arg">ubCallerResultV</em> is <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a>. </p>
+<p>This event is called inside <a class="el" href="#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a> <b>before</b> the Boot-up message is queued for transmission. Use it to configure stack settings such as heartbeat producer time, SYNC period, device type, and EMCY code registration. The device is not yet visible on the network at this point. </p>
+<dl class="section note"><dt>Note</dt><dd>Difference to <a class="el" href="#a658ad26f2a00ecab90b425916e3de216">CosMgrOnBootUp()</a>: <a class="el" href="#a658ad26f2a00ecab90b425916e3de216">CosMgrOnBootUp()</a> fires <b>after</b> the Boot-up message has physically been transmitted and the device is in NMT Pre-Operational state. Use it for hardware startup tasks that require the device to be on the bus. </dd></dl>
+<p>The parameter <em class="arg">ubCallerResultV</em> holds the state of the initialization process. Possible values are defined by the <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296" title="Error Codes of protocol stack.">CosErr_e</a> enumeration. On successful initialization the value for <em class="arg">ubCallerResultV</em> is <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a>. </p>
 <p>The following example shows how to change default settings for the heartbeat and the SYNC producer, as well as registration of <a class="el" href="cos__emcy_8h.html#COS_EMCY">EMCY</a> codes. </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="#a66f8a2f399c9e83cc14e622ddaf4c4a7">CosMgrOnStart</a>(uint8_t ubCallerResultV)</div>
 <div class="line">{</div>
 <div class="line">   <span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
@@ -482,8 +511,8 @@ Functions</h2></td></tr>
 <div class="line">   <span class="comment">//</span></div>
 <div class="line">   <a class="code hl_function" href="cos__nmt_8h.html#aae2129c83d630ffce47988418d389139">CosNmtSetHeartbeatProd</a>(1000);</div>
 <div class="line">}</div>
-<div class="ttc" id="acanopen_8h_html_aad9a4c2f6c14753f8e43e418abf37fefa48d2b59ec38b5b02386532ab5516f63c"><div class="ttname"><a href="canopen_8h.html#aad9a4c2f6c14753f8e43e418abf37fefa48d2b59ec38b5b02386532ab5516f63c">eCO_ERR_REG_VOLTAGE</a></div><div class="ttdeci">@ eCO_ERR_REG_VOLTAGE</div><div class="ttdef"><b>Definition</b> canopen.h:1054</div></div>
-<div class="ttc" id="acanopen_8h_html_aad9a4c2f6c14753f8e43e418abf37fefa92bd891d2b6a45f4f1b47c2e099e70cf"><div class="ttname"><a href="canopen_8h.html#aad9a4c2f6c14753f8e43e418abf37fefa92bd891d2b6a45f4f1b47c2e099e70cf">eCO_ERR_REG_TEMPERATURE</a></div><div class="ttdeci">@ eCO_ERR_REG_TEMPERATURE</div><div class="ttdef"><b>Definition</b> canopen.h:1057</div></div>
+<div class="ttc" id="acanopen_8h_html_aad9a4c2f6c14753f8e43e418abf37fefa48d2b59ec38b5b02386532ab5516f63c"><div class="ttname"><a href="canopen_8h.html#aad9a4c2f6c14753f8e43e418abf37fefa48d2b59ec38b5b02386532ab5516f63c">eCO_ERR_REG_VOLTAGE</a></div><div class="ttdeci">@ eCO_ERR_REG_VOLTAGE</div><div class="ttdef"><b>Definition</b> canopen.h:1070</div></div>
+<div class="ttc" id="acanopen_8h_html_aad9a4c2f6c14753f8e43e418abf37fefa92bd891d2b6a45f4f1b47c2e099e70cf"><div class="ttname"><a href="canopen_8h.html#aad9a4c2f6c14753f8e43e418abf37fefa92bd891d2b6a45f4f1b47c2e099e70cf">eCO_ERR_REG_TEMPERATURE</a></div><div class="ttdeci">@ eCO_ERR_REG_TEMPERATURE</div><div class="ttdef"><b>Definition</b> canopen.h:1073</div></div>
 <div class="ttc" id="acos301_8h_html_a010d268152927b1763215036d1087b49"><div class="ttname"><a href="cos301_8h.html#a010d268152927b1763215036d1087b49">Cos301_SetDeviceType</a></div><div class="ttdeci">void Cos301_SetDeviceType(uint8_t ubLogicalDeviceV, uint32_t ulDeviceTypeV)</div></div>
 <div class="ttc" id="acos__defs_8h_html_ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9"><div class="ttname"><a href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a></div><div class="ttdeci">@ eCOS_ERR_NONE</div><div class="ttdef"><b>Definition</b> cos_defs.h:506</div></div>
 <div class="ttc" id="acos__defs_8h_html_ad559c6541faef4f8afa177362deed296a29c9946c3d66178de67350502b5af232"><div class="ttname"><a href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a29c9946c3d66178de67350502b5af232">eCOS_ERR_PARM_LOAD</a></div><div class="ttdeci">@ eCOS_ERR_PARM_LOAD</div><div class="ttdef"><b>Definition</b> cos_defs.h:539</div></div>
@@ -513,14 +542,25 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Process CANopen message queue. </p>
-<dl class="section return"><dt>Returns</dt><dd>Status of CANopen Slave Protocol stack</dd></dl>
-<p>This function has to called within the main loop of the application. It is responsible to handle NVM operations and to check the requested NMT state. Possible return values are: </p><ul>
-<li><a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a13c467a79f8e320ce0e361dfe8fe3225">eCOS_ERR_NODE_RESET</a> </li>
-<li><a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296ad09fe4ef4e8530bc7bab3a6cc4de34a7">eCOS_ERR_NODE_INIT</a> </li>
-<li><a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a> </li>
+<dl class="section return"><dt>Returns</dt><dd>Status of the CANopen Slave protocol stack</dd></dl>
+<p>This function must be called repeatedly from the application main loop. It performs all background processing required by the CANopen stack: </p><ul>
+<li>In polling mode (<a class="el" href="cos__conf_8h.html#a9e862cc32d5b40f4064fdf5c7486e311" title="Run CAN message handler in Poll/IRQ mode.">COS_MGR_INT</a> = 0): reads pending CAN messages from all receive buffers and dispatches them to the appropriate service handlers (NMT, SDO/USDO, PDO, SYNC, …). In interrupt mode (<a class="el" href="cos__conf_8h.html#a9e862cc32d5b40f4064fdf5c7486e311" title="Run CAN message handler in Poll/IRQ mode.">COS_MGR_INT</a> = 1) this step is skipped as messages are already dispatched by the CAN receive callback. </li>
+<li>Dispatches pending SYNC events and triggers synchronous PDO processing. </li>
+<li>Detects NMT reset-node or reset-communication commands. </li>
+<li>Executes NVM load/store operations requested by the object dictionary. </li>
+<li>Runs background processing for optional services (secure configuration, USDO). </li>
 </ul>
+<p>Possible return values and the expected application response:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Return value  </th><th class="markdownTableHeadLeft">Meaning  </th><th class="markdownTableHeadLeft">Application action  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a>  </td><td class="markdownTableBodyLeft">Normal operation  </td><td class="markdownTableBodyLeft">Call again on next cycle  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a13c467a79f8e320ce0e361dfe8fe3225">eCOS_ERR_NODE_RESET</a>  </td><td class="markdownTableBodyLeft">NMT reset command received, or Bus-Off / Stop state  </td><td class="markdownTableBodyLeft">Call <a class="el" href="#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a> to restart  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296ad09fe4ef4e8530bc7bab3a6cc4de34a7">eCOS_ERR_NODE_INIT</a>  </td><td class="markdownTableBodyLeft"><a class="el" href="#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a> has not been called yet  </td><td class="markdownTableBodyLeft">Call <a class="el" href="#ae7793c1c85041faf9583c01fb465832b">CosMgrStart()</a> first  </td></tr>
+</table>
 
 </div>
 </div>
@@ -542,8 +582,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Update parameter of device profile. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uwIndexV</td><td>parameter index </td></tr>
@@ -569,10 +607,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Release the CANopen Slave protocol stack. </p>
 <dl class="section return"><dt>Returns</dt><dd>Error Code</dd></dl>
-<p>This routine stops the CANopen protocol stack. The function returns CosErr_OK on success. </p>
+<p>This routine stops the CANopen protocol stack. The function returns <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a> on success. </p>
 
 </div>
 </div>
@@ -611,7 +647,7 @@ Functions</h2></td></tr>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a658ad26f2a00ecab90b425916e3de216">CosMgrOnBootUp()</a>, <a class="el" href="#a66f8a2f399c9e83cc14e622ddaf4c4a7">CosMgrOnStart()</a></dd></dl>
 <p>This routine starts the CANopen protocol stack on the given node-ID and bit rate. The initialization routines from other CANopen services are called and the Boot-up message is sent. The function returns <a class="el" href="cos__defs_8h.html#ad559c6541faef4f8afa177362deed296a12422abaad7438ec073c5846e2ca3ed9">eCOS_ERR_NONE</a> on success. </p>
 <p>In case the device shall be started in classical CANopen mode the parameter <code>slBitrateDatSelV</code> must be set to <a class="el" href="canpie_8h.html#a1701ab116f6fb6d511dfc34e5115de2baad510570f0bc89dc1101adbce0434771">eCP_BITRATE_NONE</a>. </p>
-<dl class="section attention"><dt>Attention</dt><dd>The number and position of parameters has been changed with major version 6 (CANopen FD) of the protocol stack. </dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>The parameter <code>slBitrateDatSelV</code> was added in major version 6 for CANopen FD support. When migrating from an earlier version, add <a class="el" href="canpie_8h.html#a1701ab116f6fb6d511dfc34e5115de2baad510570f0bc89dc1101adbce0434771">eCP_BITRATE_NONE</a> as the third argument to retain classical CANopen behaviour. </dd></dl>
 
 </div>
 </div>
@@ -631,7 +667,7 @@ Functions</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="cos__mgr_8h.html">cos_mgr.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

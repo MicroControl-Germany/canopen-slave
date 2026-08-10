@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -116,6 +116,8 @@ $(function(){initNavTree('group__ID__BASE.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ga8878b3277d3d21f0324198fe0a0a5968" id="r_ga8878b3277d3d21f0324198fe0a0a5968"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8878b3277d3d21f0324198fe0a0a5968">ID_BASE_EMCY</a>&#160;&#160;&#160;0x080</td></tr>
+<tr class="memitem:ga80643a5ed8d3b88a3154b7e203e3c75d" id="r_ga80643a5ed8d3b88a3154b7e203e3c75d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga80643a5ed8d3b88a3154b7e203e3c75d">ID_BASE_PDO1_TX</a>&#160;&#160;&#160;0x180</td></tr>
+<tr class="memitem:ga61c9ebe45bf235b5be66f88ed669d9a9" id="r_ga61c9ebe45bf235b5be66f88ed669d9a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga61c9ebe45bf235b5be66f88ed669d9a9">ID_BASE_PDO1_RX</a>&#160;&#160;&#160;0x200</td></tr>
 <tr class="memitem:ga442f4ae3957e51adc7911ae7b8fc6db5" id="r_ga442f4ae3957e51adc7911ae7b8fc6db5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga442f4ae3957e51adc7911ae7b8fc6db5">ID_BASE_SDO_TX</a>&#160;&#160;&#160;0x580</td></tr>
 <tr class="memitem:ga83524d2b5bb124885feb0d82900081e7" id="r_ga83524d2b5bb124885feb0d82900081e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga83524d2b5bb124885feb0d82900081e7">ID_BASE_SDO_RX</a>&#160;&#160;&#160;0x600</td></tr>
 <tr class="memitem:ga04fc4d25f5e88e86637f85ab9407a359" id="r_ga04fc4d25f5e88e86637f85ab9407a359"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga04fc4d25f5e88e86637f85ab9407a359">ID_BASE_NMT_ERR</a>&#160;&#160;&#160;0x700</td></tr>
@@ -150,6 +152,36 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>The NMT error control identifier (heartbeat) for a CANopen device is calculated by the formula <em>node-ID + ID_BASE_NMT_ERR</em>. </p>
+
+</div>
+</div>
+<a id="ga61c9ebe45bf235b5be66f88ed669d9a9" name="ga61c9ebe45bf235b5be66f88ed669d9a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga61c9ebe45bf235b5be66f88ed669d9a9">&#9670;&#160;</a></span>ID_BASE_PDO1_RX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ID_BASE_PDO1_RX&#160;&#160;&#160;0x200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The first Receive PDO (RPDO1) identifier for a CANopen device is calculated by the formula <em>node-ID + ID_BASE_PDO1_RX</em>. </p>
+
+</div>
+</div>
+<a id="ga80643a5ed8d3b88a3154b7e203e3c75d" name="ga80643a5ed8d3b88a3154b7e203e3c75d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga80643a5ed8d3b88a3154b7e203e3c75d">&#9670;&#160;</a></span>ID_BASE_PDO1_TX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ID_BASE_PDO1_TX&#160;&#160;&#160;0x180</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The first Transmit PDO (TPDO1) identifier for a CANopen device is calculated by the formula <em>node-ID + ID_BASE_PDO1_TX</em>. </p>
 
 </div>
 </div>
@@ -198,7 +230,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

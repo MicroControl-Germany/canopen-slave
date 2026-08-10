@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -135,6 +135,8 @@ $(function(){initNavTree('canopen_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ga8878b3277d3d21f0324198fe0a0a5968" id="r_ga8878b3277d3d21f0324198fe0a0a5968"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ID__BASE.html#ga8878b3277d3d21f0324198fe0a0a5968">ID_BASE_EMCY</a>&#160;&#160;&#160;0x080</td></tr>
+<tr class="memitem:ga80643a5ed8d3b88a3154b7e203e3c75d" id="r_ga80643a5ed8d3b88a3154b7e203e3c75d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ID__BASE.html#ga80643a5ed8d3b88a3154b7e203e3c75d">ID_BASE_PDO1_TX</a>&#160;&#160;&#160;0x180</td></tr>
+<tr class="memitem:ga61c9ebe45bf235b5be66f88ed669d9a9" id="r_ga61c9ebe45bf235b5be66f88ed669d9a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ID__BASE.html#ga61c9ebe45bf235b5be66f88ed669d9a9">ID_BASE_PDO1_RX</a>&#160;&#160;&#160;0x200</td></tr>
 <tr class="memitem:ga442f4ae3957e51adc7911ae7b8fc6db5" id="r_ga442f4ae3957e51adc7911ae7b8fc6db5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ID__BASE.html#ga442f4ae3957e51adc7911ae7b8fc6db5">ID_BASE_SDO_TX</a>&#160;&#160;&#160;0x580</td></tr>
 <tr class="memitem:ga83524d2b5bb124885feb0d82900081e7" id="r_ga83524d2b5bb124885feb0d82900081e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ID__BASE.html#ga83524d2b5bb124885feb0d82900081e7">ID_BASE_SDO_RX</a>&#160;&#160;&#160;0x600</td></tr>
 <tr class="memitem:ga04fc4d25f5e88e86637f85ab9407a359" id="r_ga04fc4d25f5e88e86637f85ab9407a359"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ID__BASE.html#ga04fc4d25f5e88e86637f85ab9407a359">ID_BASE_NMT_ERR</a>&#160;&#160;&#160;0x700</td></tr>
@@ -181,6 +183,38 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ae953d92544d9fe40363e9f779f2218e1" id="r_ae953d92544d9fe40363e9f779f2218e1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae953d92544d9fe40363e9f779f2218e1">SdoCmd_e</a> { <br />
+ }</td></tr>
+<tr class="memitem:ac690e8c8a8189b3a08deb99661464fd0" id="r_ac690e8c8a8189b3a08deb99661464fd0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0">UsdoCommand_e</a> { <br />
+&#160;&#160;<a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0aed9b0c0b56e232c98acd552a5b32e096">eUSDO_CMD_DOWN_EXP_RQST</a> = 0x01
+, <br />
+&#160;&#160;<a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0a310a7f68f2535eb481f5b2406f902aff">eUSDO_CMD_DOWN_SEG_RQST_START</a> = 0x02
+, <br />
+&#160;&#160;<a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0ae5d6d452e635173df59f99a866fbb017">eUSDO_CMD_DOWN_SEG_RQST_INTER</a> = 0x03
+, <br />
+&#160;&#160;<a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0aaa572c296eaeb3ce447d11394f700c1d">eUSDO_CMD_DOWN_SEG_RQST_FINAL</a> = 0x04
+, <br />
+&#160;&#160;<a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0a2a24852156e1885305fc757c014fda4a">eUSDO_CMD_UPLD_RQST</a> = 0x11
+, <br />
+&#160;&#160;<a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0a6934c7c74b64911727f95c34764a5c46">eUSDO_CMD_UPLD_RQST_INTER</a> = 0x13
+, <br />
+&#160;&#160;<a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0abad0aae214b59649d24f3d5f2ece92b5">eUSDO_CMD_DOWN_EXP_RESP</a> = 0x21
+, <br />
+&#160;&#160;<a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0a4c28a08877e9dea3c7d3d8283abdfa7f">eUSDO_CMD_DOWN_SEG_RESP_START</a> = 0x22
+, <br />
+&#160;&#160;<a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0af48df00d3bcde8acd130a2892edf2ff0">eUSDO_CMD_DOWN_SEG_RESP_INTER</a> = 0x23
+, <br />
+&#160;&#160;<a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0a2d942d9351d2e157ee1b765e925e865f">eUSDO_CMD_DOWN_SEG_RESP_FINAL</a> = 0x24
+, <br />
+&#160;&#160;<a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0aef7a0b403d045e9d03b6782739bc2f8c">eUSDO_CMD_UPLD_RESP_EXP</a> = 0x31
+, <br />
+&#160;&#160;<a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0a3172e44faa05841b5f95e03f94540c85">eUSDO_CMD_UPLD_RESP_SEG_START</a> = 0x32
+, <br />
+&#160;&#160;<a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0aa0c0109ceb1a31bed1659d66e0380848">eUSDO_CMD_UPLD_RESP_SEG_INTER</a> = 0x33
+, <br />
+&#160;&#160;<a class="el" href="#ac690e8c8a8189b3a08deb99661464fd0a020dc71418dc73df2097019b53a19ecf">eUSDO_CMD_UPLD_RESP_SEG_FINAL</a> = 0x34
+, <br />
+&#160;&#160;<b>eUSDO_CMD_ABORT</b> = 0x7F
+<br />
  }</td></tr>
 <tr class="memitem:adb7493a7f8188d66460d16a329a83bbb" id="r_adb7493a7f8188d66460d16a329a83bbb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb7493a7f8188d66460d16a329a83bbb">UsdoAbort_e</a> { <br />
  }</td></tr>
@@ -536,8 +570,7 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Command values for SDO transfer</p>
-<p>Command values for USDO transfer </p>
+<p>Command values for SDO transfer </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae953d92544d9fe40363e9f779f2218e1aba17489ba9e1718741e7356b4eb70ace" name="ae953d92544d9fe40363e9f779f2218e1aba17489ba9e1718741e7356b4eb70ace"></a>eSDO_WRITE_REQ_SEG&#160;</td><td class="fielddoc"><p>response to segmented write request </p>
 </td></tr>
@@ -671,6 +704,7 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Command values for USDO transfer </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac690e8c8a8189b3a08deb99661464fd0aed9b0c0b56e232c98acd552a5b32e096" name="ac690e8c8a8189b3a08deb99661464fd0aed9b0c0b56e232c98acd552a5b32e096"></a>eUSDO_CMD_DOWN_EXP_RQST&#160;</td><td class="fielddoc"><p>Download expedited request </p>
 </td></tr>
@@ -720,7 +754,7 @@ Enumerations</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="canopen_8h.html">canopen.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

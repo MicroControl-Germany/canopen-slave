@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -171,16 +171,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Notify SYNC reception. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ubSyncCounterValueV</td><td>SYNC counter value</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ubSyncCounterValueV</td><td>SYNC counter value (0 if object 1019h is not supported)</td></tr>
   </table>
   </dd>
 </dl>
-<p>This function is called upon reception of a SYNC message when the device is in NMT operational state </p>
-
+<dl class="section note"><dt>Note</dt><dd>The code located in the file <code>cos_user.c</code> provides an example and has to be adopted to the application.</dd></dl>
+<p>This function is called upon reception of a SYNC message when the device is in NMT operational state (<a class="el" href="group__NODE__STATE.html#ga3fa971de2afdb65af21b6c7b7c634a2f">NODE_STATE_OPERATIONAL</a>). It is the primary synchronization point for application data: use it to latch new input values or to prepare output data before the next synchronous PDO transmission. The parameter <em class="arg">ubSyncCounterValueV</em> carries the SYNC counter from the SYNC frame (object 1019h); it is 0 if the SYNC counter is not configured.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="#a3528d19d0083d682b4e22ebb1f45d05b">CosSyncEvent</a>(uint8_t ubSyncCounterValueV)</div>
+<div class="line">{</div>
+<div class="line">   (void) ubSyncCounterValueV;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a8b8d496bc3ce2b64c4ba8fecb5816eb4" name="a8b8d496bc3ce2b64c4ba8fecb5816eb4"></a>
@@ -197,10 +200,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Handle RPDOs on SYNC reception. </p>
-<p>This function is called upon reception of a SYNC message when the device is operational and the device has Receive PDOs. Please note that Receive PDOs do not have a SYNC counter feature, they are updated on every reception of the SYNC message. </p>
-
+<dl class="section note"><dt>Note</dt><dd>The code located in the file <code>cos_user.c</code> provides an example and has to be adopted to the application.</dd></dl>
+<p>This function is called upon reception of a SYNC message when the device is in NMT operational state and has synchronous Receive PDOs configured. It fires after the stack has already distributed the received SYNC-triggered RPDO data to the mapped process variables. Use it to consume the freshly updated input values in the application. Note that RPDOs do not carry a SYNC counter; this callback fires on every SYNC regardless of the counter value.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span>  <a class="code hl_function" href="#a8b8d496bc3ce2b64c4ba8fecb5816eb4">CosSyncEventRcvPdo</a>(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a4b72a5cb600034f10566f6127882ce7b" name="a4b72a5cb600034f10566f6127882ce7b"></a>
@@ -245,7 +251,7 @@ Functions</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="cos__sync_8h.html">cos_sync.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>

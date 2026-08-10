@@ -58,9 +58,10 @@ var menudata={children:[
 {text:"Management",url:"cos__mgr_8h.html#COS_MGR"},
 {text:"NMT service",url:"cos__nmt_8h.html#COS_NMT"},
 {text:"PDO service",url:"cos__pdo_8h.html#COS_PDO"},
-{text:"SDO service",url:"cos__sdo_8h.html#COS_SDO"},
+{text:"SDO server",url:"cos__sdo_8h.html#COS_SDO"},
 {text:"SYNC service",url:"cos__sync_8h.html#COS_SYNC"},
 {text:"Timer support",url:"cos__time_8h.html#COS_TIME"},
+{text:"USDO server",url:"cos__usdo__srv_8h.html#COS_USDO"},
 {text:"Add-ons",url:"cos_add_on_overview.html",children:[
 {text:"Profile CiA 401",url:"cos_add_on_cia_401.html"},
 {text:"Profile CiA 404",url:"cos_add_on_cia_404.html",children:[
@@ -84,8 +85,10 @@ var menudata={children:[
 {text:"Compiler definitions",url:"mc__compiler_8h.html#MC_COMPILER_H"}]},
 {text:"Version history",url:"cos_version.html"}]},
 {text:"Resources",url:"",children:[
-{text:"CAN abbreviations",url:"can_abbreviations.html"},
+{text:"CAN terms",url:"can_terms.html"},
 {text:"CAN introduction",url:"can_introduction.html"},
+{text:"CANopen terms",url:"canopen_terms.html"},
+{text:"CANopen introduction",url:"canopen_introduction.html"},
 {text:"Specifications",url:"cos_specifications.html"},
 {text:"Support",url:"stack_support.html"},
 {text:"License",url:"stack_license.html"}]},

@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.00</div>
+   <div id="projectbrief">Version 7.06.02</div>
   </td>
  </tr>
  </tbody>
@@ -115,7 +115,8 @@ $(function(){initNavTree('cos__usdo__srv_8h.html','',''); });
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>USDO services are intended for configuration and diagnostic tasks in CANopen FD systems. Nevertheless process data can be transferred via USDO services as well. The USDO service offers confirmed communication between one USDO client and one or several USDO servers. By means of the USDO protocol the USDO client has access to CANopen FD object dictionary entries supported in the CANopen FD devices in the network. The USDO services provide read and write access to sub-indexes in the USDO servers’ object dictionary (see <a class="el" href="cos__dict_8h.html" title="CANopen Slave Stack - Dictionary .">cos_dict.h</a>). </p>
 <p>USDO services allow the transfer of any data size between the USDO client and the USDO server. The inherent routing capability of the USDO services enables data transfer over CANopen FD network borders; USDO client and USDO server are not necessarily connected to the same CAN. </p>
-<p>The functions in this module are called by the CANopen slave manager on reception of a USDO request. </p>
+<dl class="section note"><dt>Note</dt><dd>This module is compiled only when <a class="el" href="cos__conf_8h.html#a5bada5152a1f84187551842b69e40c7b" title="Support CANopen FD.">COS_FD_SUPPORT</a> is set to 1. In classical CANopen (CC) mode the SDO server (<a class="el" href="cos__sdo_8h.html" title="CANopen Slave Stack - Service Data Objects (SDO) .">cos_sdo.h</a>) handles object dictionary access instead. </dd></dl>
+<p>All functions in this module are <b>internal</b> to the stack. Applications must not call them directly. The CosSdo API (<a class="el" href="cos__sdo_8h.html" title="CANopen Slave Stack - Service Data Objects (SDO) .">cos_sdo.h</a>) transparently dispatches to the USDO server when <a class="el" href="cos__conf_8h.html#a5bada5152a1f84187551842b69e40c7b" title="Support CANopen FD.">COS_FD_SUPPORT</a> is active, so application code stays independent of the active transfer protocol. </p>
 </div><div class="textblock"><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Include dependency graph for cos_usdo_srv.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -123,10 +124,10 @@ $(function(){initNavTree('cos__usdo__srv_8h.html','',''); });
 <div class="center"><img src="cos__usdo__srv_8h__incl.png" border="0" usemap="#acos__usdo__srv_8h" loading="lazy" alt=""/></div>
 <map name="acos__usdo__srv_8h" id="acos__usdo__srv_8h">
 <area shape="rect" title="CANopen Slave Stack &#45; USDO server ." alt="" coords="109,5,221,31"/>
+<area shape="rect" href="cos__usdo__bridge_8h.html" title="CANopen Slave Stack &#45; SDO / USDO bridge ." alt="" coords="100,79,230,105"/>
+<area shape="poly" title=" " alt="" coords="168,31,168,63,162,63,162,31"/>
 <area shape="rect" href="cos__defs_8h.html" title="CANopen Slave Stack &#45; General definitions ." alt="" coords="122,153,208,178"/>
-<area shape="poly" title=" " alt="" coords="161,32,150,54,142,79,143,110,153,138,148,140,138,111,137,79,145,52,156,30"/>
-<area shape="rect" href="cos__usdo__bridge_8h.html" title="CANopen Slave Stack &#45; SDO / USDO bridge." alt="" coords="152,79,282,105"/>
-<area shape="poly" title=" " alt="" coords="176,30,201,65,197,68,171,33"/>
+<area shape="poly" title=" " alt="" coords="168,105,168,137,162,137,162,105"/>
 <area shape="rect" href="cp__core_8h.html" title="CANpie core functions" alt="" coords="14,226,92,252"/>
 <area shape="poly" title=" " alt="" coords="147,181,86,220,83,215,145,177"/>
 <area shape="rect" href="cp__msg_8h.html" title="CANpie message access" alt="" coords="100,300,179,326"/>
@@ -151,7 +152,6 @@ $(function(){initNavTree('cos__usdo__srv_8h.html','',''); });
 <area shape="poly" title=" " alt="" coords="261,471,311,509,308,514,258,476"/>
 <area shape="poly" title=" " alt="" coords="140,326,135,359,130,358,135,325"/>
 <area shape="poly" title=" " alt="" coords="246,326,246,432,241,432,241,326"/>
-<area shape="poly" title=" " alt="" coords="211,106,185,142,181,138,206,103"/>
 </map>
 </div>
 </div></div><!-- contents -->
@@ -170,7 +170,7 @@ $(function(){initNavTree('cos__usdo__srv_8h.html','',''); });
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="cos__usdo__srv_8h.html">cos_usdo_srv.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Jul 13 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
   </ul>
 </div>
 </body>
