@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.02</div>
+   <div id="projectbrief">Version 7.06.04</div>
   </td>
  </tr>
  </tbody>
@@ -127,7 +127,7 @@ $(function(){initNavTree('cos__defs_8h.html','',''); });
 <area shape="poly" title=" " alt="" coords="166,32,147,138,142,137,160,31"/>
 <area shape="rect" href="canopen_8h.html" title=" " alt="" coords="203,153,284,178"/>
 <area shape="poly" title=" " alt="" coords="174,30,232,138,228,140,169,33"/>
-<area shape="rect" href="cos__conf_8h.html" title="CANopen Slave Stack &#45; General configuration ." alt="" coords="228,79,313,105"/>
+<area shape="rect" title=" " alt="" coords="228,79,313,105"/>
 <area shape="poly" title=" " alt="" coords="184,29,241,68,238,72,181,34"/>
 <area shape="rect" href="cp__fifo_8h.html" title="CANpie FIFO functions ." alt="" coords="5,153,77,178"/>
 <area shape="poly" title=" " alt="" coords="54,105,48,138,43,137,48,104"/>
@@ -152,7 +152,7 @@ $(function(){initNavTree('cos__defs_8h.html','',''); });
 Macros</h2></td></tr>
 <tr class="memitem:gafd8f10aabb16f1271bdfd4ccf2bc188e" id="r_gafd8f10aabb16f1271bdfd4ccf2bc188e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__COS__VERSION.html#gafd8f10aabb16f1271bdfd4ccf2bc188e">COS_VERSION_MAJOR</a>&#160;&#160;&#160;7</td></tr>
 <tr class="memitem:ga7e8beac173d30e112e31818081782f71" id="r_ga7e8beac173d30e112e31818081782f71"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__COS__VERSION.html#ga7e8beac173d30e112e31818081782f71">COS_VERSION_MINOR</a>&#160;&#160;&#160;6</td></tr>
-<tr class="memitem:ga93530d66d38fae28aa0c8aca1685da43" id="r_ga93530d66d38fae28aa0c8aca1685da43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__COS__VERSION.html#ga93530d66d38fae28aa0c8aca1685da43">COS_VERSION_BUILD</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memitem:ga93530d66d38fae28aa0c8aca1685da43" id="r_ga93530d66d38fae28aa0c8aca1685da43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__COS__VERSION.html#ga93530d66d38fae28aa0c8aca1685da43">COS_VERSION_BUILD</a>&#160;&#160;&#160;4</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -165,7 +165,15 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="#ad3aefa0a1ed58399a94659a932bd7f52a772c18c5005ee9b1d2e103cdbacc6833">eCosBuf_SDO_TRM</a>
 , <br />
+&#160;&#160;<a class="el" href="#ad3aefa0a1ed58399a94659a932bd7f52a474ae5aa6a63061efb00a8f4c1acb31a">eCosBuf_LSS_RCV</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad3aefa0a1ed58399a94659a932bd7f52af5e8db13f3abdfc1422642ea79f4780f">eCosBuf_LSS_TRM</a>
+, <br />
 &#160;&#160;<a class="el" href="#ad3aefa0a1ed58399a94659a932bd7f52ae5d057575f4f05ad5433ff9540f7e9d7">eCosBuf_NMT_ERR</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad3aefa0a1ed58399a94659a932bd7f52a7957df1252edd7f859423dbf6c1731f1">eCosBuf_NMT_HBC</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad3aefa0a1ed58399a94659a932bd7f52a22fbdc0b021009c4762b62699d04160f">eCosBuf_TIME</a> = (uint8_t) eCosBuf_NMT_ERR + (uint8_t) COS_DICT_OBJ_1016 + 1U
 , <br />
 &#160;&#160;<a class="el" href="#ad3aefa0a1ed58399a94659a932bd7f52a2db6133737ea786c08b4cd3eaff07888">eCosBuf_PDO1_RCV</a>
 , <br />
@@ -352,11 +360,17 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ad3aefa0a1ed58399a94659a932bd7f52a772c18c5005ee9b1d2e103cdbacc6833" name="ad3aefa0a1ed58399a94659a932bd7f52a772c18c5005ee9b1d2e103cdbacc6833"></a>eCosBuf_SDO_TRM&#160;</td><td class="fielddoc"><p>SDO Tx, Identifier 580h + NodeId (Buffer 4) </p>
 </td></tr>
+<tr><td class="fieldname"><a id="ad3aefa0a1ed58399a94659a932bd7f52a474ae5aa6a63061efb00a8f4c1acb31a" name="ad3aefa0a1ed58399a94659a932bd7f52a474ae5aa6a63061efb00a8f4c1acb31a"></a>eCosBuf_LSS_RCV&#160;</td><td class="fielddoc"><p>LSS Rx, Identifier 7E5h, (Buffer 5) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad3aefa0a1ed58399a94659a932bd7f52af5e8db13f3abdfc1422642ea79f4780f" name="ad3aefa0a1ed58399a94659a932bd7f52af5e8db13f3abdfc1422642ea79f4780f"></a>eCosBuf_LSS_TRM&#160;</td><td class="fielddoc"><p>LSS Tx, Identifer 7E4h, (Buffer 6) </p>
+</td></tr>
 <tr><td class="fieldname"><a id="ad3aefa0a1ed58399a94659a932bd7f52ae5d057575f4f05ad5433ff9540f7e9d7" name="ad3aefa0a1ed58399a94659a932bd7f52ae5d057575f4f05ad5433ff9540f7e9d7"></a>eCosBuf_NMT_ERR&#160;</td><td class="fielddoc"><p>Heartbeat producer, Nodeguarding (Buffer 7) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad3aefa0a1ed58399a94659a932bd7f52a2db6133737ea786c08b4cd3eaff07888" name="ad3aefa0a1ed58399a94659a932bd7f52a2db6133737ea786c08b4cd3eaff07888"></a>eCosBuf_PDO1_RCV&#160;</td><td class="fielddoc"><p>Heartbeat consumer, (Buffer 8)</p>
-<p>TIME producer / consumer, (Buffer 9)</p>
-<p>Buffer for first Receive PDO </p>
+<tr><td class="fieldname"><a id="ad3aefa0a1ed58399a94659a932bd7f52a7957df1252edd7f859423dbf6c1731f1" name="ad3aefa0a1ed58399a94659a932bd7f52a7957df1252edd7f859423dbf6c1731f1"></a>eCosBuf_NMT_HBC&#160;</td><td class="fielddoc"><p>Heartbeat consumer, (Buffer 8) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad3aefa0a1ed58399a94659a932bd7f52a22fbdc0b021009c4762b62699d04160f" name="ad3aefa0a1ed58399a94659a932bd7f52a22fbdc0b021009c4762b62699d04160f"></a>eCosBuf_TIME&#160;</td><td class="fielddoc"><p>TIME producer / consumer, (Buffer 9) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad3aefa0a1ed58399a94659a932bd7f52a2db6133737ea786c08b4cd3eaff07888" name="ad3aefa0a1ed58399a94659a932bd7f52a2db6133737ea786c08b4cd3eaff07888"></a>eCosBuf_PDO1_RCV&#160;</td><td class="fielddoc"><p>Buffer for first Receive PDO </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad3aefa0a1ed58399a94659a932bd7f52ae24220bf040351e78d82e7933f20ef2c" name="ad3aefa0a1ed58399a94659a932bd7f52ae24220bf040351e78d82e7933f20ef2c"></a>eCosBuf_PDO1_TRM&#160;</td><td class="fielddoc"><p>Buffer for first Transmit PDO </p>
 </td></tr>
@@ -548,7 +562,7 @@ Enumerations</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="cos__defs_8h.html">cos_defs.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Tue Aug 25 2026  </li>
   </ul>
 </div>
 </body>

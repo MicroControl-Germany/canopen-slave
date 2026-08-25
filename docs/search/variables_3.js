@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['slcurrent_0',['slCurrent',['../structCos453__InputValues__s.html#a84eaead570a4e3e286a6db1efb474f0f',1,'Cos453_InputValues_s']]],
+  ['slcurrent_0',['slCurrent',['../structCos453__InputValues__s.html#a84eaead570a4e3e286a6db1efb474f0f',1,'Cos453_InputValues_s::slCurrent'],['../structCos453__OutputActualValues__s.html#a63dd8845fdcdf3e2f7fbf06acd98589c',1,'Cos453_OutputActualValues_s::slCurrent']]],
   ['slcurrentmax_1',['slCurrentMax',['../structCos453__OutputRanges__s.html#ad44602bff0f4ab3d3b4b394ff9416114',1,'Cos453_OutputRanges_s']]],
   ['slcurrentmin_2',['slCurrentMin',['../structCos453__OutputRanges__s.html#a2f0fadb7f5558d27839ef2045bdb4c2c',1,'Cos453_OutputRanges_s']]],
   ['slcurrentthreshold1_3',['slCurrentThreshold1',['../structCos453__Bank__s.html#a10535b51bb4ea096dfe82c0779e1526a',1,'Cos453_Bank_s']]],
@@ -23,7 +23,7 @@ var searchData=
   ['slminpower_20',['slMinPower',['../structCos453__Bank__s.html#a2aab811d720de2957510ec2387309459',1,'Cos453_Bank_s']]],
   ['slminvoltage_21',['slMinVoltage',['../structCos453__Bank__s.html#aad715e5f60fba0dfa631e2d80c098c5a',1,'Cos453_Bank_s']]],
   ['slnombitrate_22',['slNomBitRate',['../structCpHdi__s.html#a028744948c35628b50f394e30b699522',1,'CpHdi_s']]],
-  ['slpower_23',['slPower',['../structCos453__InputValues__s.html#a0060f14f1ac034837595ab0b18f69663',1,'Cos453_InputValues_s']]],
+  ['slpower_23',['slPower',['../structCos453__InputValues__s.html#a0060f14f1ac034837595ab0b18f69663',1,'Cos453_InputValues_s::slPower'],['../structCos453__OutputActualValues__s.html#ad0e76031357abca4da4d4102408433e4',1,'Cos453_OutputActualValues_s::slPower']]],
   ['slpowermax_24',['slPowerMax',['../structCos453__OutputRanges__s.html#a9c4cb0b9b340e01e411fee467c52e1a7',1,'Cos453_OutputRanges_s']]],
   ['slpowermin_25',['slPowerMin',['../structCos453__OutputRanges__s.html#a307d21346be1bde3aaeeb7549c7ff895',1,'Cos453_OutputRanges_s']]],
   ['slpowerthreshold1_26',['slPowerThreshold1',['../structCos453__Bank__s.html#aa8ea0153c5af523f457ae2d7cf3d5e3b',1,'Cos453_Bank_s']]],
@@ -33,13 +33,17 @@ var searchData=
   ['slsetcurrent_30',['slSetCurrent',['../structCos453__Bank__s.html#a05c5e31a0324eb920385938fb52287f6',1,'Cos453_Bank_s']]],
   ['slsetpower_31',['slSetPower',['../structCos453__Bank__s.html#a28bab07199d37cc1fe1101da2fad2413',1,'Cos453_Bank_s']]],
   ['slsetvoltage_32',['slSetVoltage',['../structCos453__Bank__s.html#ad102fce0fa2ff32df5964b15b6edcb02',1,'Cos453_Bank_s']]],
-  ['slvoltage_33',['slVoltage',['../structCos453__InputValues__s.html#ad3e5843e5b810f5168d2782ea76238ae',1,'Cos453_InputValues_s']]],
+  ['slvoltage_33',['slVoltage',['../structCos453__InputValues__s.html#ad3e5843e5b810f5168d2782ea76238ae',1,'Cos453_InputValues_s::slVoltage'],['../structCos453__OutputActualValues__s.html#a485ec9e575f4eea155f92c57688947fd',1,'Cos453_OutputActualValues_s::slVoltage']]],
   ['slvoltagemax_34',['slVoltageMax',['../structCos453__OutputRanges__s.html#a396853ec1c790177e0e2689cef40699e',1,'Cos453_OutputRanges_s']]],
   ['slvoltagemin_35',['slVoltageMin',['../structCos453__OutputRanges__s.html#aa7bf27a8069a64e22848120fe74fd91f',1,'Cos453_OutputRanges_s']]],
   ['slvoltagethreshold1_36',['slVoltageThreshold1',['../structCos453__Bank__s.html#ae2a7f8f831adeccc27cf42cd6c61a17a',1,'Cos453_Bank_s']]],
   ['slvoltagethreshold2_37',['slVoltageThreshold2',['../structCos453__Bank__s.html#a8336b57095af96c134890f32619c596b',1,'Cos453_Bank_s']]],
   ['slvoltagethresholdreturn1_38',['slVoltageThresholdReturn1',['../structCos453__Bank__s.html#ad4e8fcaac362282609afc6834c76df73',1,'Cos453_Bank_s']]],
   ['slvoltagethresholdreturn2_39',['slVoltageThresholdReturn2',['../structCos453__Bank__s.html#a0fd294d1cc17487bcbf3954d54ab53c8',1,'Cos453_Bank_s']]],
-  ['swtemperature_40',['swTemperature',['../structCos453__InputValues__s.html#affa2d2d02d8c7944aad703cf952d149e',1,'Cos453_InputValues_s']]],
-  ['szcosmob_5fstr2008g_41',['szCosMob_Str2008G',['../cos__mobj_8h.html#a0cf930b3e7afabc12b547e4a656e2b8e',1,'cos_mobj.h']]]
+  ['swtemperature_40',['swTemperature',['../structCos453__InputValues__s.html#affa2d2d02d8c7944aad703cf952d149e',1,'Cos453_InputValues_s::swTemperature'],['../structCos453__OutputActualValues__s.html#a2d13e7860675d48c2a7ab977b19c1f1d',1,'Cos453_OutputActualValues_s::swTemperature']]],
+  ['swthreshold1_41',['swThreshold1',['../structCos453__OutputTempThresholds__s.html#aa8cb966a93015708240e99cb3191c1de',1,'Cos453_OutputTempThresholds_s']]],
+  ['swthreshold2_42',['swThreshold2',['../structCos453__OutputTempThresholds__s.html#a357697c34b0f8634cc75a4f1b2e64c32',1,'Cos453_OutputTempThresholds_s']]],
+  ['swthresholdreturn1_43',['swThresholdReturn1',['../structCos453__OutputTempThresholds__s.html#a9081961eb83bb1fc470f1fae26848555',1,'Cos453_OutputTempThresholds_s']]],
+  ['swthresholdreturn2_44',['swThresholdReturn2',['../structCos453__OutputTempThresholds__s.html#a54973861cb5f114961a3f0031b8f39d5',1,'Cos453_OutputTempThresholds_s']]],
+  ['szcosmob_5fstr2008g_45',['szCosMob_Str2008G',['../cos__mobj_8h.html#a0cf930b3e7afabc12b547e4a656e2b8e',1,'cos_mobj.h']]]
 ];

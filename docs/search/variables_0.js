@@ -10,8 +10,14 @@ var searchData=
   ['aubidx1008_5fdevicenamec_7',['aubIdx1008_DeviceNameC',['../cos301_8h.html#a0332bf2c342565c0dd770f394e1e38b1',1,'cos301.h']]],
   ['aubidx1009_5fhwversionc_8',['aubIdx1009_HwVersionC',['../cos301_8h.html#afd52eecf168a8ac1b7ef2aa0acd22821',1,'cos301.h']]],
   ['aubidx100a_5fswversionc_9',['aubIdx100A_SwVersionC',['../cos301_8h.html#ac2b2c0a7846d8a64cb61c217280d3964',1,'cos301.h']]],
-  ['aubinput_10',['aubInput',['../structMcMD5Context__s.html#ac78bc36c7a0fe2351d1e3fbf0f131cab',1,'McMD5Context_s']]],
-  ['aullong_11',['aulLong',['../structCpCanMsg__s.html#a8f5c666082fc71049eb1799f223d3a0f',1,'CpCanMsg_s']]],
-  ['auqquad_12',['auqQuad',['../structCpCanMsg__s.html#a5e74c34dd00b4bb0dbf2a2a4e85f89b5',1,'CpCanMsg_s']]],
-  ['auwword_13',['auwWord',['../structCpCanMsg__s.html#a42a787a95e742278d5d145bcb8e3d67d',1,'CpCanMsg_s']]]
+  ['aubin_10',['aubIn',['../structCos302__NetVar__s.html#aee01fde2b5e238e813c42cfc030e655e',1,'Cos302_NetVar_s']]],
+  ['aubinput_11',['aubInput',['../structMcMD5Context__s.html#ac78bc36c7a0fe2351d1e3fbf0f131cab',1,'McMD5Context_s']]],
+  ['aubout_12',['aubOut',['../structCos302__NetVar__s.html#a7fe06c45dd591d5356e157e604f49e6c',1,'Cos302_NetVar_s']]],
+  ['aulin_13',['aulIn',['../structCos302__NetVar__s.html#af3c43a9a127021206af34aa8d8925633',1,'Cos302_NetVar_s']]],
+  ['aullong_14',['aulLong',['../structCpCanMsg__s.html#a8f5c666082fc71049eb1799f223d3a0f',1,'CpCanMsg_s']]],
+  ['aulout_15',['aulOut',['../structCos302__NetVar__s.html#a233fcc9b614ce776b181f85c4467df7a',1,'Cos302_NetVar_s']]],
+  ['auqquad_16',['auqQuad',['../structCpCanMsg__s.html#a5e74c34dd00b4bb0dbf2a2a4e85f89b5',1,'CpCanMsg_s']]],
+  ['auwin_17',['auwIn',['../structCos302__NetVar__s.html#a97cf630c53cf1ae42a83d6b6ec163f16',1,'Cos302_NetVar_s']]],
+  ['auwout_18',['auwOut',['../structCos302__NetVar__s.html#aabc2ef2d904726afe5d2eb8db3b8017c',1,'Cos302_NetVar_s']]],
+  ['auwword_19',['auwWord',['../structCpCanMsg__s.html#a42a787a95e742278d5d145bcb8e3d67d',1,'CpCanMsg_s']]]
 ];

@@ -9,6 +9,7 @@ var searchData=
   ['tmrhandler_5ffn_6',['TmrHandler_fn',['../mc__tmr_8h.html#a877ba0321f4657a4042330afb6b05743',1,'mc_tmr.h']]],
   ['todo_20list_7',['Todo List',['../todo.html',1,'']]],
   ['tpdo_20mapping_20example_8',['TPDO mapping example',['../cos_example_pdo_map.html#cos_pdo_mapping_tpdo',1,'']]],
-  ['tumsgdata_9',['tuMsgData',['../structCpCanMsg__s.html#a04148546b5eab14ba7a779bff177b794',1,'CpCanMsg_s']]],
-  ['tuvalue_10',['tuValue',['../structCosDicEntry__s.html#a8d6b2770fe7fd882fe01b0db680f7b35',1,'CosDicEntry_s']]]
+  ['tscos302_5fnetvarg_9',['tsCos302_NetVarG',['../cos302_8h.html#a888bf4bfaa292a9a76053c9948809aa0',1,'cos302.h']]],
+  ['tumsgdata_10',['tuMsgData',['../structCpCanMsg__s.html#a04148546b5eab14ba7a779bff177b794',1,'CpCanMsg_s']]],
+  ['tuvalue_11',['tuValue',['../structCosDicEntry__s.html#a8d6b2770fe7fd882fe01b0db680f7b35',1,'CosDicEntry_s']]]
 ];

@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.02</div>
+   <div id="projectbrief">Version 7.06.04</div>
   </td>
  </tr>
  </tbody>
@@ -282,7 +282,7 @@ $(function(){initNavTree('cos404ai_8h.html','',''); });
 <area shape="poly" title=" " alt="" coords="166,105,147,211,142,210,160,105"/>
 <area shape="rect" href="canopen_8h.html" title=" " alt="" coords="203,226,284,252"/>
 <area shape="poly" title=" " alt="" coords="174,104,232,211,228,214,169,106"/>
-<area shape="rect" href="cos__conf_8h.html" title="CANopen Slave Stack &#45; General configuration ." alt="" coords="228,153,313,178"/>
+<area shape="rect" title=" " alt="" coords="228,153,313,178"/>
 <area shape="poly" title=" " alt="" coords="184,103,241,141,238,146,181,107"/>
 <area shape="rect" href="cp__fifo_8h.html" title="CANpie FIFO functions ." alt="" coords="5,226,77,252"/>
 <area shape="poly" title=" " alt="" coords="54,179,48,211,43,210,48,178"/>
@@ -473,6 +473,7 @@ Functions</h2></td></tr>
 <tr class="memitem:af9a9d956fbaa5c91bd7f35d50508c4ae" id="r_af9a9d956fbaa5c91bd7f35d50508c4ae"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9a9d956fbaa5c91bd7f35d50508c4ae">Cos404_AI_SetDecimalDigitsPV</a> (uint8_t ubChannelV, uint8_t ubDigitsV)</td></tr>
 <tr class="memitem:a017c679d21e0631e725231299f7cc8df" id="r_a017c679d21e0631e725231299f7cc8df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a017c679d21e0631e725231299f7cc8df">Cos404_AI_SetFieldValue</a> (uint8_t ubChannelV, int32_t slFieldValueV, bool_t btStatusV)</td></tr>
 <tr class="memitem:acc7c0dca885d996a3e07a34757ed38a6" id="r_acc7c0dca885d996a3e07a34757ed38a6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc7c0dca885d996a3e07a34757ed38a6">Cos404_AI_SetPhysicalUnitPV</a> (uint8_t ubChannelV, uint32_t ulPhysicalUnitV)</td></tr>
+<tr class="memitem:aa2846b5f132eda881b91c7fe8d9b1114" id="r_aa2846b5f132eda881b91c7fe8d9b1114"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2846b5f132eda881b91c7fe8d9b1114">Cos404_AI_SetSensorType</a> (uint8_t ubChannelV, uint16_t uwSensorTypeV)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -1184,8 +1185,38 @@ This function is only available if <code><a class="el" href="cos__conf_8h.html#a
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98fa1e386bda90429c996628f4e03f99bb4f">eCosSdo_WRITE_OK</a> on success or any other value from <a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98f" title="Return code for SDO callbacks.">CosSdo_e</a> in case of an error</dd></dl>
-<p>This function should be called by application at change of sensor type to define corresponding physical unit of provided process value.</p>
-<p>The <code><a class="el" href="cos890_8h.html">cos890.h</a></code> contains the <code><a class="el" href="cos890_8h.html#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT()</a></code> macro and <code><a class="el" href="cos890_8h.html#a824d814bdfd91f4aa0d4e8fe42c07012">Cos890_SI_Unit_e</a></code> to setup this value. </p>
+<p>This function should be called by the application when the sensor type changes, to define the corresponding physical unit of the process value.</p>
+<p>The <code><a class="el" href="cos890_8h.html">cos890.h</a></code> contains the <a class="el" href="cos890_8h.html#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT()</a> macro and <a class="el" href="cos890_8h.html#a824d814bdfd91f4aa0d4e8fe42c07012">Cos890_SI_Unit_e</a> to set up this value. </p>
+
+</div>
+</div>
+<a id="aa2846b5f132eda881b91c7fe8d9b1114" name="aa2846b5f132eda881b91c7fe8d9b1114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2846b5f132eda881b91c7fe8d9b1114">&#9670;&#160;</a></span>Cos404_AI_SetSensorType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Cos404_AI_SetSensorType </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>ubChannelV</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>uwSensorTypeV</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ubChannelV</td><td>Analog input channel </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uwSensorTypeV</td><td>Sensor type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98fa1e386bda90429c996628f4e03f99bb4f">eCosSdo_WRITE_OK</a> on success or any other value from <a class="el" href="cos__defs_8h.html#a5f2ea5d4c0d5cff718531f6f83b0f98f" title="Return code for SDO callbacks.">CosSdo_e</a> in case of an error</dd></dl>
+<p>This function changes the sensor type for the given input channel <code>ubChannelV</code> to the values defined by parameter <code>uwSensorTypeV</code>. Valid values for sensor type are defined by enumeration <a class="el" href="#a1d82af0cd146d1895788e8a66d85e726">Cos404_AI_SensorType_e</a>. </p>
 
 </div>
 </div>
@@ -1229,7 +1260,7 @@ This function is only available if <code><a class="el" href="cos__conf_8h.html#a
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="dir_d076c7804b3b00786f269cf3e8d1e511.html">profile-404</a></li><li class="navelem"><a href="cos404ai_8h.html">cos404ai.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Tue Aug 25 2026  </li>
   </ul>
 </div>
 </body>

@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.02</div>
+   <div id="projectbrief">Version 7.06.04</div>
   </td>
  </tr>
  </tbody>
@@ -130,7 +130,7 @@ $(function(){initNavTree('cos890_8h.html','',''); });
 <area shape="poly" title=" " alt="" coords="166,105,147,211,142,210,160,105"/>
 <area shape="rect" href="canopen_8h.html" title=" " alt="" coords="203,226,284,252"/>
 <area shape="poly" title=" " alt="" coords="174,104,232,211,228,214,169,106"/>
-<area shape="rect" href="cos__conf_8h.html" title="CANopen Slave Stack &#45; General configuration ." alt="" coords="228,153,313,178"/>
+<area shape="rect" title=" " alt="" coords="228,153,313,178"/>
 <area shape="poly" title=" " alt="" coords="184,103,241,141,238,146,181,107"/>
 <area shape="rect" href="cp__fifo_8h.html" title="CANpie FIFO functions ." alt="" coords="5,226,77,252"/>
 <area shape="poly" title=" " alt="" coords="54,179,48,211,43,210,48,178"/>
@@ -189,11 +189,11 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                                    ((uint32_t)( \</div>
-<div class="line">                                    (((uint32_t)SiPrefix &lt;&lt; 24) &amp; 0xFF000000)     |       \</div>
-<div class="line">                                    (((uint32_t)SiNumerator &lt;&lt; 16) &amp; 0x00FF0000)  |       \</div>
-<div class="line">                                    (((uint32_t)SiDenominator &lt;&lt; 8) &amp; 0x0000FF00) |       \</div>
-<div class="line">                                    (((uint32_t)Profile) &amp; 0x000000FF)                    \</div>
+<b>Value:</b><div class="fragment"><div class="line">                                    ((uint32_t)(  \</div>
+<div class="line">                                    (((uint32_t)SiPrefix &lt;&lt; 24) &amp; 0xFF000000U)     |       \</div>
+<div class="line">                                    (((uint32_t)SiNumerator &lt;&lt; 16) &amp; 0x00FF0000U)  |       \</div>
+<div class="line">                                    (((uint32_t)SiDenominator &lt;&lt; 8) &amp; 0x0000FF00U) |       \</div>
+<div class="line">                                    (((uint32_t)Profile) &amp; 0x000000FFU)                    \</div>
 <div class="line">                                                                            ))</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -215,7 +215,7 @@ Enumerations</h2></td></tr>
 <div class="line">                                                    <a class="code hl_enumvalue" href="#a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5">eCOS890_SI_UNIT_VOLT</a>,</div>
 <div class="line">                                                    <a class="code hl_enumvalue" href="#a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29">eCOS890_SI_UNIT_NONE</a>,</div>
 <div class="line">                                                    0);</div>
-<div class="ttc" id="acos890_8h_html_a7bb539b6c100f0f5e243d8cb7d7319aa"><div class="ttname"><a href="#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT</a></div><div class="ttdeci">#define COS890_PHYSICAL_UNIT(SiPrefix, SiNumerator, SiDenominator, Profile)</div><div class="ttdef"><b>Definition</b> cos890.h:169</div></div>
+<div class="ttc" id="acos890_8h_html_a7bb539b6c100f0f5e243d8cb7d7319aa"><div class="ttname"><a href="#a7bb539b6c100f0f5e243d8cb7d7319aa">COS890_PHYSICAL_UNIT</a></div><div class="ttdeci">#define COS890_PHYSICAL_UNIT(SiPrefix, SiNumerator, SiDenominator, Profile)</div><div class="ttdef"><b>Definition</b> cos890.h:170</div></div>
 <div class="ttc" id="acos890_8h_html_a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29"><div class="ttname"><a href="#a824d814bdfd91f4aa0d4e8fe42c07012a1b576649192462e01d47712451b92e29">eCOS890_SI_UNIT_NONE</a></div><div class="ttdeci">@ eCOS890_SI_UNIT_NONE</div><div class="ttdoc">dimensionless</div><div class="ttdef"><b>Definition</b> cos890.h:75</div></div>
 <div class="ttc" id="acos890_8h_html_a824d814bdfd91f4aa0d4e8fe42c07012a7a00537a79383f3dc949c0f54fc315a2"><div class="ttname"><a href="#a824d814bdfd91f4aa0d4e8fe42c07012a7a00537a79383f3dc949c0f54fc315a2">eCOS890_SI_UNIT_DEGREE_CELSIUS</a></div><div class="ttdeci">@ eCOS890_SI_UNIT_DEGREE_CELSIUS</div><div class="ttdoc">Celsius temperature [°C].</div><div class="ttdef"><b>Definition</b> cos890.h:103</div></div>
 <div class="ttc" id="acos890_8h_html_a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5"><div class="ttname"><a href="#a824d814bdfd91f4aa0d4e8fe42c07012aa1394e09d092cadaed4701312d23bec5">eCOS890_SI_UNIT_VOLT</a></div><div class="ttdeci">@ eCOS890_SI_UNIT_VOLT</div><div class="ttdoc">electric potential difference [V]</div><div class="ttdef"><b>Definition</b> cos890.h:96</div></div>
@@ -397,7 +397,7 @@ Enumerations</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="cos890_8h.html">cos890.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Mon Aug 10 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Tue Aug 25 2026  </li>
   </ul>
 </div>
 </body>

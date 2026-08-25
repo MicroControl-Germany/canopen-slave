@@ -75,6 +75,7 @@ var NAVTREE =
           ] ],
           [ "Profile CiA 406", "cos_add_on_cia_406.html", null ],
           [ "Profile CiA 410", "cos_add_on_cia_410.html", null ],
+          [ "Profile CiA 453", "cos_add_on_cia_453.html", null ],
           [ "Safety", "cos_add_on_safety.html", null ],
           [ "Secure Configuration", "cos_add_on_secure_config.html", null ]
         ] ]
