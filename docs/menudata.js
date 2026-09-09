@@ -63,7 +63,12 @@ var menudata={children:[
 {text:"Timer support",url:"cos__time_8h.html#COS_TIME"},
 {text:"USDO server",url:"cos__usdo__srv_8h.html#COS_USDO"},
 {text:"Add-ons",url:"cos_add_on_overview.html",children:[
-{text:"Profile CiA 401",url:"cos_add_on_cia_401.html"},
+{text:"Profile CiA 401",url:"cos_add_on_cia_401.html",children:[
+{text:"Digital In",url:"cos401di_8h.html#COS_CIA401_DI"},
+{text:"Digital Out",url:"cos401do_8h.html#COS_CIA401_DO"},
+{text:"Analog In",url:"cos401ai_8h.html#COS_CIA401_AI"},
+{text:"Analog Out",url:"cos401ao_8h.html#COS_CIA401_AO"}]},
+{text:"Profile CiA 402",url:"cos_add_on_cia_402.html"},
 {text:"Profile CiA 404",url:"cos_add_on_cia_404.html",children:[
 {text:"Analog In",url:"cos404ai_8h.html#COS_CIA404_AI"},
 {text:"Analog Out",url:"cos404ao_8h.html#COS_CIA404_AO"}]},

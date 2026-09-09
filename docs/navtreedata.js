@@ -68,7 +68,13 @@ var NAVTREE =
         [ "Timer support", "cos__time_8h.html#COS_TIME", null ],
         [ "USDO server", "cos__usdo__srv_8h.html#COS_USDO", null ],
         [ "Add-ons", "cos_add_on_overview.html", [
-          [ "Profile CiA 401", "cos_add_on_cia_401.html", null ],
+          [ "Profile CiA 401", "cos_add_on_cia_401.html", [
+            [ "Digital In", "cos401di_8h.html#COS_CIA401_DI", null ],
+            [ "Digital Out", "cos401do_8h.html#COS_CIA401_DO", null ],
+            [ "Analog In", "cos401ai_8h.html#COS_CIA401_AI", null ],
+            [ "Analog Out", "cos401ao_8h.html#COS_CIA401_AO", null ]
+          ] ],
+          [ "Profile CiA 402", "cos_add_on_cia_402.html", null ],
           [ "Profile CiA 404", "cos_add_on_cia_404.html", [
             [ "Analog In", "cos404ai_8h.html#COS_CIA404_AI", null ],
             [ "Analog Out", "cos404ao_8h.html#COS_CIA404_AO", null ]

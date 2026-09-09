@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.04</div>
+   <div id="projectbrief">Version 7.08.00</div>
   </td>
  </tr>
  </tbody>
@@ -166,6 +166,22 @@ $(function(){initNavTree('cos406_8h.html','',''); });
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">650B<sub>h</sub>  </td><td class="markdownTableBodyLeft">Serial number  </td><td class="markdownTableBodyLeft">Cos406_Idx650B()  </td><td class="markdownTableBodyNone">-  </td></tr>
 </table>
+<h2>Configuration</h2>
+<p>The module is enabled by setting <span class="tt">COS_DS406</span> in the application <span class="tt"><a class="el" href="cos__conf_8h.html" title="CANopen Slave Stack - General configuration .">cos_conf.h</a></span>: </p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Value  </th><th class="markdownTableHeadLeft">Encoder class  </th><th class="markdownTableHeadLeft">Effect  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">1  </td><td class="markdownTableBodyLeft">Single-turn  </td><td class="markdownTableBodyLeft">Basic position, speed, acceleration, and status objects  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">2  </td><td class="markdownTableBodyLeft">Multi-turn  </td><td class="markdownTableBodyLeft">Adds multi-turn position scaling  </td></tr>
+</table>
+<p>Optional tuneable constants:</p><ul>
+<li><a class="el" href="group__DS406.html#ga4bd8fd96f1f71f650f6bae3e994cb5ae">DS406_RESOLUTION_SINGLE_TURN</a> — steps per revolution (default: 16384)</li>
+<li><a class="el" href="group__DS406.html#ga92dda1d1016ed3b4c273bab4d947fd82">DS406_RESOLUTION_MULTI_TURN_32</a> — maximum raw position count for 32-bit multi-turn encoders</li>
+<li><a class="el" href="group__DS406.html#ga52e72c21e04e3fa361d36631e444c208">DS406_SUPPORTED_ALARMS</a> — bitmask of supported alarm bits for object 6504h</li>
+<li><a class="el" href="group__DS406.html#ga347fdc42f402403343c0c2782629c264">DS406_SUPPORTED_WARNINGS</a> — bitmask of supported warning bits for object 6506h </li>
+</ul>
 </div><div class="textblock"><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Include dependency graph for cos406.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -204,25 +220,98 @@ $(function(){initNavTree('cos406_8h.html','',''); });
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga435f1625a63647d1a2e9874170eef1d1" id="r_ga435f1625a63647d1a2e9874170eef1d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__DS406.html#ga435f1625a63647d1a2e9874170eef1d1">DS406_PROFILE_VERSION</a>&#160;&#160;&#160;0x0400</td></tr>
-<tr class="memitem:ga52e72c21e04e3fa361d36631e444c208" id="r_ga52e72c21e04e3fa361d36631e444c208"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__DS406.html#ga52e72c21e04e3fa361d36631e444c208">DS406_SUPPORTED_ALARMS</a>&#160;&#160;&#160;0x0001</td></tr>
-<tr class="memitem:ga347fdc42f402403343c0c2782629c264" id="r_ga347fdc42f402403343c0c2782629c264"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__DS406.html#ga347fdc42f402403343c0c2782629c264">DS406_SUPPORTED_WARNINGS</a>&#160;&#160;&#160;0x0002</td></tr>
-<tr class="memitem:ga4bd8fd96f1f71f650f6bae3e994cb5ae" id="r_ga4bd8fd96f1f71f650f6bae3e994cb5ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__DS406.html#ga4bd8fd96f1f71f650f6bae3e994cb5ae">DS406_RESOLUTION_SINGLE_TURN</a>&#160;&#160;&#160;16384</td></tr>
+<tr class="memitem:ga435f1625a63647d1a2e9874170eef1d1" id="r_ga435f1625a63647d1a2e9874170eef1d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__DS406.html#ga435f1625a63647d1a2e9874170eef1d1">DS406_PROFILE_VERSION</a>&#160;&#160;&#160;0x0400U</td></tr>
+<tr class="memitem:ga52e72c21e04e3fa361d36631e444c208" id="r_ga52e72c21e04e3fa361d36631e444c208"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__DS406.html#ga52e72c21e04e3fa361d36631e444c208">DS406_SUPPORTED_ALARMS</a>&#160;&#160;&#160;0x0001U</td></tr>
+<tr class="memitem:ga347fdc42f402403343c0c2782629c264" id="r_ga347fdc42f402403343c0c2782629c264"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__DS406.html#ga347fdc42f402403343c0c2782629c264">DS406_SUPPORTED_WARNINGS</a>&#160;&#160;&#160;0x0002U</td></tr>
+<tr class="memitem:ga4bd8fd96f1f71f650f6bae3e994cb5ae" id="r_ga4bd8fd96f1f71f650f6bae3e994cb5ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__DS406.html#ga4bd8fd96f1f71f650f6bae3e994cb5ae">DS406_RESOLUTION_SINGLE_TURN</a>&#160;&#160;&#160;16384U</td></tr>
+<tr class="memitem:ga92dda1d1016ed3b4c273bab4d947fd82" id="r_ga92dda1d1016ed3b4c273bab4d947fd82"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__DS406.html#ga92dda1d1016ed3b4c273bab4d947fd82">DS406_RESOLUTION_MULTI_TURN_32</a>&#160;&#160;&#160;0x01FFFFFFU</td></tr>
 <tr class="memitem:gaa9bc45fb13e17dec6e9ce9ff52c72532" id="r_gaa9bc45fb13e17dec6e9ce9ff52c72532"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__DS406.html#gaa9bc45fb13e17dec6e9ce9ff52c72532">MAN_OFFSET_VALUE</a>&#160;&#160;&#160;0x00000000</td></tr>
 <tr class="memitem:ga5cfb47eb3f1dd1ca729c85c8c575f2ad" id="r_ga5cfb47eb3f1dd1ca729c85c8c575f2ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__DS406.html#ga5cfb47eb3f1dd1ca729c85c8c575f2ad">MAN_MINPOS_VALUE</a>&#160;&#160;&#160;0x00000000</td></tr>
 <tr class="memitem:ga7ff12d3d3677f7163780b67059d30c6a" id="r_ga7ff12d3d3677f7163780b67059d30c6a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__DS406.html#ga7ff12d3d3677f7163780b67059d30c6a">MAN_MAXPOS_VALUE</a>&#160;&#160;&#160;0x00003FFF</td></tr>
 <tr class="memitem:gae39f09ec336f0e075ab02fae3fa32746" id="r_gae39f09ec336f0e075ab02fae3fa32746"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__COS__DS406__VERSION.html#gae39f09ec336f0e075ab02fae3fa32746">COS_DS406_VERSION_MAJOR</a>&#160;&#160;&#160;4</td></tr>
-<tr class="memitem:ga068301fe40420f9a36f744da45075414" id="r_ga068301fe40420f9a36f744da45075414"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__COS__DS406__VERSION.html#ga068301fe40420f9a36f744da45075414">COS_DS406_VERSION_MINOR</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:ga068301fe40420f9a36f744da45075414" id="r_ga068301fe40420f9a36f744da45075414"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__COS__DS406__VERSION.html#ga068301fe40420f9a36f744da45075414">COS_DS406_VERSION_MINOR</a>&#160;&#160;&#160;2</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:a4bbac8c0cc8fa73d7b39752a20ea527e" id="r_a4bbac8c0cc8fa73d7b39752a20ea527e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bbac8c0cc8fa73d7b39752a20ea527e">DS406_OPER_STATUS_e</a> </td></tr>
+<tr class="memitem:a4badbe1c9db857aaea96ed27787d14c0" id="r_a4badbe1c9db857aaea96ed27787d14c0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4badbe1c9db857aaea96ed27787d14c0">DS406_ALARM_e</a> </td></tr>
 <tr class="memitem:acde878c0741220548e16e0a73416e9aa" id="r_acde878c0741220548e16e0a73416e9aa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acde878c0741220548e16e0a73416e9aa">DS406_WARN_e</a> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aa0759334c038e41798d18ee8a69239e1" id="r_aa0759334c038e41798d18ee8a69239e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0759334c038e41798d18ee8a69239e1">Cos406_SetAlarms</a> (uint16_t uwAlarmsV)</td></tr>
 <tr class="memitem:a9a330c97344d552a6ef2a5a83b95d579" id="r_a9a330c97344d552a6ef2a5a83b95d579"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a330c97344d552a6ef2a5a83b95d579">Cos406_SetEncoderValue</a> (uint32_t ulSgTurnV, uint32_t ulMtTurnV, uint32_t ulTimeDiffV)</td></tr>
+<tr class="memitem:a9a07fa32aaa8569ed6baef33fedfe379" id="r_a9a07fa32aaa8569ed6baef33fedfe379"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a07fa32aaa8569ed6baef33fedfe379">Cos406_SetOperatingStatus</a> (uint16_t uwStatusV)</td></tr>
+<tr class="memitem:ab7bbe5d1f0b5bbc485b2f92443e70709" id="r_ab7bbe5d1f0b5bbc485b2f92443e70709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7bbe5d1f0b5bbc485b2f92443e70709">Cos406_SetOperatingTime</a> (uint32_t ulTimeV)</td></tr>
+<tr class="memitem:a2ba8a4397173baad7cf20424c4a52f67" id="r_a2ba8a4397173baad7cf20424c4a52f67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ba8a4397173baad7cf20424c4a52f67">Cos406_SetWarnings</a> (uint16_t uwWarningsV)</td></tr>
 </table>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="a4badbe1c9db857aaea96ed27787d14c0" name="a4badbe1c9db857aaea96ed27787d14c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4badbe1c9db857aaea96ed27787d14c0">&#9670;&#160;</a></span>DS406_ALARM_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a4badbe1c9db857aaea96ed27787d14c0">DS406_ALARM_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Alarm bits for object 6503h (CiA 406 Table 144). An alarm indicates a malfunction that may lead to an incorrect position value; the bit stays set until the encoder can again provide a valid position. Bits 0 and 1 are mandatory for class C3 encoders. Use <a class="el" href="#aa0759334c038e41798d18ee8a69239e1">Cos406_SetAlarms()</a> to update the active alarms. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4badbe1c9db857aaea96ed27787d14c0a903cc42f09564e4402dd6ad335b87d01" name="a4badbe1c9db857aaea96ed27787d14c0a903cc42f09564e4402dd6ad335b87d01"></a>eALARM_OK&#160;</td><td class="fielddoc"><p>no active alarm </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4badbe1c9db857aaea96ed27787d14c0adcf08d3bb81a459594dec082e1ceaab3" name="a4badbe1c9db857aaea96ed27787d14c0adcf08d3bb81a459594dec082e1ceaab3"></a>eALARM_PE&#160;</td><td class="fielddoc"><p>Position error. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4badbe1c9db857aaea96ed27787d14c0a8ee066c3fe59995af49f8d921f66e49d" name="a4badbe1c9db857aaea96ed27787d14c0a8ee066c3fe59995af49f8d921f66e49d"></a>eALARM_CDE&#160;</td><td class="fielddoc"><p>Commissioning diagnostic error. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4badbe1c9db857aaea96ed27787d14c0afa00ac4cfbc177be536c67b49bfb7266" name="a4badbe1c9db857aaea96ed27787d14c0afa00ac4cfbc177be536c67b49bfb7266"></a>eALARM_MSA1&#160;</td><td class="fielddoc"><p>Manufacturer-specific alarm 1. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4badbe1c9db857aaea96ed27787d14c0aabf4f296a2693ed30c3d3078551dc652" name="a4badbe1c9db857aaea96ed27787d14c0aabf4f296a2693ed30c3d3078551dc652"></a>eALARM_MSA2&#160;</td><td class="fielddoc"><p>Manufacturer-specific alarm 2. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4badbe1c9db857aaea96ed27787d14c0ae4ef04ca398610223f6df3ed1527afb1" name="a4badbe1c9db857aaea96ed27787d14c0ae4ef04ca398610223f6df3ed1527afb1"></a>eALARM_MSA3&#160;</td><td class="fielddoc"><p>Manufacturer-specific alarm 3. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4badbe1c9db857aaea96ed27787d14c0ae670122362d0c5cd7939bbb2d8af70b6" name="a4badbe1c9db857aaea96ed27787d14c0ae670122362d0c5cd7939bbb2d8af70b6"></a>eALARM_MSA4&#160;</td><td class="fielddoc"><p>Manufacturer-specific alarm 4. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a4bbac8c0cc8fa73d7b39752a20ea527e" name="a4bbac8c0cc8fa73d7b39752a20ea527e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bbac8c0cc8fa73d7b39752a20ea527e">&#9670;&#160;</a></span>DS406_OPER_STATUS_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a4bbac8c0cc8fa73d7b39752a20ea527e">DS406_OPER_STATUS_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Operating status bits for object 6500h (CiA 406 Table 137). This object reflects the active encoder configuration as set by object 6000h. Use <a class="el" href="#a9a07fa32aaa8569ed6baef33fedfe379">Cos406_SetOperatingStatus()</a> to update the operating status. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4bbac8c0cc8fa73d7b39752a20ea527ea337a7df7066d7c9ec3927f69eb864586" name="a4bbac8c0cc8fa73d7b39752a20ea527ea337a7df7066d7c9ec3927f69eb864586"></a>eOPER_STATUS_CS&#160;</td><td class="fielddoc"><p>Code sequence: 0 = CW rotated, 1 = CCW rotated (rotary only) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bbac8c0cc8fa73d7b39752a20ea527ea82eb47bb32ae1d36dbc2c4d9614a3ff9" name="a4bbac8c0cc8fa73d7b39752a20ea527ea82eb47bb32ae1d36dbc2c4d9614a3ff9"></a>eOPER_STATUS_CDC&#160;</td><td class="fielddoc"><p>Commissioning diagnostic control enabled. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bbac8c0cc8fa73d7b39752a20ea527ea7e3977b20f4cf3fedba890dae319bdc3" name="a4bbac8c0cc8fa73d7b39752a20ea527ea7e3977b20f4cf3fedba890dae319bdc3"></a>eOPER_STATUS_SFC&#160;</td><td class="fielddoc"><p>Scaling function control enabled. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bbac8c0cc8fa73d7b39752a20ea527eafe6290dc7ade791b1c3fbdcc4fe871f7" name="a4bbac8c0cc8fa73d7b39752a20ea527eafe6290dc7ade791b1c3fbdcc4fe871f7"></a>eOPER_STATUS_MD&#160;</td><td class="fielddoc"><p>Measuring direction: 0 = forward, 1 = backwards (linear only) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bbac8c0cc8fa73d7b39752a20ea527eae324aaa21ab998ffaaa2c69fd5e10fe8" name="a4bbac8c0cc8fa73d7b39752a20ea527eae324aaa21ab998ffaaa2c69fd5e10fe8"></a>eOPER_STATUS_HSFC&#160;</td><td class="fielddoc"><p>High resolution scaling function control enabled. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bbac8c0cc8fa73d7b39752a20ea527eac865a60e907694df010d5e9cce7703e4" name="a4bbac8c0cc8fa73d7b39752a20ea527eac865a60e907694df010d5e9cce7703e4"></a>eOPER_STATUS_MSP1&#160;</td><td class="fielddoc"><p>Manufacturer-specific operating status 1. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bbac8c0cc8fa73d7b39752a20ea527ea6cfe3b1e1356a7066166e456f54f69e8" name="a4bbac8c0cc8fa73d7b39752a20ea527ea6cfe3b1e1356a7066166e456f54f69e8"></a>eOPER_STATUS_MSP2&#160;</td><td class="fielddoc"><p>Manufacturer-specific operating status 2. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bbac8c0cc8fa73d7b39752a20ea527ea7d5b7fce560a7beba8cd63b55ac2615b" name="a4bbac8c0cc8fa73d7b39752a20ea527ea7d5b7fce560a7beba8cd63b55ac2615b"></a>eOPER_STATUS_MSP3&#160;</td><td class="fielddoc"><p>Manufacturer-specific operating status 3. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bbac8c0cc8fa73d7b39752a20ea527eadffecdde66f31f3e2d5cb1f5e289a744" name="a4bbac8c0cc8fa73d7b39752a20ea527eadffecdde66f31f3e2d5cb1f5e289a744"></a>eOPER_STATUS_MSP4&#160;</td><td class="fielddoc"><p>Manufacturer-specific operating status 4. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="acde878c0741220548e16e0a73416e9aa" name="acde878c0741220548e16e0a73416e9aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acde878c0741220548e16e0a73416e9aa">&#9670;&#160;</a></span>DS406_WARN_e</h2>
 
@@ -234,21 +323,27 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Warnings. </p>
-<p>Warnings indicate that tolerance for certain internal parameters of the encoder have been exceeded. This warning will be used for Object 6505. </p>
+<p>Warning bits for object 6505h (CiA 406 Table 150). Warnings indicate that tolerances for internal encoder parameters have been exceeded, but do not imply an incorrect position value. All warning bits clear automatically when the parameter returns to its nominal range, except <a class="el" href="#acde878c0741220548e16e0a73416e9aaa07d980feb7e3cc2708d72e09c93bec42" title="Operating time limit exceeded (latched until power-on)">eWARN_OTLW</a> which is latched until the next power-on. Bits are mandatory for C3, optional for C1 and C2. Use <a class="el" href="#a2ba8a4397173baad7cf20424c4a52f67">Cos406_SetWarnings()</a> to update active warnings. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="acde878c0741220548e16e0a73416e9aaa36358cc81d3f6258220b3fe79df4f49e" name="acde878c0741220548e16e0a73416e9aaa36358cc81d3f6258220b3fe79df4f49e"></a>eWARN_FE&#160;</td><td class="fielddoc"><p>Frequency exceeded. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="acde878c0741220548e16e0a73416e9aaa13387843abafb911ca85e47d773d3936" name="acde878c0741220548e16e0a73416e9aaa13387843abafb911ca85e47d773d3936"></a>eWARN_OK&#160;</td><td class="fielddoc"><p>no active warning </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acde878c0741220548e16e0a73416e9aaa36358cc81d3f6258220b3fe79df4f49e" name="acde878c0741220548e16e0a73416e9aaa36358cc81d3f6258220b3fe79df4f49e"></a>eWARN_FE&#160;</td><td class="fielddoc"><p>Frequency exceeded. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="acde878c0741220548e16e0a73416e9aaaea74eeebdd78c1707e5bed3ef19317ca" name="acde878c0741220548e16e0a73416e9aaaea74eeebdd78c1707e5bed3ef19317ca"></a>eWARN_LCR&#160;</td><td class="fielddoc"><p>Light control reserve reached. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="acde878c0741220548e16e0a73416e9aaa3b58bfe5220bf0469cee9e08d6f77e6a" name="acde878c0741220548e16e0a73416e9aaa3b58bfe5220bf0469cee9e08d6f77e6a"></a>eWARN_CPU_WS&#160;</td><td class="fielddoc"><p>CPU watchdog status reset generated. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="acde878c0741220548e16e0a73416e9aaa07d980feb7e3cc2708d72e09c93bec42" name="acde878c0741220548e16e0a73416e9aaa07d980feb7e3cc2708d72e09c93bec42"></a>eWARN_OTLW&#160;</td><td class="fielddoc"><p>Operating time limit warning. </p>
+<tr><td class="fieldname"><a id="acde878c0741220548e16e0a73416e9aaa07d980feb7e3cc2708d72e09c93bec42" name="acde878c0741220548e16e0a73416e9aaa07d980feb7e3cc2708d72e09c93bec42"></a>eWARN_OTLW&#160;</td><td class="fielddoc"><p>Operating time limit exceeded (latched until power-on) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="acde878c0741220548e16e0a73416e9aaa993d53b1eb4c52e10f4628342e279705" name="acde878c0741220548e16e0a73416e9aaa993d53b1eb4c52e10f4628342e279705"></a>eWARN_BC&#160;</td><td class="fielddoc"><p>Battery charge too low. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="acde878c0741220548e16e0a73416e9aaa5d542cea87167fd9cb322807f324ae36" name="acde878c0741220548e16e0a73416e9aaa5d542cea87167fd9cb322807f324ae36"></a>eWARN_RP&#160;</td><td class="fielddoc"><p>Reference point not reached. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acde878c0741220548e16e0a73416e9aaa0fd3d1edb2a4f2ee881a88bcf1bb47a2" name="acde878c0741220548e16e0a73416e9aaa0fd3d1edb2a4f2ee881a88bcf1bb47a2"></a>eWARN_SR&#160;</td><td class="fielddoc"><p>Speed range exceeded. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acde878c0741220548e16e0a73416e9aaac1cf0768a2f4797e4e8d2d4cb75e8110" name="acde878c0741220548e16e0a73416e9aaac1cf0768a2f4797e4e8d2d4cb75e8110"></a>eWARN_AR&#160;</td><td class="fielddoc"><p>Acceleration range exceeded. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acde878c0741220548e16e0a73416e9aaa72469337614f8a6082d7e29358702135" name="acde878c0741220548e16e0a73416e9aaa72469337614f8a6082d7e29358702135"></a>eWARN_JR&#160;</td><td class="fielddoc"><p>Jerk range exceeded. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="acde878c0741220548e16e0a73416e9aaa349a8afa729ae71c923c2fc8fa1be1a1" name="acde878c0741220548e16e0a73416e9aaa349a8afa729ae71c923c2fc8fa1be1a1"></a>eWARN_MSW1&#160;</td><td class="fielddoc"><p>Manufacturer-specific warning 1. </p>
 </td></tr>
@@ -263,6 +358,31 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="aa0759334c038e41798d18ee8a69239e1" name="aa0759334c038e41798d18ee8a69239e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0759334c038e41798d18ee8a69239e1">&#9670;&#160;</a></span>Cos406_SetAlarms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cos406_SetAlarms </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>uwAlarmsV</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">uwAlarmsV</td><td>OR-combination of <a class="el" href="#a4badbe1c9db857aaea96ed27787d14c0">DS406_ALARM_e</a> bits </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2ba8a4397173baad7cf20424c4a52f67">Cos406_SetWarnings</a></dd></dl>
+<p>Sets the encoder alarm word returned by SDO read of object 6503h. Call this function whenever an alarm condition is detected or cleared. </p>
+
+</div>
+</div>
 <a id="a9a330c97344d552a6ef2a5a83b95d579" name="a9a330c97344d552a6ef2a5a83b95d579"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9a330c97344d552a6ef2a5a83b95d579">&#9670;&#160;</a></span>Cos406_SetEncoderValue()</h2>
 
@@ -288,13 +408,135 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ulSgTurnV</td><td>current single turn value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ulMtTurnV</td><td>current multi turn value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ulTimeDiffV</td><td>time difference between current values and last values</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ulSgTurnV</td><td>current single-turn encoder count </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ulMtTurnV</td><td>current multi-turn revolution count (ignored for single-turn configuration) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ulTimeDiffV</td><td>elapsed time since the previous call, in multiples of 1 ns; pass 0 to update the position without recalculating the speed</td></tr>
   </table>
   </dd>
 </dl>
-<p>This function passes the encoder values to the device profile CiA 406. The value for time difference is given in multiples of 1 ns. </p>
+<p>Updates the scaled position value (object 6004h) from the raw encoder counts on every call. The speed value (object 6030h) is recalculated only when <span class="tt">ulTimeDiffV &gt; 0</span>; if 0 is passed the speed retains its value from the previous call. </p>
+<p>Call this function from the encoder hardware ISR or a periodic task whenever new encoder values are available from the hardware. </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MyEncoderApplication()</div>
+<div class="line">{</div>
+<div class="line">   uint32_t ulSingleTurnValueT;</div>
+<div class="line">   uint32_t ulMultiTurnValueT;</div>
+<div class="line">   uint32_t ulTimeDifferenceT;</div>
+<div class="line">   uint16_t uwSensorWarningsT;</div>
+<div class="line">   uint16_t uwSensorAlarmsT;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// read values from sensor</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   ulSingleTurnValueT = MySensorReadSingleTurn();</div>
+<div class="line">   ulMultiTurnValueT  = MySensorReadMultiTurn();</div>
+<div class="line">   ulTimeDifferenceT  = MySensorTimeSinceLastRead();</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// process values by device profile</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   <a class="code hl_function" href="#a9a330c97344d552a6ef2a5a83b95d579">Cos406_SetEncoderValue</a>(ulSingleTurnValueT, ulMultiTurnValueT, ulTimeDifferenceT);</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// check sensor warnings</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   uwSensorWarningsT = MySensorWarnings();</div>
+<div class="line">   <span class="keywordflow">switch</span> (uwSensorWarningsT)</div>
+<div class="line">   {</div>
+<div class="line">      <span class="keywordflow">case</span> MY_SENSOR_NO_WARNING:</div>
+<div class="line">         <a class="code hl_function" href="#a2ba8a4397173baad7cf20424c4a52f67">Cos406_SetWarnings</a>(<a class="code hl_enumvalue" href="#acde878c0741220548e16e0a73416e9aaa13387843abafb911ca85e47d773d3936">eWARN_OK</a>);</div>
+<div class="line">         <span class="keywordflow">break</span>;</div>
+<div class="line">      <span class="comment">// evaluate other warnings ..</span></div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">//---------------------------------------------------------------------------------</span></div>
+<div class="line">   <span class="comment">// check sensor alarms</span></div>
+<div class="line">   <span class="comment">//</span></div>
+<div class="line">   uwSensorAlarmsT = MySensorAlarms();</div>
+<div class="line">   <span class="keywordflow">switch</span> (uwSensorAlarmsT)</div>
+<div class="line">   {</div>
+<div class="line">      <span class="keywordflow">case</span> MY_SENSOR_NO_ALARMS:</div>
+<div class="line">         <a class="code hl_function" href="#aa0759334c038e41798d18ee8a69239e1">Cos406_SetAlarms</a>(<a class="code hl_enumvalue" href="#a4badbe1c9db857aaea96ed27787d14c0a903cc42f09564e4402dd6ad335b87d01">eALARM_OK</a>);</div>
+<div class="line">         <span class="keywordflow">break</span>;</div>
+<div class="line">      <span class="comment">// evaluate other alarms ..</span></div>
+<div class="line">   }</div>
+<div class="line">}</div>
+<div class="ttc" id="acos406_8h_html_a2ba8a4397173baad7cf20424c4a52f67"><div class="ttname"><a href="#a2ba8a4397173baad7cf20424c4a52f67">Cos406_SetWarnings</a></div><div class="ttdeci">void Cos406_SetWarnings(uint16_t uwWarningsV)</div></div>
+<div class="ttc" id="acos406_8h_html_a4badbe1c9db857aaea96ed27787d14c0a903cc42f09564e4402dd6ad335b87d01"><div class="ttname"><a href="#a4badbe1c9db857aaea96ed27787d14c0a903cc42f09564e4402dd6ad335b87d01">eALARM_OK</a></div><div class="ttdeci">@ eALARM_OK</div><div class="ttdoc">no active alarm</div><div class="ttdef"><b>Definition</b> cos406.h:140</div></div>
+<div class="ttc" id="acos406_8h_html_a9a330c97344d552a6ef2a5a83b95d579"><div class="ttname"><a href="#a9a330c97344d552a6ef2a5a83b95d579">Cos406_SetEncoderValue</a></div><div class="ttdeci">void Cos406_SetEncoderValue(uint32_t ulSgTurnV, uint32_t ulMtTurnV, uint32_t ulTimeDiffV)</div></div>
+<div class="ttc" id="acos406_8h_html_aa0759334c038e41798d18ee8a69239e1"><div class="ttname"><a href="#aa0759334c038e41798d18ee8a69239e1">Cos406_SetAlarms</a></div><div class="ttdeci">void Cos406_SetAlarms(uint16_t uwAlarmsV)</div></div>
+<div class="ttc" id="acos406_8h_html_acde878c0741220548e16e0a73416e9aaa13387843abafb911ca85e47d773d3936"><div class="ttname"><a href="#acde878c0741220548e16e0a73416e9aaa13387843abafb911ca85e47d773d3936">eWARN_OK</a></div><div class="ttdeci">@ eWARN_OK</div><div class="ttdoc">no active warning</div><div class="ttdef"><b>Definition</b> cos406.h:162</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a9a07fa32aaa8569ed6baef33fedfe379" name="a9a07fa32aaa8569ed6baef33fedfe379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a07fa32aaa8569ed6baef33fedfe379">&#9670;&#160;</a></span>Cos406_SetOperatingStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cos406_SetOperatingStatus </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>uwStatusV</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">uwStatusV</td><td>OR-combination of <a class="el" href="#a4bbac8c0cc8fa73d7b39752a20ea527e">DS406_OPER_STATUS_e</a> bits</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Sets the encoder operating status word returned by SDO read of object 6500h. </p>
+
+</div>
+</div>
+<a id="ab7bbe5d1f0b5bbc485b2f92443e70709" name="ab7bbe5d1f0b5bbc485b2f92443e70709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7bbe5d1f0b5bbc485b2f92443e70709">&#9670;&#160;</a></span>Cos406_SetOperatingTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cos406_SetOperatingTime </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>ulTimeV</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ulTimeV</td><td>accumulated operating time in multiples of 0.1 h; pass <span class="tt">0xFFFFFFFFU</span> if the function is not available</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Sets the encoder operating time counter returned by SDO read of object 6508h. Update this value periodically from a real-time clock or an elapsed-time counter. </p>
+
+</div>
+</div>
+<a id="a2ba8a4397173baad7cf20424c4a52f67" name="a2ba8a4397173baad7cf20424c4a52f67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ba8a4397173baad7cf20424c4a52f67">&#9670;&#160;</a></span>Cos406_SetWarnings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cos406_SetWarnings </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>uwWarningsV</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">uwWarningsV</td><td>OR-combination of <a class="el" href="#acde878c0741220548e16e0a73416e9aa">DS406_WARN_e</a> bits </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#aa0759334c038e41798d18ee8a69239e1">Cos406_SetAlarms</a></dd></dl>
+<p>Sets the encoder warning word returned by SDO read of object 6505h. Call this function whenever a warning condition is detected or cleared. </p>
 
 </div>
 </div>
@@ -314,7 +556,7 @@ Functions</h2></td></tr>
   <ul>
     <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_ab9ddd2c2615ef270f1f12625803a92d.html">stack-cos</a></li><li class="navelem"><a href="dir_3957ab0e6272c2a5d079dd0fa0986319.html">profile-406</a></li><li class="navelem"><a href="cos406_8h.html">cos406.h</a></li>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Tue Aug 25 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Wed Sep 9 2026  </li>
   </ul>
 </div>
 </body>

@@ -5,16 +5,19 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/cos__conf_8h.html</loc>
-  </url>
-  <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/cos__demo__app_8h.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/cp__msg_8h.html</loc>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/cos__mobj_8h.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/cp__core_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/cos__conf_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/cp__fifo_8h.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/canpie_8h.html</loc>
@@ -23,10 +26,7 @@
     <loc>https://microcontrol-germany.github.io/canopen-slave/cos__nvm__user_8h.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/cos__mobj_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/cp__fifo_8h.html</loc>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/cp__msg_8h.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/mc__cpu_8h.html</loc>
@@ -132,6 +132,9 @@
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/cos401do_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/cos402_8h.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/cos404_8h.html</loc>
@@ -305,10 +308,19 @@
     <loc>https://microcontrol-germany.github.io/canopen-slave/cos_add_on_cia_401.html</loc>
   </url>
   <url>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/cos_ds402_changelog.html</loc>
+  </url>
+  <url>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/cos_add_on_cia_402.html</loc>
+  </url>
+  <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/cos_ds404_changelog.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/cos_add_on_cia_404.html</loc>
+  </url>
+  <url>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/cos_ds406_changelog.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/cos_add_on_cia_406.html</loc>
@@ -383,6 +395,9 @@
     <loc>https://microcontrol-germany.github.io/canopen-slave/group__COS__DS401__VERSION.html</loc>
   </url>
   <url>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/group__COS__DS402__VERSION.html</loc>
+  </url>
+  <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/group__COS__DS404__VERSION.html</loc>
   </url>
   <url>
@@ -416,13 +431,16 @@
     <loc>https://microcontrol-germany.github.io/canopen-slave/group__COS__SECURE__CONFIG__VERSION.html</loc>
   </url>
   <url>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos302__NetVar__s.html</loc>
+  </url>
+  <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCoObject__s.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos404__AI__Config__s.html</loc>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos402__Velocity__s.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos404__AI__ProcessData__s.html</loc>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos404__AI__Config__s.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCos404__AI__FilterParm__s.html</loc>
@@ -431,13 +449,16 @@
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__Bank__s.html</loc>
   </url>
   <url>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos404__AI__ProcessData__s.html</loc>
+  </url>
+  <url>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos402__Common__s.html</loc>
+  </url>
+  <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__DeviceCmd__s.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__DeviceFailureStatus__s.html</loc>
-  </url>
-  <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos302__NetVar__s.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__DeviceFailureStatusDelay__s.html</loc>
@@ -461,10 +482,10 @@
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__InputFailureStatus__s.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__InputStatus__s.html</loc>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__InputFailureStatusDelay__s.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__InputFailureStatusDelay__s.html</loc>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__InputStatus__s.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__InputStatusDelay__s.html</loc>
@@ -476,16 +497,16 @@
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__OutputActualValues__s.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__OutputCmd__s.html</loc>
-  </url>
-  <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__OutputFailureStatus__s.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__OutputSequence__s.html</loc>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__OutputCmd__s.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__OutputRanges__s.html</loc>
+  </url>
+  <url>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__OutputSequence__s.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__OutputStatus__s.html</loc>
@@ -494,16 +515,16 @@
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__OutputTempThresholds__s.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/structCosBootloaderSeed__s.html</loc>
-  </url>
-  <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCos453__SI__Unit__s.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/structCosDicAccessModification__s.html</loc>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCosBootloaderKey__s.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/structCosBootloaderKey__s.html</loc>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCosBootloaderSeed__s.html</loc>
+  </url>
+  <url>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCosDicAccessModification__s.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCosDicEntry__s.html</loc>
@@ -521,10 +542,10 @@
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCosTimeOfDay__s.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/structCpFifo__s.html</loc>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCpCanMsg__s.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/structCpCanMsg__s.html</loc>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCpFifo__s.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCpHdi__s.html</loc>
@@ -533,10 +554,10 @@
     <loc>https://microcontrol-germany.github.io/canopen-slave/structCpState__s.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/structCpTime__s.html</loc>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCpStatistic__s.html</loc>
   </url>
   <url>
-    <loc>https://microcontrol-germany.github.io/canopen-slave/structCpStatistic__s.html</loc>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/structCpTime__s.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/unionFloat__u.html</loc>
@@ -726,6 +747,9 @@
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/dir_1556766a54ca70d6e09250deb222f627.html</loc>
+  </url>
+  <url>
+    <loc>https://microcontrol-germany.github.io/canopen-slave/dir_1e7983144d2ab599fc3ac246c2e1f352.html</loc>
   </url>
   <url>
     <loc>https://microcontrol-germany.github.io/canopen-slave/dir_d076c7804b3b00786f269cf3e8d1e511.html</loc>

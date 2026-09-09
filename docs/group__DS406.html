@@ -48,7 +48,7 @@
   <td id="projectalign">
    <div id="projectname">CANopen Slave Protocol Stack<span id="projectnumber">&#160;</span>
    </div>
-   <div id="projectbrief">Version 7.06.04</div>
+   <div id="projectbrief">Version 7.08.00</div>
   </td>
  </tr>
  </tbody>
@@ -115,10 +115,11 @@ $(function(){initNavTree('group__DS406.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga435f1625a63647d1a2e9874170eef1d1" id="r_ga435f1625a63647d1a2e9874170eef1d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga435f1625a63647d1a2e9874170eef1d1">DS406_PROFILE_VERSION</a>&#160;&#160;&#160;0x0400</td></tr>
-<tr class="memitem:ga52e72c21e04e3fa361d36631e444c208" id="r_ga52e72c21e04e3fa361d36631e444c208"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga52e72c21e04e3fa361d36631e444c208">DS406_SUPPORTED_ALARMS</a>&#160;&#160;&#160;0x0001</td></tr>
-<tr class="memitem:ga347fdc42f402403343c0c2782629c264" id="r_ga347fdc42f402403343c0c2782629c264"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga347fdc42f402403343c0c2782629c264">DS406_SUPPORTED_WARNINGS</a>&#160;&#160;&#160;0x0002</td></tr>
-<tr class="memitem:ga4bd8fd96f1f71f650f6bae3e994cb5ae" id="r_ga4bd8fd96f1f71f650f6bae3e994cb5ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4bd8fd96f1f71f650f6bae3e994cb5ae">DS406_RESOLUTION_SINGLE_TURN</a>&#160;&#160;&#160;16384</td></tr>
+<tr class="memitem:ga435f1625a63647d1a2e9874170eef1d1" id="r_ga435f1625a63647d1a2e9874170eef1d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga435f1625a63647d1a2e9874170eef1d1">DS406_PROFILE_VERSION</a>&#160;&#160;&#160;0x0400U</td></tr>
+<tr class="memitem:ga52e72c21e04e3fa361d36631e444c208" id="r_ga52e72c21e04e3fa361d36631e444c208"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga52e72c21e04e3fa361d36631e444c208">DS406_SUPPORTED_ALARMS</a>&#160;&#160;&#160;0x0001U</td></tr>
+<tr class="memitem:ga347fdc42f402403343c0c2782629c264" id="r_ga347fdc42f402403343c0c2782629c264"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga347fdc42f402403343c0c2782629c264">DS406_SUPPORTED_WARNINGS</a>&#160;&#160;&#160;0x0002U</td></tr>
+<tr class="memitem:ga4bd8fd96f1f71f650f6bae3e994cb5ae" id="r_ga4bd8fd96f1f71f650f6bae3e994cb5ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4bd8fd96f1f71f650f6bae3e994cb5ae">DS406_RESOLUTION_SINGLE_TURN</a>&#160;&#160;&#160;16384U</td></tr>
+<tr class="memitem:ga92dda1d1016ed3b4c273bab4d947fd82" id="r_ga92dda1d1016ed3b4c273bab4d947fd82"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga92dda1d1016ed3b4c273bab4d947fd82">DS406_RESOLUTION_MULTI_TURN_32</a>&#160;&#160;&#160;0x01FFFFFFU</td></tr>
 <tr class="memitem:gaa9bc45fb13e17dec6e9ce9ff52c72532" id="r_gaa9bc45fb13e17dec6e9ce9ff52c72532"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa9bc45fb13e17dec6e9ce9ff52c72532">MAN_OFFSET_VALUE</a>&#160;&#160;&#160;0x00000000</td></tr>
 <tr class="memitem:ga5cfb47eb3f1dd1ca729c85c8c575f2ad" id="r_ga5cfb47eb3f1dd1ca729c85c8c575f2ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5cfb47eb3f1dd1ca729c85c8c575f2ad">MAN_MINPOS_VALUE</a>&#160;&#160;&#160;0x00000000</td></tr>
 <tr class="memitem:ga7ff12d3d3677f7163780b67059d30c6a" id="r_ga7ff12d3d3677f7163780b67059d30c6a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7ff12d3d3677f7163780b67059d30c6a">MAN_MAXPOS_VALUE</a>&#160;&#160;&#160;0x00003FFF</td></tr>
@@ -133,11 +134,33 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DS406_PROFILE_VERSION&#160;&#160;&#160;0x0400</td>
+          <td class="memname">#define DS406_PROFILE_VERSION&#160;&#160;&#160;0x0400U</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Definition of the device profile version number, which can be read via index 6507<sub>h</sub>. </p>
+
+</div>
+</div>
+<a id="ga92dda1d1016ed3b4c273bab4d947fd82" name="ga92dda1d1016ed3b4c273bab4d947fd82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga92dda1d1016ed3b4c273bab4d947fd82">&#9670;&#160;</a></span>DS406_RESOLUTION_MULTI_TURN_32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS406_RESOLUTION_MULTI_TURN_32&#160;&#160;&#160;0x01FFFFFFU</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>This value must match the physical encoder hardware. The default of 2<sup>25</sup>&minus;1, assumes a 25-bit absolute encoder (e.g. 14-bit single-turn + 11-bit multi-turn).</dd></dl>
+<p>Maximum total measuring range (in measuring units) for a multi-turn encoder whose position fits within a 32-bit value (object 6002<sub>h</sub>). The value is used </p>
+<p>This constant is used in three places:</p><ul>
+<li>Default initial value of object 6002<sub>h</sub> (total measuring range) at start-up</li>
+<li>Upper validation bound when writing objects 6002<sub>h</sub> (total measuring range) and 6003<sub>h</sub> (preset value); writes exceeding this value are rejected</li>
+<li>Constant value returned by object 6502<sub>h</sub> (number of distinguishable revolutions) </li>
+</ul>
+<p>Only relevant when <span class="tt">COS_DS406</span> &gt; 1. </p>
 
 </div>
 </div>
@@ -148,12 +171,17 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DS406_RESOLUTION_SINGLE_TURN&#160;&#160;&#160;16384</td>
+          <td class="memname">#define DS406_RESOLUTION_SINGLE_TURN&#160;&#160;&#160;16384U</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd>Cos406_Idx6501</dd></dl>
-<p>Definition of the maximum number of steps per revolutions for a single turn encoder. This parameter has impact on the objects 6001<sub>h</sub> (upper limit) and the object 6501<sub>h</sub>. </p>
+<dl class="section note"><dt>Note</dt><dd>This value must match the physical encoder hardware. The default of 16384 assumes a 14-bit single-turn encoder (2<sup>14</sup> steps per revolution).</dd></dl>
+<p>Physical single-turn resolution of the encoder in steps per revolution. This constant affects four data elements in the object dictionary:</p><ul>
+<li>Object 6501<sub>h</sub>: the constant value reported as single-turn resolution</li>
+<li>Object 6001<sub>h</sub>: initial value (measuring units per revolution) and upper limit for write validation; writes that exceed this value are rejected</li>
+<li>Object 6002<sub>h</sub>: initial value (total measuring range) in single-turn configuration</li>
+<li>Object 6003<sub>h</sub>: upper limit for write validation of the preset value in single-turn configuration </li>
+</ul>
 
 </div>
 </div>
@@ -164,7 +192,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DS406_SUPPORTED_ALARMS&#160;&#160;&#160;0x0001</td>
+          <td class="memname">#define DS406_SUPPORTED_ALARMS&#160;&#160;&#160;0x0001U</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -179,7 +207,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DS406_SUPPORTED_WARNINGS&#160;&#160;&#160;0x0002</td>
+          <td class="memname">#define DS406_SUPPORTED_WARNINGS&#160;&#160;&#160;0x0002U</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -247,7 +275,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="footer">
-    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Tue Aug 25 2026  </li>
+    <a href="https://www.microcontrol.net">&copy; MicroControl GmbH &amp; Co. KG</a> - Wed Sep 9 2026  </li>
   </ul>
 </div>
 </body>
