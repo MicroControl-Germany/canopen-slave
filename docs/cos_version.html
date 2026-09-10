@@ -112,7 +112,20 @@ $(function(){initNavTree('cos_version.html','',''); });
   <div class="headertitle"><div class="title">Version History </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_pages_2cos-02-reference_2cos__version"></a></p>
+<div class="textblock"><p><a class="anchor" id="md_internal_2doxygen_2pages_2cos-02-reference_2cos__version"></a></p>
+<h1>Version 7.08 - 2026.09</h1>
+<h2>Added</h2>
+<ul>
+<li><a class="el" href="cos_add_on_cia_402.html">CiA 402 profile</a> (drives and motion control)</li>
+<li><a class="el" href="cos_add_on_cia_453.html">CiA 453 profile</a> (power supply)</li>
+</ul>
+<h2>Changed</h2>
+<ul>
+<li>CiA 402: new functions for common and velocity mode parameter structures</li>
+<li>CiA 404: new function <span class="tt"><a class="el" href="cos404ai_8h.html#aa2846b5f132eda881b91c7fe8d9b1114">Cos404_AI_SetSensorType()</a></span>; hysteresis for limit and error detection</li>
+<li>CiA 406: extended documentation; ensured MISRA C:2025 compliance</li>
+<li>Fix: use <span class="tt">CPP_PACK_PREFIX</span> wrapper for packed structs (for Windows&trade; operating system)</li>
+</ul>
 <h1>Version 7.06 - 2026.07</h1>
 <h2>Added</h2>
 <ul>
@@ -121,8 +134,8 @@ $(function(){initNavTree('cos_version.html','',''); });
 </ul>
 <h2>Changed</h2>
 <ul>
-<li>Dictionary: local access modification fix</li>
-<li>PDO:Extended mappable objects limit to up to 65536 mappable objects</li>
+<li>Dictionary: fixed local access modification</li>
+<li>PDO: extended mappable objects limit to up to 65536 mappable objects</li>
 <li>SYNC: fixed timer event; fixed SYNC counter DLC check</li>
 <li>CiA 404: update AI function block</li>
 <li>CiA 890 (formerly CiA 303-2): new header file <span class="tt"><a class="el" href="cos890_8h.html">cos890.h</a></span></li>
